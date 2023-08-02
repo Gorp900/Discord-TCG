@@ -3,24 +3,27 @@ Link : https://github.com/NoNameSpecified/UnbelievaBoat-Python-Bot, to use the b
 Here I use the prefix "+" but you can change it whatever you want.
 
 1. Mini-Games
-  Mini-games have been removed for now, to be added later.
+  Blackjack: +blackjack <bet>
+  Roulette: +roulette <bet> <space>
 
 2. Balance & Money
   Check Balance: +balance
+  Deposit money: +deposit <amount or all>
+  Withdraw money. +withdraw <amount or all>
   Give money: +give <@member> <amount or all>
   Server Leaderboard: +leaderboard [page] [-cash | -bank | -total]
-    Leader board functionality is going to be odd for now, needs tweaking.
-  Removed the bank usage for withdrawing and depositing why is that even a thing?
 
 2.1 Staff Commands for economy:
-  add-money <@member> <amount>
-  remove-money <member> <amount>
+  +add-money <@member> <amount>
+  +remove-money <member> <amount>
 
 3. Income Commands
-  slut, crime, work and rob are all removed. They bring nothing to our bot.
-  Perhaps in a future release we can add gaem betting options.
+  +slut
+  +crime
+  +work
+  +rob
 
-4. Implemented Customization ( These are still a mystery atm...)
+4. Implemented Customization
   Get module (income commands) info. Use this info to edit the values:
     +module <module>
   Change module settings (income commands settings such as delay, minimum win amount etc):
@@ -29,13 +32,12 @@ Here I use the prefix "+" but you can change it whatever you want.
     +change-currency <new emoji name>
 
 5. Items
-  create-item (botmaster required)
-  delete-item <item name> (botmaster required)
-  give-item <player pinged> <item name> <amount>
-  inventory
-  bronze-pack
-  silver-pack
-  gold-pack
+  +create-item (botmaster required)
+  +delete-item <item name> (botmaster required)
+  +buy-item <item name> <amount>
+  +give-item <player pinged> <item name> <amount>
+  +inventory
+  +catalog (list-items)
 
 6. Income Roles. Whoever has the role will get income
   +add-income-role <role pinged> <income> (botmaster required)
@@ -43,6 +45,3 @@ Here I use the prefix "+" but you can change it whatever you want.
   +list-roles
   +update-income (botmaster required. This HAS TO BE USED to pay users who have the role.
                   Income is now hourly; it will add the amount of hours passed * income.)
-
-
-

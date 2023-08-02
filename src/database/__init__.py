@@ -3,9 +3,9 @@ from datetime import datetime
 from datetime import timedelta
 
 # custom blackjack game thing
-from game_libs.blackjack import blackjack_discord_implementation
+##from game_libs.blackjack import blackjack_discord_implementation
 # custom roulette game thing
-from game_libs.roulette import roulette_discord_implementation
+##from game_libs.roulette import roulette_discord_implementation
 
 """
 
@@ -21,14 +21,6 @@ class pythonboat_database_handler:
 		# we do the path from the main.py file, so we go into the db folder, then select
 		self.pathToJson = "database/database.json"
 		self.client = client
-		# for the json "variables", dont want to make a whole function to find index for variables
-		# wont be many anyways. so making it manually
-		self.variable_dict = {
-			"slut": 0,
-			"crime": 1,
-			"work": 2,
-			"rob": 3
-		}
 
 		# for colors
 		self.discord_error_rgb_code = discord.Color.from_rgb(239, 83, 80)
@@ -42,11 +34,7 @@ class pythonboat_database_handler:
 			# all the users will get created automatically in the function self.find_index_in_db()
 			# but for the different jobs etc the program needs configs for variables and symbols
 			creating_file.write("""{\n\t"userdata": [],
-										"variables":[
-											{"name":"slut","delay":15,"min_revenue":50,"max_revenue":400,"proba":50,"win_phrases":["You made","Your dad likes it so much he gives you"],"lose_phrases":["You were fined","Your uncle didn't like the encounter. You pay"],"min_lose_amount_percentage":2,"max_lose_amount_percentage":5},
-											{"name":"crime","delay":60,"min_revenue":100,"max_revenue":1200,"proba":30,"win_phrases":["You commited a crime and got","You robbed a bank and got"],"lose_phrases":["You were fined","MacGyver finds you, you pay"],"min_lose_amount_percentage":10,"max_lose_amount_percentage":20},
-											{"name":"work","delay":10,"min_revenue":50,"max_revenue":200,"win_phrases":["You worked at SubWay and made","You helped someone do his homework and got"]},
-											{"name":"rob","delay":45,"proba":50,"min_gain_amount_percentage":10,"max_gain_amount_percentage":20,"min_lose_amount_percentage":10,"max_lose_amount_percentage":20,"win_phrases":["You robbed and got"],"lose_phrases":["You were caught robbing and have to pay"]}],
+										"variables": [],
 										"symbols": [
 											{"name":"currency_symbol","symbol_emoji":":dollar:"}
 										],
@@ -97,10 +85,6 @@ class pythonboat_database_handler:
 			userdata = check_content["userdata"]
 			# variables
 			variables = check_content["variables"]
-			slut = variables[self.variable_dict["slut"]]
-			crime = variables[self.variable_dict["crime"]]
-			work = variables[self.variable_dict["work"]]
-			rob = variables[self.variable_dict["rob"]]
 			# symbol
 			currency_symbol = check_content["symbols"][0]
 			items = check_content["items"]
@@ -144,14 +128,10 @@ class pythonboat_database_handler:
 		data_to_search.append({
 			"user_id": user_to_find,
 			"cash": 0,
-			"bank": 0,
+			"engagement": 0,
 			# "balance" : cash + bank
 			# "roles": "None" ; will be checked when calculating weekly auto-role-income
 			"items": "none",
-			"last_slut": "none",
-			"last_work": "none",
-			"last_crime": "none",
-			"last_rob": "none"
 		})
 		"""
 			POSSIBLE ISSUE :
@@ -167,558 +147,6 @@ class pythonboat_database_handler:
 	"""
 	CLIENT-DB HANDLING
 	"""
-
-	async def blackjack(self, user, bet, bot, channel, username, user_pfp, message):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		# get user stuff
-		user_cash = json_user_content["cash"]
-		print("cash", user_cash)
-		if user_cash < bet:
-			self.overwrite_json(json_content)
-			return "error", f"You don't have enough money for this bet.\nYou currently have {str(self.currency_symbol)} **{'{:,}'.format(int(user_cash))}** in cash."
-
-		# the actual game
-		# start it
-		startInstance = blackjack_discord_implementation(bot, channel, self.currency_symbol)
-		bjPlay = await startInstance.play(bot, channel, username, user_pfp, message, bet)
-
-		if bjPlay == "win":
-			json_user_content["cash"] += bet
-		elif bjPlay == "loss":
-			json_user_content["cash"] -= bet
-		elif bjPlay == "bust":
-			pass
-		else:
-			return "error", "error unknown, contact admin"
-
-		# overwrite, end
-		json_content["userdata"][user_index] = json_user_content
-		self.overwrite_json(json_content)
-
-		return "success", "success"
-
-	#
-	# ROULETTE
-	#
-
-	async def roulette(self, user, bet, space, bot, channel, username, user_pfp, mention):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		# get user stuff
-		user_cash = json_user_content["cash"]
-		print("cash", user_cash)
-		if user_cash < bet:
-			self.overwrite_json(json_content)
-			return "error", f"You don't have enough money for this bet.\nYou currently have {str(self.currency_symbol)} **{'{:,}'.format(int(user_cash))}** in cash."
-
-		# the actual game
-		# start it
-		startInstance = roulette_discord_implementation(bot, channel, self.currency_symbol)
-		roulettePlay, multiplicator = await startInstance.play(bot, channel, username, user_pfp, bet, space, mention)
-		# roulettePlay will be 1 for won, 0 for lost
-		if roulettePlay:
-			json_user_content["cash"] += (bet * multiplicator) - bet
-		elif roulettePlay == 0:
-			json_user_content["cash"] -= bet
-		else:
-			return "error", "error unknown, contact admin"
-
-		# overwrite, end
-		json_content["userdata"][user_index] = json_user_content
-		self.overwrite_json(json_content)
-
-		return "success", "success"
-
-	#
-	# SLUT
-	#
-
-	async def slut(self, user, channel, username, user_pfp):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		"""
-		SPECIFIC TIME ETC
-		"""
-		# grep values
-		slut_data = json_content["variables"][self.variable_dict["slut"]]
-
-		# delay will ALWAYS be in MINUTES
-		delay = slut_data["delay"]
-		proba = slut_data["proba"]
-
-		time_check = False
-		now = datetime.now()
-		if json_user_content["last_slut"] == "none":
-			# never done it, so go ahead
-			time_check = True
-		# else, gotta check if enough time passed since last slut
-		else:
-			last_slut_string = json_user_content["last_slut"]
-			# get a timeobject from the string
-			last_slut = datetime.strptime(last_slut_string, '%Y-%m-%d %H:%M:%S.%f')
-			# calculate difference, see if it works
-			passed_time = now - last_slut
-			passed_time_minutes = passed_time.total_seconds() // 60.0
-			if passed_time_minutes == 0:
-				# because of // division it might display 0
-				passed_time_minutes = 1
-			if passed_time_minutes > delay:
-				time_check = True
-			else:
-				time_check = False
-				delay_remaining = delay - passed_time_minutes
-		# moving the block here for cleaner code
-		if time_check == False:
-			color = self.discord_blue_rgb_code
-			embed = discord.Embed(description=f"⏱ ️You cannot be a slut for {math.ceil(delay_remaining)} minutes.",
-								  color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-		else:
-			print("he can do it")
-
-		"""
-		ACTUAL FUNCTION
-		"""
-		# so, explanation :
-		# not actually using probabilites or so, just a random number between 1 and 2
-		# and if for example probability is 50%, then the random num should be > 1.5 in order to win
-		slut_success = random.randint(0, 100)
-
-		if proba < slut_success:
-			# LOST
-
-			lose_phrases = random.choice(slut_data["lose_phrases"])
-			lose_percentage = random.randint(slut_data["min_lose_amount_percentage"],
-											 slut_data["max_lose_amount_percentage"])
-			balance = json_user_content["cash"] + json_user_content["bank"]
-			loss = balance * (lose_percentage / 100)
-			# round up, no floats
-			loss = round(loss, 0)
-			print(lose_phrases, balance, loss)
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(
-				description=f"{lose_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(loss))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="r.i.p")
-			await channel.send(embed=embed)
-			json_user_content["cash"] -= loss
-			# update last slut time
-			json_user_content["last_slut"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-		else:
-			# SUCCESS
-			win_phrases = random.choice(slut_data["win_phrases"])
-			gain = random.randint(slut_data["min_revenue"], slut_data["max_revenue"])
-			# round up, no floats
-			gain = round(gain, 0)
-			color = self.discord_success_rgb_code
-			embed = discord.Embed(
-				description=f"{win_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(gain))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="gg")
-			await channel.send(embed=embed)
-			json_user_content["cash"] += gain
-			# update last slut time
-			json_user_content["last_slut"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-	# we never reach this part of the code
-
-	#
-	# CRIME
-	#
-
-	async def crime(self, user, channel, username, user_pfp):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		"""
-		SPECIFIC TIME ETC
-		"""
-		# grep values
-		crime_data = json_content["variables"][self.variable_dict["crime"]]
-
-		# delay will ALWAYS be in MINUTES
-		delay = crime_data["delay"]
-		proba = crime_data["proba"]
-
-		time_check = False
-		now = datetime.now()
-		if json_user_content["last_crime"] == "none":
-			# never done it, so go ahead
-			time_check = True
-		# else, gotta check if enough time passed since last slut
-		else:
-			last_slut_string = json_user_content["last_crime"]
-			# get a timeobject from the string
-			last_slut = datetime.strptime(last_slut_string, '%Y-%m-%d %H:%M:%S.%f')
-			# calculate difference, see if it works
-			passed_time = now - last_slut
-			passed_time_minutes = passed_time.total_seconds() // 60.0
-			if passed_time_minutes == 0:
-				# because of // division it might display 0
-				passed_time_minutes = 1
-			if passed_time_minutes > delay:
-				time_check = True
-			else:
-				time_check = False
-				delay_remaining = delay - passed_time_minutes
-		# moving the block here for cleaner code
-		if time_check == False:
-			color = self.discord_blue_rgb_code
-			embed = discord.Embed(description=f"⏱ ️You cannot commit a crime for {math.ceil(delay_remaining)} minutes.",
-								  color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-		else:
-			print("he can do it")
-
-		"""
-		ACTUAL FUNCTION
-		"""
-		# so, explanation :
-		# not actually using probabilites or so, just a random number between 1 and 2
-		# and if for example probability is 50%, then the random num should be > 1.5 in order to win
-		crime_success = random.randint(0, 100)
-
-		if proba < crime_success:
-			# LOST
-
-			lose_phrases = random.choice(crime_data["lose_phrases"])
-			lose_percentage = random.randint(crime_data["min_lose_amount_percentage"],
-											 crime_data["max_lose_amount_percentage"])
-			balance = json_user_content["cash"] + json_user_content["bank"]
-			loss = balance * (lose_percentage / 100)
-			# round up, no floats
-			loss = round(loss, 0)
-			print(lose_phrases, balance, loss)
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(
-				description=f"{lose_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(loss))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="r.i.p")
-			await channel.send(embed=embed)
-			json_user_content["cash"] -= loss
-			# update last slut time
-			json_user_content["last_crime"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-		else:
-			# SUCCESS
-			win_phrases = random.choice(crime_data["win_phrases"])
-			gain = random.randint(crime_data["min_revenue"], crime_data["max_revenue"])
-			# round up, no floats
-			gain = round(gain, 0)
-			color = self.discord_success_rgb_code
-			embed = discord.Embed(
-				description=f"{win_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(gain))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="gg")
-			await channel.send(embed=embed)
-			json_user_content["cash"] += gain
-			# update last slut time
-			json_user_content["last_crime"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-	# we never reach this part of the code
-
-	#
-	# WORK
-	#
-
-	async def work(self, user, channel, username, user_pfp):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		"""
-		SPECIFIC TIME ETC
-		"""
-		# grep values
-		work_data = json_content["variables"][self.variable_dict["work"]]
-
-		# delay will ALWAYS be in MINUTES
-		delay = work_data["delay"]
-
-		time_check = False
-		now = datetime.now()
-		if json_user_content["last_work"] == "none":
-			# never done it, so go ahead
-			time_check = True
-		# else, gotta check if enough time passed since last slut
-		else:
-			last_slut_string = json_user_content["last_work"]
-			# get a timeobject from the string
-			last_slut = datetime.strptime(last_slut_string, '%Y-%m-%d %H:%M:%S.%f')
-			# calculate difference, see if it works
-			passed_time = now - last_slut
-			passed_time_minutes = passed_time.total_seconds() // 60.0
-			if passed_time_minutes == 0:
-				# because of // division it might display 0
-				passed_time_minutes = 1
-			if passed_time_minutes > delay:
-				time_check = True
-			else:
-				time_check = False
-				delay_remaining = delay - passed_time_minutes
-		# moving the block here for cleaner code
-		if time_check == False:
-			color = self.discord_blue_rgb_code
-			embed = discord.Embed(description=f"⏱ ️You cannot work for {math.ceil(delay_remaining)} minutes.",
-								  color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-		else:
-			print("he can do it")
-
-		"""
-		ACTUAL FUNCTION
-		"""
-
-		# work is always a success
-		win_phrases = random.choice(work_data["win_phrases"])
-		gain = random.randint(work_data["min_revenue"], work_data["max_revenue"])
-		# round up, no floats
-		gain = round(gain, 0)
-		color = self.discord_success_rgb_code
-		embed = discord.Embed(description=f"{win_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(gain))}**",
-							  color=color)
-		embed.set_author(name=username, icon_url=user_pfp)
-		embed.set_footer(text="capitalism is great")
-		await channel.send(embed=embed)
-		json_user_content["cash"] += gain
-		# update last slut time
-		json_user_content["last_work"] = str(now)
-		# overwrite, end
-		json_content["userdata"][user_index] = json_user_content
-		self.overwrite_json(json_content)
-
-		return "success", "success"
-
-	#
-	# ROB
-	#
-
-	async def rob(self, user, channel, username, user_pfp, user_to_rob):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		"""
-		SPECIFIC TIME ETC
-		"""
-		# grep values
-		rob_data = json_content["variables"][self.variable_dict["rob"]]
-
-		# delay will ALWAYS be in MINUTES
-		delay = rob_data["delay"]
-		proba = rob_data["proba"]
-
-		time_check = False
-		now = datetime.now()
-		if json_user_content["last_rob"] == "none":
-			# never done it, so go ahead
-			time_check = True
-		# else, gotta check if enough time passed since last slut
-		else:
-			last_slut_string = json_user_content["last_rob"]
-			# get a timeobject from the string
-			last_slut = datetime.strptime(last_slut_string, '%Y-%m-%d %H:%M:%S.%f')
-			# calculate difference, see if it works
-			passed_time = now - last_slut
-			passed_time_minutes = passed_time.total_seconds() // 60.0
-			if passed_time_minutes == 0:
-				# because of // division it might display 0
-				passed_time_minutes = 1
-			if passed_time_minutes > delay:
-				time_check = True
-			else:
-				time_check = False
-				delay_remaining = delay - passed_time_minutes
-		# moving the block here for cleaner code
-		if time_check == False:
-			color = self.discord_blue_rgb_code
-			embed = discord.Embed(description=f"⏱ ️You cannot rob someone for {math.ceil(delay_remaining)} minutes.",
-								  color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-		else:
-			print("he can do it")
-
-		"""
-		ACTUAL FUNCTION
-		"""
-
-		# check if user you want to rob exists
-		robbed_user, status = self.find_index_in_db(json_content["userdata"], user_to_rob, fail_safe=True)
-		if (robbed_user == 0 and status == "error"):
-			# we didnt find him
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(description=f"❌ Invalid `<user>` argument given.\n\nUsage:\n`rob <user>`",
-								  color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-
-		if str(user).strip() == str(user_to_rob).strip():
-			# you cannot rob yourself
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(description=f"❌ You cannot rob yourself!", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return "success", "success"
-
-		print(robbed_user)
-		# you cannot rob from people who have less money than you
-		robbed_user_data = json_content["userdata"][robbed_user]
-		robbed_balance = robbed_user_data["cash"] + robbed_user_data["bank"]
-		user_balance = json_user_content["cash"] + json_user_content["bank"]
-		if robbed_balance < user_balance:
-			lose_percentage = random.randint(rob_data["min_lose_amount_percentage"],
-											 rob_data["max_lose_amount_percentage"])
-			balance = json_user_content["cash"] + json_user_content["bank"]
-			loss = balance * (lose_percentage / 100)
-			# round up, no floats
-			loss = round(loss, 0)
-
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(
-				description=f"❌ You've been fined {str(self.currency_symbol)} **{'{:,}'.format(int(loss))}** for trying to rob a person more poor than you.",
-				color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-
-			return "success", "success"
-
-		#
-		# Normal robbing now
-		#
-
-		# so, explanation :
-		# not actually using probabilites or so, just a random number between 1 and 2
-		# and if for example probability is 50%, then the random num should be > 1.5 in order to win
-		crime_success = random.randint(0, 100)
-
-		if proba < crime_success:
-			# LOST
-
-			lose_phrases = random.choice(rob_data["lose_phrases"])
-			lose_percentage = random.randint(rob_data["min_lose_amount_percentage"],
-											 rob_data["max_lose_amount_percentage"])
-			balance = json_user_content["cash"] + json_user_content["bank"]
-			loss = balance * (lose_percentage / 100)
-			# round up, no floats
-			loss = round(loss, 0)
-			print(lose_phrases, balance, loss)
-			color = self.discord_error_rgb_code
-			embed = discord.Embed(
-				description=f"❌ {lose_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(loss))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="robbing isn't cool")
-			await channel.send(embed=embed)
-			json_user_content["cash"] -= loss
-			# update last slut time
-			json_user_content["last_rob"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-		else:
-			# SUCCESS
-
-			win_phrases = random.choice(rob_data["win_phrases"])
-			gain_percentage = random.randint(rob_data["min_gain_amount_percentage"],
-											 rob_data["max_gain_amount_percentage"])
-
-			robbed_cash = robbed_user_data["cash"]
-			gain = robbed_cash * (gain_percentage / 100)
-
-			# round up, no floats
-			gain = round(gain, 0)
-			color = self.discord_success_rgb_code
-			embed = discord.Embed(
-				description=f"✅ {win_phrases} {str(self.currency_symbol)} **{'{:,}'.format(int(gain))}**", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			embed.set_footer(text="lucky")
-			await channel.send(embed=embed)
-			json_user_content["cash"] += gain
-			# update last slut time
-			json_user_content["last_rob"] = str(now)
-			# overwrite, end
-			json_content["userdata"][user_index] = json_user_content
-			self.overwrite_json(json_content)
-
-			return "success", "success"
-
-	# this code is never reached
 
 	#
 	# BALANCE
@@ -738,105 +166,18 @@ class pythonboat_database_handler:
 
 		json_user_content = json_content["userdata"][checked_user]
 		check_cash = "{:,}".format(int(json_user_content["cash"]))
-		check_bank = "{:,}".format(int(json_user_content["bank"]))
-		check_bal = "{:,}".format(int(json_user_content["cash"] + json_user_content["bank"]))
+		## TODO: Count items, and maybe even total TV?
 
 		formatted_time = str(f"{datetime.now().hour}:{datetime.now().minute}")
 
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(color=color)
 		embed.add_field(name="**Cash**", value=f"{str(self.currency_symbol)} {check_cash}", inline=True)
-		embed.add_field(name="**Bank**", value=f"{str(self.currency_symbol)} {check_bank}", inline=True)
-		embed.add_field(name="**Net Worth:**", value=f"{str(self.currency_symbol)} {check_bal}", inline=True)
 		embed.set_author(name=username_to_check, icon_url=userpfp_to_check)
 		embed.set_footer(text=f"today at {formatted_time}")
 		await channel.send(embed=embed)
 
 		return
-
-	#
-	# DEPOSIT
-	#
-
-	async def deposit(self, user, channel, username, user_pfp, amount):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		user_cash = json_user_content["cash"]
-
-		if amount == "all":
-			amount = user_cash
-			if amount < 0:
-				return "error", "❌ No negative values."
-		else:
-			amount = int(amount)
-			if amount > user_cash:
-				return "error", f"❌ You don't have that much money to deposit. You currently have {str(self.currency_symbol)} {'{:,}'.format(user_cash)} on hand."
-
-		json_user_content["cash"] -= amount
-		json_user_content["bank"] += amount
-
-		color = self.discord_success_rgb_code
-		embed = discord.Embed(
-			description=f"✅ Deposited {str(self.currency_symbol)} {'{:,}'.format(int(amount))} to your bank!",
-			color=color)
-		embed.set_author(name=username, icon_url=user_pfp)
-		await channel.send(embed=embed)
-
-		# overwrite, end
-		json_content["userdata"][user_index] = json_user_content
-		self.overwrite_json(json_content)
-
-		return "success", "success"
-
-	#
-	# WITHDRAW
-	#
-
-	async def withdraw(self, user, channel, username, user_pfp, amount):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-
-		if new_data != "none":
-			json_content["userdata"] = new_data
-
-		json_user_content = json_content["userdata"][user_index]
-
-		user_bank = json_user_content["bank"]
-
-		if amount == "all":
-			amount = user_bank
-			if amount < 0:
-				return "error", "❌ No negative values."
-		else:
-			amount = int(amount)
-			if amount > user_bank:
-				return "error", f"❌ You don't have that much money to withdraw. You currently have {str(self.currency_symbol)} {'{:,}'.format(user_bank)} in the bank."
-
-		json_user_content["cash"] += amount
-		json_user_content["bank"] -= amount
-
-		color = self.discord_success_rgb_code
-		embed = discord.Embed(
-			description=f"✅ Withdrew {str(self.currency_symbol)} {'{:,}'.format(int(amount))} from your bank!",
-			color=color)
-		embed.set_author(name=username, icon_url=user_pfp)
-		await channel.send(embed=embed)
-
-		# overwrite, end
-		json_content["userdata"][user_index] = json_user_content
-		self.overwrite_json(json_content)
-
-		return "success", "success"
 
 	#
 	# GIVE
@@ -891,6 +232,7 @@ class pythonboat_database_handler:
 
 	async def leaderboard(self, user, channel, username, full_name, page_number, mode_type, client):
 		# load json
+		## TODO: REDO Leaderboard to something neater
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
@@ -911,11 +253,11 @@ class pythonboat_database_handler:
 			all_users.append(json_content["userdata"][i]["user_id"])
 			if mode_type == "-cash":
 				all_bal.append(int(json_content["userdata"][i]["cash"]))
-			elif mode_type == "-bank":
-				all_bal.append(int(json_content["userdata"][i]["bank"]))
+			#elif mode_type == "-cards":
+			#	all_bal.append(int(json_content["userdata"][i]["items"]))
 			else:  # elif mode_type == "-total":
-				print(json_content["userdata"][i]["cash"] + json_content["userdata"][i]["bank"])
-				all_bal.append(int(json_content["userdata"][i]["cash"] + json_content["userdata"][i]["bank"]))
+			#	print(json_content["userdata"][i]["cash"] + json_content["userdata"][i]["items"])
+				all_bal.append(int(json_content["userdata"][i]["cash"])) #+ json_content["userdata"][i]["items"]))
 		print(all_bal)
 		# so, data is set, now sort
 		i = -1
@@ -1007,24 +349,15 @@ class pythonboat_database_handler:
 
 	#
 	# MODULE INFO
-	#
+	#  TODO: This module command is a bit of a mystery still, gotta learn what it's all about.
 
 	async def module(self, user, channel, module):
 		# load json
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 
-		"""
-		variable_dict = {
-			"slut": 0,
-			"crime": 1,
-			"work": 2,
-			"rob": 3
-		}
-		"""
-
 		if module not in self.variable_dict.keys() and module not in ["symbols", "currency_symbol"]:
-			possible = "slut, crime, work, rob, symbols"
+			possible = "symbols"
 			return "error", f"Module not found. Possibilites : {possible}"
 
 		if module in ["symbols", "currency_symbol"]:
@@ -1183,6 +516,7 @@ class pythonboat_database_handler:
 	# CREATE NEW ITEM
 	#
 
+	## TODO: Need to edit what we're going to need to create an item
 	async def create_new_item(self, item_name, cost, description, duration, stock, roles_id_required, roles_id_to_give,
 							  roles_id_to_remove, max_bal, reply_message):
 		# load json
@@ -1202,6 +536,7 @@ class pythonboat_database_handler:
 
 		print("expiration date : ", expiration_date)
 
+		## TODO: Item Vars
 		json_items.append({
 			"name": item_name,
 			"price": cost,
@@ -1271,6 +606,7 @@ class pythonboat_database_handler:
 	# BUY ITEM
 	#
 
+	## TODO: would remove, but we should take a look at this for actually giving cards to players
 	async def buy_item(self, user, channel, username, user_pfp, item_name, amount, user_roles, server_object,
 					   user_object):
 		# load json
@@ -1402,6 +738,76 @@ class pythonboat_database_handler:
 		self.overwrite_json(json_content)
 
 		return "success", "success"
+	
+	#
+	# BRONZE SILVER GOLD CARD PACKS
+	#
+
+	async def bronze_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
+		
+		for x in range(3): ## 3 card pulls...
+			# load json
+			json_file = open(self.pathToJson, "r")
+			json_content = json.load(json_file)
+			json_items = json_content["items"]
+			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+			user_content = json_content["userdata"][user_index]
+			
+			# see the odds of shiney
+			if random.randrange(0,100) >= 95: ## 5% chance
+				shiney_get = True
+			else: shiney_get = False
+
+			## TODO: Need to redo the random number based on whether we should be getting a shiney or not
+			## 	Possibly just use a while (not confirmed_card) ...
+			pull_number = random.randrange(0,len(json_items))
+			if json_items[pull_number]["shiney"] == True :
+				if shiney_get:
+					confirmed_card = json_items[pull_number]
+				else:
+					confirmed_card = json_items[pull_number+1]
+			else:
+				if shiney_get:
+					confirmed_card = json_items[pull_number]
+				else:
+					confirmed_card = json_items[pull_number+1]
+			# get item name and card_image
+			item_name = confirmed_card["name"]
+			card_image = confirmed_card["image_url"]
+
+			## Display card pull
+			color = self.discord_green_rgb_code
+			embed = discord.Embed(description=f"You found a {item_name} ", color=color)
+			embed.set_image(url=card_image)
+			embed.set_author(name=username, icon_url=user_pfp)
+			await channel.send(embed=embed)
+	
+			## Add item to inventory
+			if user_content["items"] == "none":
+				user_content["items"] = [[item_name, 1]]
+			else:
+				needAppend = True
+				for i_i in range(len(user_content["items"])):
+					if user_content["items"][i_i][0] == item_name:
+						user_content["items"][i_i][1] += 1
+						needAppend = False
+						break
+				if needAppend:
+					user_content["items"].append([item_name, 1])
+
+			# overwrite data
+			json_content["userdata"][user_index] = user_content
+			json_content["items"] = json_items
+			self.overwrite_json(json_content)
+			## end loop here
+		## end, return
+		return "bought bronze pack", "success"
+	
+	async def silver_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
+		return "bought silver pack", "success"
+	
+	async def gold_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
+		return "bought gold pack", "success"
 
 	#
 	# GIVE ITEM
@@ -1485,7 +891,7 @@ class pythonboat_database_handler:
 		else:
 			inventory_checkup = ""
 			for i in range(len(items)):
-				inventory_checkup += f"Item: `{items[i][0]}`; amount: `{items[i][1]}`\n"
+				inventory_checkup += f"`{items[i][0]}`; amount: `{items[i][1]}`\n"
 
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
@@ -1498,91 +904,7 @@ class pythonboat_database_handler:
 
 		return "success", "success"
 
-	#
-	# CATALOG
-	#
-
-	async def catalog(self, user, channel, username, user_pfp, item_check, server_object):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-
-		items = json_content["items"]
-		catalog_report = "__Items catalog:__\n```\n"
-		if item_check == "default_list":
-			for i in range(len(items)):
-				catalog_report += f"Item {i}: {items[i]['name']}\n"
-			catalog_report += "\n```\n*For details about an item: use* `catalog <item name>`"
-
-		else:
-			check = 0
-			for i in range(len(items)):
-				if items[i]["name"] == item_check:
-					check = 1
-					item_index = i
-			if not check:
-				return "error", "Error! Item not found."
-			else:  # not needed, but for readability
-				catalog_report = f"__Item {items[item_index]['name']} catalog:__\n\n"
-
-				req_roles = ""
-				for ii in range(len(items[item_index]["required_roles"])):
-					try:
-						if items[item_index]["required_roles"] == "none":
-							req_roles += "none"
-						else:
-							raise Exception("got role")
-					except:
-						role = discord.utils.get(server_object.roles, id=int(items[item_index]["required_roles"][ii]))
-						req_roles += f"@{str(role)} "
-
-				give_roles = ""
-				for iii in range(len(items[item_index]["given_roles"])):
-					try:
-						if items[item_index]["given_roles"] == "none":
-							req_roles += "none"
-						else:
-							raise Exception("got role")
-					except:
-						role = discord.utils.get(server_object.roles, id=int(items[item_index]["given_roles"][iii]))
-						give_roles += f"@{str(role)} "
-
-				rem_roles = ""
-				for iiii in range(len(items[item_index]["removed_roles"])):
-					try:
-						if items[item_index]["removed_roles"] == "none":
-							req_roles += "none"
-						else:
-							raise Exception("got role")
-					except:
-						role = discord.utils.get(server_object.roles, id=int(items[item_index]["removed_roles"][iiii]))
-						rem_roles += f"@{str(role)} "
-
-				if int(str(datetime.strptime(items[item_index]['expiration_date'], '%Y-%m-%d %H:%M:%S.%f'))[
-					   :4]) >= 2100:
-					left_time = "never"
-				else:
-					left_time = str(items[item_index]['expiration_date'])[:10]
-
-				catalog_report += f"Item name: \"{items[item_index]['name']}\"\n" \
-								  f"Item price: {items[item_index]['price']}\n" \
-								  f"Item description: \"{items[item_index]['description']}\"\n" \
-								  f"Remaining time: item expires {left_time}\n" \
-								  f"Amount remaining: {items[item_index]['amount_in_stock']} in stock\n" \
-								  f"Maximum balance to purchase: {self.currency_symbol} {items[item_index]['maximum_balance']}\n" \
-								  f"Required roles: {req_roles}\n" \
-								  f"Given roles: {give_roles}\n" \
-								  f"Removed roles: {rem_roles}\n"
-
-				catalog_report += "---------------------------------"
-
-		await channel.send(catalog_report)
-
-		# overwrite, end
-		# not needed
-
-		return "success", "success"
-
+	
 	#
 	# ROLE INCOMES - NEW ONE
 	#
@@ -1714,7 +1036,7 @@ class pythonboat_database_handler:
 
 					json_user_content = json_content["userdata"][user_index]
 					json_income_roles[role_index]["last_updated"] = str(now)
-					json_user_content["bank"] += (json_income_roles[role_index]["role_income"] * int(passed_time_hours))
+					json_user_content["cash"] += (json_income_roles[role_index]["role_income"] * int(passed_time_hours))
 					# overwrite
 					json_content["userdata"][user_index] = json_user_content
 

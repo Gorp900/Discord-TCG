@@ -36,12 +36,13 @@ from time import sleep
 
 
 # init discord stuff and json handling
-BOT_PREFIX = ("+")  # tupple in case we'd need multiple
-token = "putyourtokenhere"  # add your own token
+BOT_PREFIX = ("/")  # tupple in case we'd need multiple
+token = "" # Return to zero when committing...
 # emojis
 emoji_worked = "✅"
 emoji_error = "❌"
 discord_error_rgb_code = discord.Color.from_rgb(239, 83, 80)
+discord_success_rgb_code = discord.Color.from_rgb(83, 239, 80)
 intents = discord.Intents.all()
 client = Bot(command_prefix=BOT_PREFIX, intents=intents)  # init bot
 db_handler = database.pythonboat_database_handler(client)  # ("database.json")
@@ -83,7 +84,7 @@ async def send_error(channel):
 # ~~~ set custom status ~~~
 @client.event
 async def on_ready():
-	activity = discord.Game(name=f"My default prefix is {BOT_PREFIX}!")
+	activity = discord.Game(name=f"Blood Bowl! Use me with \"{BOT_PREFIX}\"")
 	await client.change_presence(status=discord.Status.online, activity=activity)
 	# log_channel = 807057317396217947 # in your server, select a channel you want log info to be sent to
 									# rightclick and copy id. put the id here. it should look like this : 807057317396217947
@@ -125,6 +126,7 @@ async def on_message(message):
 
 	# check if message is for our bot
 	if not ( message.content.startswith(BOT_PREFIX) ) : return 0;
+	## TODO: If message is not for the bot, perhaps just check the user of the message and add +1 engagement to them?
 
 	# prefix checked, we can continue
 	usedPrefix = message.content[0] # in case we would add more prefixes later
@@ -206,15 +208,11 @@ async def on_message(message):
 	"""
 	# list of commands # their aliases, to make the help section easier
 	all_reg_commands_aliases = {
-		"blackjack" : "bj",
-		"roulette"  : "",
-		"slut": "",
-		"crime": "",
-		"work": "",
-		"rob": "steal",
+		"gorptest": "",
+		"bronze-pack": "bp",
+		"silver-pack": "sp",
+		"gold-pack": "gp",
 		"balance": "bal",
-		"deposit": "dep",
-		"withdraw": "with",
 		"give": "pay",
 		"leaderboard": "lb",
 		"help": "info",
@@ -222,215 +220,12 @@ async def on_message(message):
 	}
 	all_reg_commands = list(all_reg_commands_aliases.keys())
 
-	# --------------
-	# BLACKJACK GAME
-	# --------------
-
-	if command in [ "blackjack", all_reg_commands_aliases["blackjack"] ]:
-		if "none" in param[1] or param[2] != "none": # only bj <bet> ; nothing more than that 1 parameter
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`blackjack <bet>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		try:
-			bet = int(param[1])
-		except Exception as e:
-			print(e)
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Invalid `<bet>` argument given.\n\nUsage:\n`blackjack <bet>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		if bet < 100:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  You must choose at least `100` for your bet.", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		try:
-			# gotta check if enough money, if bet enough, etc etc then do the actual game
-			status, bj_return = await db_handler.blackjack(user, bet, client, channel, username, user_pfp, message)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{bj_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-		# "success" case where code doesnt fail is answering client directly in handler
-		# same for all other games
-		return
-
-	# --------------
-	# ROULETTE GAME
-	# --------------
-
-	# ATTENTION : for now roulette is only playable by ONE person, multiple can't play at once
-
-	elif command in [ "roulette", all_reg_commands_aliases["roulette"] ]: # no alias
-		if "none" in param[1] or "none" in param[2]: # we need 2 parameters
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`roulette <bet> <space>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		# bet must be in 1st place, and an int
-		try:
-			bet = int(param[1])
-		except:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Invalid `<bet>` argument given.\n\nUsage:\n`roulette <bet> <space>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		# space must be in second, and a valid space
-		space = str(param[2])
-		if space not in ["odd", "even", "black", "red"]:
-			fail = 0
-			try:
-				space = int(space)
-				if not(space > 0 and space < 36):
-					fail = 1
-			except Exception as e:
-				print(e)
-				fail = 1
-			if fail == 1:
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{emoji_error}  Invalid `<space>` argument given.\n\nUsage:\n`roulette <bet> <space>`", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-
-		# convert to str, even if number. will be checked in the game itself later
-		space = str(space)
-
-		if bet < 100:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  You must choose at least `100` for your bet.", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		try:
-			# gotta check if enough money, if bet enough, etc etc then do the actual game
-			status, roulette_return = await db_handler.roulette(user, bet, space, client, channel, username, user_pfp, user_mention)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{roulette_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-		return
-
-	# --------------
-	# 	  SLUT
-	# --------------
-
-	elif command in ["slut", all_reg_commands_aliases["slut"]]:  # no alias
-		try:
-			status, slut_return = await db_handler.slut(user, channel, username, user_pfp)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{slut_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-	# --------------
-	# 	  CRIME
-	# --------------
-
-	elif command in ["crime", all_reg_commands_aliases["crime"]]:  # no alias
-		try:
-			status, crime_return = await db_handler.crime(user, channel, username, user_pfp)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{crime_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-	# --------------
-	# 	  WORK
-	# --------------
-
-	elif command in ["work", all_reg_commands_aliases["work"]]:  # no alias
-		try:
-			status, work_return = await db_handler.work(user, channel, username, user_pfp)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{work_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-
-
-	# --------------
-	# 	  ROB
-	# --------------
-
-	elif command in ["rob", all_reg_commands_aliases["rob"]]:  # no alias
-		# you gotta rob someone
-		if "none" in param[1] or param[2] != "none": # we only one param
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`rob <user>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		user_to_rob = str(param[1]) # the mention in channel gives us <@!USERID> OR <@USERIRD>
-		if len(user_to_rob) == 22:
-			flex_start = 3
-		else:  # if len(userbal_to_check) == 21:
-			flex_start = 2
-		user_to_rob = "".join(list(user_to_rob)[flex_start:-1])  # gives us only ID
-
-		try:
-			status, rob_return = await db_handler.rob(user, channel, username, user_pfp, user_to_rob)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{rob_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
 
 	# --------------
 	#    BALANCE
 	# --------------
 
-	elif command in ["balance", all_reg_commands_aliases["balance"]]:
+	if command in ["balance", all_reg_commands_aliases["balance"]]:
 		# you can either check your own balance or someone else's bal
 		if "none" in param[1]:
 			# tell handler to check bal of this user
@@ -468,106 +263,6 @@ async def on_message(message):
 		# go through the handler
 		try:
 			await db_handler.balance(user, channel, userbal_to_check, username_to_check, userpfp_to_check)
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-	# --------------
-	# 	  DEP
-	# --------------
-
-	elif command in ["deposit", all_reg_commands_aliases["deposit"]]:
-		if "none" in param[1] or param[2] != "none": # we need 1 and only 1 parameter
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`deposit <amount or all>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		amount = param[1]
-		# either all or an amount, not some random string
-		if amount != "all":
-			try:
-				# they can use the thousands separator comma
-				newAmount = []
-				for char in amount:
-					if char != ",":
-						newAmount.append(char)
-				amount = "".join(newAmount)
-				amount = int(amount)
-				if amount < 1:
-					color = discord_error_rgb_code
-					embed = discord.Embed(description=f"{emoji_error}  Invalid `<amount or all>` argument given.\n\nUsage:\n`deposit <amount or all>`", color=color)
-					embed.set_author(name=username, icon_url=user_pfp)
-					await channel.send(embed=embed)
-					return
-			except:
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{emoji_error}  Invalid `<amount or all>` argument given.\n\nUsage:\n`deposit <amount or all>`", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-
-		try:
-			amount = str(amount)
-			status, dep_return = await db_handler.deposit(user, channel, username, user_pfp, amount)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{dep_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-
-	# --------------
-	# 	  WITH
-	# --------------
-
-	elif command in ["withdraw", all_reg_commands_aliases["withdraw"]]:
-		if "none" in param[1] or param[2] != "none": # we need 1 and only 1 parameter
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`withdraw <amount or all>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-
-		amount = param[1]
-		# either all or an amount, not some random string
-		if amount != "all":
-			try:
-				# they can use the thousands separator comma
-				newAmount = []
-				for char in amount:
-					if char != ",":
-						newAmount.append(char)
-				amount = "".join(newAmount)
-				amount = int(amount)
-				if amount < 1:
-					color = discord_error_rgb_code
-					embed = discord.Embed(description=f"{emoji_error}  Invalid `<amount or all>` argument given.\n\nUsage:\n`withdraw <amount or all>`", color=color)
-					embed.set_author(name=username, icon_url=user_pfp)
-					await channel.send(embed=embed)
-					return
-			except:
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{emoji_error}  Invalid `<amount or all>` argument given.\n\nUsage:\n`withdraw <amount or all>`", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-
-		try:
-			amount = str(amount)
-			status, with_return = await db_handler.withdraw(user, channel, username, user_pfp, amount)
-
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{with_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
 		except Exception as e:
 			print(e)
 			await send_error(channel)
@@ -752,59 +447,44 @@ async def on_message(message):
 		embed = discord.Embed(title=f"Help System", color=color)
 
 		embed.add_field(name=all_reg_commands[0], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[0]]}  |  "
-														f"Usage: `blackjack <bet>`", inline=False)
-		embed.add_field(name=all_reg_commands[1], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[1]]}  |  "
-														f"Usage: `roulette <bet> <space>`", inline=False)
-		embed.add_field(name=all_reg_commands[2], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[2]]}  |  "
-												f"Usage: `slut`", inline=False)
-		embed.add_field(name=all_reg_commands[3], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[3]]}  |  "
-												f"Usage: `crime`", inline=False)
-		embed.add_field(name=all_reg_commands[4], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[4]]}  |  "
-												f"Usage: `work`", inline=False)
-		embed.add_field(name=all_reg_commands[5], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[5]]}  |  "
-													f"Usage: `rob`", inline=False)
-		embed.add_field(name=all_reg_commands[6], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[6]]}  |  "
 													f"Usage: `balance`", inline=False)
-		embed.add_field(name=all_reg_commands[7], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[7]]}  |  "
-													f"Usage: `deposit <amount>`", inline=False)
-		embed.add_field(name=all_reg_commands[8], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[8]]}  |  "
-													f"Usage: `withdraw <amount>`", inline=False)
-		embed.add_field(name=all_reg_commands[9], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[9]]}  |  "
+		embed.add_field(name=all_reg_commands[1], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[1]]}  |  "
 												f"Usage: `give <member> <amount or all>`", inline=False)
-		embed.add_field(name=all_reg_commands[10], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[10]]}  |  "
+		embed.add_field(name=all_reg_commands[2], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[2]]}  |  "
 													f"Usage: `leaderboard [page] [-cash | -bank | -total]`", inline=False)
-		embed.add_field(name=all_reg_commands[11], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[11]]}  |  "
+		embed.add_field(name=all_reg_commands[3], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[3]]}  |  "
 													f"Usage: `help` - shows this", inline=False)
-		embed.add_field(name=all_reg_commands[12], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[12]]}  |  "
+		embed.add_field(name=all_reg_commands[4], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[4]]}  |  "
 													f"Usage: `module <module, e.g. slut>`", inline=False)
 		# edit stuff
-		embed.set_footer(text="For more info, contact an admin or Kendrik 2.0#7373")
+		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
 
 		#### in 2 parts because one was too long
 
-		embed = discord.Embed(title=f"Help System", color=color)
-		embed.add_field(name="----------------------\n\nSTAFF ONLY", value=f"requires <botmaster> role", inline=False)
-		embed.add_field(name="add-money", value=f"Usage: `add-money <member> <amount>`", inline=False)
-		embed.add_field(name="remove-money", value=f"Usage: `remove-money <member> <amount>`", inline=False)
-		embed.add_field(name="change", value=f"Usage: `change <module> <variable> <new value>`", inline=False)
-		embed.add_field(name="change-currency", value=f"Usage: `change-currency <new emoji name>`", inline=False)
-		embed.add_field(name="----------------------\n\nITEM HANDLING", value=f"create and delete requires <botmaster> role", inline=False)
-		embed.add_field(name="create-item", value=f"Usage: `create-item`", inline=False)
-		embed.add_field(name="delete-item", value=f"Usage: `delete-item <item name>`", inline=False)
-		embed.add_field(name="buy-item", value=f"Usage: `buy-item <item name> <amount>`", inline=False)
-		embed.add_field(name="give-item", value=f"Usage: `give-item <player pinged> <item name> <amount>`", inline=False)
-		embed.add_field(name="inventory", value=f"Usage: `inventory`", inline=False)
-		embed.add_field(name="catalog", value=f"Usage: `catalog <nothing or item name>`", inline=False)
-		embed.add_field(name="----------------------\n\nINCOME ROLES", value=f"create, delete and update requires <botmaster> role", inline=False)
-		embed.add_field(name="add-income-role", value=f"Usage: `add-income-role <role pinged> <income>`", inline=False)
-		embed.add_field(name="remove-income-role", value=f"Usage: `remove-income-role <role pinged>`", inline=False)
-		embed.add_field(name="list-roles", value=f"Usage: `list-roles`", inline=False)
-		embed.add_field(name="update-income", value=f"Usage: `update-income` | income works hourly! automatically updates time elapsed * income", inline=False)
-		# edit stuff
-		embed.set_footer(text="For more info, contact an admin or Kendrik 2.0#7373")
+		if staff_request:
+			embed = discord.Embed(title=f"Help System", color=color)
+			embed.add_field(name="----------------------\n\nSTAFF ONLY", value=f"requires <botmaster> role", inline=False)
+			embed.add_field(name="add-money", value=f"Usage: `add-money <member> <amount>`", inline=False)
+			embed.add_field(name="remove-money", value=f"Usage: `remove-money <member> <amount>`", inline=False)
+			embed.add_field(name="change", value=f"Usage: `change <module> <variable> <new value>`", inline=False)
+			embed.add_field(name="change-currency", value=f"Usage: `change-currency <new emoji name>`", inline=False)
+			embed.add_field(name="----------------------\n\nITEM HANDLING", value=f"create and delete requires <botmaster> role", inline=False)
+			embed.add_field(name="create-item", value=f"Usage: `create-item`", inline=False)
+			embed.add_field(name="delete-item", value=f"Usage: `delete-item <item name>`", inline=False)
+			embed.add_field(name="buy-item", value=f"Usage: `buy-item <item name> <amount>`", inline=False)
+			embed.add_field(name="give-item", value=f"Usage: `give-item <player pinged> <item name> <amount>`", inline=False)
+			embed.add_field(name="inventory", value=f"Usage: `inventory`", inline=False)
+			embed.add_field(name="catalog", value=f"Usage: `catalog <nothing or item name>`", inline=False)
+			embed.add_field(name="----------------------\n\nINCOME ROLES", value=f"create, delete and update requires <botmaster> role", inline=False)
+			embed.add_field(name="add-income-role", value=f"Usage: `add-income-role <role pinged> <income>`", inline=False)
+			embed.add_field(name="remove-income-role", value=f"Usage: `remove-income-role <role pinged>`", inline=False)
+			embed.add_field(name="list-roles", value=f"Usage: `list-roles`", inline=False)
+			embed.add_field(name="update-income", value=f"Usage: `update-income` | income works hourly! automatically updates time elapsed * income", inline=False)
+			# edit stuff
+			embed.set_footer(text="For more info, contact an admin")
 
-		await channel.send(embed=embed)
+			await channel.send(embed=embed)
 
 	# --------------
 	#  MODULE INFO
@@ -1116,6 +796,13 @@ async def on_message(message):
 			add all these to the help menu
 			use-item
 		"""
+
+	elif command in ["gorptest"]:
+		embed = discord.Embed(title="MY_TITLE", description="Here's your card", color=discord_success_rgb_code)
+		embed.set_image(url="https://i.imgur.com/idb5ZTU.jpeg")
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(embed=embed)
+		return
 
 	# ---------------------------
 	#   ITEM CREATION
@@ -1478,56 +1165,70 @@ async def on_message(message):
 		return
 
 	# ---------------------------
-	#   BUY ITEM
+	#   BUY BRONZE PACK
 	# ---------------------------
 
-	elif command in ["buy-item", "get-item"]:
-		# idk why i said you need botmaster to buy items ?
-		"""
-		if not staff_request:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"🔒 Requires botmaster role", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-		"""
-
-		if "none" in param[1]:  # we need item name
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`buy-item <item name> <amount>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-		item_name = param[1]
-
-		if "none" in param[2]:  # we need item amount
-			amount = 1
-		else:
-			amount = param[2]
-
-		try:
-			amount = int(amount)
-			if amount < 1:
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{emoji_error}  Invalid `amount` given.\n\nUsage:\n`buy-item <item name> <amount>`", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"{emoji_error}  Invalid `amount` given.\n\nUsage:\n`buy-item <item name> <amount>`", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
+	elif command in ["bronze-pack", "bp"]:
+		# TODO: A confirmation embed saying "A bronze pack gives X cards for Y cash, are you sure you want to buy?"
 
 		# handler
 		user_role_ids = [randomvar.id for randomvar in message.author.roles]
 
 		try:
-			status, buy_item_return = await db_handler.buy_item(user, channel, username, user_pfp, item_name, amount, user_role_ids, server, message.author)
+			# TODO: we need db_handler to have a "purchase_bronze_pack" method, which gives three random items...
+			#status, buy_item_return = await db_handler.buy_item(user, channel, username, user_pfp, item_name, amount, user_role_ids, server, message.author)
+			status, buy_pack_return = await db_handler.bronze_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
 			if status == "error":
 				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{buy_item_return}", color=color)
+				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				await channel.send(embed=embed)
+				return
+		except Exception as e:
+			print(e)
+			await send_error(channel)
+		return
+	
+	# ---------------------------
+	#   BUY SILVER PACK
+	# ---------------------------
+
+	elif command in ["silver-pack", "sp"]:
+		# TODO: A confirmation embed saying "A silver pack gives X cards for Y cash, are you sure you want to buy?"
+
+		# handler
+		user_role_ids = [randomvar.id for randomvar in message.author.roles]
+
+		try:
+			# TODO: we need db_handler to have a "purchase_silver_pack" method, which gives three random items...
+			status, buy_pack_return = await db_handler.silver_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
+			if status == "error":
+				color = discord_error_rgb_code
+				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				await channel.send(embed=embed)
+				return
+		except Exception as e:
+			print(e)
+			await send_error(channel)
+		return
+	
+	# ---------------------------
+	#   BUY GOLD PACK
+	# ---------------------------
+
+	elif command in ["gold-pack", "gp"]:
+		# TODO: A confirmation embed saying "A gold pack gives X cards for Y cash, are you sure you want to buy?"
+
+		# handler
+		user_role_ids = [randomvar.id for randomvar in message.author.roles]
+
+		try:
+			# TODO: we need db_handler to have a "purchase_gold_pack" method, which gives three random items...
+			status, buy_pack_return = await db_handler.gold_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
+			if status == "error":
+				color = discord_error_rgb_code
+				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
 				embed.set_author(name=username, icon_url=user_pfp)
 				await channel.send(embed=embed)
 				return
@@ -1542,15 +1243,6 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["give-item"]:
-		"""
-		if not staff_request:
-			color = discord_error_rgb_code
-			embed = discord.Embed(description=f"🔒 Requires botmaster role", color=color)
-			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-			return
-		"""
-
 		if "none" in param[1]:  # we need player pinged
 			color = discord_error_rgb_code
 			embed = discord.Embed(description=f"{emoji_error}  Too few arguments given.\n\nUsage:\n`give-item <player pinged> <item name> <amount>`", color=color)
@@ -1640,6 +1332,8 @@ async def on_message(message):
 	elif command in ["inventory"]:
 		# handler
 		try:
+			## TODO OHHH MAN it'd be nice to have a better inventory return...
+			## TODO: Also would be nice to figure out a way to VIEW all the cards on a similar option
 			status, inventory_return = await db_handler.check_inventory(user, channel, username, user_pfp)
 			if status == "error":
 				color = discord_error_rgb_code
@@ -1651,32 +1345,6 @@ async def on_message(message):
 			print(e)
 			await send_error(channel)
 		return
-
-	# ---------------------------
-	#   ITEMS CATALOG
-	# ---------------------------
-
-	elif command in ["catalog", "items", "item-list", "list-items"]:
-
-		if "none" in param[1]:  # we need item name
-			item_check = "default_list"
-		else:
-			item_check = param[1]
-
-		# handler
-		try:
-			status, catalog_return = await db_handler.catalog(user, channel, username, user_pfp, item_check, server)
-			if status == "error":
-				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{catalog_return}", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
-		except Exception as e:
-			print(e)
-			await send_error(channel)
-		return
-
 
 	# ---------------------------
 	#   ADD ROLE INCOME ROLE
@@ -1864,7 +1532,7 @@ async def on_message(message):
 			await send_error(channel)
 
 		color = discord.Color.from_rgb(102, 187, 106)  # green
-		embed = discord.Embed(description=f"{emoji_worked}  Users with registered roles have received their income (into bank account).", color=color)
+		embed = discord.Embed(description=f"{emoji_worked}  Users with registered roles have received their income.", color=color)
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
 
