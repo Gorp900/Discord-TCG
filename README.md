@@ -8,7 +8,7 @@ This bot is still a work in progress.
 The general goal was to take something like UNB, and edit it to have a collection of trading cards as items instead.
 these cards would have references to an actual image file to represent them, and over time, users in discord can earn coins to buy booster packs.
 
-
+Trello Board located at : https://trello.com/invite/b/l5zEB5jt/ATTI7752192a154533784ea5ab93bbb4a6d46CC11B88/bbccg
 
 ### Origional Unb-python README is below:
 

@@ -363,6 +363,7 @@ async def on_message(message):
 	#  LEADERBOARD
 	# --------------
 
+	##: Expand leaderboard!
 	elif command in ["leaderboard", all_reg_commands_aliases["leaderboard"]]:
 		modes = ["-cash", "-bank", "-total"]
 		page_number = 1
@@ -802,6 +803,27 @@ async def on_message(message):
 		## test image: /root/BBTCG/assets/Season 16/Basic/My Little Boney/Apple Tomb.png
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(file=file_to_embed, embed=embed)
+		return
+
+	# ---------------------------
+	#   Show Card!
+	# ---------------------------
+
+	elif command in ["show-card"]:
+		if "none" in param[1]:  # If no item name: random card!
+			item_name = "random"
+		else: item_name = param[1]
+		try:
+			status, showcard_return = await db_handler.display_card(user, channel, username, user_pfp, item_name)
+			if status == "error":
+				color = discord_error_rgb_code
+				embed = discord.Embed(description=f"{showcard_return}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				await channel.send(embed=embed)
+				return
+		except Exception as e:
+			print(e)
+			await send_error(channel)
 		return
 
 	# ---------------------------

@@ -970,6 +970,45 @@ class pythonboat_database_handler:
 		return "success", "success"
 
 	
+	async def display_card(self, user, channel, username, user_pfp, item_name):
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		json_items = json_content["items"]
+
+		if item_name == "random": ## Pull a random card from the user's inventory
+			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+			user_content = json_content["userdata"][user_index]
+			user_items = user_content["items"]
+			item_position = random.randrange(0,len(user_items))
+			item_name = user_items[item_position][0]
+		
+		for cards in json_items: ## Find the card we're looking for from the inventory
+			if cards["name"] == item_name:
+				image_to_show = cards["image_location"]
+				team_name = cards["team_name"]
+				rarity_to_show = cards["rarity"]
+				shiney_card = cards["shiney"]
+				break
+			else:
+				return "error", "can't find card to display"
+			
+		if rarity_to_show == "legendary": color = discord.Color.from_rgb(245, 126, 34) ## Orange
+		elif rarity_to_show == "rare": color = discord.Color.from_rgb(35, 85, 222) ## Blue
+		elif rarity_to_show == "uncommon": color = discord.Color.from_rgb(43, 191, 38) ## Green
+		elif rarity_to_show == "common": color = discord.Color.from_rgb(230, 234, 240) ## White
+
+		embed = discord.Embed(description=f"{item_name}, of {team_name}.\n  Rarity: {rarity_to_show}", color=color)
+		if shiney_card:			
+			file_to_embed = discord.File(image_to_show, filename="image.gif")
+			embed.set_image(url="attachment://image.gif")
+		else:
+			file_to_embed = discord.File(image_to_show, filename="image.png")
+			embed.set_image(url="attachment://image.png")
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(file=file_to_embed, embed=embed)
+		return "success", "success"
+
 	#
 	# ROLE INCOMES - NEW ONE
 	#
