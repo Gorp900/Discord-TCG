@@ -522,12 +522,9 @@ class pythonboat_database_handler:
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
 
-		## Replace any spaces with underscores. it's easier for consistency with names and dirs
-		##item_name= item_name.replace(" ", "_")
-		##team_name= team_name.replace(" ", "_")
 		img_dir = "/root/BBTCG/assets/Season 16/"
 		basic_img_dir = img_dir + "Basic/"
-		shiney_img_dir = img_dir + "Shiney/"
+		shiney_img_dir = img_dir + "Shiny/"
 
 		## Check for dupes
 		for i in range(len(json_items)):
