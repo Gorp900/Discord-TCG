@@ -1,3 +1,17 @@
+# ** CCG in Python Discord Bot **
+This is a modified bot thats designed to run a collectable card game within discord.
+It's based heavily on NoNameSpecified'd Unbelievaboat-python-bot (https://github.com/NoNameSpecified/UnbelievaBoat-Python-Bot)
+Many thanks to NoNameSpecified for creating a basic python implementation of Unbeleivaboat.
+
+## WIP
+This bot is still a work in progress. 
+The general goal was to take something like UNB, and edit it to have a collection of trading cards as items instead.
+these cards would have references to an actual image file to represent them, and over time, users in discord can earn coins to buy booster packs.
+
+
+
+### Origional Unb-python README is below:
+
 # **UnbelievaBoat-like Discord Bot in python**
 ### For questions about the bot and how to set it up: ask me on Discord at *<kendrik2.0>*
 
