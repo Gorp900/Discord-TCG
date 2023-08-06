@@ -516,42 +516,43 @@ class pythonboat_database_handler:
 	# CREATE NEW ITEM
 	#
 
-	## TODO: Need to edit what we're going to need to create an item
-	async def create_new_item(self, item_name, cost, description, duration, stock, roles_id_required, roles_id_to_give,
-							  roles_id_to_remove, max_bal, reply_message):
+	async def create_new_item(self, item_name, team_name, position, rarity):
 		# load json
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
-
 		json_items = json_content["items"]
 
+		## Replace any spaces with underscores. it's easier for consistency with names and dirs
+		##item_name= item_name.replace(" ", "_")
+		##team_name= team_name.replace(" ", "_")
+		img_dir = "/root/BBTCG/assets/Season 16/"
+		basic_img_dir = img_dir + "Basic/"
+		shiney_img_dir = img_dir + "Shiney/"
+
+		## Check for dupes
 		for i in range(len(json_items)):
 			if json_items[i]["name"] == item_name:
 				return "error", "Item with such name already exists."
 
-		# calculate item duration
-		today = datetime.today()
-		print(today)
-		expiration_date = today + timedelta(days=duration)
-
-		print("expiration date : ", expiration_date)
-
-		## TODO: Item Vars
+		## Add basic item
 		json_items.append({
 			"name": item_name,
-			"price": cost,
-			"description": description,
-			"duration": duration,
-			"amount_in_stock": stock,
-			"required_roles": roles_id_required,
-			"given_roles": roles_id_to_give,
-			"removed_roles": roles_id_to_remove,
-			"maximum_balance": max_bal,
-			"reply_message": reply_message,
-			"expiration_date": str(expiration_date)
+			"team_name": team_name,
+			"image_location": basic_img_dir + team_name + "/" + item_name + ".png",
+			"shiney": False,
+			"position": position,
+			"rarity": rarity
+		})
+		json_items.append({
+			"name": "Shiney " + item_name,
+			"team_name": team_name,
+			"image_location": shiney_img_dir + team_name + "/" + item_name + ".gif",
+			"shiney": True,
+			"position": position,
+			"rarity": rarity
 		})
 
-		# overwrite, end
+		# overwrite, save current data
 		json_content["items"] = json_items
 		self.overwrite_json(json_content)
 
@@ -743,45 +744,114 @@ class pythonboat_database_handler:
 	# BRONZE SILVER GOLD CARD PACKS
 	#
 
-	async def bronze_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
-		
-		for x in range(3): ## 3 card pulls...
+	async def buy_pack(self, user, channel, username, user_pfp, pack_type, user_roles, server_object, user_object):
+		if pack_type == "bronze":
+			cards_to_draw = 3
+			shineys_possible = 1
+			shiney_chance = 1
+			cost = 100
+		elif pack_type == "silver":
+			cards_to_draw = 4
+			shineys_possible = 1
+			shiney_chance = 3
+			cost = 175
+		elif pack_type == "gold":
+			cards_to_draw = 5
+			shineys_possible = 2
+			shiney_chance = 1
+			cost = 300
+
+		## Quickly check if we can afford this...
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		user_content = json_content["userdata"][user_index]
+		user_cash = user_content["cash"]
+		if user_cash < cost:
+			return "error", f"Error! Not enough money in cash to purchase.\nto pay: {cost} ; in cash: {user_cash}"
+		user_content["cash"] -= cost
+		json_content["userdata"][user_index] = user_content
+		self.overwrite_json(json_content)
+
+		## Construct Groupings
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		json_items = json_content["items"]
+		shiney_l = []; shiney_r = []; shiney_uc = []; shiney_c = []
+		basic_l = []; basic_r = []; basic_uc = []; basic_c = []
+
+		db_size = len(json_items)
+		for x in range(db_size):
+			if (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "common"): shiney_c.append(json_items[x])
+			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "uncommon"): shiney_uc.append(json_items[x])
+			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "rare"): shiney_r.append(json_items[x])
+			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "legendary"): shiney_l.append(json_items[x])
+			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "common"): basic_c.append(json_items[x])
+			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "uncommon"): basic_uc.append(json_items[x])
+			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "rare"): basic_r.append(json_items[x])
+			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "legendary"): basic_l.append(json_items[x])
+
+		while cards_to_draw != 0:
 			# load json
 			json_file = open(self.pathToJson, "r")
 			json_content = json.load(json_file)
 			json_items = json_content["items"]
 			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 			user_content = json_content["userdata"][user_index]
-			
-			# see the odds of shiney
-			if random.randrange(0,100) >= 95: ## 5% chance
-				shiney_get = True
-			else: shiney_get = False
 
-			## TODO: Need to redo the random number based on whether we should be getting a shiney or not
-			## 	Possibly just use a while (not confirmed_card) ...
-			pull_number = random.randrange(0,len(json_items))
-			if json_items[pull_number]["shiney"] == True :
-				if shiney_get:
-					confirmed_card = json_items[pull_number]
-				else:
-					confirmed_card = json_items[pull_number+1]
-			else:
-				if shiney_get:
-					confirmed_card = json_items[pull_number]
-				else:
-					confirmed_card = json_items[pull_number+1]
-			# get item name and card_image
+			# see the odds of shiney
+			shiney_get = False
+			if (random.randrange(0,100) <= shiney_chance and shineys_possible > 0) or (pack_type == "gold" and cards_to_draw == 5):
+				shiney_get = True
+				shineys_possible -= 1
+			## Perform Card Rarity weighting
+			card_rarity_number = random.randrange(0,33) ## range is 0-32 included
+			if card_rarity_number <= 2:
+				card_rarity_get = "legendary"
+				color = discord.Color.from_rgb(245, 126, 34) ## Orange
+			elif card_rarity_number >= 3 and card_rarity_number <= 7:
+				card_rarity_get = "rare"
+				color = discord.Color.from_rgb(35, 85, 222) ## Blue
+			elif card_rarity_number >= 8 and card_rarity_number <= 18:
+				card_rarity_get = "uncommon"
+				color = discord.Color.from_rgb(43, 191, 38) ## Green
+			elif card_rarity_number >= 19:
+				card_rarity_get = "common"
+				color = discord.Color.from_rgb(230, 234, 240) ## White
+
+			## Time to pull a card snd see if the requirements match our rando numbers
+			if (shiney_get == True) and (card_rarity_get == "legendary") :
+				draw_pool = shiney_l
+			elif (shiney_get == True) and (card_rarity_get == "rare") :
+				draw_pool = shiney_r
+			elif (shiney_get == True) and (card_rarity_get == "uncommon") :
+				draw_pool = shiney_uc
+			elif (shiney_get == True) and (card_rarity_get == "common") :
+				draw_pool = shiney_c
+			elif (shiney_get == False) and (card_rarity_get == "legendary") :
+				draw_pool = basic_l
+			elif (shiney_get == False) and (card_rarity_get == "rare") :
+				draw_pool = basic_r
+			elif (shiney_get == False) and (card_rarity_get == "uncommon") :
+				draw_pool = basic_uc
+			elif (shiney_get == False) and (card_rarity_get == "common") :
+				draw_pool = basic_c
+			pull_number = random.randrange(0,len(draw_pool))
+			confirmed_card = draw_pool[pull_number]
 			item_name = confirmed_card["name"]
-			card_image = confirmed_card["image_url"]
+			card_image = confirmed_card["image_location"]
 
 			## Display card pull
-			color = self.discord_green_rgb_code
-			embed = discord.Embed(description=f"You found a {item_name} ", color=color)
-			embed.set_image(url=card_image)
+			embed = discord.Embed(description=f"You found a {item_name}!\n({card_rarity_get})", color=color)
+			if shiney_get == False: 
+				image_to_embed = discord.File(card_image, filename="image.png")
+				embed.set_image(url="attachement://image.png")
+			if shiney_get == True: 
+				image_to_embed = discord.File(card_image, filename="image.gif")
+				embed.set_image(url="attachement://image.gif")
 			embed.set_author(name=username, icon_url=user_pfp)
-			await channel.send(embed=embed)
-	
+			await channel.send(file=image_to_embed, embed=embed)
+
 			## Add item to inventory
 			if user_content["items"] == "none":
 				user_content["items"] = [[item_name, 1]]
@@ -799,15 +869,10 @@ class pythonboat_database_handler:
 			json_content["userdata"][user_index] = user_content
 			json_content["items"] = json_items
 			self.overwrite_json(json_content)
+			cards_to_draw -= 1
 			## end loop here
 		## end, return
-		return "bought bronze pack", "success"
-	
-	async def silver_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
-		return "bought silver pack", "success"
-	
-	async def gold_pack(self, user, channel, username, user_pfp, user_roles, server_object, user_object):
-		return "bought gold pack", "success"
+		return "bought pack", "success"
 
 	#
 	# GIVE ITEM
@@ -891,7 +956,7 @@ class pythonboat_database_handler:
 		else:
 			inventory_checkup = ""
 			for i in range(len(items)):
-				inventory_checkup += f"`{items[i][0]}`; amount: `{items[i][1]}`\n"
+				inventory_checkup += f"`{items[i][0]}`\n\t amount: `{items[i][1]}`\n"
 
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
@@ -926,7 +991,6 @@ class pythonboat_database_handler:
 			"role_income": income,
 			"last_updated": now
 		})
-
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(
 			description=f"New income role added.\nrole_id : {income_role_id}, income : {str(self.currency_symbol)} **{'{:,}'.format(int(income))}**",
@@ -985,7 +1049,7 @@ class pythonboat_database_handler:
 			role = discord.utils.get(server_object.roles, id=int(json_income_roles[i]["role_id"]))
 			ping_role = f"<@&{json_income_roles[i]['role_id']}>"
 
-			role_list_report += f"Role name: {ping_role}\n" \
+			role_list_report += f"Role name: "+str(ping_role)+"\n" \
 								f"Role income: {self.currency_symbol} {'{:,}'.format(json_income_roles[i]['role_income'])}\n\n"
 
 		role_list_report += "---------------------------------"
@@ -1016,20 +1080,25 @@ class pythonboat_database_handler:
 
 		for role_index in range(len(json_income_roles)):
 			role_id = json_income_roles[role_index]["role_id"]
+			print(f"GORP: Role is {role_id}")
+
 
 			# new edit for hourly income:
 			now = datetime.now()
-			print("p1")
 			last_income_update_string = json_income_roles[role_index]["last_updated"]
-			print("p2")
 			# get a timeobject from the string
 			last_income_update = datetime.strptime(last_income_update_string, '%Y-%m-%d %H:%M:%S.%f')
 			# calculate difference, see if it works
 			passed_time = now - last_income_update
 			passed_time_hours = passed_time.total_seconds() // 3600.0
+			print(f"GORP: Pased_time is {passed_time} // in hours = {passed_time_hours} ")
 
+			print("Gorp: Time to find all members in roles and give 'em cash")
+			# role = discord.utils.get(server_object.roles, id=int(role_id))
 			role = discord.utils.get(server_object.roles, id=int(role_id))
+			print(f"GORP: Role is {role}")
 			for member in role.members:
+				print(f"GORP: member  is {member}")
 				try:
 					# also to create user in case he isnt registered yet
 					user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)

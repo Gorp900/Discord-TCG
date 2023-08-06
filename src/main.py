@@ -37,7 +37,8 @@ from time import sleep
 
 # init discord stuff and json handling
 BOT_PREFIX = ("/")  # tupple in case we'd need multiple
-token = "" # Return to zero when committing...
+
+#token = "" # Return to zero when committing...
 # emojis
 emoji_worked = "✅"
 emoji_error = "❌"
@@ -445,17 +446,12 @@ async def on_message(message):
 	elif command in ["help", all_reg_commands_aliases["help"]]:
 		color = discord.Color.from_rgb(3, 169, 244)
 		embed = discord.Embed(title=f"Help System", color=color)
-
-		embed.add_field(name=all_reg_commands[0], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[0]]}  |  "
-													f"Usage: `balance`", inline=False)
-		embed.add_field(name=all_reg_commands[1], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[1]]}  |  "
-												f"Usage: `give <member> <amount or all>`", inline=False)
-		embed.add_field(name=all_reg_commands[2], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[2]]}  |  "
-													f"Usage: `leaderboard [page] [-cash | -bank | -total]`", inline=False)
-		embed.add_field(name=all_reg_commands[3], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[3]]}  |  "
-													f"Usage: `help` - shows this", inline=False)
-		embed.add_field(name=all_reg_commands[4], value=f"Alias: {all_reg_commands_aliases[all_reg_commands[4]]}  |  "
-													f"Usage: `module <module, e.g. slut>`", inline=False)
+		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cash and cards", inline=False)
+		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cash to <user> pinged", inline=False)
+		embed.add_field(name="give-item", value=f"Usage: `/give-item <user> <item> <amount>`\nSends <item> to <user> pinged.  If <amount> is left blank, it sends a single item", inline=False)
+		embed.add_field(name="bronze-pack", value=f"Usage: `/bronze-pack` OR `/bp` \nPurchases a Bronze Pack of cards for 100 Coins", inline=False)
+		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Bronze Pack of cards for 175 Coins", inline=False)
+		embed.add_field(name="gold-pack", value=f"Usage: `/gold-pack` OR `/gp` \nPurchases a Bronze Pack of cards for 300 Coins", inline=False)
 		# edit stuff
 		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
@@ -799,9 +795,13 @@ async def on_message(message):
 
 	elif command in ["gorptest"]:
 		embed = discord.Embed(title="MY_TITLE", description="Here's your card", color=discord_success_rgb_code)
-		embed.set_image(url="https://i.imgur.com/idb5ZTU.jpeg")
+		test_image = "/root/BBTCG/assets/Season 16/Shiny/DaRedskullzz/Brock Leskull.gif"
+		file_to_embed = discord.File(test_image, filename="image.gif")
+		#embed.set_image(url="https://i.imgur.com/idb5ZTU.jpeg")
+		embed.set_image(url="attachment://image.gif")
+		## test image: /root/BBTCG/assets/Season 16/Basic/My Little Boney/Apple Tomb.png
 		embed.set_author(name=username, icon_url=user_pfp)
-		await channel.send(embed=embed)
+		await channel.send(file=file_to_embed, embed=embed)
 		return
 
 	# ---------------------------
@@ -848,260 +848,55 @@ async def on_message(message):
 				# good input
 				item_name = user_input
 				first_embed = discord.Embed(title="Item Info", color=color)
-				first_embed.add_field(name="Name", value=f"{item_name}")
+				first_embed.add_field(name="name", value=f"{item_name}")
 				first_embed.set_footer(text="Type cancel to quit")
-				next_info = ":two: How much should the item cost to purchase?"
+				next_info = ":two: What Team does this player belong to?"
 				last_report = await channel.send(next_info, embed=first_embed)
 				checkpoints += 1
 
 			elif checkpoints == 2:
-				# check 2: cost
+				# check 2: teamname
 				try:
-					cost = int(user_input)
-					if cost < 1:
-						await channel.send(f"{emoji_error}  Invalid price given. Please try again or type cancel to exit.")
+					team_name = user_input
+					if len(user_input) > 200:
+						await channel.send(f"{emoji_error} The maximum length for an team name is 200 characters. Please try again.")
 						continue
 				except:
-					await channel.send(f"{emoji_error}  Invalid price given. Please try again or type cancel to exit.")
+					await channel.send(f"{emoji_error}  Something Wrong with the team name?")
 					continue
-				first_embed.add_field(name="Price", value=f"{cost}")
+				first_embed.add_field(name="team_name", value=f"{team_name}")
 				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":three: Please provide a description of the item.\nThis should be no more than 200 characters."
+				next_info = ":three: What is the rarity of the item? (Common, Uncommon, Rare, Legendary)"
 				await last_report.edit(content=next_info, embed=first_embed)
 				checkpoints += 1
 
 			elif checkpoints == 3:
-				# check 3: description
-				if len(user_input) > 200:
-					await channel.send(f"{emoji_error} The maximum length for an items description is 200 characters. Please try again.")
+				# check 3: rarity
+				try:
+					rarity = user_input
+					if rarity != "common" and rarity != "uncommon" and rarity != "rare" and rarity != "legendary":
+						await channel.send(f"{emoji_error}  Invalid rarity given. Please try again or type cancel to exit.")
+						continue
+				except:
+					await channel.send(f"{emoji_error}  Invalid rarity given. Please try again or type cancel to exit.")
 					continue
-				if user_input == "skip":
-					description = "none"
-				else:
-					description = user_input
-				first_embed.add_field(name="Description", value=f"{description}", inline=False)
+				first_embed.add_field(name="rarity", value=f"{rarity}")
 				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":four: How long should this item stay in the store for? (integer, in days)\nMinimum duration is 1 day.\nIf no limit, just reply `skip`."
+				next_info = ":four: What Position is this player?.\nThis should be no more than 200 characters."
 				await last_report.edit(content=next_info, embed=first_embed)
 				checkpoints += 1
 
 			elif checkpoints == 4:
-				# check 4: duration
-				try:
-					duration = int(user_input)
-					if duration < 1:
-						await channel.send(f"{emoji_error}  Invalid time duration given. Please try again or type cancel to exit.")
-						continue
-				except:
-					if user_input == "skip":
-						#duration = "none"
-						duration = 99999 # the problem is that database.py always wants an int to calculate an expiration date.
-									   # so ill just put it to 993 days for now, maybe ill add a real fix later
-									   # edit: now changed to 99999 which should be enough, will show as "unlimited"
-					else:
-						await channel.send(f"{emoji_error}  Invalid time duration given. Please try again or type cancel to exit.")
-						continue
-				if duration == 99999:
-					duration_str = "unlimited"
-				else:
-					duration_str = int(user_input)
-				first_embed.add_field(name="Time remaining", value=f"{duration} days left")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":five: How much stock of this item will there be?\nIf unlimited, just reply `skip` or `infinity`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 5:
-				# check 5: stock
-				try:
-					stock = int(user_input)
-					if stock < 1:
-						await channel.send(f"{emoji_error}  Invalid stock amount given. Please try again or type cancel to exit.")
-						continue
-				except:
-					if user_input == "skip" or user_input == "infinity":
-						stock = "unlimited"
-					else:
-						await channel.send(f"{emoji_error}  Invalid stock amount given. Please try again or type cancel to exit.")
-						continue
-
-				first_embed.add_field(name="Stock remaining", value=f"{stock}")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":six: What role must the user already have in order to buy this item?\nIf none, just reply `skip`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 6:
-				# check 6: required role
-				try:
-					if user_input == "skip":
-						raise ValueError
-
-					roles = user_input
-					roles = roles.split(" ")
-					roles_clean = []
-					for i in range(len(roles)):
-						if len(roles[i]) == 22:
-							flex_start = 3
-						else:  # if len() == 21:
-							flex_start = 2
-						roles_clean.append( "".join(list(roles[i])[flex_start:-1]) )  # gives us only ID
-					print(roles, roles_clean)
-
-					required_roles = ""
-					for role_id in roles_clean:
-						try:
-							role = discord.utils.get(server.roles, id=int(role_id))
-							print(role)
-							required_roles += f"{str(role.mention)} "
-						except:
-							await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-							raise NameError
-
-				except NameError:
-					continue
-
-				except ValueError:
-					if user_input == "skip":
-						required_roles = "none"
-
-				except Exception as e:
-					await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-					continue
-				try:
-					roles_id_required = roles_clean
-				except:
-					roles_id_required = "none"
-				first_embed.add_field(name="Role required", value=f"{required_roles}")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":seven: What role do you want to be given when this item is bought?\nIf none, just reply `skip`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 7:
-				# check 7: role to be given when item bought
-				try:
-					if user_input == "skip":
-						raise ValueError
-
-					roles = user_input
-					roles = roles.split(" ")
-					roles_clean = []
-					for i in range(len(roles)):
-						if len(roles[i]) == 22:
-							flex_start = 3
-						else:  # if len() == 21:
-							flex_start = 2
-						roles_clean.append("".join(list(roles[i])[flex_start:-1]))  # gives us only ID
-					print(roles, roles_clean)
-
-					roles_give = ""
-					for role_id in roles_clean:
-						try:
-							role = discord.utils.get(server.roles, id=int(role_id))
-							print(role)
-							roles_give += f"{str(role.mention)} "
-						except:
-							await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-							raise NameError
-
-				except NameError:
-					continue
-
-				except ValueError:
-					if user_input == "skip":
-						roles_give = "none"
-
-				except Exception as e:
-					await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-					continue
-
-				try:
-					roles_id_to_give = roles_clean
-				except:
-					roles_id_to_give = "none"
-				first_embed.add_field(name="Role given", value=f"{roles_give}")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":eight: What role do you want to be removed from the user when this item is bought?\nIf none, just reply `skip`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 8:
-				# check 8: role to be removed when item bought
-				try:
-					if user_input == "skip":
-						raise ValueError
-
-					roles = user_input
-					roles = roles.split(" ")
-					roles_clean = []
-					for i in range(len(roles)):
-						if len(roles[i]) == 22:
-							flex_start = 3
-						else:  # if len() == 21:
-							flex_start = 2
-						roles_clean.append("".join(list(roles[i])[flex_start:-1]))  # gives us only ID
-					print(roles, roles_clean)
-
-					roles_remove = ""
-					for role_id in roles_clean:
-						try:
-							role = discord.utils.get(server.roles, id=int(role_id))
-							print(role)
-							roles_remove += f"{str(role.mention)} "
-						except:
-							await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-							raise NameError
-
-				except NameError:
-					continue
-
-				except ValueError:
-					if user_input == "skip":
-						roles_remove = "none"
-
-				except Exception as e:
-					await channel.send(f"{emoji_error}  Invalid role given. Please try again.")
-					continue
-
-				try:
-					roles_id_to_remove = roles_clean
-				except:
-					roles_id_to_remove = "none"
-				first_embed.add_field(name="Role removed", value=f"{roles_remove}")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":nine: What is the maximum balanace a user can have in order to buy this item?\nIf none, just reply `skip`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 9:
-				# check 9: max balance
-				try:
-					max_bal = int(user_input)
-					if max_bal < 1:
-						await channel.send(f"{emoji_error}  Invalid minimum balance given. Please try again or type cancel to exit.")
-						continue
-				except:
-					if user_input == "skip":
-						max_bal = "none"
-					else:
-						await channel.send(f"{emoji_error}  Invalid minimum balance given. Please try again or type cancel to exit.")
-						continue
-				first_embed.add_field(name="Required balance", value=f"{max_bal}")
-				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
-				next_info = ":keycap_ten: What message do you want the bot to reply with, when the item is bought?\nIf none, just reply `skip`."
-				await last_report.edit(content=next_info, embed=first_embed)
-				checkpoints += 1
-
-			elif checkpoints == 10:
-				# check 10: reply message
-				if len(user_input) > 150:
-					await channel.send(f"{emoji_error} The maximum length for a reply message is 150 characters. Please try again.")
+				# check 4: position
+				if len(user_input) > 200:
+					await channel.send(f"{emoji_error} The maximum length for an items description is 200 characters. Please try again.")
 					continue
 				if user_input == "skip":
-					user_input = f"Congrats on buying the item."
-				reply_message = user_input
-				first_embed.add_field(name="Reply message", value=f"{reply_message}", inline=False)
+					position = "generic"
+				else:
+					position = user_input
+				first_embed.add_field(name="position", value=f"{position}", inline=False)
+				first_embed.set_footer(text="Type cancel to quit or skip to skip this option")
 				next_info = f"{emoji_worked}  Item created successfully!"
 				await last_report.edit(content=next_info, embed=first_embed)
 				checkpoints = -1
@@ -1111,7 +906,7 @@ async def on_message(message):
 		# handler
 
 		try:
-			status, create_item_return = await db_handler.create_new_item(item_name, cost, description, duration, stock, roles_id_required, roles_id_to_give, roles_id_to_remove, max_bal, reply_message)
+			status, create_item_return = await db_handler.create_new_item(item_name, team_name, position, rarity) 
 			if status == "error":
 				color = discord_error_rgb_code
 				embed = discord.Embed(description=f"{create_item_return}", color=color)
@@ -1169,15 +964,24 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["bronze-pack", "bp"]:
-		# TODO: A confirmation embed saying "A bronze pack gives X cards for Y cash, are you sure you want to buy?"
+		embed = discord.Embed(description=f"A Bronze pack costs 100 coins, and contains 3 cards.\nType `yes` to confirm or anything else to cancel.")
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(embed=embed)
+		user_input = ""
+		# get input first
+		user_input = await get_user_input(message)
+		print(user_input)
+		# check if user wants cancel
+		if user_input != "yes":
+			await channel.send(f"{emoji_error}  Cancelled command.")
+			return
 
 		# handler
 		user_role_ids = [randomvar.id for randomvar in message.author.roles]
 
 		try:
-			# TODO: we need db_handler to have a "purchase_bronze_pack" method, which gives three random items...
-			#status, buy_item_return = await db_handler.buy_item(user, channel, username, user_pfp, item_name, amount, user_role_ids, server, message.author)
-			status, buy_pack_return = await db_handler.bronze_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
+			pack_type = "bronze"
+			status, buy_pack_return = await db_handler.buy_pack(user, channel, username, user_pfp, pack_type, user_role_ids, server, message.author)
 			if status == "error":
 				color = discord_error_rgb_code
 				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
@@ -1194,14 +998,24 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["silver-pack", "sp"]:
-		# TODO: A confirmation embed saying "A silver pack gives X cards for Y cash, are you sure you want to buy?"
+		embed = discord.Embed(description=f"A Silver pack costs 175 coins, and contains 4 cards.\nType `yes` to confirm or anything else to cancel.")
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(embed=embed)
+		user_input = ""
+		# get input first
+		user_input = await get_user_input(message)
+		print(user_input)
+		# check if user wants cancel
+		if user_input != "yes":
+			await channel.send(f"{emoji_error}  Cancelled command.")
+			return
 
 		# handler
 		user_role_ids = [randomvar.id for randomvar in message.author.roles]
 
 		try:
-			# TODO: we need db_handler to have a "purchase_silver_pack" method, which gives three random items...
-			status, buy_pack_return = await db_handler.silver_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
+			pack_type = "silver"
+			status, buy_pack_return = await db_handler.buy_pack(user, channel, username, user_pfp, pack_type, user_role_ids, server, message.author)
 			if status == "error":
 				color = discord_error_rgb_code
 				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
@@ -1218,14 +1032,24 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["gold-pack", "gp"]:
-		# TODO: A confirmation embed saying "A gold pack gives X cards for Y cash, are you sure you want to buy?"
+		embed = discord.Embed(description=f"A Gold pack costs 300 coins, and contains 5 cards with a single guarenteed shiney.\nType `yes` to confirm or anything else to cancel.")
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(embed=embed)
+		user_input = ""
+		# get input first
+		user_input = await get_user_input(message)
+		print(user_input)
+		# check if user wants cancel
+		if user_input != "yes":
+			await channel.send(f"{emoji_error}  Cancelled command.")
+			return
 
 		# handler
 		user_role_ids = [randomvar.id for randomvar in message.author.roles]
 
 		try:
-			# TODO: we need db_handler to have a "purchase_gold_pack" method, which gives three random items...
-			status, buy_pack_return = await db_handler.gold_pack(user, channel, username, user_pfp, user_role_ids, server, message.author)
+			pack_type = "gold"
+			status, buy_pack_return = await db_handler.buy_pack(user, channel, username, user_pfp, pack_type, user_role_ids, server, message.author)
 			if status == "error":
 				color = discord_error_rgb_code
 				embed = discord.Embed(description=f"{buy_pack_return}", color=color)
@@ -1367,7 +1191,6 @@ async def on_message(message):
 			return
 
 		# check role
-
 		income_role_raw = param[1]
 		income_role = ""
 		if len(income_role_raw) == 22:
@@ -1391,7 +1214,7 @@ async def on_message(message):
 			print(e)
 			await channel.send(f"{emoji_error}  Invalid role given, (second check not passed either). Please try again.")
 			return
-
+		
 		# check amount
 		amount = param[2]
 		# they can use the thousands separator comma

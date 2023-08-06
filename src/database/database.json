@@ -7,9 +7,22 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 2000,
+            "cash": 5000,
             "engagement": 0,
-            "items": "none"
+            "items": [
+                [
+                    "test_card",
+                    6
+                ],
+                [
+                    "test_card3",
+                    1
+                ],
+                [
+                    "test_card2",
+                    2
+                ]
+            ]
         }
     ],
     "variables": [],
@@ -21,42 +34,43 @@
     ],
     "items": [
         {
-            "name": "whoopiedoo1",
-            "price": 10,
-            "description": "my first test item",
-            "duration": 99999,
-            "amount_in_stock": "unlimited",
-            "required_roles": "none",
-            "given_roles": "none",
-            "removed_roles": "none",
-            "maximum_balance": "none",
-            "reply_message": "Congrats on buying the item.",
-            "expiration_date": "2297-05-16 18:59:53.613365"
+            "name": "test_card",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "common"
         },
         {
-            "name": "fjdhhsf",
-            "price": 20,
-            "description": "djfsal",
-            "duration": 99999,
-            "amount_in_stock": "unlimited",
-            "required_roles": "none",
-            "given_roles": "none",
-            "removed_roles": "none",
-            "maximum_balance": "none",
-            "reply_message": "Congrats on buying the item.",
-            "expiration_date": "2297-05-16 21:29:13.523432"
+            "name": "test_card2",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "uncommon"
+        },
+        {
+            "name": "test_card3",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiney test_card4",
+            "team_name": "daredskullzz",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiney/DaRedskullzz/Alberto Del Riskull.gif",
+            "shiney": true,
+            "position": "generic",
+            "rarity": "common"
         }
     ],
     "income_roles": [
         {
             "role_id": "136399736224624711",
-            "role_income": 10,
-            "last_updated": "2023-08-02 20:48:08.986390"
-        },
-        {
-            "role_id": "136399775021928499",
-            "role_income": 15,
-            "last_updated": "2023-08-02 20:48:35.887034"
+            "role_income": 11,
+            "last_updated": "2023-08-06 18:01:35.508680"
         }
     ]
 }
