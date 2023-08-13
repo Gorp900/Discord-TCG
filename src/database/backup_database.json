@@ -3,138 +3,74 @@
         {
             "user_id": 100000000000000000,
             "cash": 100.0,
-            "bank": 100.0,
-            "items": "none",
-            "last_slut": "2021-01-01 00:00:00.0",
-            "last_work": "2021-01-01 00:00:00.0",
-            "last_crime": "2021-01-01 00:00:00.0",
-            "last_rob": "2021-01-01 00:00:00.0"
+            "items": "none"
         },
         {
             "user_id": 185112370996183042,
-            "cash": 1190,
-            "bank": 0,
+            "cash": 6933,
+            "engagement": 0,
             "items": [
                 [
-                    "testitem2",
+                    "test_card",
+                    6
+                ],
+                [
+                    "test_card3",
                     1
                 ],
                 [
-                    "testitem1",
-                    1
+                    "test_card2",
+                    2
                 ]
-            ],
-            "last_slut": "none",
-            "last_work": "none",
-            "last_crime": "none",
-            "last_rob": "none"
-        }
-    ],
-    "variables": [
-        {
-            "name": "slut",
-            "delay": 10,
-            "min_revenue": 50,
-            "max_revenue": 400,
-            "proba": 50,
-            "win_phrases": [
-                "You made",
-                "Your dad likes it so much he gives you"
-            ],
-            "lose_phrases": [
-                "You were fined",
-                "Your uncle didn't like the encounter. You pay"
-            ],
-            "min_lose_amount_percentage": 2,
-            "max_lose_amount_percentage": 5
-        },
-        {
-            "name": "crime",
-            "delay": 60,
-            "min_revenue": 100,
-            "max_revenue": 1200,
-            "proba": 30,
-            "win_phrases": [
-                "You commited a crime and got",
-                "You robbed a bank and got"
-            ],
-            "lose_phrases": [
-                "You were fined",
-                "MacGyver finds you, you pay"
-            ],
-            "min_lose_amount_percentage": 10,
-            "max_lose_amount_percentage": 20
-        },
-        {
-            "name": "work",
-            "delay": 10,
-            "min_revenue": 51,
-            "max_revenue": 200,
-            "win_phrases": [
-                "You worked at SubWay and made",
-                "You helped someone do his homework and got"
-            ]
-        },
-        {
-            "name": "rob",
-            "delay": 45,
-            "proba": 50,
-            "min_gain_amount_percentage": 10,
-            "max_gain_amount_percentage": 20,
-            "min_lose_amount_percentage": 10,
-            "max_lose_amount_percentage": 20,
-            "win_phrases": [
-                "You robbed and got"
-            ],
-            "lose_phrases": [
-                "You were caught robbing and have to pay"
             ]
         }
     ],
+    "variables": [],
     "symbols": [
         {
             "name": "currency_symbol",
-            "symbol_emoji": "my_currency_emoji_clear_name_only"
+            "symbol_emoji": "ball"
         }
     ],
     "items": [
         {
-            "name": "testitem1",
-            "price": 10,
-            "description": "my first test item",
-            "duration": 99999,
-            "amount_in_stock": "unlimited",
-            "required_roles": "none",
-            "given_roles": "none",
-            "removed_roles": "none",
-            "maximum_balance": "none",
-            "reply_message": "Congrats on buying the item.",
-            "expiration_date": "2297-05-16 18:59:53.613365"
+            "name": "test_card",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "common"
         },
         {
-            "name": "testitem2",
-            "price": 50,
-            "description": "my 2nd test item",
-            "duration": 99999,
-            "amount_in_stock": "unlimited",
-            "required_roles": "none",
-            "given_roles": "none",
-            "removed_roles": "none",
-            "maximum_balance": "none",
-            "reply_message": "woah!",
-            "expiration_date": "2297-05-16 19:00:43.688084"
+            "name": "test_card2",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "uncommon"
+        },
+        {
+            "name": "test_card3",
+            "team_name": "test_team",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Alberto Del Riskull.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "rare"
+        },
+        {
+            "name": "shiney test_card4",
+            "team_name": "daredskullzz",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/DaRedskullzz/Alberto Del Riskull.gif",
+            "shiney": true,
+            "position": "generic",
+            "rarity": "common"
         }
     ],
     "income_roles": [
         {
-            "role_id": "136399736224624711",
-            "role_income": 10,
-            "last_updated": "2023-08-02 20:48:08.986390"
-        },
-        {
-            "role_id": "136399775021928499",
-            "role_income": 15,
-            "last_updated": "2023-08-02 20:48:35.887034"
+            "role_id": "1136399736224624711",
+            "role_income": 2,
+            "last_updated": "2023-08-13 17:26:05.287283"
         }
     ]
 }

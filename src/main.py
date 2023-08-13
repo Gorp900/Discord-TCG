@@ -126,8 +126,9 @@ async def on_message(message):
 	"""
 
 	# check if message is for our bot
-	if not ( message.content.startswith(BOT_PREFIX) ) : return 0;
-	## TODO: If message is not for the bot, perhaps just check the user of the message and add +1 engagement to them?
+	if not ( message.content.startswith(BOT_PREFIX) ) : 
+		## db_handler.non_command_engagement_boost(message.author.id) ## TODO: Need to handle this, but since this check comes so early, what if a coach is new?  How to track last message?
+		return 0;
 
 	# prefix checked, we can continue
 	usedPrefix = message.content[0] # in case we would add more prefixes later
@@ -803,6 +804,8 @@ async def on_message(message):
 		## test image: /root/BBTCG/assets/Season 16/Basic/My Little Boney/Apple Tomb.png
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(file=file_to_embed, embed=embed)
+
+		ret_status = await db_handler.non_command_engagement_boost(user)
 		return
 
 	# ---------------------------

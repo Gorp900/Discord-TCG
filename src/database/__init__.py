@@ -127,7 +127,7 @@ class pythonboat_database_handler:
 		# so we automatically create him
 		data_to_search.append({
 			"user_id": user_to_find,
-			"cash": 0,
+			"cash": 150,
 			"engagement": 0,
 			# "balance" : cash + bank
 			# "roles": "None" ; will be checked when calculating weekly auto-role-income
@@ -147,6 +147,34 @@ class pythonboat_database_handler:
 	"""
 	CLIENT-DB HANDLING
 	"""
+	##########
+	## Adding enagagement on non-command messages
+	##########
+
+	## TODO: This doesnt fully work yet, it's the actual time passing i need to figure out, then save.
+	async def non_command_engagement_boost(self, user):
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		user_content = json_content["userdata"][user_index]
+
+		# new edit for hourly income:
+		now = datetime.now()
+		last_engagement_update_string = user_content["last_engagement_boost"]
+		# get a timeobject from the string
+		last_engagement_update = datetime.strptime(last_engagement_update_string, '%Y-%m-%d %H:%M:%S.%f')
+		# calculate difference, see if it works
+		passed_time = now - last_engagement_update
+		passed_time_hours = passed_time.total_seconds() // 3600.0
+		passed_time_minutes = passed_time.total_seconds() // 216000.0
+		print(f"Non-message: user {user} last message was {last_engagement_update_string}")
+		print(f"Non-message: Thats {passed_time.total_seconds()} in total_seconds")
+		print(f"Non-message: Thats {passed_time_hours} in hours")
+		print(f"Non-message: and   {passed_time_minutes} in minutes")
+
+		## user_content["engagement"] += 1
+		return "success"
 
 	#
 	# BALANCE
@@ -220,6 +248,7 @@ class pythonboat_database_handler:
 		await channel.send(embed=embed)
 
 		# overwrite, end
+		json_user_content["engagement"] += 4
 		json_content["userdata"][user_index] = json_user_content
 		json_content["userdata"][reception_user_index] = json_recept_content
 		self.overwrite_json(json_content)
@@ -767,6 +796,7 @@ class pythonboat_database_handler:
 		if user_cash < cost:
 			return "error", f"Error! Not enough money in cash to purchase.\nto pay: {cost} ; in cash: {user_cash}"
 		user_content["cash"] -= cost
+		user_content["engagement"] += 1
 		json_content["userdata"][user_index] = user_content
 		self.overwrite_json(json_content)
 
@@ -929,6 +959,7 @@ class pythonboat_database_handler:
 		await channel.send(embed=embed)
 
 		# overwrite, end
+		json_user_content["engagement"] += 4
 		json_content["userdata"][user_index] = json_user_content
 		json_content["userdata"][reception_user_index] = json_recept_content
 		self.overwrite_json(json_content)
@@ -972,6 +1003,7 @@ class pythonboat_database_handler:
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
+		found_card = False
 
 		if item_name == "random": ## Pull a random card from the user's inventory
 			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
@@ -979,16 +1011,18 @@ class pythonboat_database_handler:
 			user_items = user_content["items"]
 			item_position = random.randrange(0,len(user_items))
 			item_name = user_items[item_position][0]
-		
+
 		for cards in json_items: ## Find the card we're looking for from the inventory
 			if cards["name"] == item_name:
 				image_to_show = cards["image_location"]
 				team_name = cards["team_name"]
 				rarity_to_show = cards["rarity"]
 				shiney_card = cards["shiney"]
+				found_card = True
 				break
-			else:
-				return "error", "can't find card to display"
+
+		if found_card == False:
+			return "error", "can't find card to display"
 			
 		if rarity_to_show == "legendary": color = discord.Color.from_rgb(245, 126, 34) ## Orange
 		elif rarity_to_show == "rare": color = discord.Color.from_rgb(35, 85, 222) ## Blue
@@ -1116,8 +1150,6 @@ class pythonboat_database_handler:
 
 		for role_index in range(len(json_income_roles)):
 			role_id = json_income_roles[role_index]["role_id"]
-			print(f"GORP: Role is {role_id}")
-
 
 			# new edit for hourly income:
 			now = datetime.now()
@@ -1127,21 +1159,20 @@ class pythonboat_database_handler:
 			# calculate difference, see if it works
 			passed_time = now - last_income_update
 			passed_time_hours = passed_time.total_seconds() // 3600.0
-			print(f"GORP: Pased_time is {passed_time} // in hours = {passed_time_hours} ")
 
-			print("Gorp: Time to find all members in roles and give 'em cash")
-			# role = discord.utils.get(server_object.roles, id=int(role_id))
-			role = discord.utils.get(server_object.roles, id=int(role_id))
-			print(f"GORP: Role is {role}")
+			## TODO: For now, just Coaches as a role, but i'll need to modify this for other roles eventually.
+			role = discord.utils.find(lambda r: r.name == "Coaches", server_object.roles)	
 			for member in role.members:
-				print(f"GORP: member  is {member}")
 				try:
 					# also to create user in case he isnt registered yet
 					user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
 
 					json_user_content = json_content["userdata"][user_index]
 					json_income_roles[role_index]["last_updated"] = str(now)
-					json_user_content["cash"] += (json_income_roles[role_index]["role_income"] * int(passed_time_hours))
+					payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
+					bonus_engagement = json_user_content["engagement"] / 10
+					json_user_content["engagement"] = 0
+					json_user_content["cash"] += (payment + bonus_engagement)
 					# overwrite
 					json_content["userdata"][user_index] = json_user_content
 

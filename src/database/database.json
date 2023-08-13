@@ -7,8 +7,9 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 5000,
+            "cash": 6933,
             "engagement": 0,
+            "last_engagement_boost": "2023-08-13 18:00:00.287283",
             "items": [
                 [
                     "test_card",
@@ -58,9 +59,9 @@
             "rarity": "rare"
         },
         {
-            "name": "Shiney test_card4",
+            "name": "shiney test_card4",
             "team_name": "daredskullzz",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiney/DaRedskullzz/Alberto Del Riskull.gif",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/DaRedskullzz/Alberto Del Riskull.gif",
             "shiney": true,
             "position": "generic",
             "rarity": "common"
@@ -68,9 +69,9 @@
     ],
     "income_roles": [
         {
-            "role_id": "136399736224624711",
-            "role_income": 11,
-            "last_updated": "2023-08-06 18:01:35.508680"
+            "role_id": "1136399736224624711",
+            "role_income": 2,
+            "last_updated": "2023-08-13 17:26:05.287283"
         }
     ]
 }
