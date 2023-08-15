@@ -1,4 +1,4 @@
-import json, os, time, random, math, sys, discord, math
+import json, os, time, random, math, sys, discord, math, glob
 from datetime import datetime
 from datetime import timedelta
 
@@ -582,6 +582,53 @@ class pythonboat_database_handler:
 		json_content["items"] = json_items
 		self.overwrite_json(json_content)
 
+		return "success", "success"
+	
+	## Populate_database will recursivly search the asset folder for NEW images to make as items in it's DB
+	async def populate_database(self):
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		json_items = json_content["items"]
+
+		img_dir = "/root/BBTCG/assets/"
+		files = glob.glob(img_dir + "**", recursive = True) ## Glob finds all filenames
+		for item in files:
+			split_string = item.split("/") ## Splits each line by slash, to 8 parts...
+			found_player = False
+			if len(split_string) == 8: ## If we have 8 seperate sections, then it matches our expected layout.
+				found_player = True
+				player_name = split_string[7].split(".")[0]
+				team_name = split_string[6]
+				if split_string[5] == "Basic": 
+					shiney = False
+				elif split_string[5] == "Shiny": 
+					shiney = True
+					player_name = "Shiney " + player_name
+				season_name = split_string[4]
+				image_location = item
+
+			## If we have indeed found a player, add it to the DB
+			if found_player == True:
+				## Check for if it already exists in the DB first though.
+				already_exists = False
+				for i in range(len(json_items)):
+					if json_items[i]["name"] == player_name: already_exists = True
+				## If it doesn't already exist, now we add it in
+				if already_exists == False:
+					print(f"Populate-database :: Found new player and adding them to database.\n\tName == {player_name}\n\tLocation == {image_location}")
+					json_items.append({
+						"name": player_name,
+						"team_name": team_name,
+						"season_name": season_name,
+						"image_location": image_location,
+						"shiney": shiney,
+						"position": "generic",
+						"rarity": "common"
+					})
+		# overwrite, save current data
+		json_content["items"] = json_items
+		self.overwrite_json(json_content)
 		return "success", "success"
 
 	#

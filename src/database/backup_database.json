@@ -7,20 +7,39 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 6933,
-            "engagement": 0,
+            "cash": 5733,
+            "engagement": 6,
+            "items": [
+                [
+                    "test_card",
+                    11
+                ],
+                [
+                    "test_card3",
+                    2
+                ],
+                [
+                    "test_card2",
+                    3
+                ],
+                [
+                    "shiney test_card4",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 163388306460114945,
+            "cash": 4700,
+            "engagement": 3,
             "items": [
                 [
                     "test_card",
                     6
                 ],
                 [
-                    "test_card3",
-                    1
-                ],
-                [
                     "test_card2",
-                    2
+                    4
                 ]
             ]
         }
@@ -29,7 +48,7 @@
     "symbols": [
         {
             "name": "currency_symbol",
-            "symbol_emoji": "ball"
+            "symbol_emoji": "cyans"
         }
     ],
     "items": [
@@ -61,6 +80,38 @@
             "name": "shiney test_card4",
             "team_name": "daredskullzz",
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/DaRedskullzz/Alberto Del Riskull.gif",
+            "shiney": true,
+            "position": "generic",
+            "rarity": "common"
+        },
+        {
+            "name": "taquito",
+            "team_name": "the amazon primes",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/the amazon primes/taquito.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "common"
+        },
+        {
+            "name": "Shiney taquito",
+            "team_name": "the amazon primes",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/the amazon primes/taquito.gif",
+            "shiney": true,
+            "position": "generic",
+            "rarity": "common"
+        },
+        {
+            "name": "cabrito",
+            "team_name": "amazon primes",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/amazon primes/cabrito.png",
+            "shiney": false,
+            "position": "generic",
+            "rarity": "common"
+        },
+        {
+            "name": "Shiney cabrito",
+            "team_name": "amazon primes",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/amazon primes/cabrito.gif",
             "shiney": true,
             "position": "generic",
             "rarity": "common"

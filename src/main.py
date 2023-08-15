@@ -795,7 +795,10 @@ async def on_message(message):
 			use-item
 		"""
 
+	#### GorpTest is a testing command for various things at the time of running...
 	elif command in ["gorptest"]:
+		if not staff_request:
+			return
 		embed = discord.Embed(title="MY_TITLE", description="Here's your card", color=discord_success_rgb_code)
 		test_image = "/root/BBTCG/assets/Season 16/Shiny/DaRedskullzz/Brock Leskull.gif"
 		file_to_embed = discord.File(test_image, filename="image.gif")
@@ -806,6 +809,14 @@ async def on_message(message):
 		await channel.send(file=file_to_embed, embed=embed)
 
 		ret_status = await db_handler.non_command_engagement_boost(user)
+		return
+	
+	#### This command is set to automatically deal with our databse to avoid needing manual writing
+	####      At least for most of it, some manual intervention is still needed for some parts
+	elif command in ["populate-database"]:
+		if not staff_request:
+			return
+		ret_status = await db_handler.populate_database()
 		return
 
 	# ---------------------------
