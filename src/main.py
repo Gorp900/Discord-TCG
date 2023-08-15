@@ -182,7 +182,8 @@ async def on_message(message):
 	server = message.guild
 	user = message.author.id
 	user_mention = message.author.mention
-	user_pfp = message.author.avatar.url
+	if message.author.avatar.url: user_pfp = message.author.avatar.url
+	else: user_pfp = "https://nufflezone.com/wp-content/uploads/2023/05/Icono_Nuffle_Zone_Ball_Black-3000x3000-1-300x300.png"
 	username = str(message.author)
 	nickname = str(message.author.display_name)
 	user_roles = [randomvar.name.lower() for randomvar in message.author.roles] ## GORP:TODO: Do we remove lower() here?
