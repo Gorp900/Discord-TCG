@@ -896,27 +896,46 @@ class pythonboat_database_handler:
 			## Time to pull a card snd see if the requirements match our rando numbers
 			if (shiney_get == True) and (card_rarity_get == "legendary") :
 				draw_pool = shiney_l
+				rarity_prefix = "```arm\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "rare") :
 				draw_pool = shiney_r
+				rarity_prefix = "```yaml\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "uncommon") :
 				draw_pool = shiney_uc
+				rarity_prefix = "```\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "common") :
 				draw_pool = shiney_c
+				rarity_prefix = "```\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "legendary") :
 				draw_pool = basic_l
+				rarity_prefix = "```arm\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "rare") :
 				draw_pool = basic_r
+				rarity_prefix = "```yaml\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "uncommon") :
 				draw_pool = basic_uc
+				rarity_prefix = "```\n"
+				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "common") :
 				draw_pool = basic_c
+				rarity_prefix = "```\n"
+				rarity_suffix = "\n```"
 			pull_number = random.randrange(0,len(draw_pool))
 			confirmed_card = draw_pool[pull_number]
 			item_name = confirmed_card["name"]
 			card_image = confirmed_card["image_location"]
 
+			description_name = rarity_prefix + item_name + rarity_suffix
+			description_rarity = "It's **" + card_rarity_get + "**"
+
 			## Display card pull
-			embed = discord.Embed(description=f"You found a {item_name}!\n({card_rarity_get})", color=color)
+			embed = discord.Embed(description=f"You got a {description_name}\n{description_rarity}", color=color)
 			if shiney_get == False: 
 				image_to_embed = discord.File(card_image, filename="image.png")
 				embed.set_image(url="attachement://image.png")
