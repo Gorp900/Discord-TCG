@@ -61,7 +61,7 @@ async def get_user_input(message):
 	answer = await client.wait_for("message", check=lambda response: response.author == message.author and response.channel == message.channel)
 	answer = answer.content
 	# clean input
-	answer = answer.lower().strip()
+	answer = answer.lower().strip() ## GORP:TODO: Do we remove lower() here?
 
 	return answer
 
@@ -134,7 +134,7 @@ async def on_message(message):
 	usedPrefix = message.content[0] # in case we would add more prefixes later
 	# in selenor bot : check for case sensitive or not c.s. commands, not needed for this bot,
 	# make it a clean input
-	command = message.content.split(usedPrefix)[1].lower().split(" ")
+	command = message.content.split(usedPrefix)[1].split(" ")
 
 	# stop if not meant for bot. (like just a "?")
 	if command[0] in ["", " "]: return 0;
@@ -185,10 +185,10 @@ async def on_message(message):
 	user_pfp = message.author.avatar.url
 	username = str(message.author)
 	nickname = str(message.author.display_name)
-	user_roles = [randomvar.name.lower() for randomvar in message.author.roles]
+	user_roles = [randomvar.name.lower() for randomvar in message.author.roles] ## GORP:TODO: Do we remove lower() here?
 
 	# some stuff will be only for staff, which will be recognizable by the botmaster role
-	staff_request = 1 if ("botmaster" in user_roles) else 0
+	staff_request = 1 if ("botmaster" in user_roles) else 0 ## TODO: Rename botmaster role?
 	print("staff status : ", staff_request)
 	command = command[0]
 
