@@ -125,6 +125,8 @@ class pythonboat_database_handler:
 		print("\ncreating user\n")
 		# we did NOT find him, which means he doesn't exist yet
 		# so we automatically create him
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
 		data_to_search.append({
 			"user_id": user_to_find,
 			"cash": 150,
@@ -133,6 +135,8 @@ class pythonboat_database_handler:
 			# "roles": "None" ; will be checked when calculating weekly auto-role-income
 			"items": "none",
 		})
+		json_content["userdata"] = data_to_search
+		self.overwrite_json(json_content)
 		"""
 			POSSIBLE ISSUE :
 				that we need to create user by overwrite, then problem of doing that while another command is
