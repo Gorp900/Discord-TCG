@@ -109,7 +109,7 @@ class pythonboat_database_handler:
 
 	# find the user in the database
 	def find_index_in_db(self, data_to_search, user_to_find, fail_safe=False):
-		print(data_to_search)
+		#print(data_to_search)
 		user_to_find = int(user_to_find)
 		for i in range(len(data_to_search)):
 			if data_to_search[i]["user_id"] == user_to_find:
@@ -1253,7 +1253,7 @@ class pythonboat_database_handler:
 					json_user_content = json_content["userdata"][user_index]
 					json_income_roles[role_index]["last_updated"] = str(now)
 					payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
-					bonus_engagement = json_user_content["engagement"] / 10
+					bonus_engagement = json_user_content["engagement"] // 10
 					json_user_content["engagement"] = 0
 					json_user_content["cash"] += (payment + bonus_engagement)
 					# overwrite
