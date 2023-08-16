@@ -855,6 +855,7 @@ class pythonboat_database_handler:
 		basic_l = []; basic_r = []; basic_uc = []; basic_c = []
 
 		db_size = len(json_items)
+		##print(f"Buy-Pack :: Pre-loop, db_size is {db_size}")
 		for x in range(db_size):
 			if (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "common"): shiney_c.append(json_items[x])
 			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "uncommon"): shiney_uc.append(json_items[x])
@@ -865,7 +866,9 @@ class pythonboat_database_handler:
 			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "rare"): basic_r.append(json_items[x])
 			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "legendary"): basic_l.append(json_items[x])
 
+		##print(f"Buy-Pack :: Organized db into seperate arrays...")
 		while cards_to_draw != 0:
+			##print(f"Buy-Pack :: Inside Loop, cards left to draw is == {cards_to_draw}")
 			# load json
 			json_file = open(self.pathToJson, "r")
 			json_content = json.load(json_file)
@@ -893,46 +896,36 @@ class pythonboat_database_handler:
 				card_rarity_get = "common"
 				color = discord.Color.from_rgb(230, 234, 240) ## White
 
+			##print(f"Buy-Pack :: Card decided, we are getting a == {card_rarity_get} == and is it shiney...{shiney_get}")
 			## Time to pull a card snd see if the requirements match our rando numbers
 			if (shiney_get == True) and (card_rarity_get == "legendary") :
 				draw_pool = shiney_l
-				rarity_prefix = "```arm\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "rare") :
 				draw_pool = shiney_r
-				rarity_prefix = "```yaml\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "uncommon") :
 				draw_pool = shiney_uc
-				rarity_prefix = "```\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == True) and (card_rarity_get == "common") :
 				draw_pool = shiney_c
-				rarity_prefix = "```\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "legendary") :
 				draw_pool = basic_l
-				rarity_prefix = "```arm\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "rare") :
 				draw_pool = basic_r
-				rarity_prefix = "```yaml\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "uncommon") :
 				draw_pool = basic_uc
-				rarity_prefix = "```\n"
-				rarity_suffix = "\n```"
 			elif (shiney_get == False) and (card_rarity_get == "common") :
 				draw_pool = basic_c
-				rarity_prefix = "```\n"
-				rarity_suffix = "\n```"
+			##print(f"Buy-Pack :: Drawing pool has been made, it has entries == " + str(len(draw_pool)))
 			pull_number = random.randrange(0,len(draw_pool))
+			##print(f"Buy-Pack :: designated pullnumber from randrange [0-" + str(len(draw_pool)) + f"] and we got {pull_number}")
 			confirmed_card = draw_pool[pull_number]
 			item_name = confirmed_card["name"]
 			card_image = confirmed_card["image_location"]
 
+			## Altering the pre/suffix to just be plain, so the name is at least in a seperate box
+			rarity_prefix = "```\n"
+			rarity_suffix = "\n```"
 			description_name = rarity_prefix + item_name + rarity_suffix
-			description_rarity = "It's **" + card_rarity_get + "**"
+			description_rarity = "Rarity :: **" + card_rarity_get + "**"
 
 			## Display card pull
 			embed = discord.Embed(description=f"You got a {description_name}\n{description_rarity}", color=color)
@@ -1043,6 +1036,7 @@ class pythonboat_database_handler:
 
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 		user_content = json_content["userdata"][user_index]
+		item_content = json_content["items"]
 
 		items = user_content["items"]
 		if items == "none":
@@ -1050,7 +1044,16 @@ class pythonboat_database_handler:
 		else:
 			inventory_checkup = ""
 			for i in range(len(items)):
-				inventory_checkup += f"`{items[i][0]}`\n\t amount: `{items[i][1]}`\n"
+				rarity = "?"
+				for ii in range(len(item_content)):
+					if items[i][0] == item_content[ii]["name"]: rarity = item_content[ii]["rarity"] ## Just get rarity of item
+				## Below is interesting, we want to align parts of the writing to make it more uniform, so we count characters and decide how many tabs we need.
+				number_of_tabs = (7-(len(items[i][0])//4))
+				number_of_extra_spaces = (3-(len(items[i][0])%4))
+				tab_string = ""
+				for iii in range(number_of_tabs): tab_string +="\t"
+				for iii in range(number_of_extra_spaces): tab_string +=" "
+				inventory_checkup += f"`{items[i][1]} :: {items[i][0]} {tab_string}== Rarity: {rarity}`\n"
 
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
