@@ -21,14 +21,3484 @@
     ],
     "items": [
         {
-            "name": "TEST_ITEM_DELETE_ME",
-            "team_name": "TEST_TEAM",
+            "name": "Shiny Ricky Ponting",
+            "team_name": "Mental Disintegration",
             "season_name": "Season 16",
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Ricky Ponting.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Dasypeltis",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Dasypeltis.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Tugger",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Tugger.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Kraken",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Kraken.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Pigeon",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Pigeon.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Binga",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Binga.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Patters",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Patters.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Dhar'gor",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Dhar'gor.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny David Warner",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/David Warner.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny The Kid",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/The Kid.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Merv Hughes",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Merv Hughes.gif",
+            "shiny": true,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Steve Smith",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Steve Smith.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Mark Waugh",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Mark Waugh.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Chiles en Nogada",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Chiles en Nogada.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Cabrito",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Cabrito.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Rajas con Crema",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Rajas con Crema.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Gringas",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Gringas.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Taquito",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Taquito.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Salsa Verde",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Salsa Verde.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Salsa",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Salsa.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Quesadilla",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Quesadilla.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Corunda",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Corunda.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Chorizo",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Chorizo.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Aporreadillo",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Aporreadillo.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Filete de Pescado",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Filete de Pescado.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Chili con Carne",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Chili con Carne.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Yalcrab",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Yalcrab.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Drofrehtur",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Drofrehtur.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Neirb'O",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Neirb'O.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Mor",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Mor.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Serrot",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Serrot.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Egrofal",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Egrofal.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Rekcut",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Rekcut.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Rehsurc",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Rehsurc.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Enin Fo Neves",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Enin Fo Neves.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Ttocs",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Ttocs.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Stemats",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Stemats.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Ballin Bozos",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Ballin Bozos.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny SMORC!!!",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/SMORC!!!.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Things That Are Blue",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Things That Are Blue.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Holidays Are Coming",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Holidays Are Coming.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Quad Damage",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Quad Damage.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Things That Are Red",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Things That Are Red.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Hanna-Barbarians",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Hanna-Barbarians.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Westerosi Legends",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Westerosi Legends.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Opera Omnia",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Opera Omnia.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny The Moogle Mob",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/The Moogle Mob.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny When Fruit Attacks",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/When Fruit Attacks.gif",
             "shiny": true,
             "position": "bigguy",
             "deceased": false,
             "rarity": "common"
+        },
+        {
+            "name": "Shiny Bos",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Bos.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Meruru",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Meruru.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Thighza",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Thighza.gif",
+            "shiny": true,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Lent",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Lent.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Ayesha",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Ayesha.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Tao",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Tao.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Rorona",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Rorona.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Sophie",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Sophie.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Totori",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Totori.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Sterkenburg",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Sterkenburg.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Marie",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Marie.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny JoJo the Bizzare",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/JoJo the Bizzare.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Frosty the Forsaken",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Frosty the Forsaken.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Joker the Jovial",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Joker the Jovial.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Ransome the Ridiculous",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Ransome the Ridiculous.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Crackpot the Butcher",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Crackpot the Butcher.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Magsy the Malicious",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Magsy the Malicious.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Franco the Fierce",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Franco the Fierce.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Yabba the Yeasty",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Yabba the Yeasty.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Pockets the Pox-Ridden",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Pockets the Pox-Ridden.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Noodles the Nasty",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Noodles the Nasty.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Zumbo the Zany Mad Man",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Zumbo the Zany Mad Man.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Chuckles the Cheesy",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Chuckles the Cheesy.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Yoyo the Yuckie",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Yoyo the Yuckie.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Stack Dorsey",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Stack Dorsey.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Jeff Bez.OS",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Jeff Bez.OS.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Matrix Huateng",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Matrix Huateng.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Greed Hastings",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Greed Hastings.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny NFTeve Jobs",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/NFTeve Jobs.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Mark Zuckerborg",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Mark Zuckerborg.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Enum Musk",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Enum Musk.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Satellite Nadella",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Satellite Nadella.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Whitney Wolfe Herdware",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Whitney Wolfe Herdware.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Daniel RobotEks",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Daniel RobotEks.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Susan Wojchipski",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Susan Wojchipski.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Coco Montrese",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Coco Montrese.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Bianca del Rio",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Bianca del Rio.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Rotstalker",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Rotstalker.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Deathwing",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Deathwing.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Penny Tration",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Penny Tration.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Eureka O'Hara",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Eureka O'Hara.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Chanel",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Chanel.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Pearl",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Pearl.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Steak Bake",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Steak Bake.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Chad Michaels",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Chad Michaels.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Tyra Sanchez",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Tyra Sanchez.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Adore Delano",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Adore Delano.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Ongina",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Ongina.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Returner Deryck",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Returner Deryck.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Attacker Arwing",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Attacker Arwing.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Anger Richard",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Anger Richard.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Second Madonna Mabel",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Second Madonna Mabel.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Maimai",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Maimai.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Belinda",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Belinda.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Jake",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Jake.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Violence Bruce",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Violence Bruce.gif",
+            "shiny": true,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Bad Steve",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Bad Steve.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Third Madonna Regina",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Third Madonna Regina.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Striker Lyle",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Striker Lyle.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Kilian",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Kilian.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Arianna",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Arianna.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Crasty",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Crasty.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Byrne",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Byrne.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Jack",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Jack.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Larry",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Larry.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Doyle",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Doyle.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Dougal",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Dougal.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Len",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Len.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Benny-Cake",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Benny-Cake.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Jim",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Jim.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Noel",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Noel.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Brennan",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Brennan.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Ted",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Ted.gif",
+            "shiny": true,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Richard",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Richard.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Cyril",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Cyril.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Fitzgibbon",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Fitzgibbon.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Herr Kut",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herr Kut.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Chucky",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Chucky.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Ninja",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Ninja.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Herman",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herman.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Pesski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Pesski.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Huski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Huski.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Gerard",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Gerard.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Rimski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Rimski.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Jones",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Jones.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Herr Raid",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herr Raid.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Le Cont",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Le Cont.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny John-Boy",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/John-Boy.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Herr Dry",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herr Dry.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Twilight Spinal",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Twilight Spinal.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Apple Tomb",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Apple Tomb.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Rainbone Dash",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Rainbone Dash.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Applecrack",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Applecrack.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Shmolder III",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Shmolder III.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Skeletaloo",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Skeletaloo.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Princess Lunate II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Princess Lunate II.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Big McSkellingtosh",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Big McSkellingtosh.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Koccyx",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Koccyx.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Tahbashimen Iumut",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Tahbashimen Iumut.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Raritibia",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Raritibia.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Starlight Grimmer II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Starlight Grimmer II.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Flutterspine II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Flutterspine II.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Samoa Joskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Samoa Joskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Bo Dalskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Bo Dalskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Big E Lanskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Big E Lanskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Brock Leskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Brock Leskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Xavier Woodskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Xavier Woodskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Ryskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Ryskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Alberto Del Riskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Alberto Del Riskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Cesarskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Cesarskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Kevil Owskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Kevil Owskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Dean Ambskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Dean Ambskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Baron Corskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Baron Corskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Kofi Kingskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Kofi Kingskull.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Dead Pony Club",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Dead Pony Club.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Whitstable Bay",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Whitstable Bay.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Hobgoblin",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Hobgoblin.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny TEA",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/TEA.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Doombar",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Doombar.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Tactical Nuclear Penguin",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Tactical Nuclear Penguin.gif",
+            "shiny": true,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shiny Pumpkin King",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Pumpkin King.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Shiny Abbot Ale",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Abbot Ale.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Spitfire",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Spitfire.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Hop House 13",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Hop House 13.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Shiny Fursty Ferret",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Fursty Ferret.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Shiny Black Sheep",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Black Sheep.gif",
+            "shiny": true,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Pigeon",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Pigeon.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "David Warner",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/David Warner.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Binga",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Binga.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Mark Waugh",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Mark Waugh.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Merv Hughes",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Merv Hughes.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Kraken",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Kraken.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Patters",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Patters.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Tugger",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Tugger.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Ricky Ponting",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Ricky Ponting.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Dhar'gor",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Dhar'gor.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Steve Smith",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Steve Smith.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Dasypeltis",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Dasypeltis.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "The Kid",
+            "team_name": "Mental Disintegration",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/The Kid.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Filete de Pescado",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Filete de Pescado.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Rajas con Crema",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Rajas con Crema.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Corunda",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Corunda.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Salsa",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Salsa.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Chiles en Nogada",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Chiles en Nogada.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Taquito",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Taquito.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Aporreadillo",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Aporreadillo.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Quesadilla",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Quesadilla.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Chorizo",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Chorizo.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Cabrito",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Cabrito.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Salsa Verde",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Salsa Verde.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Gringas",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Gringas.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Chili con Carne",
+            "team_name": "The Amazon Primes",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Chili con Carne.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Yalcrab",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Yalcrab.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Drofrehtur",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Drofrehtur.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Rekcut",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Rekcut.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Neirb'O",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Neirb'O.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Rehsurc",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Rehsurc.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Stemats",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Stemats.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Enin Fo Neves",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Enin Fo Neves.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Ttocs",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Ttocs.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Mor",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Mor.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Egrofal",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Egrofal.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Serrot",
+            "team_name": "Reverse Engineers",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Serrot.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Hanna-Barbarians",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Hanna-Barbarians.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "When Fruit Attacks",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/When Fruit Attacks.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Opera Omnia",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Opera Omnia.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Holidays Are Coming",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Holidays Are Coming.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Ballin Bozos",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Ballin Bozos.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "SMORC!!!",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/SMORC!!!.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Quad Damage",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Quad Damage.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Things That Are Red",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Things That Are Red.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Things That Are Blue",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Things That Are Blue.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "The Moogle Mob",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/The Moogle Mob.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Westerosi Legends",
+            "team_name": "Things That Are Bloodbowl",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Westerosi Legends.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Thighza",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Thighza.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Lent",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Lent.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Totori",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Totori.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Sophie",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Sophie.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Ayesha",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Ayesha.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Tao",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Tao.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Rorona",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Rorona.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Sterkenburg",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Sterkenburg.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Meruru",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Meruru.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Marie",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Marie.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Bos",
+            "team_name": "The Grand Atelier",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Bos.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Joker the Jovial",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Joker the Jovial.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Crackpot the Butcher",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Crackpot the Butcher.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Ransome the Ridiculous",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Ransome the Ridiculous.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Zumbo the Zany Mad Man",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Zumbo the Zany Mad Man.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Yabba the Yeasty",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Yabba the Yeasty.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Pockets the Pox-Ridden",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Pockets the Pox-Ridden.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Chuckles the Cheesy",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Chuckles the Cheesy.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Franco the Fierce",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Franco the Fierce.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "JoJo the Bizzare",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/JoJo the Bizzare.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Magsy the Malicious",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Magsy the Malicious.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Yoyo the Yuckie",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Yoyo the Yuckie.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Noodles the Nasty",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Noodles the Nasty.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Frosty the Forsaken",
+            "team_name": "Ballin Bozos",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Frosty the Forsaken.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Mark Zuckerborg",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Mark Zuckerborg.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Stack Dorsey",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Stack Dorsey.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Whitney Wolfe Herdware",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Whitney Wolfe Herdware.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Greed Hastings",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Greed Hastings.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Susan Wojchipski",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Susan Wojchipski.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "NFTeve Jobs",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/NFTeve Jobs.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Satellite Nadella",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Satellite Nadella.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Enum Musk",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Enum Musk.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Matrix Huateng",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Matrix Huateng.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Jeff Bez.OS",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Jeff Bez.OS.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Daniel RobotEks",
+            "team_name": "Gestult Of Personality",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Daniel RobotEks.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Chad Michaels",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Chad Michaels.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Eureka O'Hara",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Eureka O'Hara.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Ongina",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Ongina.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Coco Montrese",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Coco Montrese.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Rotstalker",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Rotstalker.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Bianca del Rio",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Bianca del Rio.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Chanel",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Chanel.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Pearl",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Pearl.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Deathwing",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Deathwing.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Steak Bake",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Steak Bake.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Penny Tration",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Penny Tration.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Tyra Sanchez",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Tyra Sanchez.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Adore Delano",
+            "team_name": "Dragging Your Heels",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Adore Delano.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Crasty",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Crasty.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Returner Deryck",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Returner Deryck.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Striker Lyle",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Striker Lyle.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Violence Bruce",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Violence Bruce.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Third Madonna Regina",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Third Madonna Regina.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Arianna",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Arianna.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Anger Richard",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Anger Richard.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Bad Steve",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Bad Steve.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Maimai",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Maimai.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Second Madonna Mabel",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Second Madonna Mabel.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Belinda",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Belinda.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Attacker Arwing",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Attacker Arwing.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Jake",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Jake.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Kilian",
+            "team_name": "Diabolos Daredevils",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Kilian.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Doyle",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Doyle.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Richard",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Richard.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Byrne",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Byrne.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Jim",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Jim.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Cyril",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Cyril.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Noel",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Noel.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Larry",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Larry.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Fitzgibbon",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Fitzgibbon.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Ted",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Ted.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Jack",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Jack.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Dougal",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Dougal.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Brennan",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Brennan.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Len",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Len.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Benny-Cake",
+            "team_name": "Shoddy Workmanship",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Benny-Cake.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Gerard",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Gerard.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Jones",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Jones.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Herr Kut",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herr Kut.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Herman",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herman.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Rimski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Rimski.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Ninja",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Ninja.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Chucky",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Chucky.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "John-Boy",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/John-Boy.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Pesski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Pesski.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Herr Dry",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herr Dry.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Herr Raid",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herr Raid.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Huski",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Huski.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Le Cont",
+            "team_name": "Team Lard",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Le Cont.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Raritibia",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Raritibia.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Applecrack",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Applecrack.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Tahbashimen Iumut",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Tahbashimen Iumut.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Rainbone Dash",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Rainbone Dash.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Apple Tomb",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Apple Tomb.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Flutterspine II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Flutterspine II.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Princess Lunate II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Princess Lunate II.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Skeletaloo",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Skeletaloo.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Koccyx",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Koccyx.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Twilight Spinal",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Twilight Spinal.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Shmolder III",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Shmolder III.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Big McSkellingtosh",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Big McSkellingtosh.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Starlight Grimmer II",
+            "team_name": "My Little Boney",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Starlight Grimmer II.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Ryskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Ryskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Kevil Owskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Kevil Owskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Cesarskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Cesarskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Baron Corskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Baron Corskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Big E Lanskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Big E Lanskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Brock Leskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Brock Leskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Kofi Kingskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Kofi Kingskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Dean Ambskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Dean Ambskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Samoa Joskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Samoa Joskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Alberto Del Riskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Alberto Del Riskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Xavier Woodskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Xavier Woodskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Bo Dalskull",
+            "team_name": "Da Redskullzz",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Bo Dalskull.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Hobgoblin",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Hobgoblin.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "TEA",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/TEA.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Spitfire",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Spitfire.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Whitstable Bay",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Whitstable Bay.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
+        },
+        {
+            "name": "Fursty Ferret",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Fursty Ferret.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Doombar",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Doombar.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Dead Pony Club",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Dead Pony Club.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Tactical Nuclear Penguin",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Tactical Nuclear Penguin.png",
+            "shiny": false,
+            "position": "bigguy",
+            "deceased": false,
+            "rarity": "legendary"
+        },
+        {
+            "name": "Hop House 13",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Hop House 13.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Abbot Ale",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Abbot Ale.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "common"
+        },
+        {
+            "name": "Black Sheep",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Black Sheep.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "uncommon"
+        },
+        {
+            "name": "Pumpkin King",
+            "team_name": "The Beers With Beards",
+            "season_name": "Season 16",
+            "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Pumpkin King.png",
+            "shiny": false,
+            "position": "generic",
+            "deceased": false,
+            "rarity": "rare"
         }
     ],
     "income_roles": [
