@@ -564,17 +564,21 @@ class pythonboat_database_handler:
 		json_items.append({
 			"name": item_name,
 			"team_name": team_name,
+			"season_name": "Season 16",
 			"image_location": basic_img_dir + team_name + "/" + item_name + ".png",
 			"shiny": False,
 			"position": position,
+			"deceased": False,
 			"rarity": rarity
 		})
 		json_items.append({
 			"name": "Shiny " + item_name,
 			"team_name": team_name,
+			"season_name": "Season 16",
 			"image_location": shiny_img_dir + team_name + "/" + item_name + ".gif",
 			"shiny": True,
 			"position": position,
+			"deceased": False,
 			"rarity": rarity
 		})
 
@@ -597,6 +601,7 @@ class pythonboat_database_handler:
 			split_string = item.split("/") ## Splits each line by slash, to 8 parts...
 			found_player = False
 			if len(split_string) == 8: ## If we have 8 seperate sections, then it matches our expected layout.
+				## Specifially, we're looking for the structure to be like :: /root/BBTCG/assets/<season_name>/<basic_or_shiny>/<team_name>/<player_name>.png or .gif
 				found_player = True
 				player_name = split_string[7].split(".")[0]
 				team_name = split_string[6]
@@ -624,6 +629,7 @@ class pythonboat_database_handler:
 						"image_location": image_location,
 						"shiny": shiny,
 						"position": "generic",
+						"deceased": False,
 						"rarity": "common"
 					})
 		# overwrite, save current data
