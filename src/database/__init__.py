@@ -989,6 +989,8 @@ class pythonboat_database_handler:
 							return "error", f"❌ You do not have enough items of that item to give."
 						json_user_content["items"][ii_i][1] -= amount
 						worked = True
+						## TODO: Add right here a check for if item is now 0
+						##		 To remove it from inventory of items.
 						break
 				if worked == False:
 					return "error", f"❌ You do not have that item to give"
@@ -1029,6 +1031,8 @@ class pythonboat_database_handler:
 	# CHECK INVENTORY
 	#
 
+	## TODO: Would like to order the inventory
+	## TODO: Also need to add other options to this, for going to html page...
 	async def check_inventory(self, user, channel, username, user_pfp):
 		# load json
 		json_file = open(self.pathToJson, "r")

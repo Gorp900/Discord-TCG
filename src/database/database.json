@@ -7,8 +7,8 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 3133,
-            "engagement": 16,
+            "cash": 3646.8,
+            "engagement": 0,
             "items": [
                 [
                     "Kofi Kingskull",
@@ -28,7 +28,7 @@
                 ],
                 [
                     "Shiney Ricky Ponting",
-                    1
+                    0
                 ],
                 [
                     "Shiney Cabrito",
@@ -60,6 +60,41 @@
                 ],
                 [
                     "Quad Damage222",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 163388306460114945,
+            "cash": 3527.1000000000004,
+            "engagement": 9,
+            "items": [
+                [
+                    "Shiney Lent",
+                    0
+                ],
+                [
+                    "Shiney Ricky Ponting",
+                    2
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II333",
+                    2
+                ],
+                [
+                    "Kofi Kingskull222",
+                    2
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "Kofi Kingskull333",
                     1
                 ]
             ]
@@ -240,7 +275,12 @@
         {
             "role_id": "1136399736224624711",
             "role_income": 2,
-            "last_updated": "2023-08-13 17:26:05.287283"
+            "last_updated": "2023-08-16 17:35:35.164053"
+        },
+        {
+            "role_id": "135592919693267085",
+            "role_income": 10,
+            "last_updated": "2023-08-16 17:36:07.775111"
         }
     ]
 }
