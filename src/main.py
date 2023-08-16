@@ -372,8 +372,9 @@ async def on_message(message):
 	#  LEADERBOARD
 	# --------------
 
-	##: Expand leaderboard!
+	##TODO: Expand leaderboard! 
 	elif command in ["leaderboard", all_reg_commands_aliases["leaderboard"]]:
+		return ## Do a quick return since wwe dont want to do this just yet
 		modes = ["-cash", "-bank", "-total"]
 		page_number = 1
 		mode_type = modes[2]
@@ -448,7 +449,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-
+	
 	# --------------
 	#     HELP
 	# --------------
@@ -458,7 +459,7 @@ async def on_message(message):
 		embed = discord.Embed(title=f"Help System", color=color)
 		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cyans", inline=False)
 		embed.add_field(name="inventory", value=f"Usage: `/inventory`\nShows your currently collected cards", inline=False)
-		embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False)
+		## embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False) ## TODO: Re-implement when autocomplete is in
 		embed.add_field(name="show-card", value=f"Usage: `/show-card \"<card_name>\"`\nShows the named card to the chat.  If no card is named, it shows a random card from your inventory", inline=False)
 		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
 		embed.add_field(name="give-item", value=f"Usage: `/give-item <user> <item> <amount>`\nSends <item> to <user> pinged.  If <amount> is left blank, it sends a single item", inline=False)
