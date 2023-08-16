@@ -7,97 +7,9 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 3646.8,
+            "cash": 150,
             "engagement": 0,
-            "items": [
-                [
-                    "Kofi Kingskull",
-                    14
-                ],
-                [
-                    "Starlight Grimmer II",
-                    5
-                ],
-                [
-                    "Shiny Lent",
-                    1
-                ],
-                [
-                    "Ransome the Ridiculous",
-                    7
-                ],
-                [
-                    "Shiny Ricky Ponting",
-                    0
-                ],
-                [
-                    "Shiny Cabrito",
-                    2
-                ],
-                [
-                    "Quad Damage",
-                    2
-                ],
-                [
-                    "Shiny Ongina",
-                    1
-                ],
-                [
-                    "Shiny Cabrito222",
-                    1
-                ],
-                [
-                    "Shiny Ricky Ponting222",
-                    1
-                ],
-                [
-                    "Kofi Kingskull333",
-                    1
-                ],
-                [
-                    "Kofi Kingskull222",
-                    1
-                ],
-                [
-                    "Quad Damage222",
-                    1
-                ]
-            ]
-        },
-        {
-            "user_id": 163388306460114945,
-            "cash": 3527.1000000000004,
-            "engagement": 9,
-            "items": [
-                [
-                    "Shiny Lent",
-                    0
-                ],
-                [
-                    "Shiny Ricky Ponting",
-                    2
-                ],
-                [
-                    "Kofi Kingskull",
-                    1
-                ],
-                [
-                    "Starlight Grimmer II333",
-                    2
-                ],
-                [
-                    "Kofi Kingskull222",
-                    2
-                ],
-                [
-                    "Quad Damage",
-                    1
-                ],
-                [
-                    "Kofi Kingskull333",
-                    1
-                ]
-            ]
+            "items": "none"
         }
     ],
     "variables": [],
@@ -109,178 +21,21 @@
     ],
     "items": [
         {
-            "name": "Shiny Ricky Ponting",
-            "team_name": "Mental Disintegration",
+            "name": "TEST_ITEM_DELETE_ME",
+            "team_name": "TEST_TEAM",
             "season_name": "Season 16",
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Ricky Ponting.gif",
             "shiny": true,
             "position": "bigguy",
+            "deceased": false,
             "rarity": "common"
-        },
-        {
-            "name": "Shiny Cabrito",
-            "team_name": "The Amazon Primes",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Cabrito.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "uncommon"
-        },
-        {
-            "name": "Shiny Lent",
-            "team_name": "The Grand Atelier",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Lent.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "rare"
-        },
-        {
-            "name": "Shiny Ongina",
-            "team_name": "Dragging Your Heels",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Ongina.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "legendary"
-        },
-        {
-            "name": "Ransome the Ridiculous",
-            "team_name": "Ballin Bozos",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Ransome the Ridiculous.png",
-            "shiny": false,
-            "position": "bigguy",
-            "rarity": "rare"
-        },
-        {
-            "name": "Quad Damage",
-            "team_name": "ThingsThatAreBloodbowl",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/ThingsThatAreBloodbowl/Quad Damage.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "legendary"
-        },
-        {
-            "name": "Kofi Kingskull",
-            "team_name": "DaRedskullzz",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Kofi Kingskull.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "common"
-        },
-        {
-            "name": "Starlight Grimmer II",
-            "team_name": "My Little Boney",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Starlight Grimmer II.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "uncommon"
-        },
-        {
-            "name": "Shiny Ricky Ponting222",
-            "team_name": "Mental Disintegration",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Ricky Ponting.gif",
-            "shiny": true,
-            "position": "bigguy",
-            "rarity": "common"
-        },
-        {
-            "name": "Shiny Cabrito222",
-            "team_name": "The Amazon Primes",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Cabrito.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "uncommon"
-        },
-        {
-            "name": "Shiny Lent222",
-            "team_name": "The Grand Atelier",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Lent.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "rare"
-        },
-        {
-            "name": "Shiny Ongina222",
-            "team_name": "Dragging Your Heels",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Ongina.gif",
-            "shiny": true,
-            "position": "generic",
-            "rarity": "legendary"
-        },
-        {
-            "name": "Ransome the Ridiculous222",
-            "team_name": "Ballin Bozos",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Ransome the Ridiculous.png",
-            "shiny": false,
-            "position": "bigguy",
-            "rarity": "rare"
-        },
-        {
-            "name": "Quad Damage222",
-            "team_name": "ThingsThatAreBloodbowl",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/ThingsThatAreBloodbowl/Quad Damage.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "legendary"
-        },
-        {
-            "name": "Kofi Kingskull222",
-            "team_name": "DaRedskullzz",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Kofi Kingskull.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "common"
-        },
-        {
-            "name": "Starlight Grimmer II222",
-            "team_name": "My Little Boney",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Starlight Grimmer II.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "uncommon"
-        },
-        {
-            "name": "Kofi Kingskull333",
-            "team_name": "DaRedskullzz",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/DaRedskullzz/Kofi Kingskull.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "common"
-        },
-        {
-            "name": "Starlight Grimmer II333",
-            "team_name": "My Little Boney",
-            "season_name": "Season 16",
-            "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Starlight Grimmer II.png",
-            "shiny": false,
-            "position": "generic",
-            "rarity": "uncommon"
         }
     ],
     "income_roles": [
         {
-            "role_id": "1136399736224624711",
+            "role_id": "TEST_ROLE_DELETE_ME",
             "role_income": 2,
             "last_updated": "2023-08-16 17:35:35.164053"
-        },
-        {
-            "role_id": "135592919693267085",
-            "role_income": 10,
-            "last_updated": "2023-08-16 17:36:07.775111"
         }
     ]
 }
