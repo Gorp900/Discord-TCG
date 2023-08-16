@@ -553,7 +553,7 @@ class pythonboat_database_handler:
 
 		img_dir = "/root/BBTCG/assets/Season 16/"
 		basic_img_dir = img_dir + "Basic/"
-		shiney_img_dir = img_dir + "Shiny/"
+		shiny_img_dir = img_dir + "Shiny/"
 
 		## Check for dupes
 		for i in range(len(json_items)):
@@ -565,15 +565,15 @@ class pythonboat_database_handler:
 			"name": item_name,
 			"team_name": team_name,
 			"image_location": basic_img_dir + team_name + "/" + item_name + ".png",
-			"shiney": False,
+			"shiny": False,
 			"position": position,
 			"rarity": rarity
 		})
 		json_items.append({
-			"name": "Shiney " + item_name,
+			"name": "Shiny " + item_name,
 			"team_name": team_name,
-			"image_location": shiney_img_dir + team_name + "/" + item_name + ".gif",
-			"shiney": True,
+			"image_location": shiny_img_dir + team_name + "/" + item_name + ".gif",
+			"shiny": True,
 			"position": position,
 			"rarity": rarity
 		})
@@ -601,10 +601,10 @@ class pythonboat_database_handler:
 				player_name = split_string[7].split(".")[0]
 				team_name = split_string[6]
 				if split_string[5] == "Basic": 
-					shiney = False
+					shiny = False
 				elif split_string[5] == "Shiny": 
-					shiney = True
-					player_name = "Shiney " + player_name
+					shiny = True
+					player_name = "Shiny " + player_name
 				season_name = split_string[4]
 				image_location = item
 
@@ -622,7 +622,7 @@ class pythonboat_database_handler:
 						"team_name": team_name,
 						"season_name": season_name,
 						"image_location": image_location,
-						"shiney": shiney,
+						"shiny": shiny,
 						"position": "generic",
 						"rarity": "common"
 					})
@@ -820,18 +820,18 @@ class pythonboat_database_handler:
 	async def buy_pack(self, user, channel, username, user_pfp, pack_type, user_roles, server_object, user_object):
 		if pack_type == "bronze":
 			cards_to_draw = 3
-			shineys_possible = 1
-			shiney_chance = 1
+			shinys_possible = 1
+			shiny_chance = 1
 			cost = 100
 		elif pack_type == "silver":
 			cards_to_draw = 4
-			shineys_possible = 1
-			shiney_chance = 3
+			shinys_possible = 1
+			shiny_chance = 3
 			cost = 175
 		elif pack_type == "gold":
 			cards_to_draw = 5
-			shineys_possible = 2
-			shiney_chance = 1
+			shinys_possible = 2
+			shiny_chance = 1
 			cost = 300
 
 		## Quickly check if we can afford this...
@@ -851,20 +851,20 @@ class pythonboat_database_handler:
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
-		shiney_l = []; shiney_r = []; shiney_uc = []; shiney_c = []
+		shiny_l = []; shiny_r = []; shiny_uc = []; shiny_c = []
 		basic_l = []; basic_r = []; basic_uc = []; basic_c = []
 
 		db_size = len(json_items)
 		##print(f"Buy-Pack :: Pre-loop, db_size is {db_size}")
 		for x in range(db_size):
-			if (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "common"): shiney_c.append(json_items[x])
-			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "uncommon"): shiney_uc.append(json_items[x])
-			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "rare"): shiney_r.append(json_items[x])
-			elif (json_items[x]["shiney"] == True) and (json_items[x]["rarity"] == "legendary"): shiney_l.append(json_items[x])
-			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "common"): basic_c.append(json_items[x])
-			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "uncommon"): basic_uc.append(json_items[x])
-			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "rare"): basic_r.append(json_items[x])
-			elif (json_items[x]["shiney"] == False) and (json_items[x]["rarity"] == "legendary"): basic_l.append(json_items[x])
+			if (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "common"): shiny_c.append(json_items[x])
+			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "uncommon"): shiny_uc.append(json_items[x])
+			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "rare"): shiny_r.append(json_items[x])
+			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "legendary"): shiny_l.append(json_items[x])
+			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "common"): basic_c.append(json_items[x])
+			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "uncommon"): basic_uc.append(json_items[x])
+			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "rare"): basic_r.append(json_items[x])
+			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "legendary"): basic_l.append(json_items[x])
 
 		##print(f"Buy-Pack :: Organized db into seperate arrays...")
 		while cards_to_draw != 0:
@@ -876,11 +876,11 @@ class pythonboat_database_handler:
 			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 			user_content = json_content["userdata"][user_index]
 
-			# see the odds of shiney
-			shiney_get = False
-			if (random.randrange(0,100) <= shiney_chance and shineys_possible > 0) or (pack_type == "gold" and cards_to_draw == 5):
-				shiney_get = True
-				shineys_possible -= 1
+			# see the odds of shiny
+			shiny_get = False
+			if (random.randrange(0,100) <= shiny_chance and shinys_possible > 0) or (pack_type == "gold" and cards_to_draw == 5):
+				shiny_get = True
+				shinys_possible -= 1
 			## Perform Card Rarity weighting
 			card_rarity_number = random.randrange(0,33) ## range is 0-32 included
 			if card_rarity_number <= 2:
@@ -896,23 +896,23 @@ class pythonboat_database_handler:
 				card_rarity_get = "common"
 				color = discord.Color.from_rgb(230, 234, 240) ## White
 
-			##print(f"Buy-Pack :: Card decided, we are getting a == {card_rarity_get} == and is it shiney...{shiney_get}")
+			##print(f"Buy-Pack :: Card decided, we are getting a == {card_rarity_get} == and is it shiny...{shiny_get}")
 			## Time to pull a card snd see if the requirements match our rando numbers
-			if (shiney_get == True) and (card_rarity_get == "legendary") :
-				draw_pool = shiney_l
-			elif (shiney_get == True) and (card_rarity_get == "rare") :
-				draw_pool = shiney_r
-			elif (shiney_get == True) and (card_rarity_get == "uncommon") :
-				draw_pool = shiney_uc
-			elif (shiney_get == True) and (card_rarity_get == "common") :
-				draw_pool = shiney_c
-			elif (shiney_get == False) and (card_rarity_get == "legendary") :
+			if (shiny_get == True) and (card_rarity_get == "legendary") :
+				draw_pool = shiny_l
+			elif (shiny_get == True) and (card_rarity_get == "rare") :
+				draw_pool = shiny_r
+			elif (shiny_get == True) and (card_rarity_get == "uncommon") :
+				draw_pool = shiny_uc
+			elif (shiny_get == True) and (card_rarity_get == "common") :
+				draw_pool = shiny_c
+			elif (shiny_get == False) and (card_rarity_get == "legendary") :
 				draw_pool = basic_l
-			elif (shiney_get == False) and (card_rarity_get == "rare") :
+			elif (shiny_get == False) and (card_rarity_get == "rare") :
 				draw_pool = basic_r
-			elif (shiney_get == False) and (card_rarity_get == "uncommon") :
+			elif (shiny_get == False) and (card_rarity_get == "uncommon") :
 				draw_pool = basic_uc
-			elif (shiney_get == False) and (card_rarity_get == "common") :
+			elif (shiny_get == False) and (card_rarity_get == "common") :
 				draw_pool = basic_c
 			##print(f"Buy-Pack :: Drawing pool has been made, it has entries == " + str(len(draw_pool)))
 			pull_number = random.randrange(0,len(draw_pool))
@@ -929,10 +929,10 @@ class pythonboat_database_handler:
 
 			## Display card pull
 			embed = discord.Embed(description=f"You got a {description_name}\n{description_rarity}", color=color)
-			if shiney_get == False: 
+			if shiny_get == False: 
 				image_to_embed = discord.File(card_image, filename="image.png")
 				embed.set_image(url="attachement://image.png")
-			if shiney_get == True: 
+			if shiny_get == True: 
 				image_to_embed = discord.File(card_image, filename="image.gif")
 				embed.set_image(url="attachement://image.gif")
 			embed.set_author(name=username, icon_url=user_pfp)
@@ -1090,7 +1090,7 @@ class pythonboat_database_handler:
 				image_to_show = cards["image_location"]
 				team_name = cards["team_name"]
 				rarity_to_show = cards["rarity"]
-				shiney_card = cards["shiney"]
+				shiny_card = cards["shiny"]
 				found_card = True
 				break
 
@@ -1103,7 +1103,7 @@ class pythonboat_database_handler:
 		elif rarity_to_show == "common": color = discord.Color.from_rgb(230, 234, 240) ## White
 
 		embed = discord.Embed(description=f"{item_name}, of {team_name}.\n  Rarity: {rarity_to_show}", color=color)
-		if shiney_card:			
+		if shiny_card:			
 			file_to_embed = discord.File(image_to_show, filename="image.gif")
 			embed.set_image(url="attachment://image.gif")
 		else:

@@ -189,7 +189,14 @@ async def on_message(message):
 	user_roles = [randomvar.name.lower() for randomvar in message.author.roles] ## GORP:TODO: Do we remove lower() here?
 
 	# some stuff will be only for staff, which will be recognizable by the botmaster role
-	staff_request = 1 if ("botmaster" in user_roles) else 0 ## TODO: Rename botmaster role?
+	## NOTE: Put the botmaster roles as lower_case for safety
+	staff_request = 0
+	botmaster_roles = ["botmaster", "manager", "commissioners"]
+	for role in user_roles:
+		for bt_role in botmaster_roles:
+			if role == bt_role: staff_request = 1
+			break
+	#staff_request = 1 if (("Manager" in user_roles) or ("Commissioners" in user_roles)) else 0 ## TODO: Rename botmaster role?
 	print("staff status : ", staff_request)
 	command = command[0]
 
@@ -1077,7 +1084,7 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["gold-pack", "gp"]:
-		embed = discord.Embed(description=f"A Gold pack costs 300 coins, and contains 5 cards with a single guarenteed shiney.\nType `yes` to confirm or anything else to cancel.")
+		embed = discord.Embed(description=f"A Gold pack costs 300 coins, and contains 5 cards with a single guarenteed shiny.\nType `yes` to confirm or anything else to cancel.")
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
 		user_input = ""
