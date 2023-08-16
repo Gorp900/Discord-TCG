@@ -182,7 +182,7 @@ async def on_message(message):
 	server = message.guild
 	user = message.author.id
 	user_mention = message.author.mention
-	if message.author.avatar.url: user_pfp = message.author.avatar.url
+	if message.author.avatar: user_pfp = message.author.avatar.url
 	else: user_pfp = "https://nufflezone.com/wp-content/uploads/2023/05/Icono_Nuffle_Zone_Ball_Black-3000x3000-1-300x300.png"
 	username = str(message.author)
 	nickname = str(message.author.display_name)
@@ -449,8 +449,11 @@ async def on_message(message):
 	elif command in ["help", all_reg_commands_aliases["help"]]:
 		color = discord.Color.from_rgb(3, 169, 244)
 		embed = discord.Embed(title=f"Help System", color=color)
-		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cash and cards", inline=False)
-		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cash to <user> pinged", inline=False)
+		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cyans", inline=False)
+		embed.add_field(name="inventory", value=f"Usage: `/inventory`\nShows your currently collected cards", inline=False)
+		embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False)
+		embed.add_field(name="show-card", value=f"Usage: `/show-card \"<card_name>\"`\nShows the named card to the chat.  If no card is named, it shows a random card from your inventory", inline=False)
+		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
 		embed.add_field(name="give-item", value=f"Usage: `/give-item <user> <item> <amount>`\nSends <item> to <user> pinged.  If <amount> is left blank, it sends a single item", inline=False)
 		embed.add_field(name="bronze-pack", value=f"Usage: `/bronze-pack` OR `/bp` \nPurchases a Bronze Pack of cards for 100 Coins", inline=False)
 		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Bronze Pack of cards for 175 Coins", inline=False)
@@ -459,37 +462,43 @@ async def on_message(message):
 		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
 
+		if not staff_request: return
 		#### in 2 parts because one was too long
 
-		if staff_request:
-			embed = discord.Embed(title=f"Help System", color=color)
-			embed.add_field(name="----------------------\n\nSTAFF ONLY", value=f"requires <botmaster> role", inline=False)
-			embed.add_field(name="add-money", value=f"Usage: `add-money <member> <amount>`", inline=False)
-			embed.add_field(name="remove-money", value=f"Usage: `remove-money <member> <amount>`", inline=False)
-			embed.add_field(name="change", value=f"Usage: `change <module> <variable> <new value>`", inline=False)
-			embed.add_field(name="change-currency", value=f"Usage: `change-currency <new emoji name>`", inline=False)
-			embed.add_field(name="----------------------\n\nITEM HANDLING", value=f"create and delete requires <botmaster> role", inline=False)
-			embed.add_field(name="create-item", value=f"Usage: `create-item`", inline=False)
-			embed.add_field(name="delete-item", value=f"Usage: `delete-item <item name>`", inline=False)
-			embed.add_field(name="buy-item", value=f"Usage: `buy-item <item name> <amount>`", inline=False)
-			embed.add_field(name="give-item", value=f"Usage: `give-item <player pinged> <item name> <amount>`", inline=False)
-			embed.add_field(name="inventory", value=f"Usage: `inventory`", inline=False)
-			embed.add_field(name="catalog", value=f"Usage: `catalog <nothing or item name>`", inline=False)
-			embed.add_field(name="----------------------\n\nINCOME ROLES", value=f"create, delete and update requires <botmaster> role", inline=False)
-			embed.add_field(name="add-income-role", value=f"Usage: `add-income-role <role pinged> <income>`", inline=False)
-			embed.add_field(name="remove-income-role", value=f"Usage: `remove-income-role <role pinged>`", inline=False)
-			embed.add_field(name="list-roles", value=f"Usage: `list-roles`", inline=False)
-			embed.add_field(name="update-income", value=f"Usage: `update-income` | income works hourly! automatically updates time elapsed * income", inline=False)
-			# edit stuff
-			embed.set_footer(text="For more info, contact an admin")
+		embed = discord.Embed(title=f"Help System", color=color)
+		embed.add_field(name="----------------------\n\nSTAFF ONLY", value=f"requires <botmaster> role", inline=False)
+		embed.add_field(name="add-money", value=f"Usage: `add-money <member> <amount>`", inline=False)
+		embed.add_field(name="remove-money", value=f"Usage: `remove-money <member> <amount>`", inline=False)
+		embed.add_field(name="change-currency", value=f"Usage: `change-currency <new emoji name>`", inline=False)
+		embed.add_field(name="----------------------\n\nITEM HANDLING", value=f"create and delete requires <botmaster> role", inline=False)
+		embed.add_field(name="create-item", value=f"Usage: `create-item`", inline=False)
+		embed.add_field(name="delete-item", value=f"Usage: `delete-item <item name>`", inline=False)
+		embed.add_field(name="populate-database", value=f"Usage: `populate-database` :: Updates database by actual saved files on host machine", inline=False)
+		embed.add_field(name="----------------------\n\nINCOME ROLES", value=f"create, delete and update requires <botmaster> role", inline=False)
+		embed.add_field(name="add-income-role", value=f"Usage: `add-income-role <role pinged> <income>`", inline=False)
+		embed.add_field(name="remove-income-role", value=f"Usage: `remove-income-role <role pinged>`", inline=False)
+		embed.add_field(name="list-roles", value=f"Usage: `list-roles`", inline=False)
+		embed.add_field(name="update-income", value=f"Usage: `update-income` | Will gift everyone cyans based on role |\nshould be run every hour or so, or at least every day", inline=False)
+		await channel.send(embed=embed)
 
-			await channel.send(embed=embed)
+		## Notes to GORP:
+		# enagagement is awarded for buying packs, giving away cash, and giving away cards (ie: trading)
+		#    engagement is used to boost the amount of cash you receive from update-income
+		#    There is work to be done to include other ways to reward engagement
+
 
 	# --------------
 	#  MODULE INFO
 	# --------------
 
+	## TODO: What does the module command really even do?  Add and removed additional python games i guess?
 	elif command in ["module", all_reg_commands_aliases["module"]]:
+		if not staff_request:
+			color = discord_error_rgb_code
+			embed = discord.Embed(description=f"🔒 Requires botmaster role", color=color)
+			embed.set_author(name=username, icon_url=user_pfp)
+			await channel.send(embed=embed)
+			return
 		if "none" in param[1] or param[2] != "none":  # we need 1 and only 1 parameter
 			color = discord_error_rgb_code
 			embed = discord.Embed(
