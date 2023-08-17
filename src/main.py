@@ -37,7 +37,8 @@ from time import sleep
 
 # init discord stuff and json handling
 BOT_PREFIX = ("/")  # tupple in case we'd need multiple
-
+token_file = open("bot_token", "r")
+token = token_file.readline()
 #token = "" # Return to zero when committing...
 # emojis
 emoji_worked = "✅"
@@ -186,7 +187,15 @@ async def on_message(message):
 	else: user_pfp = "https://nufflezone.com/wp-content/uploads/2023/05/Icono_Nuffle_Zone_Ball_Black-3000x3000-1-300x300.png"
 	username = str(message.author)
 	nickname = str(message.author.display_name)
-	user_roles = [randomvar.name.lower() for randomvar in message.author.roles] ## GORP:TODO: Do we remove lower() here?
+	user_roles = ""
+	is_a_bot = False
+	## We check if there is a "roles" I beleive this is tied to the bot reading messages of other bots...
+	if message.author.roles:
+		user_roles = [randomvar.name.lower() for randomvar in message.author.roles]
+	else: 
+		user_roles = "botmaster"
+		is_a_bot = True
+
 
 	# some stuff will be only for staff, which will be recognizable by the botmaster role
 	## NOTE: Put the botmaster roles as lower_case for safety
@@ -230,6 +239,25 @@ async def on_message(message):
 	}
 	all_reg_commands = list(all_reg_commands_aliases.keys())
 
+
+	### BOT-MANAGED Update Income
+	## The ONLY command a bot should be doing is this one... it's basically a duplicate of the main "update-income"
+	if is_a_bot:
+		if command in ["update-income"]:
+			try:
+				status, update_incomes_return = await db_handler.update_incomes(user, channel, username, user_pfp, server)
+				if status == "error":
+					color = discord_error_rgb_code
+					embed = discord.Embed(description=f"{update_incomes_return}", color=color)
+					embed.set_author(name=username, icon_url=user_pfp)
+					await channel.send(embed=embed)
+					return
+			except Exception as e:
+				print(e)
+				await send_error(channel)
+			print(f"BOT AUTO UPDATE INCOME COMPLETE")
+			return
+		return
 
 	# --------------
 	#    BALANCE

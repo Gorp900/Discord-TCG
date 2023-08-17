@@ -4,6 +4,210 @@
             "user_id": 100000000000000000,
             "cash": 100.0,
             "items": "none"
+        },
+        {
+            "user_id": 185112370996183042,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "The Kid",
+                    0
+                ],
+                [
+                    "Big E Lanskull",
+                    1
+                ],
+                [
+                    "Jeff Bez.OS",
+                    1
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 163388306460114945,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Steve Smith",
+                    1
+                ],
+                [
+                    "The Kid",
+                    2
+                ],
+                [
+                    "Kofi Kingskull",
+                    0
+                ]
+            ]
+        },
+        {
+            "user_id": 225690039206543361,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Maimai",
+                    1
+                ],
+                [
+                    "Greed Hastings",
+                    1
+                ],
+                [
+                    "Shiny Herr Dry",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 185808377052528640,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 109392522874208256,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 185103319247749120,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Alberto Del Riskull",
+                    1
+                ],
+                [
+                    "Deathwing",
+                    1
+                ],
+                [
+                    "Penny Tration",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 330073959758430210,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Brock Leskull",
+                    1
+                ],
+                [
+                    "Franco the Fierce",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 133960484201168896,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 533708157382426625,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Fitzgibbon",
+                    1
+                ],
+                [
+                    "When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Stemats",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 204269962204938240,
+            "cash": 88,
+            "engagement": 0,
+            "items": [
+                [
+                    "Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Maimai",
+                    1
+                ],
+                [
+                    "Kraken",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 134405791103844352,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 136928539487371266,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 186924306276679680,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 204750746745438208,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 241944494033862657,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 247856257631911936,
+            "cash": 188,
+            "engagement": 0,
+            "items": "none"
         }
     ],
     "variables": [],
@@ -3499,7 +3703,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-08-16 17:35:35.164053"
+            "last_updated": "2023-08-17 14:42:55.614200"
         }
     ]
 }
