@@ -190,6 +190,7 @@ async def on_message(message):
 	user_roles = ""
 	is_a_bot = False
 	## We check if there is a "roles" I beleive this is tied to the bot reading messages of other bots...
+	## TODO: this bit doesn't quite work, revert the logic here to just be like 2 lines from here, making user_roles.
 	if message.author.roles:
 		user_roles = [randomvar.name.lower() for randomvar in message.author.roles]
 	else: 

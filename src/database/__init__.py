@@ -999,8 +999,18 @@ class pythonboat_database_handler:
 							return "error", f"❌ You do not have enough items of that item to give."
 						json_user_content["items"][ii_i][1] -= amount
 						worked = True
-						## TODO: Add right here a check for if item is now 0
-						##		 To remove it from inventory of items.
+						
+						## Check for anything that is now empty
+						if json_user_content["items"][ii_i][1] == 0:
+							user_items = json_user_content["items"]
+							nil_list = []
+							for i in range(len(user_items)):
+								if user_items[i][1] == 0: ## check which items are at value 0 and add to a list
+									nil_list.append(user_items[i])
+							for x in range(len(nil_list)):
+								user_items.remove(nil_list[x]) ## Remove matching instances of the list from inventory
+							json_user_content["items"] = user_items
+
 						break
 				if worked == False:
 					return "error", f"❌ You do not have that item to give"
@@ -1053,6 +1063,15 @@ class pythonboat_database_handler:
 		item_content = json_content["items"]
 
 		items = user_content["items"]
+
+		## First we wanna remove nil items:
+		nil_list = []
+		for i in range(len(items)):
+			if items[i][1] == 0: ## check which items are at value 0 and add to a list
+				nil_list.append(items[i])
+		for x in range(len(nil_list)):
+			items.remove(nil_list[x]) ## Remove matching instances of the list from inventory
+
 		if items == "none":
 			inventory_checkup = "**Inventory empty. No items owned.**"
 		else:
