@@ -1266,18 +1266,18 @@ class pythonboat_database_handler:
 			role = discord.utils.find(lambda r: r.name == "Coaches", server_object.roles)	
 			for member in role.members:
 				try:
-					# also to create user in case he isnt registered yet
-					user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
+					if passed_time_hours >= 1:
+						# also to create user in case he isnt registered yet
+						user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
 
-					json_user_content = json_content["userdata"][user_index]
-					json_income_roles[role_index]["last_updated"] = str(now)
-					payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
-					bonus_engagement = json_user_content["engagement"]
-					json_user_content["engagement"] = 0
-					json_user_content["cash"] += (payment + bonus_engagement)
-					# overwrite
-					json_content["userdata"][user_index] = json_user_content
-
+						json_user_content = json_content["userdata"][user_index]
+						json_income_roles[role_index]["last_updated"] = str(now)
+						payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
+						bonus_engagement = json_user_content["engagement"]
+						json_user_content["engagement"] // 2
+						json_user_content["cash"] += (payment + bonus_engagement)
+						# overwrite
+						json_content["userdata"][user_index] = json_user_content
 				except:
 					pass
 

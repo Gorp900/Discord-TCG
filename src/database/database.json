@@ -7,7 +7,7 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 88,
+            "cash": 228,
             "engagement": 0,
             "items": [
                 [
@@ -30,7 +30,7 @@
         },
         {
             "user_id": 163388306460114945,
-            "cash": 88,
+            "cash": 133,
             "engagement": 0,
             "items": [
                 [
@@ -42,39 +42,92 @@
                     2
                 ],
                 [
-                    "Kofi Kingskull",
-                    0
+                    "Noodles the Nasty",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II",
+                    1
+                ],
+                [
+                    "Kraken",
+                    1
                 ]
             ]
         },
         {
             "user_id": 225690039206543361,
-            "cash": 88,
+            "cash": 46,
             "engagement": 0,
             "items": [
+                [
+                    "Shiny Herr Dry",
+                    1
+                ],
+                [
+                    "Meruru",
+                    1
+                ],
+                [
+                    "Jack",
+                    1
+                ],
+                [
+                    "Skeletaloo",
+                    1
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    1
+                ],
                 [
                     "Maimai",
                     1
                 ],
                 [
-                    "Greed Hastings",
+                    "Jim",
                     1
                 ],
                 [
-                    "Shiny Herr Dry",
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Spitfire",
                     1
                 ]
             ]
         },
         {
             "user_id": 185808377052528640,
-            "cash": 188,
+            "cash": 29,
             "engagement": 0,
-            "items": "none"
+            "items": [
+                [
+                    "Shiny Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Belinda",
+                    1
+                ],
+                [
+                    "Kevil Owskull",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    1
+                ],
+                [
+                    "Hop House 13",
+                    1
+                ]
+            ]
         },
         {
             "user_id": 109392522874208256,
-            "cash": 88,
+            "cash": 107,
             "engagement": 0,
             "items": [
                 [
@@ -88,12 +141,28 @@
                 [
                     "Yabba the Yeasty",
                     1
+                ],
+                [
+                    "Tao",
+                    1
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    1
+                ],
+                [
+                    "Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
                 ]
             ]
         },
         {
             "user_id": 185103319247749120,
-            "cash": 88,
+            "cash": 129,
             "engagement": 0,
             "items": [
                 [
@@ -107,13 +176,25 @@
                 [
                     "Penny Tration",
                     1
+                ],
+                [
+                    "Brock Leskull",
+                    1
+                ],
+                [
+                    "Raritibia",
+                    1
+                ],
+                [
+                    "Rimski",
+                    1
                 ]
             ]
         },
         {
             "user_id": 330073959758430210,
-            "cash": 88,
-            "engagement": 0,
+            "cash": 46,
+            "engagement": 1,
             "items": [
                 [
                     "Eureka O'Hara",
@@ -126,38 +207,139 @@
                 [
                     "Franco the Fierce",
                     1
+                ],
+                [
+                    "Whitstable Bay",
+                    1
+                ],
+                [
+                    "Big E Lanskull",
+                    1
+                ],
+                [
+                    "Xavier Woodskull",
+                    1
+                ],
+                [
+                    "Bo Dalskull",
+                    1
+                ],
+                [
+                    "Stemats",
+                    1
+                ],
+                [
+                    "When Fruit Attacks",
+                    2
+                ],
+                [
+                    "Kilian",
+                    1
+                ],
+                [
+                    "Magsy the Malicious",
+                    1
                 ]
             ]
         },
         {
             "user_id": 133960484201168896,
-            "cash": 188,
-            "engagement": 0,
-            "items": "none"
+            "cash": 0,
+            "engagement": 5,
+            "items": [
+                [
+                    "Shiny Lent",
+                    1
+                ],
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Byrne",
+                    1
+                ],
+                [
+                    "Cyril",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    1
+                ],
+                [
+                    "Deathwing",
+                    1
+                ],
+                [
+                    "Enum Musk",
+                    1
+                ],
+                [
+                    "Ted",
+                    1
+                ]
+            ]
         },
         {
             "user_id": 533708157382426625,
-            "cash": 88,
-            "engagement": 0,
+            "cash": 0,
+            "engagement": 1,
             "items": [
                 [
                     "Fitzgibbon",
                     1
                 ],
                 [
-                    "When Fruit Attacks",
+                    "Herr Kut",
                     1
                 ],
                 [
-                    "Stemats",
+                    "Kraken",
+                    1
+                ],
+                [
+                    "Bo Dalskull",
+                    1
+                ],
+                [
+                    "Shiny Returner Deryck",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    1
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Fursty Ferret",
+                    1
+                ],
+                [
+                    "Greed Hastings",
+                    1
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    1
+                ],
+                [
+                    "Thighza",
+                    1
+                ],
+                [
+                    "Apple Tomb",
                     1
                 ]
             ]
         },
         {
             "user_id": 204269962204938240,
-            "cash": 88,
-            "engagement": 0,
+            "cash": 33,
+            "engagement": 5,
             "items": [
                 [
                     "Third Madonna Regina",
@@ -168,46 +350,104 @@
                     1
                 ],
                 [
-                    "Kraken",
+                    "Chanel",
+                    1
+                ],
+                [
+                    "Crasty",
+                    2
+                ],
+                [
+                    "Kilian",
+                    1
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Enin Fo Neves",
+                    1
+                ],
+                [
+                    "Jake",
                     1
                 ]
             ]
         },
         {
             "user_id": 134405791103844352,
-            "cash": 188,
+            "cash": 180,
             "engagement": 0,
-            "items": "none"
+            "items": [
+                [
+                    "Dead Pony Club",
+                    1
+                ],
+                [
+                    "Jones",
+                    1
+                ],
+                [
+                    "Rimski",
+                    2
+                ],
+                [
+                    "Black Sheep",
+                    1
+                ],
+                [
+                    "Cabrito",
+                    1
+                ]
+            ]
         },
         {
             "user_id": 136928539487371266,
-            "cash": 188,
+            "cash": 328,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 186924306276679680,
-            "cash": 188,
+            "cash": 328,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 204750746745438208,
-            "cash": 188,
+            "cash": 328,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 241944494033862657,
-            "cash": 188,
+            "cash": 328,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 247856257631911936,
-            "cash": 188,
+            "cash": 154,
             "engagement": 0,
-            "items": "none"
+            "items": [
+                [
+                    "Daniel RobotEks",
+                    1
+                ],
+                [
+                    "Huski",
+                    1
+                ],
+                [
+                    "Alberto Del Riskull",
+                    1
+                ],
+                [
+                    "Chanel",
+                    1
+                ]
+            ]
         }
     ],
     "variables": [],
@@ -3703,7 +3943,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-08-17 14:42:55.614200"
+            "last_updated": "2023-08-20 21:14:51.901032"
         }
     ]
 }
