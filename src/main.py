@@ -487,14 +487,14 @@ async def on_message(message):
 		color = discord.Color.from_rgb(3, 169, 244)
 		embed = discord.Embed(title=f"Help System", color=color)
 		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cyans", inline=False)
-		embed.add_field(name="inventory", value=f"Usage: `/inventory <type>`\nShows your currently collected cards and other info.", inline=False)
+		embed.add_field(name="inventory", value=f"Usage: `/inventory <type>`\nShows your currently collected cards and other info.  Type can be [default, teams, rarity].  Leaving it blank is [default]", inline=False)
 		## embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False) ## TODO: Re-implement when autocomplete is in
 		embed.add_field(name="show-card", value=f"Usage: `/show-card \"<card_name>\"`\nShows the named card to the chat.  If no card is named, it shows a random card from your inventory", inline=False)
 		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
 		embed.add_field(name="give-item", value=f"Usage: `/give-item <user> <item> <amount>`\nSends <item> to <user> pinged.  If <amount> is left blank, it sends a single item", inline=False)
 		embed.add_field(name="bronze-pack", value=f"Usage: `/bronze-pack` OR `/bp` \nPurchases a Bronze Pack of cards for 100 Coins", inline=False)
-		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Bronze Pack of cards for 175 Coins", inline=False)
-		embed.add_field(name="gold-pack", value=f"Usage: `/gold-pack` OR `/gp` \nPurchases a Bronze Pack of cards for 300 Coins", inline=False)
+		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Silver Pack of cards for 175 Coins", inline=False)
+		embed.add_field(name="gold-pack", value=f"Usage: `/gold-pack` OR `/gp` \nPurchases a Gold Pack of cards for 300 Coins", inline=False)
 		# edit stuff
 		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
