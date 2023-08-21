@@ -37,7 +37,7 @@ from time import sleep
 
 # init discord stuff and json handling
 BOT_PREFIX = ("/")  # tupple in case we'd need multiple
-token_file = open("bot_token", "r")
+token_file = open("/root/BBTCG/PROD/Discord-TCG/src/bot_token", "r")
 token = token_file.readline()
 #token = "" # Return to zero when committing...
 # emojis
@@ -487,7 +487,7 @@ async def on_message(message):
 		color = discord.Color.from_rgb(3, 169, 244)
 		embed = discord.Embed(title=f"Help System", color=color)
 		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cyans", inline=False)
-		embed.add_field(name="inventory", value=f"Usage: `/inventory`\nShows your currently collected cards", inline=False)
+		embed.add_field(name="inventory", value=f"Usage: `/inventory <type>`\nShows your currently collected cards and other info.", inline=False)
 		## embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False) ## TODO: Re-implement when autocomplete is in
 		embed.add_field(name="show-card", value=f"Usage: `/show-card \"<card_name>\"`\nShows the named card to the chat.  If no card is named, it shows a random card from your inventory", inline=False)
 		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
@@ -1236,11 +1236,13 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["inventory"]:
-		# handler
+		
+		if "none" in param[1]:	display_mode = "default"
+		else: display_mode = param[1]
 		try:
 			## TODO OHHH MAN it'd be nice to have a better inventory return...
 			## TODO: Also would be nice to figure out a way to VIEW all the cards on a similar option
-			status, inventory_return = await db_handler.check_inventory(user, channel, username, user_pfp)
+			status, inventory_return = await db_handler.check_inventory(user, channel, username, user_pfp, display_mode)
 			if status == "error":
 				color = discord_error_rgb_code
 				embed = discord.Embed(description=f"{inventory_return}", color=color)

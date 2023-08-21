@@ -19,7 +19,7 @@ class pythonboat_database_handler:
 	# always called when imported in main.py
 	def __init__(self, client):
 		# we do the path from the main.py file, so we go into the db folder, then select
-		self.pathToJson = "database/database.json"
+		self.pathToJson = "/root/BBTCG/PROD/Discord-TCG/src/database/database.json"
 		self.client = client
 
 		# for colors
@@ -1053,7 +1053,7 @@ class pythonboat_database_handler:
 
 	## TODO: Would like to order the inventory
 	## TODO: Also need to add other options to this, for going to html page...
-	async def check_inventory(self, user, channel, username, user_pfp):
+	async def check_inventory(self, user, channel, username, user_pfp, display_mode):
 		# load json
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
@@ -1072,26 +1072,67 @@ class pythonboat_database_handler:
 		for x in range(len(nil_list)):
 			items.remove(nil_list[x]) ## Remove matching instances of the list from inventory
 
+		## Construct a team list, and seperate count, as well as a rarity list and count
+		team_list = []
+		for i in range(len(item_content)):
+			team_list.append(item_content[i]["team_name"])
+		team_list = list(dict.fromkeys(team_list))
+		team_count = []
+		for i in range(len(team_list)): team_count.append(0)
+		rarity_list = ["common", "uncommon", "rare", "legendary"]
+		rarity_count = [0, 0, 0, 0]
+
 		if items == "none":
 			inventory_checkup = "**Inventory empty. No items owned.**"
 		else:
 			inventory_checkup = ""
-			for i in range(len(items)):
-				rarity = "?"
-				for ii in range(len(item_content)):
-					if items[i][0] == item_content[ii]["name"]: rarity = item_content[ii]["rarity"] ## Just get rarity of item
-				## Below is interesting, we want to align parts of the writing to make it more uniform, so we count characters and decide how many tabs we need.
-				number_of_tabs = (7-(len(items[i][0])//4))
-				number_of_extra_spaces = (3-(len(items[i][0])%4))
-				tab_string = ""
-				for iii in range(number_of_tabs): tab_string +="\t"
-				for iii in range(number_of_extra_spaces): tab_string +=" "
-				inventory_checkup += f"`{items[i][1]} :: {items[i][0]} {tab_string}== Rarity: {rarity}`\n"
+			if display_mode == "default": ## Default shows individual card counts
+				for i in range(len(items)):
+					rarity = "?"
+					team_name = "?"
+					## This lil loop gets matchign stats of items...
+					for ii in range(len(item_content)):
+						if items[i][0] == item_content[ii]["name"]: 
+							rarity = item_content[ii]["rarity"]
+							team_name = item_content[ii]["team_name"]
+					## Count teams and rarity here
+					if team_name in team_list: team_count[team_list.index(team_name)] += 1
+					if rarity in rarity_list: rarity_count[rarity_list.index(rarity)] += 1
+
+					## Below is interesting, we want to align parts of the writing to make it more uniform, so we count characters and decide how many tabs we need.
+					number_of_tabs = (7-(len(items[i][0])//4))
+					number_of_extra_spaces = (3-(len(items[i][0])%4))
+					tab_string = ""
+					for iii in range(number_of_tabs): tab_string +="\t"
+					for iii in range(number_of_extra_spaces): tab_string +=" "
+					inventory_checkup += f"`{items[i][1]} :: {items[i][0]} {tab_string}== Rarity: {rarity}`\n"
+					
+			elif display_mode == "teams": 
+				for i in range(len(items)): ## teams show players belonging to teams
+					team_name = "?"
+					## This lil loop gets matchign stats of items...
+					for ii in range(len(item_content)):
+						if items[i][0] == item_content[ii]["name"]: 
+							team_name = item_content[ii]["team_name"]
+					## Count teams and rarity here
+					if team_name in team_list: team_count[team_list.index(team_name)] += 1
+				for i in range(len(team_list)):
+					inventory_checkup += f"`{team_count[i]} :: {team_list[i]}`\n"
+			elif display_mode == "rarity":
+				for i in range(len(items)): ## rarity shows number per rarity
+					rarity = "?"
+					## This lil loop gets matchign stats of items...
+					for ii in range(len(item_content)):
+						if items[i][0] == item_content[ii]["name"]: 
+							rarity = item_content[ii]["rarity"]
+					## Count teams and rarity here
+					if rarity in rarity_list: rarity_count[rarity_list.index(rarity)] += 1
+				for i in range(len(rarity_list)):
+					inventory_checkup += f"`{rarity_count[i]} :: {rarity_list[i]}`\n"
 
 		color = self.discord_blue_rgb_code
 		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
 		embed.set_author(name=username, icon_url=user_pfp)
-		embed.set_footer(text="nice")
 		await channel.send(embed=embed)
 
 		# overwrite, end
