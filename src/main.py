@@ -498,6 +498,8 @@ async def on_message(message):
 		# edit stuff
 		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
+		if(message.content.startswith("/")):
+			await message.delete()
 
 		if not staff_request: return
 		#### in 2 parts because one was too long
@@ -880,12 +882,49 @@ async def on_message(message):
 				embed = discord.Embed(description=f"{showcard_return}", color=color)
 				embed.set_author(name=username, icon_url=user_pfp)
 				await channel.send(embed=embed)
-				return
+				
 		except Exception as e:
 			print(e)
 			await send_error(channel)
 		return
 
+	# ---------------------------
+	#   Find Card
+	# ---------------------------
+
+	elif command in ["find-item"]:
+		if "none" in param[1]:  
+			color = discord_error_rgb_code
+			embed = discord.Embed(description=f"{emoji_error}  No card to find", color=color)
+			embed.set_author(name=username, icon_url=user_pfp)
+			await channel.send(embed=embed)
+			return
+		else: item_name = param[1]
+		try:
+			userList = []
+			outputList = []
+			status = await db_handler.find_item(userList, item_name)
+			if status == "error":
+				color = discord_error_rgb_code
+				embed = discord.Embed(description=f"{status}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				await channel.send(embed=embed)
+			
+			for i in range(len(userList)):
+				user = (await client.fetch_user(userList[i]))
+				outputList.append(user.global_name)
+
+			outputList = '\n'.join(outputList)
+			color = discord.Color.from_rgb(3, 169, 244)
+			embed = discord.Embed(description=f"Find-Item", color=color)
+			embed.add_field(name = "Users who own card:", value = outputList)
+			embed.set_author(name=username, icon_url=user_pfp)
+			await channel.send(embed=embed)
+		
+		except Exception as e:
+			print(e)
+			await send_error(channel)
+		
 	# ---------------------------
 	#   ITEM CREATION
 	# ---------------------------
@@ -1073,7 +1112,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-		return
+			return
 	
 	# ---------------------------
 	#   BUY SILVER PACK
@@ -1107,7 +1146,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-		return
+			return
 	
 	# ---------------------------
 	#   BUY GOLD PACK
@@ -1141,7 +1180,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-		return
+			return
 
 	# ---------------------------
 	#   GIVE ITEM -- can also be used to "sell"
@@ -1229,7 +1268,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-		return
+			return
 
 	# ---------------------------
 	#   CHECK INVENTORY
@@ -1252,7 +1291,7 @@ async def on_message(message):
 		except Exception as e:
 			print(e)
 			await send_error(channel)
-		return
+			return
 
 	# ---------------------------
 	#   ADD ROLE INCOME ROLE
@@ -1442,6 +1481,10 @@ async def on_message(message):
 		embed = discord.Embed(description=f"{emoji_worked}  Users with registered roles have received their income.", color=color)
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
+
+		return
+	if(message.content.startswith("/")):
+		await message.delete()
 
 		return
 
