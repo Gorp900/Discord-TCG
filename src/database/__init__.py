@@ -1204,44 +1204,7 @@ class pythonboat_database_handler:
 					print(userdata[i]["user_id"])
 					userList.append(userdata[i]["user_id"])		
 		return "success"
-		item_content = json_content["items"]
 
-		items = user_content["items"]
-
-		## First we wanna remove nil items:
-		nil_list = []
-		for i in range(len(items)):
-			if items[i][1] == 0: ## check which items are at value 0 and add to a list
-				nil_list.append(items[i])
-		for x in range(len(nil_list)):
-			items.remove(nil_list[x]) ## Remove matching instances of the list from inventory
-
-		if items == "none":
-			inventory_checkup = "**Inventory empty. No items owned.**"
-		else:
-			inventory_checkup = ""
-			for i in range(len(items)):
-				rarity = "?"
-				for ii in range(len(item_content)):
-					if items[i][0] == item_content[ii]["name"]: rarity = item_content[ii]["rarity"] ## Just get rarity of item
-				## Below is interesting, we want to align parts of the writing to make it more uniform, so we count characters and decide how many tabs we need.
-				number_of_tabs = (7-(len(items[i][0])//4))
-				number_of_extra_spaces = (3-(len(items[i][0])%4))
-				tab_string = ""
-				for iii in range(number_of_tabs): tab_string +="\t"
-				for iii in range(number_of_extra_spaces): tab_string +=" "
-				inventory_checkup += f"`{items[i][1]} :: {items[i][0]} {tab_string}== Rarity: {rarity}`\n"
-
-		color = self.discord_blue_rgb_code
-		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
-		embed.set_author(name=username, icon_url=user_pfp)
-		embed.set_footer(text="nice")
-		await channel.send(embed=embed)
-
-		# overwrite, end
-		# not needed
-
-		return "success", "success"
 	#
 	# ROLE INCOMES - NEW ONE
 	#
