@@ -994,7 +994,7 @@ class pythonboat_database_handler:
 			else:
 				worked = False
 				for ii_i in range(len(json_user_content["items"])):
-					if json_user_content["items"][ii_i][0] == item_name:
+					if json_user_content["items"][ii_i][0].casefold() == item_name.casefold():
 						if (json_user_content["items"][ii_i][1] - amount) < 0:
 							return "error", f"❌ You do not have enough items of that item to give."
 						json_user_content["items"][ii_i][1] -= amount
@@ -1156,7 +1156,7 @@ class pythonboat_database_handler:
 			item_name = user_items[item_position][0]
 
 		for cards in json_items: ## Find the card we're looking for from the inventory
-			if cards["name"] == item_name:
+			if cards["name"].casefold() == item_name.casefold():
 				image_to_show = cards["image_location"]
 				team_name = cards["team_name"]
 				rarity_to_show = cards["rarity"]
@@ -1183,6 +1183,65 @@ class pythonboat_database_handler:
 		await channel.send(file=file_to_embed, embed=embed)
 		return "success", "success"
 
+	#
+	# FIND CARD
+	#
+	#Should find whether any player owns specified card and output users name
+	async def find_item(self, userList, cardToFind):
+		##Loop through all users, getting their list of items and check if card exists in their inventory
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+
+		#Gets us all users data
+		userdata = json_content["userdata"]
+
+		#Loop through getting list of items for each user
+		for i in range(len(userdata)):
+			items = userdata[i]["items"]
+			for j in range(len(items)):
+				if items[j][0].casefold() == cardToFind.casefold():
+					print(userdata[i]["user_id"])
+					userList.append(userdata[i]["user_id"])		
+		return "success"
+		item_content = json_content["items"]
+
+		items = user_content["items"]
+
+		## First we wanna remove nil items:
+		nil_list = []
+		for i in range(len(items)):
+			if items[i][1] == 0: ## check which items are at value 0 and add to a list
+				nil_list.append(items[i])
+		for x in range(len(nil_list)):
+			items.remove(nil_list[x]) ## Remove matching instances of the list from inventory
+
+		if items == "none":
+			inventory_checkup = "**Inventory empty. No items owned.**"
+		else:
+			inventory_checkup = ""
+			for i in range(len(items)):
+				rarity = "?"
+				for ii in range(len(item_content)):
+					if items[i][0] == item_content[ii]["name"]: rarity = item_content[ii]["rarity"] ## Just get rarity of item
+				## Below is interesting, we want to align parts of the writing to make it more uniform, so we count characters and decide how many tabs we need.
+				number_of_tabs = (7-(len(items[i][0])//4))
+				number_of_extra_spaces = (3-(len(items[i][0])%4))
+				tab_string = ""
+				for iii in range(number_of_tabs): tab_string +="\t"
+				for iii in range(number_of_extra_spaces): tab_string +=" "
+				inventory_checkup += f"`{items[i][1]} :: {items[i][0]} {tab_string}== Rarity: {rarity}`\n"
+
+		color = self.discord_blue_rgb_code
+		embed = discord.Embed(title="Owned Items", description=f"{inventory_checkup}", color=color)
+		embed.set_author(name=username, icon_url=user_pfp)
+		embed.set_footer(text="nice")
+		await channel.send(embed=embed)
+
+		# overwrite, end
+		# not needed
+
+		return "success", "success"
 	#
 	# ROLE INCOMES - NEW ONE
 	#
