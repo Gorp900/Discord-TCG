@@ -1315,7 +1315,7 @@ class pythonboat_database_handler:
 						json_income_roles[role_index]["last_updated"] = str(now)
 						payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
 						bonus_engagement = json_user_content["engagement"]
-						json_user_content["engagement"] // 2
+						json_user_content["engagement"] // 10
 						json_user_content["cash"] += (payment + bonus_engagement)
 						# overwrite
 						json_content["userdata"][user_index] = json_user_content
