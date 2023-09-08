@@ -7,13 +7,9 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 25,
-            "engagement": 7,
+            "cash": 126,
+            "engagement": 13,
             "items": [
-                [
-                    "The Kid",
-                    0
-                ],
                 [
                     "Big E Lanskull",
                     1
@@ -32,7 +28,7 @@
                 ],
                 [
                     "Yalcrab",
-                    1
+                    2
                 ],
                 [
                     "Rimski",
@@ -48,10 +44,6 @@
                 ],
                 [
                     "Chad Michaels",
-                    1
-                ],
-                [
-                    "John-Boy",
                     1
                 ],
                 [
@@ -101,13 +93,37 @@
                 [
                     "Noel",
                     1
+                ],
+                [
+                    "Deathwing",
+                    1
+                ],
+                [
+                    "When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Jim",
+                    1
+                ],
+                [
+                    "Jake",
+                    1
+                ],
+                [
+                    "The Moogle Mob",
+                    1
+                ],
+                [
+                    "Daniel RobotEks",
+                    1
                 ]
             ]
         },
         {
             "user_id": 163388306460114945,
-            "cash": 75,
-            "engagement": 15,
+            "cash": 195,
+            "engagement": 16,
             "items": [
                 [
                     "Steve Smith",
@@ -143,7 +159,7 @@
                 ],
                 [
                     "Patters",
-                    2
+                    3
                 ],
                 [
                     "Yalcrab",
@@ -216,13 +232,29 @@
                 [
                     "Whitstable Bay",
                     1
+                ],
+                [
+                    "Shiny Larry",
+                    1
+                ],
+                [
+                    "Byrne",
+                    1
+                ],
+                [
+                    "Larry",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    1
                 ]
             ]
         },
         {
             "user_id": 225690039206543361,
-            "cash": 47,
-            "engagement": 39,
+            "cash": 123,
+            "engagement": 62,
             "items": [
                 [
                     "Shiny Herr Dry",
@@ -238,7 +270,7 @@
                 ],
                 [
                     "Maimai",
-                    2
+                    3
                 ],
                 [
                     "Spitfire",
@@ -298,14 +330,10 @@
                 ],
                 [
                     "Starlight Grimmer II",
-                    1
+                    2
                 ],
                 [
                     "Tugger",
-                    1
-                ],
-                [
-                    "Quad Damage",
                     1
                 ],
                 [
@@ -346,7 +374,7 @@
                 ],
                 [
                     "Ninja",
-                    2
+                    3
                 ],
                 [
                     "Richard",
@@ -354,7 +382,7 @@
                 ],
                 [
                     "Yoyo the Yuckie",
-                    1
+                    2
                 ],
                 [
                     "Rainbone Dash",
@@ -362,7 +390,7 @@
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Abbot Ale",
@@ -374,7 +402,7 @@
                 ],
                 [
                     "Aporreadillo",
-                    1
+                    2
                 ],
                 [
                     "Greed Hastings",
@@ -394,7 +422,7 @@
                 ],
                 [
                     "Zumbo the Zany Mad Man",
-                    1
+                    2
                 ],
                 [
                     "Big McSkellingtosh",
@@ -418,7 +446,7 @@
                 ],
                 [
                     "Patters",
-                    1
+                    2
                 ],
                 [
                     "Yalcrab",
@@ -426,14 +454,62 @@
                 ],
                 [
                     "Alberto Del Riskull",
+                    2
+                ],
+                [
+                    "Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Opera Omnia",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    2
+                ],
+                [
+                    "Dean Ambskull",
+                    1
+                ],
+                [
+                    "Huski",
+                    1
+                ],
+                [
+                    "Cesarskull",
+                    1
+                ],
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "Shiny Noodles the Nasty",
+                    1
+                ],
+                [
+                    "Merv Hughes",
+                    1
+                ],
+                [
+                    "Chad Michaels",
+                    1
+                ],
+                [
+                    "Deathwing",
                     1
                 ]
             ]
         },
         {
             "user_id": 185808377052528640,
-            "cash": 111,
-            "engagement": 4,
+            "cash": 57,
+            "engagement": 5,
             "items": [
                 [
                     "Shiny Holidays Are Coming",
@@ -506,13 +582,33 @@
                 [
                     "Greed Hastings",
                     1
+                ],
+                [
+                    "Shiny Rajas con Crema",
+                    1
+                ],
+                [
+                    "Richard",
+                    1
+                ],
+                [
+                    "Thighza",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    1
+                ],
+                [
+                    "Joker the Jovial",
+                    1
                 ]
             ]
         },
         {
             "user_id": 109392522874208256,
-            "cash": 0,
-            "engagement": 21,
+            "cash": 180,
+            "engagement": 26,
             "items": [
                 [
                     "Frosty the Forsaken",
@@ -659,23 +755,43 @@
                     1
                 ],
                 [
-                    "Stemats",
-                    1
-                ],
-                [
                     "The Moogle Mob",
                     1
                 ],
                 [
                     "Rehsurc",
                     1
+                ],
+                [
+                    "Chorizo",
+                    1
+                ],
+                [
+                    "Shiny Benny-Cake",
+                    1
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Stack Dorsey",
+                    1
+                ],
+                [
+                    "Quesadilla",
+                    1
+                ],
+                [
+                    "Totori",
+                    1
                 ]
             ]
         },
         {
             "user_id": 185103319247749120,
-            "cash": 44,
-            "engagement": 5,
+            "cash": 177,
+            "engagement": 11,
             "items": [
                 [
                     "Alberto Del Riskull",
@@ -771,18 +887,38 @@
                 ],
                 [
                     "Drofrehtur",
-                    1
+                    2
                 ],
                 [
                     "Ongina",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    1
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Jake",
+                    1
+                ],
+                [
+                    "John-Boy",
                     1
                 ]
             ]
         },
         {
             "user_id": 330073959758430210,
-            "cash": 85,
-            "engagement": 28,
+            "cash": 67,
+            "engagement": 51,
             "items": [
                 [
                     "Eureka O'Hara",
@@ -794,7 +930,7 @@
                 ],
                 [
                     "Whitstable Bay",
-                    2
+                    1
                 ],
                 [
                     "Big E Lanskull",
@@ -810,7 +946,7 @@
                 ],
                 [
                     "When Fruit Attacks",
-                    1
+                    2
                 ],
                 [
                     "Kilian",
@@ -834,7 +970,7 @@
                 ],
                 [
                     "Jack",
-                    1
+                    2
                 ],
                 [
                     "Huski",
@@ -898,14 +1034,10 @@
                 ],
                 [
                     "Kevil Owskull",
-                    1
+                    2
                 ],
                 [
                     "Shiny Rimski",
-                    1
-                ],
-                [
-                    "Pockets the Pox-Ridden",
                     1
                 ],
                 [
@@ -914,7 +1046,7 @@
                 ],
                 [
                     "Ricky Ponting",
-                    1
+                    2
                 ],
                 [
                     "Arianna",
@@ -938,11 +1070,11 @@
                 ],
                 [
                     "Rehsurc",
-                    2
+                    3
                 ],
                 [
                     "Tyra Sanchez",
-                    1
+                    2
                 ],
                 [
                     "Deathwing",
@@ -958,7 +1090,7 @@
                 ],
                 [
                     "Susan Wojchipski",
-                    1
+                    2
                 ],
                 [
                     "John-Boy",
@@ -970,11 +1102,11 @@
                 ],
                 [
                     "Satellite Nadella",
-                    1
+                    2
                 ],
                 [
                     "Chanel",
-                    1
+                    2
                 ],
                 [
                     "Dead Pony Club",
@@ -991,13 +1123,57 @@
                 [
                     "Aporreadillo",
                     1
+                ],
+                [
+                    "Rajas con Crema",
+                    1
+                ],
+                [
+                    "Rimski",
+                    1
+                ],
+                [
+                    "Princess Lunate II",
+                    1
+                ],
+                [
+                    "Le Cont",
+                    2
+                ],
+                [
+                    "Yalcrab",
+                    2
+                ],
+                [
+                    "Fitzgibbon",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Corunda",
+                    2
+                ],
+                [
+                    "JoJo the Bizzare",
+                    1
+                ],
+                [
+                    "Dhar'gor",
+                    1
+                ],
+                [
+                    "Noodles the Nasty",
+                    1
                 ]
             ]
         },
         {
             "user_id": 133960484201168896,
-            "cash": 93,
-            "engagement": 12,
+            "cash": 153,
+            "engagement": 18,
             "items": [
                 [
                     "Shiny Lent",
@@ -1029,7 +1205,7 @@
                 ],
                 [
                     "Greed Hastings",
-                    1
+                    2
                 ],
                 [
                     "Brock Leskull",
@@ -1061,7 +1237,7 @@
                 ],
                 [
                     "Jack",
-                    1
+                    2
                 ],
                 [
                     "Ayesha",
@@ -1069,10 +1245,6 @@
                 ],
                 [
                     "Merv Hughes",
-                    1
-                ],
-                [
-                    "Dhar'gor",
                     1
                 ],
                 [
@@ -1102,13 +1274,41 @@
                 [
                     "Maimai",
                     1
+                ],
+                [
+                    "Raritibia",
+                    1
+                ],
+                [
+                    "Jim",
+                    1
+                ],
+                [
+                    "Chad Michaels",
+                    1
+                ],
+                [
+                    "Benny-Cake",
+                    1
+                ],
+                [
+                    "Richard",
+                    1
+                ],
+                [
+                    "Daniel RobotEks",
+                    1
+                ],
+                [
+                    "Spitfire",
+                    1
                 ]
             ]
         },
         {
             "user_id": 533708157382426625,
-            "cash": 16,
-            "engagement": 30,
+            "cash": 132,
+            "engagement": 61,
             "items": [
                 [
                     "Fitzgibbon",
@@ -1156,7 +1356,7 @@
                 ],
                 [
                     "Stemats",
-                    4
+                    6
                 ],
                 [
                     "Flutterspine II",
@@ -1164,7 +1364,7 @@
                 ],
                 [
                     "Frosty the Forsaken",
-                    2
+                    1
                 ],
                 [
                     "The Moogle Mob",
@@ -1208,14 +1408,6 @@
                 ],
                 [
                     "Sophie",
-                    1
-                ],
-                [
-                    "Chorizo",
-                    1
-                ],
-                [
-                    "Eureka O'Hara",
                     1
                 ],
                 [
@@ -1296,11 +1488,11 @@
                 ],
                 [
                     "Alberto Del Riskull",
-                    1
+                    2
                 ],
                 [
                     "Matrix Huateng",
-                    1
+                    2
                 ],
                 [
                     "Jones",
@@ -1321,12 +1513,92 @@
                 [
                     "SMORC!!!",
                     1
+                ],
+                [
+                    "Patters",
+                    1
+                ],
+                [
+                    "Shiny Stemats",
+                    1
+                ],
+                [
+                    "Anger Richard",
+                    1
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Whitstable Bay",
+                    1
+                ],
+                [
+                    "Noel",
+                    1
+                ],
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Kevil Owskull",
+                    1
+                ],
+                [
+                    "Huski",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Maimai",
+                    1
+                ],
+                [
+                    "Applecrack",
+                    1
+                ],
+                [
+                    "Cabrito",
+                    1
+                ],
+                [
+                    "Greed Hastings",
+                    1
+                ],
+                [
+                    "Arianna",
+                    1
+                ],
+                [
+                    "Rimski",
+                    1
+                ],
+                [
+                    "Samoa Joskull",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    1
+                ],
+                [
+                    "Hop House 13",
+                    1
                 ]
             ]
         },
         {
             "user_id": 204269962204938240,
-            "cash": 356,
+            "cash": 701,
             "engagement": 13,
             "items": [
                 [
@@ -1461,8 +1733,8 @@
         },
         {
             "user_id": 134405791103844352,
-            "cash": 305,
-            "engagement": 3,
+            "cash": 251,
+            "engagement": 4,
             "items": [
                 [
                     "Dead Pony Club",
@@ -1535,24 +1807,44 @@
                 [
                     "Opera Omnia",
                     1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Ongina",
+                    1
+                ],
+                [
+                    "Chad Michaels",
+                    1
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Attacker Arwing",
+                    1
                 ]
             ]
         },
         {
             "user_id": 136928539487371266,
-            "cash": 976,
+            "cash": 1178,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 186924306276679680,
-            "cash": 976,
+            "cash": 1178,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 204750746745438208,
-            "cash": 437,
+            "cash": 672,
             "engagement": 3,
             "items": [
                 [
@@ -1599,8 +1891,8 @@
         },
         {
             "user_id": 241944494033862657,
-            "cash": 87,
-            "engagement": 3,
+            "cash": 75,
+            "engagement": 4,
             "items": [
                 [
                     "Shiny Quad Damage",
@@ -1608,7 +1900,7 @@
                 ],
                 [
                     "Greed Hastings",
-                    1
+                    2
                 ],
                 [
                     "Dasypeltis",
@@ -1661,12 +1953,28 @@
                 [
                     "The Kid",
                     1
+                ],
+                [
+                    "Shiny David Warner",
+                    1
+                ],
+                [
+                    "Tao",
+                    1
+                ],
+                [
+                    "David Warner",
+                    1
+                ],
+                [
+                    "Matrix Huateng",
+                    1
                 ]
             ]
         },
         {
             "user_id": 247856257631911936,
-            "cash": 802,
+            "cash": 1004,
             "engagement": 0,
             "items": [
                 [
@@ -1689,13 +1997,19 @@
         },
         {
             "user_id": 193861041946492928,
-            "cash": 386,
+            "cash": 588,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 145625064153415680,
-            "cash": 336,
+            "cash": 538,
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 288345258209574915,
+            "cash": 352,
             "engagement": 0,
             "items": "none"
         }
@@ -5193,7 +5507,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-09-04 08:30:06.868810"
+            "last_updated": "2023-09-08 17:11:11.598004"
         }
     ]
 }

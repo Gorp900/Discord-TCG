@@ -987,6 +987,7 @@ class pythonboat_database_handler:
 
 		json_user_content = json_content["userdata"][user_index]
 		json_recept_content = json_content["userdata"][reception_user_index]
+		json_item_database = json_content["items"]
 
 		try:
 			if json_user_content["items"] == "none":
@@ -1016,6 +1017,9 @@ class pythonboat_database_handler:
 					return "error", f"❌ You do not have that item to give"
 
 			# so we should be good, now handling the reception side
+			for x in range(len(json_item_database)):
+				if json_item_database[x]["name"].casefold() == item_name.casefold():
+					item_name = json_item_database[x]["name"]
 			if json_recept_content["items"] == "none":
 				json_recept_content["items"] = [[item_name, amount]]
 			else:
