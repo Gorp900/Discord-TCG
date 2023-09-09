@@ -1084,17 +1084,25 @@ class pythonboat_database_handler:
 			current_team = team_list[i]
 			text_to_insert += "<button class=\"collapsible\">" + current_team + "</button>\n <div class=\"content\"><div class=\"row\">\n"
 			for ii in range(len(item_content)): ## Made the first line, so now we check database for players in this team
-				if item_content[ii]["team_name"] == current_team: ## If the player belongs to the team...
+				if (item_content[ii]["team_name"] == current_team) and item_content[ii]["shiny"] == False: ## If the player belongs to the team...
 					current_player = item_content[ii]["name"]
 					current_image = item_content[ii]["image_location"]
-					current_image = current_image.lstrip("/root/BBTCG/")
 					quantity = 0
+					shiny_quantity = 0
 					gray_string = " class=\"gray-image\" "
 					for iii in range(len(user_content)): ## After getting their details, we check if the user has any of these players in their inventory
 						if user_content[iii][0] == current_player: 
 							quantity = user_content[iii][1]
 							gray_string = " "
-					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Quantity: " + str(quantity) + "</p><img" + gray_string + "src=\"" + current_image +"\"></div>\n"
+						if user_content[iii][0] == str("Shiny " + current_player): 
+							shiny_quantity = user_content[iii][1]
+							gray_string = " "
+					if shiny_quantity > 0:
+						for s in range(len(item_content)):
+							if item_content[s]["name"] == str("Shiny " + current_player):
+								current_image = item_content[s]["image_location"]
+					current_image = current_image.lstrip("/root/BBTCG/")
+					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Basic: " + str(quantity) + "<br>Shinies: " + str(shiny_quantity) + "</p><img" + gray_string + "src=\"" + current_image +"\"></div>\n"
 			text_to_insert += "</div></div>\n"
 		contents.insert(current_line_num_to_edit, text_to_insert)
 		text_to_insert = ""
