@@ -1051,7 +1051,7 @@ class pythonboat_database_handler:
 
 		return "success", "success"
 
-	async def create_html_inventory(self, user):
+	async def create_html_inventory(self, user, channel, username, user_pfp):
 		# load json
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
@@ -1063,12 +1063,16 @@ class pythonboat_database_handler:
 		##Copy our new file
 		origional_file = "/root/mysite/bloodbowl/bot-inventories/base-inventory.html"
 		new_file = "/root/mysite/bloodbowl/bot-inventories/" + str(user) + ".html"
-		shutil.copyfile(origional_file, new_file)
+		link_to_collection = "https://gorp900.com/" + new_file.lstrip("/root/mysite/")
+		try: 
+			shutil.copyfile(origional_file, new_file)
 		
-		## Open it for editing
-		begin_edit_line_num = 67 ## Hand set for now, could do with some logic instead
-		with open(new_file, "r") as f:
-			contents = f.readlines()
+			## Open it for editing
+			begin_edit_line_num = 67 ## Hand set for now, could do with some logic instead
+			with open(new_file, "r") as f:
+				contents = f.readlines()
+		except:
+			return "error", f"❌ Cannot create or read new file"
 		
 		## Need to create list of team names to be the basis of our loop
 		team_list = []
@@ -1108,10 +1112,17 @@ class pythonboat_database_handler:
 		text_to_insert = ""
 
 		## Now we're done, time to write our new content to back.
-		with open(new_file, "w") as f:
-			f.writelines(contents)
+		try:
+			with open(new_file, "w") as f:
+				f.writelines(contents)
+		except:
+			return "error", f"❌ Cannot write to new file"
 
-		return "success"
+		color = self.discord_blue_rgb_code
+		embed = discord.Embed(title="Your Visual Collection", description=f"{link_to_collection}", color=color)
+		embed.set_author(name=username, icon_url=user_pfp)
+		await channel.send(embed=embed)
+		return "success", "success"
 
 	#
 	# CHECK INVENTORY

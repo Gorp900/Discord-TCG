@@ -488,6 +488,7 @@ async def on_message(message):
 		embed = discord.Embed(title=f"Help System", color=color)
 		embed.add_field(name="balance", value=f"Usage: `/balance`\nShows you're current balance of cyans", inline=False)
 		embed.add_field(name="inventory", value=f"Usage: `/inventory <type>`\nShows your currently collected cards and other info.  Type can be [default, teams, rarity].  Leaving it blank is [default]", inline=False)
+		embed.add_field(name="collection", value=f"Usage: `/collection`\nThis Will generate a html version of your inventory and return to you the link.", inline=False)
 		## embed.add_field(name="leaderboard", value=f"Usage: `/leaderboard`\nShows who has the most cyans", inline=False) ## TODO: Re-implement when autocomplete is in
 		embed.add_field(name="show-card", value=f"Usage: `/show-card \"<card_name>\"`\nShows the named card to the chat.  If no card is named, it shows a random card from your inventory", inline=False)
 		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
@@ -1285,6 +1286,21 @@ async def on_message(message):
 			print(e)
 			await send_error(channel)
 			return
+		
+	elif command in ["collection"]:
+		try:
+			status, ret_status = await db_handler.create_html_inventory(user, channel, username, user_pfp)
+			if status == "error":
+				color = discord_error_rgb_code
+				embed = discord.Embed(description=f"{ret_status}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				await channel.send(embed=embed)
+				return
+		except Exception as e:
+			print(e)
+			await send_error(channel)
+			return
+
 
 	# ---------------------------
 	#   ADD ROLE INCOME ROLE
