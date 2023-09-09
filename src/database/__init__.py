@@ -1,4 +1,4 @@
-import json, os, time, random, math, sys, discord, math, glob
+import json, os, time, random, math, sys, discord, math, glob, shutil
 from datetime import datetime
 from datetime import timedelta
 
@@ -1050,6 +1050,60 @@ class pythonboat_database_handler:
 		self.overwrite_json(json_content)
 
 		return "success", "success"
+
+	async def create_html_inventory(self, user):
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		user_content = json_content["userdata"][user_index]["items"]
+		item_content = json_content["items"]
+
+		##Copy our new file
+		origional_file = "/root/mysite/bloodbowl/bot-inventories/base-inventory.html"
+		new_file = "/root/mysite/bloodbowl/bot-inventories/" + str(user) + ".html"
+		shutil.copyfile(origional_file, new_file)
+		
+		## Open it for editing
+		begin_edit_line_num = 67 ## Hand set for now, could do with some logic instead
+		with open(new_file, "r") as f:
+			contents = f.readlines()
+		
+		## Need to create list of team names to be the basis of our loop
+		team_list = []
+		for i in range(len(item_content)):
+			team_list.append(item_content[i]["team_name"])
+		team_list = list(dict.fromkeys(team_list))
+		team_list.sort()
+
+		## Now we need to create our inseterted text in a loop
+		text_to_insert = ""
+		current_line_num_to_edit = begin_edit_line_num
+		for i in range(len(team_list)): ## Loop based on team name so we loop through 'em
+			current_team = team_list[i]
+			text_to_insert += "<button class=\"collapsible\">" + current_team + "</button>\n <div class=\"content\"><div class=\"row\">\n"
+			for ii in range(len(item_content)): ## Made the first line, so now we check database for players in this team
+				if item_content[ii]["team_name"] == current_team: ## If the player belongs to the team...
+					current_player = item_content[ii]["name"]
+					current_image = item_content[ii]["image_location"]
+					current_image = current_image.lstrip("/root/BBTCG/")
+					quantity = 0
+					gray_string = " class=\"gray-image\" "
+					for iii in range(len(user_content)): ## After getting their details, we check if the user has any of these players in their inventory
+						if user_content[iii][0] == current_player: 
+							quantity = user_content[iii][1]
+							gray_string = " "
+					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Quantity: " + str(quantity) + "</p><img" + gray_string + "src=\"" + current_image +"\"></div>\n"
+			text_to_insert += "</div></div>\n"
+		contents.insert(current_line_num_to_edit, text_to_insert)
+		text_to_insert = ""
+
+		## Now we're done, time to write our new content to back.
+		with open(new_file, "w") as f:
+			f.writelines(contents)
+
+		return "success"
 
 	#
 	# CHECK INVENTORY

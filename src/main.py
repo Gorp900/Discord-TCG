@@ -849,15 +849,7 @@ async def on_message(message):
 	elif command in ["gorptest"]:
 		if not staff_request:
 			return
-		test_text = "DOUGAL!"
-		embed = discord.Embed(title="MY_TITLE", description=f"Here's ```arm\n{test_text}\n``` card", color=discord_success_rgb_code)
-		test_image = "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Dougal.png"
-		file_to_embed = discord.File(test_image, filename="image.png")
-		embed.set_image(url="attachment://image.png")
-		embed.set_author(name=username, icon_url=user_pfp)
-		await channel.send(file=file_to_embed, embed=embed)
-
-		##ret_status = await db_handler.non_command_engagement_boost(user)
+		ret_status = await db_handler.create_html_inventory(user)
 		return
 	
 	#### This command is set to automatically deal with our databse to avoid needing manual writing

@@ -7,8 +7,8 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 126,
-            "engagement": 13,
+            "cash": 69,
+            "engagement": 14,
             "items": [
                 [
                     "Big E Lanskull",
@@ -117,12 +117,24 @@
                 [
                     "Daniel RobotEks",
                     1
+                ],
+                [
+                    "Tugger",
+                    1
+                ],
+                [
+                    "Meruru",
+                    1
+                ],
+                [
+                    "Corunda",
+                    1
                 ]
             ]
         },
         {
             "user_id": 163388306460114945,
-            "cash": 195,
+            "cash": 241,
             "engagement": 16,
             "items": [
                 [
@@ -253,8 +265,8 @@
         },
         {
             "user_id": 225690039206543361,
-            "cash": 123,
-            "engagement": 62,
+            "cash": 16,
+            "engagement": 64,
             "items": [
                 [
                     "Shiny Herr Dry",
@@ -366,7 +378,7 @@
                 ],
                 [
                     "Salsa",
-                    1
+                    2
                 ],
                 [
                     "TEA",
@@ -394,7 +406,7 @@
                 ],
                 [
                     "Abbot Ale",
-                    1
+                    2
                 ],
                 [
                     "Bo Dalskull",
@@ -462,7 +474,7 @@
                 ],
                 [
                     "Opera Omnia",
-                    1
+                    2
                 ],
                 [
                     "Sterkenburg",
@@ -486,7 +498,7 @@
                 ],
                 [
                     "Quad Damage",
-                    1
+                    2
                 ],
                 [
                     "Shiny Noodles the Nasty",
@@ -503,12 +515,20 @@
                 [
                     "Deathwing",
                     1
+                ],
+                [
+                    "Pigeon",
+                    1
+                ],
+                [
+                    "Shiny Rehsurc",
+                    1
                 ]
             ]
         },
         {
             "user_id": 185808377052528640,
-            "cash": 57,
+            "cash": 92,
             "engagement": 5,
             "items": [
                 [
@@ -607,7 +627,7 @@
         },
         {
             "user_id": 109392522874208256,
-            "cash": 180,
+            "cash": 236,
             "engagement": 26,
             "items": [
                 [
@@ -790,8 +810,8 @@
         },
         {
             "user_id": 185103319247749120,
-            "cash": 177,
-            "engagement": 11,
+            "cash": 43,
+            "engagement": 12,
             "items": [
                 [
                     "Alberto Del Riskull",
@@ -903,7 +923,7 @@
                 ],
                 [
                     "Kofi Kingskull",
-                    1
+                    2
                 ],
                 [
                     "Jake",
@@ -912,13 +932,25 @@
                 [
                     "John-Boy",
                     1
+                ],
+                [
+                    "Chanel",
+                    1
+                ],
+                [
+                    "Cabrito",
+                    1
+                ],
+                [
+                    "Cyril",
+                    1
                 ]
             ]
         },
         {
             "user_id": 330073959758430210,
-            "cash": 67,
-            "engagement": 51,
+            "cash": 48,
+            "engagement": 52,
             "items": [
                 [
                     "Eureka O'Hara",
@@ -950,7 +982,7 @@
                 ],
                 [
                     "Kilian",
-                    1
+                    2
                 ],
                 [
                     "Dougal",
@@ -1042,7 +1074,7 @@
                 ],
                 [
                     "Pesski",
-                    1
+                    2
                 ],
                 [
                     "Ricky Ponting",
@@ -1167,13 +1199,17 @@
                 [
                     "Noodles the Nasty",
                     1
+                ],
+                [
+                    "Returner Deryck",
+                    1
                 ]
             ]
         },
         {
             "user_id": 133960484201168896,
-            "cash": 153,
-            "engagement": 18,
+            "cash": 26,
+            "engagement": 19,
             "items": [
                 [
                     "Shiny Lent",
@@ -1233,7 +1269,7 @@
                 ],
                 [
                     "Deathwing",
-                    2
+                    3
                 ],
                 [
                     "Jack",
@@ -1302,13 +1338,25 @@
                 [
                     "Spitfire",
                     1
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Shmolder III",
+                    1
+                ],
+                [
+                    "Sophie",
+                    1
                 ]
             ]
         },
         {
             "user_id": 533708157382426625,
-            "cash": 132,
-            "engagement": 61,
+            "cash": 24,
+            "engagement": 63,
             "items": [
                 [
                     "Fitzgibbon",
@@ -1388,7 +1436,7 @@
                 ],
                 [
                     "Sterkenburg",
-                    1
+                    2
                 ],
                 [
                     "Ballin Bozos",
@@ -1436,7 +1484,7 @@
                 ],
                 [
                     "Ongina",
-                    1
+                    2
                 ],
                 [
                     "Black Sheep",
@@ -1593,12 +1641,28 @@
                 [
                     "Hop House 13",
                     1
+                ],
+                [
+                    "Princess Lunate II",
+                    1
+                ],
+                [
+                    "JoJo the Bizzare",
+                    1
+                ],
+                [
+                    "Rotstalker",
+                    1
+                ],
+                [
+                    "Salsa",
+                    1
                 ]
             ]
         },
         {
             "user_id": 204269962204938240,
-            "cash": 701,
+            "cash": 744,
             "engagement": 13,
             "items": [
                 [
@@ -1733,7 +1797,7 @@
         },
         {
             "user_id": 134405791103844352,
-            "cash": 251,
+            "cash": 285,
             "engagement": 4,
             "items": [
                 [
@@ -1832,19 +1896,19 @@
         },
         {
             "user_id": 136928539487371266,
-            "cash": 1178,
+            "cash": 1208,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 186924306276679680,
-            "cash": 1178,
+            "cash": 1208,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 204750746745438208,
-            "cash": 672,
+            "cash": 705,
             "engagement": 3,
             "items": [
                 [
@@ -1891,7 +1955,7 @@
         },
         {
             "user_id": 241944494033862657,
-            "cash": 75,
+            "cash": 109,
             "engagement": 4,
             "items": [
                 [
@@ -1974,7 +2038,7 @@
         },
         {
             "user_id": 247856257631911936,
-            "cash": 1004,
+            "cash": 1034,
             "engagement": 0,
             "items": [
                 [
@@ -1997,19 +2061,19 @@
         },
         {
             "user_id": 193861041946492928,
-            "cash": 588,
+            "cash": 618,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 145625064153415680,
-            "cash": 538,
+            "cash": 568,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 288345258209574915,
-            "cash": 352,
+            "cash": 382,
             "engagement": 0,
             "items": "none"
         }
@@ -5507,7 +5571,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-09-08 17:11:11.598004"
+            "last_updated": "2023-09-09 08:35:01.452639"
         }
     ]
 }
