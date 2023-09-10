@@ -1068,7 +1068,7 @@ class pythonboat_database_handler:
 			shutil.copyfile(origional_file, new_file)
 		
 			## Open it for editing
-			begin_edit_line_num = 67 ## Hand set for now, could do with some logic instead
+			begin_edit_line_num = 84 ## Hand set for now, TODO: could do with some logic instead
 			with open(new_file, "r") as f:
 				contents = f.readlines()
 		except:
@@ -1091,22 +1091,26 @@ class pythonboat_database_handler:
 				if (item_content[ii]["team_name"] == current_team) and item_content[ii]["shiny"] == False: ## If the player belongs to the team...
 					current_player = item_content[ii]["name"]
 					current_image = item_content[ii]["image_location"]
+					current_rarity = item_content[ii]["rarity"]
 					quantity = 0
 					shiny_quantity = 0
-					gray_string = " class=\"gray-image\" "
+					color_string = " class=\"gray-image\" "
 					for iii in range(len(user_content)): ## After getting their details, we check if the user has any of these players in their inventory
 						if user_content[iii][0] == current_player: 
 							quantity = user_content[iii][1]
-							gray_string = " "
 						if user_content[iii][0] == str("Shiny " + current_player): 
 							shiny_quantity = user_content[iii][1]
-							gray_string = " "
 					if shiny_quantity > 0:
 						for s in range(len(item_content)):
 							if item_content[s]["name"] == str("Shiny " + current_player):
 								current_image = item_content[s]["image_location"]
+					if (quantity > 0 ) or (shiny_quantity > 0):
+						if current_rarity == "common": color_string = " class=\"common-item\" "
+						if current_rarity == "uncommon": color_string = " class=\"uncommon-item\" "
+						if current_rarity == "rare": color_string = " class=\"rare-item\" "
+						if current_rarity == "legendary": color_string = " class=\"legendary-item\" "
 					current_image = current_image.lstrip("/root/BBTCG/")
-					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Basic: " + str(quantity) + "<br>Shinies: " + str(shiny_quantity) + "</p><img" + gray_string + "src=\"" + current_image +"\"></div>\n"
+					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Basic: " + str(quantity) + "<br>Shinies: " + str(shiny_quantity) + "</p><img" + color_string + "src=\"" + current_image +"\"></div>\n"
 			text_to_insert += "</div></div>\n"
 		contents.insert(current_line_num_to_edit, text_to_insert)
 		text_to_insert = ""

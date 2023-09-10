@@ -7,8 +7,8 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 69,
-            "engagement": 14,
+            "cash": 11,
+            "engagement": 15,
             "items": [
                 [
                     "Big E Lanskull",
@@ -129,12 +129,24 @@
                 [
                     "Corunda",
                     1
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    1
+                ],
+                [
+                    "Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Ayesha",
+                    1
                 ]
             ]
         },
         {
             "user_id": 163388306460114945,
-            "cash": 241,
+            "cash": 285,
             "engagement": 16,
             "items": [
                 [
@@ -265,7 +277,7 @@
         },
         {
             "user_id": 225690039206543361,
-            "cash": 16,
+            "cash": 108,
             "engagement": 64,
             "items": [
                 [
@@ -528,7 +540,7 @@
         },
         {
             "user_id": 185808377052528640,
-            "cash": 92,
+            "cash": 125,
             "engagement": 5,
             "items": [
                 [
@@ -627,7 +639,7 @@
         },
         {
             "user_id": 109392522874208256,
-            "cash": 236,
+            "cash": 290,
             "engagement": 26,
             "items": [
                 [
@@ -810,7 +822,7 @@
         },
         {
             "user_id": 185103319247749120,
-            "cash": 43,
+            "cash": 83,
             "engagement": 12,
             "items": [
                 [
@@ -949,7 +961,7 @@
         },
         {
             "user_id": 330073959758430210,
-            "cash": 48,
+            "cash": 128,
             "engagement": 52,
             "items": [
                 [
@@ -1208,7 +1220,7 @@
         },
         {
             "user_id": 133960484201168896,
-            "cash": 26,
+            "cash": 73,
             "engagement": 19,
             "items": [
                 [
@@ -1355,7 +1367,7 @@
         },
         {
             "user_id": 533708157382426625,
-            "cash": 24,
+            "cash": 115,
             "engagement": 63,
             "items": [
                 [
@@ -1662,7 +1674,7 @@
         },
         {
             "user_id": 204269962204938240,
-            "cash": 744,
+            "cash": 785,
             "engagement": 13,
             "items": [
                 [
@@ -1797,7 +1809,7 @@
         },
         {
             "user_id": 134405791103844352,
-            "cash": 285,
+            "cash": 317,
             "engagement": 4,
             "items": [
                 [
@@ -1896,19 +1908,19 @@
         },
         {
             "user_id": 136928539487371266,
-            "cash": 1208,
+            "cash": 1236,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 186924306276679680,
-            "cash": 1208,
+            "cash": 1236,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 204750746745438208,
-            "cash": 705,
+            "cash": 736,
             "engagement": 3,
             "items": [
                 [
@@ -1955,7 +1967,7 @@
         },
         {
             "user_id": 241944494033862657,
-            "cash": 109,
+            "cash": 141,
             "engagement": 4,
             "items": [
                 [
@@ -2038,7 +2050,7 @@
         },
         {
             "user_id": 247856257631911936,
-            "cash": 1034,
+            "cash": 1062,
             "engagement": 0,
             "items": [
                 [
@@ -2061,19 +2073,19 @@
         },
         {
             "user_id": 193861041946492928,
-            "cash": 618,
+            "cash": 646,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 145625064153415680,
-            "cash": 568,
+            "cash": 596,
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 288345258209574915,
-            "cash": 382,
+            "cash": 410,
             "engagement": 0,
             "items": "none"
         }
@@ -5571,7 +5583,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-09-09 08:35:01.452639"
+            "last_updated": "2023-09-09 23:15:34.329503"
         }
     ]
 }
