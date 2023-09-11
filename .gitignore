@@ -1,2 +1,2 @@
-src/database/database.json
+src/database/*.json
 src/bot_token

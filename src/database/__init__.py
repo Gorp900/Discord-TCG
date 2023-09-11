@@ -1051,6 +1051,10 @@ class pythonboat_database_handler:
 
 		return "success", "success"
 
+	####
+	# Creates html inventory page
+	####
+
 	async def create_html_inventory(self, user, channel, username, user_pfp):
 		# load json
 		json_file = open(self.pathToJson, "r")
@@ -1063,12 +1067,12 @@ class pythonboat_database_handler:
 		##Copy our new file
 		origional_file = "/root/mysite/bloodbowl/bot-inventories/base-inventory.html"
 		new_file = "/root/mysite/bloodbowl/bot-inventories/" + str(user) + ".html"
-		link_to_collection = "https://gorp900.com/" + new_file.lstrip("/root/mysite/")
+		link_to_collection = "https://neonblades.com/" + new_file.lstrip("/root/mysite/")
 		try: 
 			shutil.copyfile(origional_file, new_file)
 		
 			## Open it for editing
-			begin_edit_line_num = 84 ## Hand set for now, TODO: could do with some logic instead
+			begin_edit_line_num = 115 ## Hand set for now, TODO: could do with some logic instead
 			with open(new_file, "r") as f:
 				contents = f.readlines()
 		except:
