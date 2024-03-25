@@ -197,6 +197,34 @@ class pythonboat_database_handler:
 			json_content["userdata"] = new_data
 
 		json_user_content = json_content["userdata"][checked_user]
+		
+		## UPDATE BALANCE IF NEEDED
+		# Get current time, and last updated time
+		now = datetime.now()
+		last_income_update_string = json_user_content["last_balance_update"]
+		if not last_income_update_string:
+			json_user_content["last_balance_update"] = str(now)
+		last_income_update = datetime.strptime(last_income_update_string, '%Y-%m-%d %H:%M:%S.%f')
+		# calculate difference
+		passed_time = now - last_income_update
+		passed_time_hours = passed_time.total_seconds() // 3600.0
+		json_user_content["last_balance_update"] = str(now)
+		try:
+			if passed_time_hours >= 1:
+			# Calculate payment and bonuses ( THIS IS LIKE THE OTHER BALANCE UPDATE METHOD MAKE SURE ANY CHANGES APPLY TO BOTH )
+				payment = 2 * int(passed_time_hours)
+				bonus_engagement = json_user_content["engagement"]
+				json_user_content["engagement"] / 10
+				json_user_content["cash"] += (payment + bonus_engagement)
+				# overwrite
+				json_content["userdata"][user_index] = json_user_content
+		except:
+			pass
+		### save and return
+		self.overwrite_json(json_content)
+		### END OF UPDATE BALANCE
+
+
 		check_cash = "{:,}".format(int(json_user_content["cash"]))
 		## TODO: Count items, and maybe even total TV?
 
@@ -262,10 +290,68 @@ class pythonboat_database_handler:
 	#
 	# LEADERBOARD
 	#
+	## TODO each of these....
+	async def leaderboard_com(self, user, channel, username, client):
+		## Completionist Leaderboard, Count how many times a coach has 11 unique players from each team
+		return "success", "success"
 
+	async def leaderboard_hoa(self, user, channel, username, client):
+		## Hoarder Leaderboard, Count each coaches total number of cards
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		if new_data != "none":
+			json_content["userdata"] = new_data
+
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			running_total = 0
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					running_total += current_user["items"][x][1] ## get it's count and add to running total...
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		## Now to sort dict
+		## the sorted function takes what to sort and how, setting the key with lambda x:x[1] uses it's own item list, with it's second varr as the key to sort.
+		return_dict = sorted(return_dict, key=lambda x:x[1], reverse=True) ## reverse=true makes it highest first
+		return "success", return_dict
+
+	async def leaderboard_bee(self, user, channel, username, client):
+		## Beef Leaderboard, count each coaches most uniqye big guys
+		return "success", "success"
+
+	async def leaderboard_zub(self, user, channel, username, client):
+		## Zubat Award: Count each coaches most duplicates of one player
+		return "success", "success"
+
+	async def leaderboard_mag(self, user, channel, username, client):
+		## Magpie Award: Count each coaches number of shinies
+		return "success", "success"
+	
+	async def leaderboard_sal(self, user, channel, username, client):
+		## Fruit Salad Award: Count how many times each coach as a collection of 1 player from each team
+		return "success", "success"
+	
+	async def leaderboard_und(self, user, channel, username, client):
+		## Undertaker Award : Count most unique players that are dead
+		return "success", "success"
+	
+	async def leaderboard_cha(self, user, channel, username, client):
+		## Champion award : Count which coach has the most uniqye players from the winning league and bowl teams
+		winning_league_team = "Mental Disintegration"
+		winning_bowl_team = ""
+		return "success", "success"
+
+
+## Old LEaderboard, TODO: Remove me, no longer used
 	async def leaderboard(self, user, channel, username, full_name, page_number, mode_type, client):
 		# load json
-		## TODO: REDO Leaderboard to something neater
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
@@ -373,7 +459,7 @@ class pythonboat_database_handler:
 		elif user_lb_position == 2:
 			pos_name = "nd"
 		elif user_lb_position == 3:
-			pos_name = "rd"
+			pos_name = "rd" 
 		embed.set_footer(
 			text=f"Page {page_number}/{total_pages}  •  Your leaderboard rank: {user_lb_position}{pos_name}")
 		await channel.send(embed=embed)
@@ -1381,6 +1467,7 @@ class pythonboat_database_handler:
 
 		return "success", "success"
 
+
 	#
 	# ROLE INCOMES - UPDATE INCOMES
 	#
@@ -1414,15 +1501,22 @@ class pythonboat_database_handler:
 			role = discord.utils.find(lambda r: r.name == "Coaches", server_object.roles)	
 			for member in role.members:
 				try:
+					# calculate difference, see if it works
+					last_income_update = datetime.strptime(last_income_update_string, '%Y-%m-%d %H:%M:%S.%f')
+					individual_last_update = datetime.strptime(json_user_content["last_balance_update"], '%Y-%m-%d %H:%M:%S.%f')
+					if individual_last_update > last_income_update:
+						passed_time = now - individual_last_update
+					else:
+						passed_time = now - last_income_update
+					passed_time_hours = passed_time.total_seconds() // 3600.0
 					if passed_time_hours >= 1:
 						# also to create user in case he isnt registered yet
 						user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
-
 						json_user_content = json_content["userdata"][user_index]
-						json_income_roles[role_index]["last_updated"] = str(now)
+						json_user_content["last_balance_update"] = str(now)
 						payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
 						bonus_engagement = json_user_content["engagement"]
-						json_user_content["engagement"] // 10
+						json_user_content["engagement"] / 10
 						json_user_content["cash"] += (payment + bonus_engagement)
 						# overwrite
 						json_content["userdata"][user_index] = json_user_content
@@ -1430,6 +1524,7 @@ class pythonboat_database_handler:
 					pass
 
 		# overwrite, end
+		json_income_roles[role_index]["last_updated"] = str(now)
 		json_content["income_roles"] = json_income_roles
 		self.overwrite_json(json_content)
 

@@ -234,7 +234,7 @@ async def on_message(message):
 		"gold-pack": "gp",
 		"balance": "bal",
 		"give": "pay",
-		"leaderboard": "lb",
+		"awards": "lb",
 		"help": "info",
 		"module": "moduleinfo"
 	}
@@ -401,73 +401,54 @@ async def on_message(message):
 	#  LEADERBOARD
 	# --------------
 
-	##TODO: Expand leaderboard! 
-	elif command in ["leaderboard", all_reg_commands_aliases["leaderboard"]]:
-		return ## Do a quick return since wwe dont want to do this just yet
-		modes = ["-cash", "-bank", "-total"]
+	elif command in ["awards", all_reg_commands_aliases["awards"]]:
+		modes = ["-completionist", "-hoarder", "-beef", "-zubat", "-magpie", "-salad", "-undertaker", "-champion"]
 		page_number = 1
-		mode_type = modes[2]
+		mode_type = modes[1] ## default is hoarder, so most cards
 		server_name = server.name
 		full_name = server_name  # + mode_type
 
-		# first, vanilla
-		if "none" in param[1] and "none" in param[2]:
+		# first, no params used...
+		if "none" in param[1]:
 			# using default vars
-			page_number = 1
-			mode_type = modes[2]
-			full_name += " Leaderboard"
+			color = discord_error_rgb_code
+			embed = discord.Embed(
+			description=f"{emoji_error} Need a leaderboard Type, enter one of the following in format of \"leaderboard -type\": \n\n \
+				-completionist : 11 unique players from one team\n \
+				-hoarder : Most Cards\n-beef : Most unique big guys\n-zubat : Most duplicates of one player\n \
+				-magpie : Most Shinies\n-salad : 1 player from each team\n-undertaker : Most unique dead players\n \
+				-champion : Most unique playerrs from the season winning and bowl winning teams", color=color)
+			embed.set_author(name=username, icon_url=user_pfp)
+			await channel.send(embed=embed)
+			return
 		# one argument
-		elif param[1] != "none" and "none" in param[2]:
+		elif param[1] != "none":
 			if param[1] in modes:
 				mode_type = param[1]
 				page_number = 1
-				if mode_type == "-total": full_name += " Leaderboard"
-				if mode_type == "-cash": full_name += " Cash Leaderboard"
-				if mode_type == "-bank": full_name += " Bank Leaderboard"
-			else:
-				try:
-					page_number = int(param[1])
-					mode_type = modes[2]
-					full_name += " Leaderboard"
-				except:
-					color = discord_error_rgb_code
-					embed = discord.Embed(
-						description=f"{emoji_error}  Invalid `[-cash | -bank | -total]` argument given.\n\nUsage:\n"
-									f"`leaderboard [page] [-cash | -bank | -total]`", color=color)
-					embed.set_author(name=username, icon_url=user_pfp)
-					await channel.send(embed=embed)
-					return
-		# two arguments
-		else:
-			try:
-				page_number = int(param[1])
-				mode_type = param[2]
-				if mode_type == "-total": full_name += " Leaderboard"
-				elif mode_type == "-cash": full_name += " Cash Leaderboard"
-				elif mode_type == "-bank": full_name += " Bank Leaderboard"
-				else:
-					color = discord_error_rgb_code
-					embed = discord.Embed(
-						description=f"{emoji_error}  Invalid `[-cash | -bank | -total]` argument given.\n\nUsage:\n"
-									f"`leaderboard [page] [-cash | -bank | -total]`", color=color)
-					embed.set_author(name=username, icon_url=user_pfp)
-					await channel.send(embed=embed)
-					return
-			except:
-				color = discord_error_rgb_code
-				embed = discord.Embed(
-					description=f"{emoji_error}  Invalid `[-cash | -bank | -total]` argument given.\n\nUsage:\n"
-								f"`leaderboard [page] [-cash | -bank | -total]`", color=color)
-				embed.set_author(name=username, icon_url=user_pfp)
-				await channel.send(embed=embed)
-				return
+				if mode_type == "-completionist": full_name = "Completionists"
+				elif mode_type == "-hoarder": full_name = "Card Hoarders"
+				elif mode_type == "-beef": full_name = "Beefiest Bunch"
+				elif mode_type == "-zubat": full_name = "ZubatZubatZubat"
+				elif mode_type == "-magpie": full_name = "Shiney Magpies"
+				elif mode_type == "-salad": full_name = "Delicious Fruit Salads"
+				elif mode_type == "-undertaker": full_name = "Leaderboard of the Dead"
+				elif mode_type == "-champion": full_name = "Champ Collectors"
 
 		print(f"Looking for {full_name}, at page {page_number}, in mode {mode_type}")
 
 		# handler
-
 		try:
-			status, lb_return = await db_handler.leaderboard(user, channel, username, full_name, page_number, mode_type, client)
+			print("at start of try statement, mode type == ", mode_type)
+			if mode_type == "-completionist": status, lb_return = await db_handler.leaderboard_com(user, channel, username, client)
+			elif mode_type == "-hoarder": status, lb_return = await db_handler.leaderboard_hoa(user, channel, username, client)
+			elif mode_type == "-beef": status, lb_return = await db_handler.leaderboard_bee(user, channel, username, client)
+			elif mode_type == "-zubat": status, lb_return = await db_handler.leaderboard_zub(user, channel, username, client)
+			elif mode_type == "-magpie": status, lb_return = await db_handler.leaderboard_mag(user, channel, username, client)
+			elif mode_type == "-salad": status, lb_return = await db_handler.leaderboard_sal(user, channel, username, client)
+			elif mode_type == "-undertaker" : status, lb_return = await db_handler.leaderboard_und(user, channel, username, client)
+			elif mode_type == "-champion": status, lb_return = await db_handler.leaderboard_cha(user, channel, username, client)
+			else : status = "error"
 
 			if status == "error":
 				color = discord_error_rgb_code
@@ -475,7 +456,18 @@ async def on_message(message):
 				embed.set_author(name=username, icon_url=user_pfp)
 				await channel.send(embed=embed)
 				return
+			else:
+				## we got return as lb_return, time to print
+				color = discord.Color.from_rgb(3, 169, 244)
+				embed = discord.Embed(title=f"\n{full_name}", color=color)
+				embed.set_author(name=username, icon_url=user_pfp)
+				embed.add_field(name="1st", value=f"{lb_return[0][0]} : {lb_return[0][1]}")
+				embed.add_field(name="2nd", value=f"{lb_return[1][0]} : {lb_return[1][1]}")
+				embed.add_field(name="3rd", value=f"{lb_return[2][0]} : {lb_return[2][1]}")
+				await channel.send(embed=embed)
+				return
 		except Exception as e:
+			print("in execption of awards statement...")
 			print(e)
 			await send_error(channel)
 	

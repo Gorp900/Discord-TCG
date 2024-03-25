@@ -3,12 +3,14 @@
         {
             "user_id": 100000000000000000,
             "cash": 100.0,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "items": "none"
         },
         {
             "user_id": 185112370996183042,
-            "cash": 54,
-            "engagement": 15,
+            "cash": 3535,
+            "last_balance_update": "2023-11-09 16:30:29.498930",
+            "engagement": 36,
             "items": [
                 [
                     "Big E Lanskull",
@@ -28,11 +30,11 @@
                 ],
                 [
                     "Yalcrab",
-                    2
+                    3
                 ],
                 [
                     "Rimski",
-                    4
+                    6
                 ],
                 [
                     "Franco the Fierce",
@@ -96,7 +98,7 @@
                 ],
                 [
                     "Deathwing",
-                    1
+                    2
                 ],
                 [
                     "When Fruit Attacks",
@@ -132,22 +134,119 @@
                 ],
                 [
                     "Zumbo the Zany Mad Man",
-                    1
-                ],
-                [
-                    "Holidays Are Coming",
-                    1
+                    2
                 ],
                 [
                     "Ayesha",
+                    3
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    2
+                ],
+                [
+                    "TEA",
+                    1
+                ],
+                [
+                    "Thighza",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    2
+                ],
+                [
+                    "Penny Tration",
+                    1
+                ],
+                [
+                    "Spitfire",
+                    1
+                ],
+                [
+                    "Drofrehtur",
+                    1
+                ],
+                [
+                    "Pigeon",
+                    1
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    1
+                ],
+                [
+                    "Shiny Crasty",
+                    1
+                ],
+                [
+                    "Ongina",
+                    1
+                ],
+                [
+                    "Stack Dorsey",
+                    1
+                ],
+                [
+                    "Samoa Joskull",
+                    1
+                ],
+                [
+                    "Cyril",
+                    2
+                ],
+                [
+                    "Kilian",
+                    2
+                ],
+                [
+                    "Xavier Woodskull",
+                    1
+                ],
+                [
+                    "Salsa",
+                    1
+                ],
+                [
+                    "Len",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Things That Are Red",
+                    1
+                ],
+                [
+                    "Rehsurc",
+                    2
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Skeletaloo",
                     1
                 ]
             ]
         },
         {
             "user_id": 163388306460114945,
-            "cash": 329,
-            "engagement": 16,
+            "cash": 2245,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
+            "engagement": 46,
             "items": [
                 [
                     "Steve Smith",
@@ -155,11 +254,11 @@
                 ],
                 [
                     "The Kid",
-                    3
+                    4
                 ],
                 [
                     "Starlight Grimmer II",
-                    1
+                    3
                 ],
                 [
                     "Kraken",
@@ -167,7 +266,7 @@
                 ],
                 [
                     "Violence Bruce",
-                    1
+                    2
                 ],
                 [
                     "Shiny Chanel",
@@ -187,7 +286,7 @@
                 ],
                 [
                     "Yalcrab",
-                    1
+                    2
                 ],
                 [
                     "Ayesha",
@@ -211,7 +310,7 @@
                 ],
                 [
                     "Opera Omnia",
-                    1
+                    2
                 ],
                 [
                     "Binga",
@@ -223,11 +322,11 @@
                 ],
                 [
                     "When Fruit Attacks",
-                    1
+                    2
                 ],
                 [
                     "Pockets the Pox-Ridden",
-                    1
+                    2
                 ],
                 [
                     "Shiny Ninja",
@@ -239,7 +338,7 @@
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Chorizo",
@@ -255,7 +354,7 @@
                 ],
                 [
                     "Whitstable Bay",
-                    1
+                    2
                 ],
                 [
                     "Shiny Larry",
@@ -272,13 +371,206 @@
                 [
                     "Rajas con Crema",
                     1
+                ],
+                [
+                    "Shiny Skeletaloo",
+                    2
+                ],
+                [
+                    "Herr Raid",
+                    1
+                ],
+                [
+                    "Things That Are Red",
+                    1
+                ],
+                [
+                    "Shiny John-Boy",
+                    1
+                ],
+                [
+                    "Neirb'O",
+                    1
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Shiny Black Sheep",
+                    1
+                ],
+                [
+                    "Crasty",
+                    2
+                ],
+                [
+                    "Shiny Jim",
+                    1
+                ],
+                [
+                    "Pigeon",
+                    1
+                ],
+                [
+                    "Brock Leskull",
+                    1
+                ],
+                [
+                    "Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    1
+                ],
+                [
+                    "Ricky Ponting",
+                    2
+                ],
+                [
+                    "Raritibia",
+                    1
+                ],
+                [
+                    "Corunda",
+                    1
+                ],
+                [
+                    "Fitzgibbon",
+                    1
+                ],
+                [
+                    "Aporreadillo",
+                    1
+                ],
+                [
+                    "Dasypeltis",
+                    1
+                ],
+                [
+                    "Shiny Dasypeltis",
+                    1
+                ],
+                [
+                    "Skeletaloo",
+                    3
+                ],
+                [
+                    "Fursty Ferret",
+                    1
+                ],
+                [
+                    "Ballin Bozos",
+                    1
+                ],
+                [
+                    "Susan Wojchipski",
+                    1
+                ],
+                [
+                    "Daniel RobotEks",
+                    2
+                ],
+                [
+                    "Applecrack",
+                    1
+                ],
+                [
+                    "Arianna",
+                    1
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    2
+                ],
+                [
+                    "Shiny Westerosi Legends",
+                    1
+                ],
+                [
+                    "Stemats",
+                    1
+                ],
+                [
+                    "Kevil Owskull",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    1
+                ],
+                [
+                    "Tyra Sanchez",
+                    2
+                ],
+                [
+                    "Salsa",
+                    1
+                ],
+                [
+                    "Totori",
+                    1
+                ],
+                [
+                    "Steak Bake",
+                    1
+                ],
+                [
+                    "Rotstalker",
+                    2
+                ],
+                [
+                    "Shiny Herr Kut",
+                    1
+                ],
+                [
+                    "Serrot",
+                    1
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    1
+                ],
+                [
+                    "Chiles en Nogada",
+                    1
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Shmolder III",
+                    1
+                ],
+                [
+                    "Rimski",
+                    1
+                ],
+                [
+                    "Merv Hughes",
+                    1
+                ],
+                [
+                    "Cyril",
+                    1
+                ],
+                [
+                    "Len",
+                    1
                 ]
             ]
         },
         {
             "user_id": 225690039206543361,
-            "cash": 101,
-            "engagement": 65,
+            "cash": 6555,
+            "last_balance_update": "2023-12-19 11:17:54.244466",
+            "engagement": 251,
             "items": [
                 [
                     "Shiny Herr Dry",
@@ -286,31 +578,27 @@
                 ],
                 [
                     "Skeletaloo",
-                    4
+                    8
                 ],
                 [
                     "Tahbashimen Iumut",
-                    1
-                ],
-                [
-                    "Maimai",
                     3
                 ],
                 [
+                    "Maimai",
+                    4
+                ],
+                [
                     "Spitfire",
-                    1
+                    3
                 ],
                 [
                     "Coco Montrese",
-                    1
-                ],
-                [
-                    "Shmolder III",
                     2
                 ],
                 [
-                    "Len",
-                    1
+                    "Shmolder III",
+                    6
                 ],
                 [
                     "Mark Waugh",
@@ -326,7 +614,7 @@
                 ],
                 [
                     "Raritibia",
-                    1
+                    2
                 ],
                 [
                     "Flutterspine II",
@@ -342,7 +630,7 @@
                 ],
                 [
                     "Chorizo",
-                    2
+                    4
                 ],
                 [
                     "Taquito",
@@ -350,7 +638,7 @@
                 ],
                 [
                     "Applecrack",
-                    1
+                    3
                 ],
                 [
                     "Starlight Grimmer II",
@@ -362,11 +650,11 @@
                 ],
                 [
                     "Princess Lunate II",
-                    1
+                    2
                 ],
                 [
                     "Binga",
-                    1
+                    2
                 ],
                 [
                     "Chili con Carne",
@@ -374,19 +662,19 @@
                 ],
                 [
                     "SMORC!!!",
-                    2
+                    3
                 ],
                 [
                     "When Fruit Attacks",
-                    1
+                    3
                 ],
                 [
                     "Fursty Ferret",
-                    1
+                    2
                 ],
                 [
                     "Whitstable Bay",
-                    1
+                    2
                 ],
                 [
                     "Salsa",
@@ -398,7 +686,7 @@
                 ],
                 [
                     "Ninja",
-                    3
+                    5
                 ],
                 [
                     "Richard",
@@ -418,11 +706,11 @@
                 ],
                 [
                     "Abbot Ale",
-                    2
+                    4
                 ],
                 [
                     "Bo Dalskull",
-                    1
+                    2
                 ],
                 [
                     "Aporreadillo",
@@ -430,23 +718,23 @@
                 ],
                 [
                     "Greed Hastings",
-                    1
+                    2
                 ],
                 [
                     "Thighza",
-                    1
+                    2
                 ],
                 [
                     "The Kid",
-                    2
+                    4
                 ],
                 [
                     "Cyril",
-                    1
+                    2
                 ],
                 [
                     "Zumbo the Zany Mad Man",
-                    2
+                    3
                 ],
                 [
                     "Big McSkellingtosh",
@@ -454,7 +742,7 @@
                 ],
                 [
                     "Shiny Huski",
-                    1
+                    2
                 ],
                 [
                     "Salsa Verde",
@@ -462,15 +750,15 @@
                 ],
                 [
                     "Totori",
-                    1
+                    2
                 ],
                 [
                     "Black Sheep",
-                    2
+                    4
                 ],
                 [
                     "Patters",
-                    2
+                    4
                 ],
                 [
                     "Yalcrab",
@@ -478,11 +766,11 @@
                 ],
                 [
                     "Alberto Del Riskull",
-                    2
+                    4
                 ],
                 [
                     "Hanna-Barbarians",
-                    1
+                    2
                 ],
                 [
                     "Opera Omnia",
@@ -490,15 +778,15 @@
                 ],
                 [
                     "Sterkenburg",
-                    2
+                    4
                 ],
                 [
                     "Dean Ambskull",
-                    1
+                    2
                 ],
                 [
                     "Huski",
-                    1
+                    4
                 ],
                 [
                     "Cesarskull",
@@ -506,7 +794,7 @@
                 ],
                 [
                     "Eureka O'Hara",
-                    1
+                    2
                 ],
                 [
                     "Quad Damage",
@@ -526,11 +814,11 @@
                 ],
                 [
                     "Deathwing",
-                    1
+                    3
                 ],
                 [
                     "Pigeon",
-                    1
+                    2
                 ],
                 [
                     "Shiny Rehsurc",
@@ -543,13 +831,390 @@
                 [
                     "Drofrehtur",
                     1
+                ],
+                [
+                    "Hop House 13",
+                    4
+                ],
+                [
+                    "Meruru",
+                    1
+                ],
+                [
+                    "Fitzgibbon",
+                    2
+                ],
+                [
+                    "Chiles en Nogada",
+                    1
+                ],
+                [
+                    "Mor",
+                    2
+                ],
+                [
+                    "Shiny Apple Tomb",
+                    2
+                ],
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Ricky Ponting",
+                    1
+                ],
+                [
+                    "Lent",
+                    1
+                ],
+                [
+                    "Penny Tration",
+                    1
+                ],
+                [
+                    "Benny-Cake",
+                    2
+                ],
+                [
+                    "Twilight Spinal",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    2
+                ],
+                [
+                    "Westerosi Legends",
+                    1
+                ],
+                [
+                    "Sophie",
+                    4
+                ],
+                [
+                    "Ayesha",
+                    3
+                ],
+                [
+                    "Larry",
+                    3
+                ],
+                [
+                    "Chanel",
+                    2
+                ],
+                [
+                    "Egrofal",
+                    2
+                ],
+                [
+                    "Bos",
+                    2
+                ],
+                [
+                    "Pesski",
+                    3
+                ],
+                [
+                    "Shiny Byrne",
+                    1
+                ],
+                [
+                    "Adore Delano",
+                    1
+                ],
+                [
+                    "Rorona",
+                    1
+                ],
+                [
+                    "Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Gerard",
+                    2
+                ],
+                [
+                    "Holidays Are Coming",
+                    2
+                ],
+                [
+                    "Shiny Pigeon",
+                    1
+                ],
+                [
+                    "Bad Steve",
+                    1
+                ],
+                [
+                    "Shiny Gringas",
+                    1
+                ],
+                [
+                    "Shiny Rotstalker",
+                    1
+                ],
+                [
+                    "Ballin Bozos",
+                    1
+                ],
+                [
+                    "Kevil Owskull",
+                    3
+                ],
+                [
+                    "Shiny Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Shiny Rimski",
+                    1
+                ],
+                [
+                    "Len",
+                    1
+                ],
+                [
+                    "Tao",
+                    1
+                ],
+                [
+                    "Dead Pony Club",
+                    1
+                ],
+                [
+                    "Shiny Mark Zuckerborg",
+                    1
+                ],
+                [
+                    "Rotstalker",
+                    2
+                ],
+                [
+                    "Gringas",
+                    2
+                ],
+                [
+                    "Brennan",
+                    1
+                ],
+                [
+                    "Jack",
+                    1
+                ],
+                [
+                    "Returner Deryck",
+                    1
+                ],
+                [
+                    "Shiny Hop House 13",
+                    1
+                ],
+                [
+                    "Noel",
+                    2
+                ],
+                [
+                    "Samoa Joskull",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Shiny Fitzgibbon",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Kraken",
+                    2
+                ],
+                [
+                    "Steak Bake",
+                    1
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    3
+                ],
+                [
+                    "Shiny Quesadilla",
+                    1
+                ],
+                [
+                    "Herr Kut",
+                    1
+                ],
+                [
+                    "Shiny Chili con Carne",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    1
+                ],
+                [
+                    "Shiny Bo Dalskull",
+                    1
+                ],
+                [
+                    "Stemats",
+                    1
+                ],
+                [
+                    "Shiny Applecrack",
+                    1
+                ],
+                [
+                    "Susan Wojchipski",
+                    1
+                ],
+                [
+                    "David Warner",
+                    1
+                ],
+                [
+                    "Shiny Lent",
+                    1
+                ],
+                [
+                    "Shiny Kevil Owskull",
+                    1
+                ],
+                [
+                    "Koccyx",
+                    1
+                ],
+                [
+                    "Things That Are Blue",
+                    1
+                ],
+                [
+                    "Le Cont",
+                    1
+                ],
+                [
+                    "Chucky",
+                    1
+                ],
+                [
+                    "Marie",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Shiny Rekcut",
+                    1
+                ],
+                [
+                    "Tyra Sanchez",
+                    1
+                ],
+                [
+                    "Attacker Arwing",
+                    1
+                ],
+                [
+                    "Shiny Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Rimski",
+                    1
+                ],
+                [
+                    "Second Madonna Mabel",
+                    1
+                ],
+                [
+                    "Shiny Black Sheep",
+                    1
+                ],
+                [
+                    "Belinda",
+                    1
+                ],
+                [
+                    "Shiny Twilight Spinal",
+                    1
+                ],
+                [
+                    "Magsy the Malicious",
+                    1
+                ],
+                [
+                    "Shiny Susan Wojchipski",
+                    1
+                ],
+                [
+                    "Herr Raid",
+                    1
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Dasypeltis",
+                    1
+                ],
+                [
+                    "Corunda",
+                    1
+                ],
+                [
+                    "Shiny Shmolder III",
+                    1
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Shiny Patters",
+                    1
+                ],
+                [
+                    "Jeff Bez.OS",
+                    1
+                ],
+                [
+                    "Shiny Skeletaloo",
+                    1
+                ],
+                [
+                    "Arianna",
+                    1
+                ],
+                [
+                    "Shiny Zumbo the Zany Mad Man",
+                    1
+                ],
+                [
+                    "Daniel RobotEks",
+                    1
+                ],
+                [
+                    "Pumpkin King",
+                    1
                 ]
             ]
         },
         {
             "user_id": 185808377052528640,
-            "cash": 158,
-            "engagement": 5,
+            "cash": 5743,
+            "last_balance_update": "2024-01-31 22:17:31.408697",
+            "engagement": 11,
             "items": [
                 [
                     "Shiny Holidays Are Coming",
@@ -593,7 +1258,7 @@
                 ],
                 [
                     "Shiny Arianna",
-                    1
+                    2
                 ],
                 [
                     "Shiny Cabrito",
@@ -609,7 +1274,7 @@
                 ],
                 [
                     "Fursty Ferret",
-                    1
+                    2
                 ],
                 [
                     "Rekcut",
@@ -633,69 +1298,26 @@
                 ],
                 [
                     "Thighza",
-                    1
-                ],
-                [
-                    "Westerosi Legends",
-                    1
-                ],
-                [
-                    "Joker the Jovial",
-                    1
-                ]
-            ]
-        },
-        {
-            "user_id": 109392522874208256,
-            "cash": 44,
-            "engagement": 27,
-            "items": [
-                [
-                    "Frosty the Forsaken",
-                    1
-                ],
-                [
-                    "Yabba the Yeasty",
-                    1
-                ],
-                [
-                    "Whitney Wolfe Herdware",
                     2
                 ],
                 [
-                    "Pockets the Pox-Ridden",
+                    "Westerosi Legends",
+                    2
+                ],
+                [
+                    "Joker the Jovial",
+                    2
+                ],
+                [
+                    "Shiny Whitney Wolfe Herdware",
                     1
                 ],
                 [
-                    "Franco the Fierce",
+                    "Dead Pony Club",
                     1
                 ],
                 [
-                    "Magsy the Malicious",
-                    1
-                ],
-                [
-                    "Rimski",
-                    1
-                ],
-                [
-                    "Black Sheep",
-                    1
-                ],
-                [
-                    "Huski",
-                    1
-                ],
-                [
-                    "Ransome the Ridiculous",
-                    1
-                ],
-                [
-                    "Noodles the Nasty",
-                    1
-                ],
-                [
-                    "Belinda",
+                    "Stemats",
                     1
                 ],
                 [
@@ -703,32 +1325,172 @@
                     1
                 ],
                 [
-                    "Larry",
+                    "Serrot",
                     1
                 ],
                 [
-                    "Thighza",
-                    2
-                ],
-                [
-                    "Tahbashimen Iumut",
+                    "Shiny Greed Hastings",
                     1
                 ],
                 [
-                    "Zumbo the Zany Mad Man",
-                    2
+                    "Coco Montrese",
+                    1
                 ],
                 [
-                    "Tao",
-                    2
+                    "Stack Dorsey",
+                    1
+                ],
+                [
+                    "Returner Deryck",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
                 ],
                 [
                     "Bo Dalskull",
                     1
                 ],
                 [
-                    "Shiny The Kid",
+                    "Brock Leskull",
                     1
+                ],
+                [
+                    "Bos",
+                    1
+                ],
+                [
+                    "Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Shiny Huski",
+                    1
+                ],
+                [
+                    "Applecrack",
+                    2
+                ],
+                [
+                    "Dasypeltis",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Mark Zuckerborg",
+                    1
+                ],
+                [
+                    "Larry",
+                    1
+                ],
+                [
+                    "Shiny Noodles the Nasty",
+                    1
+                ],
+                [
+                    "Noel",
+                    1
+                ],
+                [
+                    "Crasty",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 109392522874208256,
+            "cash": 108,
+            "last_balance_update": "2024-03-18 12:15:11.978351",
+            "engagement": 175,
+            "items": [
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    2
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    2
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    2
+                ],
+                [
+                    "Franco the Fierce",
+                    2
+                ],
+                [
+                    "Magsy the Malicious",
+                    3
+                ],
+                [
+                    "Rimski",
+                    5
+                ],
+                [
+                    "Black Sheep",
+                    1
+                ],
+                [
+                    "Huski",
+                    5
+                ],
+                [
+                    "Ransome the Ridiculous",
+                    1
+                ],
+                [
+                    "Noodles the Nasty",
+                    4
+                ],
+                [
+                    "Belinda",
+                    4
+                ],
+                [
+                    "When Fruit Attacks",
+                    9
+                ],
+                [
+                    "Larry",
+                    5
+                ],
+                [
+                    "Thighza",
+                    7
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    7
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    3
+                ],
+                [
+                    "Tao",
+                    6
+                ],
+                [
+                    "Bo Dalskull",
+                    5
+                ],
+                [
+                    "Shiny The Kid",
+                    3
                 ],
                 [
                     "Byrne",
@@ -736,27 +1498,27 @@
                 ],
                 [
                     "Pigeon",
-                    1
+                    4
                 ],
                 [
                     "Kilian",
-                    1
+                    4
                 ],
                 [
                     "Westerosi Legends",
-                    1
+                    5
                 ],
                 [
                     "Kraken",
-                    1
-                ],
-                [
-                    "Joker the Jovial",
                     2
                 ],
                 [
+                    "Joker the Jovial",
+                    5
+                ],
+                [
                     "Mor",
-                    1
+                    5
                 ],
                 [
                     "Meruru",
@@ -768,39 +1530,35 @@
                 ],
                 [
                     "Opera Omnia",
-                    1
+                    2
                 ],
                 [
                     "Rotstalker",
-                    1
+                    6
                 ],
                 [
                     "Tyra Sanchez",
-                    1
+                    4
                 ],
                 [
                     "Abbot Ale",
-                    1
+                    2
                 ],
                 [
                     "JoJo the Bizzare",
-                    1
+                    2
                 ],
                 [
                     "Cyril",
-                    1
+                    6
                 ],
                 [
                     "Sterkenburg",
-                    1
-                ],
-                [
-                    "The Moogle Mob",
-                    1
+                    11
                 ],
                 [
                     "Rehsurc",
-                    1
+                    6
                 ],
                 [
                     "Chorizo",
@@ -808,19 +1566,15 @@
                 ],
                 [
                     "Shiny Benny-Cake",
-                    1
+                    3
                 ],
                 [
                     "Kofi Kingskull",
-                    1
+                    2
                 ],
                 [
                     "Stack Dorsey",
-                    1
-                ],
-                [
-                    "Quesadilla",
-                    1
+                    3
                 ],
                 [
                     "Totori",
@@ -828,15 +1582,15 @@
                 ],
                 [
                     "Shiny Black Sheep",
-                    1
+                    3
                 ],
                 [
                     "Arianna",
-                    1
+                    3
                 ],
                 [
                     "Ninja",
-                    1
+                    6
                 ],
                 [
                     "Rekcut",
@@ -845,13 +1599,686 @@
                 [
                     "Chad Michaels",
                     1
+                ],
+                [
+                    "Rorona",
+                    1
+                ],
+                [
+                    "Shiny Mor",
+                    3
+                ],
+                [
+                    "Violence Bruce",
+                    4
+                ],
+                [
+                    "Flutterspine II",
+                    1
+                ],
+                [
+                    "Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Shiny Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Dasypeltis",
+                    7
+                ],
+                [
+                    "Binga",
+                    3
+                ],
+                [
+                    "Things That Are Red",
+                    2
+                ],
+                [
+                    "Satellite Nadella",
+                    3
+                ],
+                [
+                    "Shiny Dhar'gor",
+                    1
+                ],
+                [
+                    "Shiny Shmolder III",
+                    3
+                ],
+                [
+                    "Lent",
+                    1
+                ],
+                [
+                    "Chili con Carne",
+                    1
+                ],
+                [
+                    "Shiny Huski",
+                    2
+                ],
+                [
+                    "Taquito",
+                    1
+                ],
+                [
+                    "Deathwing",
+                    6
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Salsa Verde",
+                    6
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    2
+                ],
+                [
+                    "Chanel",
+                    5
+                ],
+                [
+                    "Hanna-Barbarians",
+                    3
+                ],
+                [
+                    "Ongina",
+                    1
+                ],
+                [
+                    "SMORC!!!",
+                    3
+                ],
+                [
+                    "Second Madonna Mabel",
+                    3
+                ],
+                [
+                    "Shiny Zumbo the Zany Mad Man",
+                    2
+                ],
+                [
+                    "Alberto Del Riskull",
+                    3
+                ],
+                [
+                    "Chiles en Nogada",
+                    3
+                ],
+                [
+                    "Shmolder III",
+                    4
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    3
+                ],
+                [
+                    "Starlight Grimmer II",
+                    3
+                ],
+                [
+                    "Yalcrab",
+                    6
+                ],
+                [
+                    "Mark Waugh",
+                    1
+                ],
+                [
+                    "Shiny Kraken",
+                    1
+                ],
+                [
+                    "Sophie",
+                    3
+                ],
+                [
+                    "Shiny Satellite Nadella",
+                    1
+                ],
+                [
+                    "Herr Dry",
+                    2
+                ],
+                [
+                    "Tugger",
+                    1
+                ],
+                [
+                    "Penny Tration",
+                    2
+                ],
+                [
+                    "Mark Zuckerborg",
+                    1
+                ],
+                [
+                    "Striker Lyle",
+                    1
+                ],
+                [
+                    "Jake",
+                    1
+                ],
+                [
+                    "Big McSkellingtosh",
+                    3
+                ],
+                [
+                    "TEA",
+                    1
+                ],
+                [
+                    "Shiny Hop House 13",
+                    1
+                ],
+                [
+                    "Shiny Le Cont",
+                    1
+                ],
+                [
+                    "Kevil Owskull",
+                    5
+                ],
+                [
+                    "Quad Damage",
+                    2
+                ],
+                [
+                    "Shiny Applecrack",
+                    1
+                ],
+                [
+                    "Richard",
+                    3
+                ],
+                [
+                    "Shiny Violence Bruce",
+                    2
+                ],
+                [
+                    "Steve Smith",
+                    1
+                ],
+                [
+                    "Le Cont",
+                    3
+                ],
+                [
+                    "Greed Hastings",
+                    7
+                ],
+                [
+                    "Jeff Bez.OS",
+                    1
+                ],
+                [
+                    "Shiny Pockets the Pox-Ridden",
+                    2
+                ],
+                [
+                    "Drofrehtur",
+                    2
+                ],
+                [
+                    "Fursty Ferret",
+                    2
+                ],
+                [
+                    "Crasty",
+                    4
+                ],
+                [
+                    "Shiny Bianca del Rio",
+                    1
+                ],
+                [
+                    "Dhar'gor",
+                    4
+                ],
+                [
+                    "Xavier Woodskull",
+                    4
+                ],
+                [
+                    "Filete de Pescado",
+                    1
+                ],
+                [
+                    "Aporreadillo",
+                    1
+                ],
+                [
+                    "Shiny Rainbone Dash",
+                    1
+                ],
+                [
+                    "Princess Lunate II",
+                    1
+                ],
+                [
+                    "Corunda",
+                    7
+                ],
+                [
+                    "Spitfire",
+                    2
+                ],
+                [
+                    "Shiny Rehsurc",
+                    1
+                ],
+                [
+                    "Jim",
+                    5
+                ],
+                [
+                    "Ttocs",
+                    2
+                ],
+                [
+                    "Shiny Ttocs",
+                    1
+                ],
+                [
+                    "Merv Hughes",
+                    2
+                ],
+                [
+                    "Shiny Steve Smith",
+                    1
+                ],
+                [
+                    "Twilight Spinal",
+                    1
+                ],
+                [
+                    "Shiny Spitfire",
+                    1
+                ],
+                [
+                    "Shiny Cyril",
+                    1
+                ],
+                [
+                    "Patters",
+                    2
+                ],
+                [
+                    "Shiny Patters",
+                    1
+                ],
+                [
+                    "Pumpkin King",
+                    1
+                ],
+                [
+                    "Herr Kut",
+                    1
+                ],
+                [
+                    "Apple Tomb",
+                    2
+                ],
+                [
+                    "John-Boy",
+                    3
+                ],
+                [
+                    "Returner Deryck",
+                    1
+                ],
+                [
+                    "Third Madonna Regina",
+                    2
+                ],
+                [
+                    "Rajas con Crema",
+                    3
+                ],
+                [
+                    "Shiny Rajas con Crema",
+                    1
+                ],
+                [
+                    "Hop House 13",
+                    2
+                ],
+                [
+                    "Shiny Greed Hastings",
+                    1
+                ],
+                [
+                    "Gerard",
+                    3
+                ],
+                [
+                    "Shiny Binga",
+                    2
+                ],
+                [
+                    "Shiny Kevil Owskull",
+                    3
+                ],
+                [
+                    "Enum Musk",
+                    2
+                ],
+                [
+                    "Shiny Byrne",
+                    1
+                ],
+                [
+                    "Susan Wojchipski",
+                    3
+                ],
+                [
+                    "Shiny Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Noel",
+                    1
+                ],
+                [
+                    "Shiny Pumpkin King",
+                    2
+                ],
+                [
+                    "Applecrack",
+                    2
+                ],
+                [
+                    "Jones",
+                    3
+                ],
+                [
+                    "Shiny Enin Fo Neves",
+                    1
+                ],
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Shiny Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Maimai",
+                    7
+                ],
+                [
+                    "David Warner",
+                    2
+                ],
+                [
+                    "Shiny Steak Bake",
+                    2
+                ],
+                [
+                    "Shiny SMORC!!!",
+                    2
+                ],
+                [
+                    "Daniel RobotEks",
+                    1
+                ],
+                [
+                    "Pearl",
+                    1
+                ],
+                [
+                    "Cesarskull",
+                    2
+                ],
+                [
+                    "Ayesha",
+                    1
+                ],
+                [
+                    "Shiny Joker the Jovial",
+                    2
+                ],
+                [
+                    "Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Shiny Susan Wojchipski",
+                    1
+                ],
+                [
+                    "Big E Lanskull",
+                    2
+                ],
+                [
+                    "Shiny Dasypeltis",
+                    1
+                ],
+                [
+                    "Herman",
+                    3
+                ],
+                [
+                    "Enin Fo Neves",
+                    1
+                ],
+                [
+                    "Jack",
+                    1
+                ],
+                [
+                    "Shiny Opera Omnia",
+                    1
+                ],
+                [
+                    "Shiny Noodles the Nasty",
+                    2
+                ],
+                [
+                    "Coco Montrese",
+                    2
+                ],
+                [
+                    "Skeletaloo",
+                    2
+                ],
+                [
+                    "Shiny Abbot Ale",
+                    2
+                ],
+                [
+                    "The Kid",
+                    3
+                ],
+                [
+                    "Dead Pony Club",
+                    2
+                ],
+                [
+                    "Shiny Brennan",
+                    1
+                ],
+                [
+                    "Shiny Enum Musk",
+                    2
+                ],
+                [
+                    "Shiny Westerosi Legends",
+                    2
+                ],
+                [
+                    "Shiny Fursty Ferret",
+                    1
+                ],
+                [
+                    "Tactical Nuclear Penguin",
+                    2
+                ],
+                [
+                    "Shiny Herr Kut",
+                    1
+                ],
+                [
+                    "Shiny When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Shiny Whitney Wolfe Herdware",
+                    1
+                ],
+                [
+                    "Shiny Xavier Woodskull",
+                    2
+                ],
+                [
+                    "Shiny Second Madonna Mabel",
+                    1
+                ],
+                [
+                    "Salsa",
+                    2
+                ],
+                [
+                    "Shiny Gringas",
+                    1
+                ],
+                [
+                    "Doyle",
+                    2
+                ],
+                [
+                    "Attacker Arwing",
+                    1
+                ],
+                [
+                    "Shiny Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Bos",
+                    1
+                ],
+                [
+                    "Shiny NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Ryskull",
+                    1
+                ],
+                [
+                    "Shiny Yalcrab",
+                    3
+                ],
+                [
+                    "Shiny Deathwing",
+                    2
+                ],
+                [
+                    "Shiny Jack",
+                    1
+                ],
+                [
+                    "Dean Ambskull",
+                    2
+                ],
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Shiny Apple Tomb",
+                    1
+                ],
+                [
+                    "Shiny Penny Tration",
+                    1
+                ],
+                [
+                    "Cabrito",
+                    1
+                ],
+                [
+                    "Bad Steve",
+                    1
+                ],
+                [
+                    "Shiny Herr Dry",
+                    1
+                ],
+                [
+                    "Steak Bake",
+                    2
+                ],
+                [
+                    "Raritibia",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Shiny Marie",
+                    1
+                ],
+                [
+                    "Gringas",
+                    1
+                ],
+                [
+                    "Shiny Kilian",
+                    1
+                ],
+                [
+                    "Whitstable Bay",
+                    1
+                ],
+                [
+                    "Marie",
+                    2
+                ],
+                [
+                    "Shiny JoJo the Bizzare",
+                    1
+                ],
+                [
+                    "Hobgoblin",
+                    1
+                ],
+                [
+                    "Shiny Cabrito",
+                    1
+                ],
+                [
+                    "Shiny Doyle",
+                    1
+                ],
+                [
+                    "Shiny Jones",
+                    1
+                ],
+                [
+                    "Shiny Jim",
+                    1
                 ]
             ]
         },
         {
             "user_id": 185103319247749120,
-            "cash": 123,
-            "engagement": 12,
+            "cash": 116,
+            "last_balance_update": "2023-11-30 16:12:03.934262",
+            "engagement": 83,
             "items": [
                 [
                     "Alberto Del Riskull",
@@ -859,7 +2286,7 @@
                 ],
                 [
                     "Deathwing",
-                    1
+                    2
                 ],
                 [
                     "Penny Tration",
@@ -871,35 +2298,31 @@
                 ],
                 [
                     "Raritibia",
-                    1
+                    2
                 ],
                 [
                     "Rimski",
-                    1
+                    3
                 ],
                 [
                     "Salsa Verde",
                     1
                 ],
                 [
-                    "Totori",
-                    1
-                ],
-                [
                     "Herman",
-                    1
+                    2
                 ],
                 [
                     "Pigeon",
-                    1
+                    2
                 ],
                 [
                     "Daniel RobotEks",
-                    1
+                    3
                 ],
                 [
                     "The Kid",
-                    1
+                    6
                 ],
                 [
                     "Merv Hughes",
@@ -907,7 +2330,7 @@
                 ],
                 [
                     "Kevil Owskull",
-                    1
+                    3
                 ],
                 [
                     "Violence Bruce",
@@ -926,15 +2349,7 @@
                     1
                 ],
                 [
-                    "Apple Tomb",
-                    1
-                ],
-                [
                     "Shiny Enum Musk",
-                    1
-                ],
-                [
-                    "Dhar'gor",
                     1
                 ],
                 [
@@ -943,11 +2358,11 @@
                 ],
                 [
                     "Dasypeltis",
-                    2
+                    3
                 ],
                 [
                     "Drofrehtur",
-                    2
+                    4
                 ],
                 [
                     "Ongina",
@@ -955,15 +2370,15 @@
                 ],
                 [
                     "Rajas con Crema",
-                    1
+                    2
                 ],
                 [
                     "Westerosi Legends",
-                    1
+                    2
                 ],
                 [
                     "Kofi Kingskull",
-                    2
+                    1
                 ],
                 [
                     "Jake",
@@ -975,217 +2390,78 @@
                 ],
                 [
                     "Chanel",
-                    1
+                    6
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Cyril",
-                    1
-                ]
-            ]
-        },
-        {
-            "user_id": 330073959758430210,
-            "cash": 9,
-            "engagement": 54,
-            "items": [
-                [
-                    "Eureka O'Hara",
-                    1
-                ],
-                [
-                    "Brock Leskull",
-                    1
-                ],
-                [
-                    "Whitstable Bay",
-                    1
-                ],
-                [
-                    "Big E Lanskull",
-                    1
-                ],
-                [
-                    "Xavier Woodskull",
-                    2
-                ],
-                [
-                    "Bo Dalskull",
-                    1
-                ],
-                [
-                    "When Fruit Attacks",
                     3
                 ],
                 [
-                    "Kilian",
-                    2
-                ],
-                [
-                    "Dougal",
-                    1
-                ],
-                [
                     "Third Madonna Regina",
-                    2
-                ],
-                [
-                    "Ongina",
                     1
                 ],
                 [
-                    "Richard",
-                    1
-                ],
-                [
-                    "Jack",
-                    2
-                ],
-                [
-                    "Huski",
-                    2
-                ],
-                [
-                    "Violence Bruce",
-                    1
-                ],
-                [
-                    "Cabrito",
-                    1
-                ],
-                [
-                    "Herr Dry",
-                    1
-                ],
-                [
-                    "Dean Ambskull",
+                    "Stemats",
                     1
                 ],
                 [
                     "Ninja",
-                    1
-                ],
-                [
-                    "Cyril",
-                    2
-                ],
-                [
-                    "Larry",
-                    1
-                ],
-                [
-                    "Alberto Del Riskull",
-                    1
-                ],
-                [
-                    "David Warner",
-                    1
-                ],
-                [
-                    "Apple Tomb",
-                    1
-                ],
-                [
-                    "Noel",
-                    2
-                ],
-                [
-                    "Yabba the Yeasty",
-                    1
-                ],
-                [
-                    "Coco Montrese",
-                    1
-                ],
-                [
-                    "Maimai",
-                    1
-                ],
-                [
-                    "Kevil Owskull",
-                    2
-                ],
-                [
-                    "Shiny Rimski",
-                    1
-                ],
-                [
-                    "Pesski",
-                    2
-                ],
-                [
-                    "Ricky Ponting",
-                    2
-                ],
-                [
-                    "Arianna",
-                    1
-                ],
-                [
-                    "Meruru",
-                    1
-                ],
-                [
-                    "Benny-Cake",
-                    1
-                ],
-                [
-                    "Westerosi Legends",
-                    2
-                ],
-                [
-                    "Samoa Joskull",
-                    2
-                ],
-                [
-                    "Rehsurc",
                     3
                 ],
                 [
-                    "Tyra Sanchez",
+                    "Joker the Jovial",
+                    4
+                ],
+                [
+                    "Le Cont",
+                    1
+                ],
+                [
+                    "Fursty Ferret",
                     2
                 ],
                 [
-                    "Deathwing",
+                    "Jim",
+                    3
+                ],
+                [
+                    "Stack Dorsey",
+                    3
+                ],
+                [
+                    "Mark Waugh",
                     1
                 ],
                 [
-                    "Taquito",
+                    "Hop House 13",
+                    6
+                ],
+                [
+                    "Thighza",
+                    3
+                ],
+                [
+                    "Chad Michaels",
                     1
                 ],
                 [
-                    "Sterkenburg",
-                    1
-                ],
-                [
-                    "Susan Wojchipski",
+                    "Hanna-Barbarians",
                     2
                 ],
                 [
-                    "John-Boy",
+                    "Abbot Ale",
                     1
                 ],
                 [
-                    "Salsa Verde",
+                    "Xavier Woodskull",
                     1
                 ],
                 [
-                    "Satellite Nadella",
-                    2
-                ],
-                [
-                    "Chanel",
-                    2
-                ],
-                [
-                    "Dead Pony Club",
-                    1
-                ],
-                [
-                    "Sophie",
+                    "Binga",
                     1
                 ],
                 [
@@ -1193,86 +2469,43 @@
                     1
                 ],
                 [
-                    "Aporreadillo",
-                    1
+                    "Bos",
+                    3
                 ],
                 [
-                    "Rajas con Crema",
-                    1
-                ],
-                [
-                    "Rimski",
-                    1
-                ],
-                [
-                    "Princess Lunate II",
-                    1
-                ],
-                [
-                    "Le Cont",
+                    "Kraken",
                     2
                 ],
                 [
-                    "Yalcrab",
+                    "Chuckles the Cheesy",
                     2
                 ],
                 [
-                    "Fitzgibbon",
+                    "Applecrack",
                     1
                 ],
                 [
-                    "Frosty the Forsaken",
+                    "Bo Dalskull",
+                    4
+                ],
+                [
+                    "Eureka O'Hara",
                     1
                 ],
                 [
-                    "Corunda",
+                    "Tao",
                     2
                 ],
                 [
-                    "JoJo the Bizzare",
+                    "Striker Lyle",
                     1
                 ],
                 [
-                    "Dhar'gor",
-                    1
-                ],
-                [
-                    "Noodles the Nasty",
-                    1
+                    "Ted",
+                    3
                 ],
                 [
                     "Returner Deryck",
-                    1
-                ],
-                [
-                    "Greed Hastings",
-                    1
-                ],
-                [
-                    "Thighza",
-                    1
-                ],
-                [
-                    "Jim",
-                    1
-                ],
-                [
-                    "Dasypeltis",
-                    1
-                ]
-            ]
-        },
-        {
-            "user_id": 133960484201168896,
-            "cash": 20,
-            "engagement": 20,
-            "items": [
-                [
-                    "Shiny Lent",
-                    1
-                ],
-                [
-                    "Dougal",
                     1
                 ],
                 [
@@ -1280,24 +2513,252 @@
                     1
                 ],
                 [
-                    "Cyril",
+                    "Pearl",
                     1
                 ],
                 [
-                    "Sterkenburg",
+                    "Anger Richard",
                     1
                 ],
                 [
-                    "Enum Musk",
+                    "Belinda",
                     1
                 ],
                 [
-                    "Ted",
+                    "Second Madonna Mabel",
+                    1
+                ],
+                [
+                    "The Moogle Mob",
                     2
+                ],
+                [
+                    "Shiny Yalcrab",
+                    1
+                ],
+                [
+                    "Magsy the Malicious",
+                    1
+                ],
+                [
+                    "Opera Omnia",
+                    1
+                ],
+                [
+                    "Larry",
+                    2
+                ],
+                [
+                    "Herr Kut",
+                    1
+                ],
+                [
+                    "Chucky",
+                    1
+                ],
+                [
+                    "Sophie",
+                    1
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    3
+                ],
+                [
+                    "Totori",
+                    1
+                ],
+                [
+                    "Skeletaloo",
+                    4
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Noodles the Nasty",
+                    1
+                ],
+                [
+                    "Gerard",
+                    2
+                ],
+                [
+                    "Quad Damage",
+                    4
+                ],
+                [
+                    "Steak Bake",
+                    1
+                ],
+                [
+                    "Shiny Gringas",
+                    1
+                ],
+                [
+                    "Shiny Things That Are Blue",
+                    1
+                ],
+                [
+                    "JoJo the Bizzare",
+                    1
+                ],
+                [
+                    "Ryskull",
+                    1
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Shiny Abbot Ale",
+                    2
+                ],
+                [
+                    "Richard",
+                    1
+                ],
+                [
+                    "Ricky Ponting",
+                    2
+                ],
+                [
+                    "Shmolder III",
+                    2
+                ],
+                [
+                    "Shiny Kilian",
+                    3
+                ],
+                [
+                    "Corunda",
+                    2
+                ],
+                [
+                    "Salsa",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Shiny Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Jones",
+                    1
+                ],
+                [
+                    "Shiny Tugger",
+                    1
+                ],
+                [
+                    "Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Rorona",
+                    2
+                ],
+                [
+                    "Shiny Neirb'O",
+                    1
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Shiny Ayesha",
+                    1
+                ],
+                [
+                    "When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Satellite Nadella",
+                    2
+                ],
+                [
+                    "Shiny Hop House 13",
+                    2
+                ],
+                [
+                    "Black Sheep",
+                    1
+                ],
+                [
+                    "Patters",
+                    1
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    2
+                ],
+                [
+                    "Maimai",
+                    1
+                ],
+                [
+                    "Shiny Arianna",
+                    1
                 ],
                 [
                     "Greed Hastings",
                     2
+                ],
+                [
+                    "Neirb'O",
+                    1
+                ],
+                [
+                    "Shiny Greed Hastings",
+                    1
+                ],
+                [
+                    "Noel",
+                    1
+                ],
+                [
+                    "SMORC!!!",
+                    2
+                ],
+                [
+                    "Shiny Corunda",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 330073959758430210,
+            "cash": 0,
+            "last_balance_update": "2024-03-11 20:37:02.757917",
+            "engagement": 349,
+            "items": [
+                [
+                    "Eureka O'Hara",
+                    4
                 ],
                 [
                     "Brock Leskull",
@@ -1305,7 +2766,1011 @@
                 ],
                 [
                     "Whitstable Bay",
+                    3
+                ],
+                [
+                    "Big E Lanskull",
+                    4
+                ],
+                [
+                    "Xavier Woodskull",
+                    8
+                ],
+                [
+                    "Bo Dalskull",
+                    6
+                ],
+                [
+                    "When Fruit Attacks",
+                    15
+                ],
+                [
+                    "Kilian",
+                    10
+                ],
+                [
+                    "Dougal",
+                    2
+                ],
+                [
+                    "Third Madonna Regina",
+                    5
+                ],
+                [
+                    "Ongina",
+                    5
+                ],
+                [
+                    "Richard",
+                    2
+                ],
+                [
+                    "Jack",
+                    3
+                ],
+                [
+                    "Huski",
+                    14
+                ],
+                [
+                    "Violence Bruce",
+                    10
+                ],
+                [
+                    "Cabrito",
+                    12
+                ],
+                [
+                    "Herr Dry",
                     1
+                ],
+                [
+                    "Dean Ambskull",
+                    5
+                ],
+                [
+                    "Ninja",
+                    9
+                ],
+                [
+                    "Cyril",
+                    6
+                ],
+                [
+                    "Larry",
+                    8
+                ],
+                [
+                    "Alberto Del Riskull",
+                    5
+                ],
+                [
+                    "David Warner",
+                    3
+                ],
+                [
+                    "Apple Tomb",
+                    5
+                ],
+                [
+                    "Noel",
+                    6
+                ],
+                [
+                    "Yabba the Yeasty",
+                    4
+                ],
+                [
+                    "Coco Montrese",
+                    8
+                ],
+                [
+                    "Maimai",
+                    6
+                ],
+                [
+                    "Kevil Owskull",
+                    7
+                ],
+                [
+                    "Shiny Rimski",
+                    2
+                ],
+                [
+                    "Pesski",
+                    4
+                ],
+                [
+                    "Ricky Ponting",
+                    5
+                ],
+                [
+                    "Arianna",
+                    2
+                ],
+                [
+                    "Meruru",
+                    3
+                ],
+                [
+                    "Benny-Cake",
+                    4
+                ],
+                [
+                    "Westerosi Legends",
+                    14
+                ],
+                [
+                    "Samoa Joskull",
+                    5
+                ],
+                [
+                    "Rehsurc",
+                    15
+                ],
+                [
+                    "Tyra Sanchez",
+                    4
+                ],
+                [
+                    "Deathwing",
+                    11
+                ],
+                [
+                    "Taquito",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    7
+                ],
+                [
+                    "Susan Wojchipski",
+                    5
+                ],
+                [
+                    "John-Boy",
+                    3
+                ],
+                [
+                    "Salsa Verde",
+                    6
+                ],
+                [
+                    "Satellite Nadella",
+                    8
+                ],
+                [
+                    "Chanel",
+                    5
+                ],
+                [
+                    "Dead Pony Club",
+                    7
+                ],
+                [
+                    "Sophie",
+                    2
+                ],
+                [
+                    "Serrot",
+                    3
+                ],
+                [
+                    "Aporreadillo",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    5
+                ],
+                [
+                    "Rimski",
+                    6
+                ],
+                [
+                    "Princess Lunate II",
+                    4
+                ],
+                [
+                    "Le Cont",
+                    3
+                ],
+                [
+                    "Yalcrab",
+                    9
+                ],
+                [
+                    "Fitzgibbon",
+                    2
+                ],
+                [
+                    "Frosty the Forsaken",
+                    8
+                ],
+                [
+                    "Corunda",
+                    9
+                ],
+                [
+                    "JoJo the Bizzare",
+                    3
+                ],
+                [
+                    "Dhar'gor",
+                    5
+                ],
+                [
+                    "Noodles the Nasty",
+                    3
+                ],
+                [
+                    "Returner Deryck",
+                    6
+                ],
+                [
+                    "Greed Hastings",
+                    7
+                ],
+                [
+                    "Thighza",
+                    10
+                ],
+                [
+                    "Jim",
+                    7
+                ],
+                [
+                    "Dasypeltis",
+                    9
+                ],
+                [
+                    "Patters",
+                    6
+                ],
+                [
+                    "Shiny Enin Fo Neves",
+                    1
+                ],
+                [
+                    "Crasty",
+                    7
+                ],
+                [
+                    "Starlight Grimmer II",
+                    5
+                ],
+                [
+                    "Chorizo",
+                    6
+                ],
+                [
+                    "Stemats",
+                    5
+                ],
+                [
+                    "Things That Are Red",
+                    4
+                ],
+                [
+                    "The Moogle Mob",
+                    2
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    6
+                ],
+                [
+                    "Opera Omnia",
+                    3
+                ],
+                [
+                    "Kofi Kingskull",
+                    5
+                ],
+                [
+                    "Hanna-Barbarians",
+                    6
+                ],
+                [
+                    "Applecrack",
+                    7
+                ],
+                [
+                    "Crackpot the Butcher",
+                    2
+                ],
+                [
+                    "Gringas",
+                    4
+                ],
+                [
+                    "Pigeon",
+                    2
+                ],
+                [
+                    "Black Sheep",
+                    3
+                ],
+                [
+                    "Skeletaloo",
+                    7
+                ],
+                [
+                    "Herman",
+                    4
+                ],
+                [
+                    "The Kid",
+                    11
+                ],
+                [
+                    "Abbot Ale",
+                    10
+                ],
+                [
+                    "Big McSkellingtosh",
+                    1
+                ],
+                [
+                    "Shiny The Kid",
+                    3
+                ],
+                [
+                    "Fursty Ferret",
+                    3
+                ],
+                [
+                    "Gerard",
+                    2
+                ],
+                [
+                    "Herr Raid",
+                    2
+                ],
+                [
+                    "Twilight Spinal",
+                    2
+                ],
+                [
+                    "Mor",
+                    4
+                ],
+                [
+                    "Tao",
+                    4
+                ],
+                [
+                    "Steak Bake",
+                    4
+                ],
+                [
+                    "Pearl",
+                    3
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    8
+                ],
+                [
+                    "Magsy the Malicious",
+                    4
+                ],
+                [
+                    "Things That Are Blue",
+                    2
+                ],
+                [
+                    "Jake",
+                    3
+                ],
+                [
+                    "Matrix Huateng",
+                    4
+                ],
+                [
+                    "Stack Dorsey",
+                    5
+                ],
+                [
+                    "Daniel RobotEks",
+                    4
+                ],
+                [
+                    "Shiny Magsy the Malicious",
+                    1
+                ],
+                [
+                    "Rainbone Dash",
+                    2
+                ],
+                [
+                    "Rotstalker",
+                    6
+                ],
+                [
+                    "Drofrehtur",
+                    3
+                ],
+                [
+                    "Enin Fo Neves",
+                    6
+                ],
+                [
+                    "Chili con Carne",
+                    3
+                ],
+                [
+                    "Mark Waugh",
+                    3
+                ],
+                [
+                    "Striker Lyle",
+                    4
+                ],
+                [
+                    "Ted",
+                    5
+                ],
+                [
+                    "Second Madonna Mabel",
+                    3
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    9
+                ],
+                [
+                    "Holidays Are Coming",
+                    5
+                ],
+                [
+                    "Bianca del Rio",
+                    1
+                ],
+                [
+                    "SMORC!!!",
+                    8
+                ],
+                [
+                    "Quesadilla",
+                    3
+                ],
+                [
+                    "Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Raritibia",
+                    4
+                ],
+                [
+                    "Doyle",
+                    2
+                ],
+                [
+                    "Shiny Tugger",
+                    1
+                ],
+                [
+                    "Tugger",
+                    4
+                ],
+                [
+                    "Jones",
+                    3
+                ],
+                [
+                    "Steve Smith",
+                    2
+                ],
+                [
+                    "Len",
+                    1
+                ],
+                [
+                    "Belinda",
+                    2
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    7
+                ],
+                [
+                    "Shiny Zumbo the Zany Mad Man",
+                    2
+                ],
+                [
+                    "Koccyx",
+                    2
+                ],
+                [
+                    "Kraken",
+                    8
+                ],
+                [
+                    "Anger Richard",
+                    2
+                ],
+                [
+                    "Quad Damage",
+                    7
+                ],
+                [
+                    "Shiny Byrne",
+                    1
+                ],
+                [
+                    "Shiny Jeff Bez.OS",
+                    1
+                ],
+                [
+                    "Hobgoblin",
+                    2
+                ],
+                [
+                    "Shiny Filete de Pescado",
+                    2
+                ],
+                [
+                    "Shmolder III",
+                    8
+                ],
+                [
+                    "Flutterspine II",
+                    3
+                ],
+                [
+                    "Cesarskull",
+                    4
+                ],
+                [
+                    "Penny Tration",
+                    2
+                ],
+                [
+                    "Doombar",
+                    1
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    4
+                ],
+                [
+                    "Shiny Doombar",
+                    1
+                ],
+                [
+                    "Ransome the Ridiculous",
+                    4
+                ],
+                [
+                    "Byrne",
+                    7
+                ],
+                [
+                    "Shiny Corunda",
+                    3
+                ],
+                [
+                    "Ttocs",
+                    3
+                ],
+                [
+                    "Merv Hughes",
+                    2
+                ],
+                [
+                    "Shiny Totori",
+                    2
+                ],
+                [
+                    "Shiny Spitfire",
+                    2
+                ],
+                [
+                    "Hop House 13",
+                    11
+                ],
+                [
+                    "Joker the Jovial",
+                    6
+                ],
+                [
+                    "Shiny The Moogle Mob",
+                    3
+                ],
+                [
+                    "NFTeve Jobs",
+                    4
+                ],
+                [
+                    "Shiny Kilian",
+                    2
+                ],
+                [
+                    "Shiny Pigeon",
+                    1
+                ],
+                [
+                    "Binga",
+                    3
+                ],
+                [
+                    "Shiny Mark Zuckerborg",
+                    2
+                ],
+                [
+                    "Rorona",
+                    3
+                ],
+                [
+                    "Shiny SMORC!!!",
+                    1
+                ],
+                [
+                    "Shiny Thighza",
+                    4
+                ],
+                [
+                    "Shiny Greed Hastings",
+                    4
+                ],
+                [
+                    "Shiny Lent",
+                    2
+                ],
+                [
+                    "Herr Kut",
+                    1
+                ],
+                [
+                    "Shiny When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Shiny Gringas",
+                    2
+                ],
+                [
+                    "Shiny Deathwing",
+                    2
+                ],
+                [
+                    "Ryskull",
+                    4
+                ],
+                [
+                    "Shiny Cesarskull",
+                    1
+                ],
+                [
+                    "Totori",
+                    2
+                ],
+                [
+                    "Lent",
+                    2
+                ],
+                [
+                    "Shiny Huski",
+                    3
+                ],
+                [
+                    "Shiny Applecrack",
+                    3
+                ],
+                [
+                    "Spitfire",
+                    5
+                ],
+                [
+                    "Shiny Yabba the Yeasty",
+                    1
+                ],
+                [
+                    "Shiny Arianna",
+                    1
+                ],
+                [
+                    "Franco the Fierce",
+                    3
+                ],
+                [
+                    "Shiny Merv Hughes",
+                    2
+                ],
+                [
+                    "Shiny Hop House 13",
+                    2
+                ],
+                [
+                    "Shiny Noel",
+                    1
+                ],
+                [
+                    "Shiny Quad Damage",
+                    1
+                ],
+                [
+                    "Shiny Rotstalker",
+                    2
+                ],
+                [
+                    "Mark Zuckerborg",
+                    2
+                ],
+                [
+                    "Ballin Bozos",
+                    1
+                ],
+                [
+                    "Shiny Rajas con Crema",
+                    1
+                ],
+                [
+                    "Shiny Jake",
+                    3
+                ],
+                [
+                    "Shiny Rainbone Dash",
+                    1
+                ],
+                [
+                    "Jeff Bez.OS",
+                    2
+                ],
+                [
+                    "Shiny Larry",
+                    2
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Egrofal",
+                    1
+                ],
+                [
+                    "Shiny Belinda",
+                    1
+                ],
+                [
+                    "Ayesha",
+                    3
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    1
+                ],
+                [
+                    "Shiny Black Sheep",
+                    2
+                ],
+                [
+                    "Shiny Cabrito",
+                    3
+                ],
+                [
+                    "Shiny Cyril",
+                    2
+                ],
+                [
+                    "Shiny Jim",
+                    3
+                ],
+                [
+                    "Shiny Satellite Nadella",
+                    3
+                ],
+                [
+                    "Shiny Benny-Cake",
+                    1
+                ],
+                [
+                    "Chiles en Nogada",
+                    3
+                ],
+                [
+                    "Shiny Tao",
+                    2
+                ],
+                [
+                    "Shiny Marie",
+                    2
+                ],
+                [
+                    "Attacker Arwing",
+                    2
+                ],
+                [
+                    "Shiny Kraken",
+                    1
+                ],
+                [
+                    "Rekcut",
+                    1
+                ],
+                [
+                    "Shiny Maimai",
+                    2
+                ],
+                [
+                    "Shiny Chanel",
+                    3
+                ],
+                [
+                    "Shiny Sterkenburg",
+                    2
+                ],
+                [
+                    "Bos",
+                    2
+                ],
+                [
+                    "Shiny Yalcrab",
+                    3
+                ],
+                [
+                    "Shiny Doyle",
+                    1
+                ],
+                [
+                    "Chad Michaels",
+                    1
+                ],
+                [
+                    "Shiny Princess Lunate II",
+                    2
+                ],
+                [
+                    "Shiny Joker the Jovial",
+                    1
+                ],
+                [
+                    "Shiny Herman",
+                    2
+                ],
+                [
+                    "Shiny Crasty",
+                    1
+                ],
+                [
+                    "Filete de Pescado",
+                    4
+                ],
+                [
+                    "Baron Corskull",
+                    1
+                ],
+                [
+                    "Shiny Noodles the Nasty",
+                    1
+                ],
+                [
+                    "Shiny Mor",
+                    1
+                ],
+                [
+                    "Shiny Shmolder III",
+                    1
+                ],
+                [
+                    "Marie",
+                    2
+                ],
+                [
+                    "Shiny Rekcut",
+                    1
+                ],
+                [
+                    "Shiny Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Salsa",
+                    2
+                ],
+                [
+                    "Shiny Steak Bake",
+                    1
+                ],
+                [
+                    "Shiny Salsa",
+                    1
+                ],
+                [
+                    "Shiny Le Cont",
+                    1
+                ],
+                [
+                    "Shiny Steve Smith",
+                    1
+                ],
+                [
+                    "Shiny Len",
+                    1
+                ],
+                [
+                    "Shiny John-Boy",
+                    1
+                ],
+                [
+                    "Shiny Dasypeltis",
+                    1
+                ],
+                [
+                    "Shiny Violence Bruce",
+                    1
+                ],
+                [
+                    "Shiny Gerard",
+                    1
+                ],
+                [
+                    "Shiny Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Shiny Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Shiny Bos",
+                    1
+                ],
+                [
+                    "Shiny Dougal",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 133960484201168896,
+            "cash": 77,
+            "last_balance_update": "2024-02-05 11:44:41.987106",
+            "engagement": 108,
+            "items": [
+                [
+                    "Shiny Lent",
+                    1
+                ],
+                [
+                    "Dougal",
+                    3
+                ],
+                [
+                    "Byrne",
+                    1
+                ],
+                [
+                    "Cyril",
+                    4
+                ],
+                [
+                    "Sterkenburg",
+                    4
+                ],
+                [
+                    "Enum Musk",
+                    1
+                ],
+                [
+                    "Ted",
+                    3
+                ],
+                [
+                    "Greed Hastings",
+                    6
+                ],
+                [
+                    "Brock Leskull",
+                    2
+                ],
+                [
+                    "Whitstable Bay",
+                    2
                 ],
                 [
                     "Rorona",
@@ -1317,15 +3782,15 @@
                 ],
                 [
                     "Pesski",
-                    2
+                    4
                 ],
                 [
                     "Magsy the Malicious",
-                    2
+                    1
                 ],
                 [
                     "Deathwing",
-                    3
+                    5
                 ],
                 [
                     "Jack",
@@ -1336,24 +3801,16 @@
                     1
                 ],
                 [
-                    "Merv Hughes",
-                    1
-                ],
-                [
-                    "Yoyo the Yuckie",
-                    1
-                ],
-                [
                     "Tyra Sanchez",
-                    1
+                    3
                 ],
                 [
                     "Larry",
-                    1
+                    3
                 ],
                 [
                     "Rajas con Crema",
-                    1
+                    2
                 ],
                 [
                     "Rotstalker",
@@ -1361,23 +3818,19 @@
                 ],
                 [
                     "Westerosi Legends",
-                    1
+                    3
                 ],
                 [
                     "Maimai",
-                    1
-                ],
-                [
-                    "Raritibia",
-                    1
+                    6
                 ],
                 [
                     "Jim",
-                    1
+                    2
                 ],
                 [
                     "Chad Michaels",
-                    1
+                    3
                 ],
                 [
                     "Benny-Cake",
@@ -1385,145 +3838,30 @@
                 ],
                 [
                     "Richard",
-                    1
+                    3
                 ],
                 [
                     "Daniel RobotEks",
                     1
                 ],
                 [
-                    "Spitfire",
-                    1
-                ],
-                [
                     "Rehsurc",
-                    1
+                    4
                 ],
                 [
                     "Shmolder III",
-                    1
-                ],
-                [
-                    "Sophie",
-                    1
-                ],
-                [
-                    "Steak Bake",
-                    1
-                ],
-                [
-                    "Big McSkellingtosh",
-                    1
-                ]
-            ]
-        },
-        {
-            "user_id": 533708157382426625,
-            "cash": 7,
-            "engagement": 65,
-            "items": [
-                [
-                    "Fitzgibbon",
-                    1
-                ],
-                [
-                    "Herr Kut",
-                    1
-                ],
-                [
-                    "Kraken",
-                    1
-                ],
-                [
-                    "Bo Dalskull",
-                    2
-                ],
-                [
-                    "Shiny Returner Deryck",
-                    1
-                ],
-                [
-                    "Westerosi Legends",
-                    1
-                ],
-                [
-                    "Rehsurc",
-                    1
-                ],
-                [
-                    "Fursty Ferret",
-                    1
-                ],
-                [
-                    "Whitney Wolfe Herdware",
-                    1
-                ],
-                [
-                    "Thighza",
-                    3
-                ],
-                [
-                    "Deathwing",
-                    2
-                ],
-                [
-                    "Stemats",
                     6
                 ],
                 [
-                    "Flutterspine II",
-                    1
-                ],
-                [
-                    "Frosty the Forsaken",
-                    1
-                ],
-                [
-                    "The Moogle Mob",
-                    1
-                ],
-                [
-                    "Violence Bruce",
-                    2
-                ],
-                [
-                    "When Fruit Attacks",
-                    1
-                ],
-                [
-                    "Jim",
-                    1
-                ],
-                [
-                    "Gringas",
-                    1
-                ],
-                [
-                    "Sterkenburg",
-                    2
-                ],
-                [
-                    "Ballin Bozos",
-                    1
-                ],
-                [
-                    "Chad Michaels",
-                    1
-                ],
-                [
-                    "Shmolder III",
-                    1
-                ],
-                [
-                    "Corunda",
-                    2
-                ],
-                [
                     "Sophie",
-                    1
+                    3
                 ],
                 [
-                    "Steve Smith",
+                    "Steak Bake",
+                    2
+                ],
+                [
+                    "Big McSkellingtosh",
                     1
                 ],
                 [
@@ -1531,35 +3869,139 @@
                     2
                 ],
                 [
-                    "Things That Are Red",
+                    "Shiny Joker the Jovial",
                     1
                 ],
                 [
-                    "Yalcrab",
+                    "Chanel",
+                    3
+                ],
+                [
+                    "David Warner",
                     2
                 ],
                 [
-                    "Penny Tration",
+                    "When Fruit Attacks",
+                    3
+                ],
+                [
+                    "Fitzgibbon",
+                    4
+                ],
+                [
+                    "Noel",
+                    2
+                ],
+                [
+                    "Len",
                     1
                 ],
                 [
-                    "Pesski",
+                    "Shiny Satellite Nadella",
                     1
+                ],
+                [
+                    "Raritibia",
+                    3
+                ],
+                [
+                    "Kilian",
+                    3
+                ],
+                [
+                    "Hop House 13",
+                    3
+                ],
+                [
+                    "Kraken",
+                    2
+                ],
+                [
+                    "Alberto Del Riskull",
+                    2
                 ],
                 [
                     "Ongina",
+                    1
+                ],
+                [
+                    "Shiny Huski",
+                    1
+                ],
+                [
+                    "Pumpkin King",
+                    1
+                ],
+                [
+                    "Cabrito",
+                    3
+                ],
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Brennan",
+                    1
+                ],
+                [
+                    "Herr Dry",
+                    1
+                ],
+                [
+                    "Joker the Jovial",
+                    4
+                ],
+                [
+                    "Whitney Wolfe Herdware",
                     2
                 ],
                 [
-                    "Black Sheep",
+                    "Tao",
                     1
                 ],
                 [
-                    "Marie",
+                    "Pockets the Pox-Ridden",
+                    4
+                ],
+                [
+                    "Steve Smith",
+                    3
+                ],
+                [
+                    "Shiny Shmolder III",
+                    2
+                ],
+                [
+                    "Apple Tomb",
                     1
                 ],
                 [
-                    "Crasty",
+                    "TEA",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    2
+                ],
+                [
+                    "Huski",
+                    3
+                ],
+                [
+                    "Shiny When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Shiny Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Holidays Are Coming",
+                    1
+                ],
+                [
+                    "Stemats",
                     1
                 ],
                 [
@@ -1567,43 +4009,83 @@
                     1
                 ],
                 [
-                    "Shiny Chanel",
-                    1
-                ],
-                [
-                    "Chanel",
-                    1
-                ],
-                [
-                    "Zumbo the Zany Mad Man",
-                    1
-                ],
-                [
-                    "Hanna-Barbarians",
-                    1
-                ],
-                [
-                    "Aporreadillo",
-                    1
-                ],
-                [
-                    "Pigeon",
-                    1
-                ],
-                [
-                    "Drofrehtur",
-                    1
-                ],
-                [
-                    "Chucky",
-                    1
-                ],
-                [
-                    "Alberto Del Riskull",
+                    "Le Cont",
                     2
                 ],
                 [
+                    "Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Shiny Rotstalker",
+                    1
+                ],
+                [
+                    "Spitfire",
+                    3
+                ],
+                [
+                    "Franco the Fierce",
+                    1
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ],
+                [
                     "Matrix Huateng",
+                    3
+                ],
+                [
+                    "Gringas",
+                    2
+                ],
+                [
+                    "SMORC!!!",
+                    1
+                ],
+                [
+                    "Applecrack",
+                    2
+                ],
+                [
+                    "Shiny Jones",
+                    2
+                ],
+                [
+                    "Chiles en Nogada",
+                    1
+                ],
+                [
+                    "Rimski",
+                    4
+                ],
+                [
+                    "Aporreadillo",
+                    2
+                ],
+                [
+                    "Yalcrab",
+                    4
+                ],
+                [
+                    "Bo Dalskull",
+                    3
+                ],
+                [
+                    "Shiny Black Sheep",
+                    1
+                ],
+                [
+                    "Serrot",
+                    2
+                ],
+                [
+                    "Ryskull",
+                    1
+                ],
+                [
+                    "Chuckles the Cheesy",
                     2
                 ],
                 [
@@ -1611,7 +4093,167 @@
                     1
                 ],
                 [
-                    "Rajas con Crema",
+                    "Penny Tration",
+                    2
+                ],
+                [
+                    "Corunda",
+                    2
+                ],
+                [
+                    "Shiny Salsa",
+                    1
+                ],
+                [
+                    "Egrofal",
+                    1
+                ],
+                [
+                    "Pigeon",
+                    2
+                ],
+                [
+                    "Shiny Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Lent",
+                    2
+                ],
+                [
+                    "Rekcut",
+                    2
+                ],
+                [
+                    "The Kid",
+                    3
+                ],
+                [
+                    "Shiny Cesarskull",
+                    1
+                ],
+                [
+                    "Salsa Verde",
+                    1
+                ],
+                [
+                    "Marie",
+                    1
+                ],
+                [
+                    "Second Madonna Mabel",
+                    1
+                ],
+                [
+                    "Chorizo",
+                    2
+                ],
+                [
+                    "Starlight Grimmer II",
+                    2
+                ],
+                [
+                    "Violence Bruce",
+                    1
+                ],
+                [
+                    "Jake",
+                    1
+                ],
+                [
+                    "Binga",
+                    1
+                ],
+                [
+                    "Shiny Violence Bruce",
+                    1
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Shiny Skeletaloo",
+                    1
+                ],
+                [
+                    "Shiny Thighza",
+                    2
+                ],
+                [
+                    "Things That Are Red",
+                    1
+                ],
+                [
+                    "Abbot Ale",
+                    1
+                ],
+                [
+                    "Ransome the Ridiculous",
+                    1
+                ],
+                [
+                    "Shiny Matrix Huateng",
+                    1
+                ],
+                [
+                    "Ninja",
+                    3
+                ],
+                [
+                    "Satellite Nadella",
+                    1
+                ],
+                [
+                    "Shiny Pesski",
+                    1
+                ],
+                [
+                    "Belinda",
+                    3
+                ],
+                [
+                    "Ballin Bozos",
+                    1
+                ],
+                [
+                    "Shiny Crasty",
+                    1
+                ],
+                [
+                    "Shiny Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Dead Pony Club",
+                    1
+                ],
+                [
+                    "Pearl",
+                    2
+                ],
+                [
+                    "Shiny Samoa Joskull",
+                    1
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Flutterspine II",
+                    1
+                ],
+                [
+                    "Fursty Ferret",
+                    1
+                ],
+                [
+                    "Shiny Quad Damage",
+                    1
+                ],
+                [
+                    "Herr Kut",
                     1
                 ],
                 [
@@ -1619,19 +4261,15 @@
                     1
                 ],
                 [
-                    "Shiny Xavier Woodskull",
+                    "Neirb'O",
                     1
                 ],
                 [
-                    "SMORC!!!",
+                    "Striker Lyle",
                     1
                 ],
                 [
-                    "Patters",
-                    2
-                ],
-                [
-                    "Shiny Stemats",
+                    "Shiny Whitney Wolfe Herdware",
                     1
                 ],
                 [
@@ -1639,76 +4277,376 @@
                     1
                 ],
                 [
-                    "Quad Damage",
+                    "Yoyo the Yuckie",
                     1
                 ],
                 [
-                    "NFTeve Jobs",
+                    "Crasty",
+                    1
+                ],
+                [
+                    "Shiny Rehsurc",
+                    1
+                ],
+                [
+                    "Gerard",
+                    1
+                ],
+                [
+                    "Shiny Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Bad Steve",
+                    1
+                ],
+                [
+                    "Bos",
+                    1
+                ],
+                [
+                    "Mor",
+                    1
+                ],
+                [
+                    "Shiny Ayesha",
+                    1
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    1
+                ],
+                [
+                    "Shiny Rajas con Crema",
+                    1
+                ],
+                [
+                    "Quesadilla",
+                    1
+                ],
+                [
+                    "Shiny Herr Kut",
+                    1
+                ],
+                [
+                    "Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Shiny Mark Zuckerborg",
+                    1
+                ],
+                [
+                    "Rainbone Dash",
+                    1
+                ],
+                [
+                    "Shiny Chanel",
+                    1
+                ],
+                [
+                    "Attacker Arwing",
+                    1
+                ],
+                [
+                    "Shiny Dasypeltis",
+                    1
+                ],
+                [
+                    "Twilight Spinal",
+                    1
+                ]
+            ]
+        },
+        {
+            "user_id": 533708157382426625,
+            "cash": 298,
+            "last_balance_update": "2024-03-10 15:57:20.053080",
+            "engagement": 535,
+            "items": [
+                [
+                    "Herr Kut",
+                    5
+                ],
+                [
+                    "Kraken",
+                    11
+                ],
+                [
+                    "Bo Dalskull",
+                    8
+                ],
+                [
+                    "Shiny Returner Deryck",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    14
+                ],
+                [
+                    "Rehsurc",
+                    12
+                ],
+                [
+                    "Fursty Ferret",
+                    5
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    5
+                ],
+                [
+                    "Thighza",
+                    19
+                ],
+                [
+                    "Deathwing",
+                    16
+                ],
+                [
+                    "Stemats",
+                    9
+                ],
+                [
+                    "Flutterspine II",
                     2
                 ],
                 [
-                    "Whitstable Bay",
+                    "Frosty the Forsaken",
+                    5
+                ],
+                [
+                    "The Moogle Mob",
+                    4
+                ],
+                [
+                    "Violence Bruce",
+                    5
+                ],
+                [
+                    "When Fruit Attacks",
+                    12
+                ],
+                [
+                    "Jim",
+                    14
+                ],
+                [
+                    "Gringas",
+                    5
+                ],
+                [
+                    "Sterkenburg",
+                    16
+                ],
+                [
+                    "Ballin Bozos",
+                    3
+                ],
+                [
+                    "Chad Michaels",
+                    3
+                ],
+                [
+                    "Shmolder III",
+                    11
+                ],
+                [
+                    "Corunda",
+                    16
+                ],
+                [
+                    "Sophie",
+                    5
+                ],
+                [
+                    "Steve Smith",
+                    5
+                ],
+                [
+                    "Opera Omnia",
+                    5
+                ],
+                [
+                    "Things That Are Red",
+                    2
+                ],
+                [
+                    "Yalcrab",
+                    17
+                ],
+                [
+                    "Penny Tration",
+                    5
+                ],
+                [
+                    "Pesski",
+                    6
+                ],
+                [
+                    "Ongina",
+                    4
+                ],
+                [
+                    "Black Sheep",
+                    8
+                ],
+                [
+                    "Marie",
+                    4
+                ],
+                [
+                    "Crasty",
+                    5
+                ],
+                [
+                    "Enin Fo Neves",
+                    8
+                ],
+                [
+                    "Shiny Chanel",
+                    4
+                ],
+                [
+                    "Chanel",
+                    21
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    13
+                ],
+                [
+                    "Hanna-Barbarians",
+                    11
+                ],
+                [
+                    "Aporreadillo",
+                    2
+                ],
+                [
+                    "Pigeon",
+                    7
+                ],
+                [
+                    "Drofrehtur",
+                    4
+                ],
+                [
+                    "Chucky",
+                    3
+                ],
+                [
+                    "Alberto Del Riskull",
+                    7
+                ],
+                [
+                    "Matrix Huateng",
+                    7
+                ],
+                [
+                    "Jones",
+                    2
+                ],
+                [
+                    "Rajas con Crema",
+                    8
+                ],
+                [
+                    "Susan Wojchipski",
+                    5
+                ],
+                [
+                    "Shiny Xavier Woodskull",
+                    2
+                ],
+                [
+                    "SMORC!!!",
+                    5
+                ],
+                [
+                    "Patters",
+                    9
+                ],
+                [
+                    "Shiny Stemats",
+                    2
+                ],
+                [
+                    "Anger Richard",
+                    2
+                ],
+                [
+                    "Quad Damage",
+                    7
+                ],
+                [
+                    "NFTeve Jobs",
                     1
+                ],
+                [
+                    "Whitstable Bay",
+                    2
                 ],
                 [
                     "Noel",
-                    1
+                    7
                 ],
                 [
                     "Dougal",
-                    1
+                    2
                 ],
                 [
                     "Kevil Owskull",
-                    1
+                    12
                 ],
                 [
                     "Huski",
-                    1
+                    9
                 ],
                 [
                     "Pockets the Pox-Ridden",
-                    1
+                    8
                 ],
                 [
                     "Maimai",
-                    1
+                    7
                 ],
                 [
                     "Applecrack",
-                    1
+                    6
                 ],
                 [
                     "Cabrito",
-                    1
+                    15
                 ],
                 [
                     "Greed Hastings",
-                    1
+                    12
                 ],
                 [
                     "Arianna",
-                    1
+                    4
                 ],
                 [
                     "Rimski",
-                    1
+                    10
                 ],
                 [
                     "Samoa Joskull",
-                    1
+                    3
                 ],
                 [
                     "Satellite Nadella",
-                    1
+                    6
                 ],
                 [
                     "Hop House 13",
-                    1
+                    14
                 ],
                 [
                     "Princess Lunate II",
-                    1
+                    7
                 ],
                 [
                     "JoJo the Bizzare",
@@ -1716,30 +4654,723 @@
                 ],
                 [
                     "Rotstalker",
-                    1
+                    14
                 ],
                 [
                     "Salsa",
-                    1
+                    7
                 ],
                 [
                     "Tugger",
-                    1
+                    8
                 ],
                 [
                     "Tao",
+                    6
+                ],
+                [
+                    "Holidays Are Coming",
+                    5
+                ],
+                [
+                    "Skeletaloo",
+                    13
+                ],
+                [
+                    "Ninja",
+                    7
+                ],
+                [
+                    "Ransome the Ridiculous",
+                    2
+                ],
+                [
+                    "Kilian",
+                    15
+                ],
+                [
+                    "Lent",
+                    8
+                ],
+                [
+                    "Eureka O'Hara",
+                    4
+                ],
+                [
+                    "Jeff Bez.OS",
+                    3
+                ],
+                [
+                    "Cyril",
+                    11
+                ],
+                [
+                    "Tyra Sanchez",
+                    5
+                ],
+                [
+                    "Ted",
+                    5
+                ],
+                [
+                    "Second Madonna Mabel",
+                    3
+                ],
+                [
+                    "Larry",
+                    9
+                ],
+                [
+                    "Merv Hughes",
+                    4
+                ],
+                [
+                    "Spitfire",
+                    8
+                ],
+                [
+                    "Le Cont",
+                    11
+                ],
+                [
+                    "Bos",
+                    8
+                ],
+                [
+                    "Binga",
+                    8
+                ],
+                [
+                    "Stack Dorsey",
+                    2
+                ],
+                [
+                    "Tactical Nuclear Penguin",
+                    5
+                ],
+                [
+                    "Abbot Ale",
+                    15
+                ],
+                [
+                    "Ayesha",
+                    8
+                ],
+                [
+                    "Big E Lanskull",
+                    5
+                ],
+                [
+                    "Shiny Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Ttocs",
+                    4
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    11
+                ],
+                [
+                    "Shiny Opera Omnia",
+                    3
+                ],
+                [
+                    "Magsy the Malicious",
+                    2
+                ],
+                [
+                    "Egrofal",
+                    1
+                ],
+                [
+                    "John-Boy",
+                    1
+                ],
+                [
+                    "Things That Are Blue",
+                    3
+                ],
+                [
+                    "Dasypeltis",
+                    10
+                ],
+                [
+                    "Meruru",
+                    5
+                ],
+                [
+                    "Fitzgibbon",
+                    3
+                ],
+                [
+                    "Daniel RobotEks",
+                    2
+                ],
+                [
+                    "Noodles the Nasty",
+                    4
+                ],
+                [
+                    "Salsa Verde",
+                    8
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    5
+                ],
+                [
+                    "Raritibia",
+                    7
+                ],
+                [
+                    "Rekcut",
+                    4
+                ],
+                [
+                    "Belinda",
+                    6
+                ],
+                [
+                    "Dead Pony Club",
+                    4
+                ],
+                [
+                    "Ricky Ponting",
+                    3
+                ],
+                [
+                    "Jack",
+                    4
+                ],
+                [
+                    "The Kid",
+                    6
+                ],
+                [
+                    "Dean Ambskull",
+                    3
+                ],
+                [
+                    "Big McSkellingtosh",
+                    2
+                ],
+                [
+                    "Joker the Jovial",
+                    8
+                ],
+                [
+                    "Shiny Chuckles the Cheesy",
+                    1
+                ],
+                [
+                    "Herman",
+                    6
+                ],
+                [
+                    "Chorizo",
+                    4
+                ],
+                [
+                    "Mor",
+                    4
+                ],
+                [
+                    "Xavier Woodskull",
+                    8
+                ],
+                [
+                    "Dhar'gor",
+                    1
+                ],
+                [
+                    "Richard",
+                    5
+                ],
+                [
+                    "Len",
+                    3
+                ],
+                [
+                    "Filete de Pescado",
+                    1
+                ],
+                [
+                    "Bianca del Rio",
+                    2
+                ],
+                [
+                    "Herr Dry",
+                    4
+                ],
+                [
+                    "Yabba the Yeasty",
+                    4
+                ],
+                [
+                    "Chiles en Nogada",
+                    4
+                ],
+                [
+                    "Baron Corskull",
+                    2
+                ],
+                [
+                    "Pearl",
+                    2
+                ],
+                [
+                    "Apple Tomb",
+                    2
+                ],
+                [
+                    "Doombar",
+                    3
+                ],
+                [
+                    "Totori",
+                    2
+                ],
+                [
+                    "Pumpkin King",
+                    3
+                ],
+                [
+                    "Chili con Carne",
+                    5
+                ],
+                [
+                    "Starlight Grimmer II",
+                    7
+                ],
+                [
+                    "Third Madonna Regina",
+                    3
+                ],
+                [
+                    "Coco Montrese",
+                    7
+                ],
+                [
+                    "Hobgoblin",
+                    1
+                ],
+                [
+                    "Gerard",
+                    5
+                ],
+                [
+                    "Mark Zuckerborg",
+                    4
+                ],
+                [
+                    "Shiny Le Cont",
+                    1
+                ],
+                [
+                    "Shiny Joker the Jovial",
+                    1
+                ],
+                [
+                    "Shiny Cyril",
+                    1
+                ],
+                [
+                    "Shiny Salsa Verde",
+                    1
+                ],
+                [
+                    "Rorona",
+                    1
+                ],
+                [
+                    "Jake",
+                    3
+                ],
+                [
+                    "Cesarskull",
+                    2
+                ],
+                [
+                    "Crackpot the Butcher",
+                    3
+                ],
+                [
+                    "TEA",
+                    3
+                ],
+                [
+                    "Serrot",
+                    2
+                ],
+                [
+                    "Mark Waugh",
+                    2
+                ],
+                [
+                    "Shiny Whitney Wolfe Herdware",
+                    1
+                ],
+                [
+                    "Doyle",
+                    5
+                ],
+                [
+                    "Shiny Larry",
+                    2
+                ],
+                [
+                    "Striker Lyle",
+                    4
+                ],
+                [
+                    "Shiny Noel",
+                    3
+                ],
+                [
+                    "Shiny Satellite Nadella",
+                    2
+                ],
+                [
+                    "Shiny Hop House 13",
+                    4
+                ],
+                [
+                    "Steak Bake",
+                    5
+                ],
+                [
+                    "Herr Raid",
+                    2
+                ],
+                [
+                    "Returner Deryck",
+                    2
+                ],
+                [
+                    "Shiny Sophie",
+                    1
+                ],
+                [
+                    "Shiny Rotstalker",
+                    1
+                ],
+                [
+                    "Taquito",
+                    2
+                ],
+                [
+                    "Shiny Bos",
+                    1
+                ],
+                [
+                    "Enum Musk",
+                    1
+                ],
+                [
+                    "Twilight Spinal",
+                    4
+                ],
+                [
+                    "Ryskull",
+                    1
+                ],
+                [
+                    "Quesadilla",
+                    3
+                ],
+                [
+                    "Shiny Tugger",
+                    2
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    3
+                ],
+                [
+                    "Shiny Holidays Are Coming",
+                    2
+                ],
+                [
+                    "Adore Delano",
+                    2
+                ],
+                [
+                    "Koccyx",
+                    3
+                ],
+                [
+                    "Kofi Kingskull",
+                    5
+                ],
+                [
+                    "Brennan",
+                    5
+                ],
+                [
+                    "Neirb'O",
+                    3
+                ],
+                [
+                    "Shiny Chiles en Nogada",
+                    1
+                ],
+                [
+                    "Franco the Fierce",
+                    3
+                ],
+                [
+                    "Byrne",
+                    2
+                ],
+                [
+                    "David Warner",
+                    4
+                ],
+                [
+                    "Benny-Cake",
+                    2
+                ],
+                [
+                    "Rainbone Dash",
+                    4
+                ],
+                [
+                    "Bad Steve",
+                    4
+                ],
+                [
+                    "Shiny Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Shiny Patters",
+                    1
+                ],
+                [
+                    "Attacker Arwing",
+                    3
+                ],
+                [
+                    "Brock Leskull",
+                    3
+                ],
+                [
+                    "Shiny Brock Leskull",
+                    1
+                ],
+                [
+                    "Shiny Richard",
+                    1
+                ],
+                [
+                    "Shiny Byrne",
+                    2
+                ],
+                [
+                    "Shiny Dasypeltis",
+                    1
+                ],
+                [
+                    "Shiny Pearl",
+                    1
+                ],
+                [
+                    "Shiny Jim",
+                    2
+                ],
+                [
+                    "Shiny Rehsurc",
+                    1
+                ],
+                [
+                    "Shiny Binga",
+                    1
+                ],
+                [
+                    "Shiny Pesski",
+                    1
+                ],
+                [
+                    "Shiny Lent",
+                    2
+                ],
+                [
+                    "Shiny Herr Dry",
+                    2
+                ],
+                [
+                    "Shiny Corunda",
+                    1
+                ],
+                [
+                    "Shiny Greed Hastings",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Shiny Kevil Owskull",
+                    2
+                ],
+                [
+                    "Shiny Fursty Ferret",
+                    1
+                ],
+                [
+                    "Shiny Hobgoblin",
+                    1
+                ],
+                [
+                    "Shiny Totori",
+                    1
+                ],
+                [
+                    "Shiny Westerosi Legends",
+                    2
+                ],
+                [
+                    "Shiny Thighza",
+                    1
+                ],
+                [
+                    "Shiny John-Boy",
+                    1
+                ],
+                [
+                    "Shiny Chili con Carne",
+                    1
+                ],
+                [
+                    "Shiny Adore Delano",
+                    1
+                ],
+                [
+                    "Shiny Rimski",
+                    2
+                ],
+                [
+                    "Shiny Kilian",
+                    1
+                ],
+                [
+                    "Shiny Ballin Bozos",
+                    1
+                ],
+                [
+                    "Shiny Chad Michaels",
+                    1
+                ],
+                [
+                    "Shiny Mor",
+                    1
+                ],
+                [
+                    "Shiny Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Shiny Things That Are Red",
+                    1
+                ],
+                [
+                    "Shiny Apple Tomb",
+                    1
+                ],
+                [
+                    "Shiny Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Shiny Stack Dorsey",
+                    1
+                ],
+                [
+                    "Shiny Yalcrab",
+                    1
+                ],
+                [
+                    "Shiny Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Shiny Maimai",
+                    1
+                ],
+                [
+                    "Shiny Magsy the Malicious",
+                    1
+                ],
+                [
+                    "Shiny Jones",
+                    1
+                ],
+                [
+                    "Shiny Dead Pony Club",
+                    1
+                ],
+                [
+                    "Shiny Abbot Ale",
+                    1
+                ],
+                [
+                    "Shiny Chorizo",
+                    1
+                ],
+                [
+                    "Shiny Jake",
+                    1
+                ],
+                [
+                    "Shiny When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Shiny Cabrito",
+                    1
+                ],
+                [
+                    "Shiny Dougal",
+                    1
+                ],
+                [
+                    "Shiny Rainbone Dash",
+                    1
+                ],
+                [
+                    "Shiny Starlight Grimmer II",
+                    1
+                ],
+                [
+                    "Shiny Gringas",
+                    1
+                ],
+                [
+                    "Shiny Tao",
+                    1
+                ],
+                [
+                    "Shiny Kraken",
+                    1
+                ],
+                [
+                    "Shiny Spitfire",
                     1
                 ]
             ]
         },
         {
             "user_id": 204269962204938240,
-            "cash": 826,
-            "engagement": 13,
+            "cash": 3847,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
+            "engagement": 34,
             "items": [
                 [
                     "Third Madonna Regina",
-                    1
+                    2
                 ],
                 [
                     "Maimai",
@@ -1759,7 +5390,7 @@
                 ],
                 [
                     "Tahbashimen Iumut",
-                    1
+                    3
                 ],
                 [
                     "Enin Fo Neves",
@@ -1775,7 +5406,7 @@
                 ],
                 [
                     "Abbot Ale",
-                    1
+                    2
                 ],
                 [
                     "Larry",
@@ -1783,11 +5414,11 @@
                 ],
                 [
                     "Rimski",
-                    2
+                    3
                 ],
                 [
                     "Zumbo the Zany Mad Man",
-                    1
+                    2
                 ],
                 [
                     "Tyra Sanchez",
@@ -1803,7 +5434,7 @@
                 ],
                 [
                     "Cyril",
-                    1
+                    3
                 ],
                 [
                     "Xavier Woodskull",
@@ -1811,7 +5442,7 @@
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Hop House 13",
@@ -1831,7 +5462,7 @@
                 ],
                 [
                     "Binga",
-                    1
+                    2
                 ],
                 [
                     "Yalcrab",
@@ -1843,11 +5474,11 @@
                 ],
                 [
                     "Greed Hastings",
-                    1
+                    2
                 ],
                 [
                     "Sophie",
-                    1
+                    2
                 ],
                 [
                     "Herman",
@@ -1855,34 +5486,199 @@
                 ],
                 [
                     "Eureka O'Hara",
-                    2
+                    3
                 ],
                 [
                     "Arianna",
-                    1
+                    2
                 ],
                 [
                     "Striker Lyle",
+                    1
+                ],
+                [
+                    "Princess Lunate II",
+                    1
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "Tao",
+                    1
+                ],
+                [
+                    "Dead Pony Club",
+                    1
+                ],
+                [
+                    "Violence Bruce",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    2
+                ],
+                [
+                    "Rorona",
+                    2
+                ],
+                [
+                    "Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Len",
+                    1
+                ],
+                [
+                    "Ryskull",
+                    2
+                ],
+                [
+                    "Dougal",
+                    1
+                ],
+                [
+                    "Shiny Brennan",
+                    1
+                ],
+                [
+                    "Alberto Del Riskull",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II",
+                    1
+                ],
+                [
+                    "Huski",
+                    2
+                ],
+                [
+                    "Jim",
+                    2
+                ],
+                [
+                    "Deathwing",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    1
+                ],
+                [
+                    "Applecrack",
+                    1
+                ],
+                [
+                    "Big E Lanskull",
+                    2
+                ],
+                [
+                    "Salsa Verde",
+                    1
+                ],
+                [
+                    "Dasypeltis",
+                    2
+                ],
+                [
+                    "Shiny Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Pesski",
+                    1
+                ],
+                [
+                    "Fursty Ferret",
+                    2
+                ],
+                [
+                    "Neirb'O",
+                    1
+                ],
+                [
+                    "Shmolder III",
+                    1
+                ],
+                [
+                    "Bo Dalskull",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Hobgoblin",
+                    1
+                ],
+                [
+                    "Bos",
+                    1
+                ],
+                [
+                    "Ongina",
+                    1
+                ],
+                [
+                    "Big McSkellingtosh",
+                    1
+                ],
+                [
+                    "Chorizo",
+                    1
+                ],
+                [
+                    "Tugger",
+                    1
+                ],
+                [
+                    "Black Sheep",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    1
+                ],
+                [
+                    "Serrot",
+                    1
+                ],
+                [
+                    "Flutterspine II",
+                    1
+                ],
+                [
+                    "Patters",
                     1
                 ]
             ]
         },
         {
             "user_id": 134405791103844352,
-            "cash": 49,
-            "engagement": 5,
+            "cash": 252,
+            "last_balance_update": "2024-03-17 16:15:47.790095",
+            "engagement": 56,
             "items": [
                 [
                     "Dead Pony Club",
-                    1
+                    3
                 ],
                 [
                     "Jones",
-                    1
+                    2
                 ],
                 [
                     "Rimski",
-                    2
+                    6
                 ],
                 [
                     "Black Sheep",
@@ -1890,7 +5686,7 @@
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Shiny Chanel",
@@ -1898,43 +5694,43 @@
                 ],
                 [
                     "Dhar'gor",
-                    1
-                ],
-                [
-                    "Herman",
-                    1
-                ],
-                [
-                    "Herr Kut",
-                    1
-                ],
-                [
-                    "Huski",
-                    1
-                ],
-                [
-                    "Hop House 13",
-                    1
-                ],
-                [
-                    "Violence Bruce",
                     2
                 ],
                 [
+                    "Herman",
+                    3
+                ],
+                [
+                    "Herr Kut",
+                    2
+                ],
+                [
+                    "Huski",
+                    3
+                ],
+                [
+                    "Hop House 13",
+                    4
+                ],
+                [
+                    "Violence Bruce",
+                    5
+                ],
+                [
                     "Abbot Ale",
-                    1
+                    2
                 ],
                 [
                     "Shiny Deathwing",
-                    1
+                    2
                 ],
                 [
                     "Westerosi Legends",
-                    1
+                    5
                 ],
                 [
                     "Kevil Owskull",
-                    1
+                    3
                 ],
                 [
                     "Ricky Ponting",
@@ -1954,7 +5750,7 @@
                 ],
                 [
                     "Chad Michaels",
-                    1
+                    2
                 ],
                 [
                     "Rehsurc",
@@ -1962,7 +5758,7 @@
                 ],
                 [
                     "Attacker Arwing",
-                    1
+                    2
                 ],
                 [
                     "Shiny Salsa Verde",
@@ -1974,30 +5770,505 @@
                 ],
                 [
                     "SMORC!!!",
-                    1
+                    2
                 ],
                 [
                     "Pesski",
+                    1
+                ],
+                [
+                    "Shiny Big E Lanskull",
+                    2
+                ],
+                [
+                    "Whitstable Bay",
+                    1
+                ],
+                [
+                    "Len",
+                    1
+                ],
+                [
+                    "Byrne",
+                    2
+                ],
+                [
+                    "Quesadilla",
+                    1
+                ],
+                [
+                    "Shiny Stemats",
+                    1
+                ],
+                [
+                    "Cyril",
+                    3
+                ],
+                [
+                    "TEA",
+                    5
+                ],
+                [
+                    "Baron Corskull",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    3
+                ],
+                [
+                    "Shiny Larry",
+                    1
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Ballin Bozos",
+                    2
+                ],
+                [
+                    "Shiny Salsa",
+                    1
+                ],
+                [
+                    "Bos",
+                    2
+                ],
+                [
+                    "Thighza",
+                    1
+                ],
+                [
+                    "Shiny Satellite Nadella",
+                    1
+                ],
+                [
+                    "Maimai",
+                    1
+                ],
+                [
+                    "Ted",
+                    1
+                ],
+                [
+                    "Noel",
+                    2
+                ],
+                [
+                    "Adore Delano",
+                    1
+                ],
+                [
+                    "Kraken",
+                    3
+                ],
+                [
+                    "Sophie",
+                    1
+                ],
+                [
+                    "Shiny Rimski",
+                    2
+                ],
+                [
+                    "Applecrack",
+                    2
+                ],
+                [
+                    "Chiles en Nogada",
+                    3
+                ],
+                [
+                    "Le Cont",
+                    2
+                ],
+                [
+                    "Shiny Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Chorizo",
+                    1
+                ],
+                [
+                    "Larry",
+                    2
+                ],
+                [
+                    "Rotstalker",
+                    4
+                ],
+                [
+                    "Shiny Jim",
+                    1
+                ],
+                [
+                    "Herr Raid",
+                    2
+                ],
+                [
+                    "Aporreadillo",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    5
+                ],
+                [
+                    "Kofi Kingskull",
+                    1
+                ],
+                [
+                    "Deathwing",
+                    5
+                ],
+                [
+                    "Shiny Xavier Woodskull",
+                    2
+                ],
+                [
+                    "Shiny Violence Bruce",
+                    1
+                ],
+                [
+                    "Second Madonna Mabel",
+                    1
+                ],
+                [
+                    "Stack Dorsey",
+                    2
+                ],
+                [
+                    "Susan Wojchipski",
+                    2
+                ],
+                [
+                    "Shiny Joker the Jovial",
+                    3
+                ],
+                [
+                    "Whitney Wolfe Herdware",
+                    2
+                ],
+                [
+                    "Bo Dalskull",
+                    5
+                ],
+                [
+                    "Skeletaloo",
+                    4
+                ],
+                [
+                    "Xavier Woodskull",
+                    1
+                ],
+                [
+                    "Shiny Chuckles the Cheesy",
+                    1
+                ],
+                [
+                    "Neirb'O",
+                    2
+                ],
+                [
+                    "Benny-Cake",
+                    1
+                ],
+                [
+                    "Taquito",
+                    1
+                ],
+                [
+                    "Shiny Yalcrab",
+                    1
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    2
+                ],
+                [
+                    "Ayesha",
+                    1
+                ],
+                [
+                    "Shiny Brennan",
+                    1
+                ],
+                [
+                    "Big McSkellingtosh",
+                    1
+                ],
+                [
+                    "Rekcut",
+                    1
+                ],
+                [
+                    "Dasypeltis",
+                    2
+                ],
+                [
+                    "Shiny Chucky",
+                    1
+                ],
+                [
+                    "Chanel",
+                    3
+                ],
+                [
+                    "Shiny Le Cont",
+                    1
+                ],
+                [
+                    "Binga",
+                    1
+                ],
+                [
+                    "Jim",
+                    4
+                ],
+                [
+                    "Shiny Jack",
+                    1
+                ],
+                [
+                    "Greed Hastings",
+                    1
+                ],
+                [
+                    "Crasty",
+                    1
+                ],
+                [
+                    "Jeff Bez.OS",
+                    2
+                ],
+                [
+                    "Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Shiny Shmolder III",
+                    1
+                ],
+                [
+                    "Apple Tomb",
+                    1
+                ],
+                [
+                    "Doyle",
+                    1
+                ],
+                [
+                    "NFTeve Jobs",
+                    1
+                ],
+                [
+                    "Dean Ambskull",
+                    1
+                ],
+                [
+                    "Shiny Maimai",
+                    1
+                ],
+                [
+                    "Joker the Jovial",
+                    2
+                ],
+                [
+                    "Ninja",
+                    2
+                ],
+                [
+                    "Shiny Westerosi Legends",
+                    1
+                ],
+                [
+                    "Tahbashimen Iumut",
+                    1
+                ],
+                [
+                    "Shiny Applecrack",
+                    2
+                ],
+                [
+                    "Jake",
+                    2
+                ],
+                [
+                    "When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II",
+                    2
+                ],
+                [
+                    "Drofrehtur",
+                    1
+                ],
+                [
+                    "Big E Lanskull",
+                    1
+                ],
+                [
+                    "Shiny Meruru",
+                    1
+                ],
+                [
+                    "Pumpkin King",
+                    1
+                ],
+                [
+                    "Daniel RobotEks",
+                    2
+                ],
+                [
+                    "Shiny Steak Bake",
+                    1
+                ],
+                [
+                    "Koccyx",
+                    1
+                ],
+                [
+                    "Ransome the Ridiculous",
+                    1
+                ],
+                [
+                    "Shiny Filete de Pescado",
+                    3
+                ],
+                [
+                    "Rajas con Crema",
+                    2
+                ],
+                [
+                    "Kilian",
+                    1
+                ],
+                [
+                    "Shiny Ransome the Ridiculous",
+                    1
+                ],
+                [
+                    "Shiny Third Madonna Regina",
+                    1
+                ],
+                [
+                    "Mor",
+                    1
+                ],
+                [
+                    "Gringas",
+                    1
+                ],
+                [
+                    "Meruru",
+                    1
+                ],
+                [
+                    "Arianna",
+                    1
+                ],
+                [
+                    "Shiny Spitfire",
+                    1
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    3
+                ],
+                [
+                    "JoJo the Bizzare",
+                    1
+                ],
+                [
+                    "Shiny Pigeon",
+                    1
+                ],
+                [
+                    "Shiny Pumpkin King",
+                    1
+                ],
+                [
+                    "Yalcrab",
+                    1
+                ],
+                [
+                    "Brock Leskull",
+                    1
+                ],
+                [
+                    "Shiny Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Shiny Bos",
+                    1
+                ],
+                [
+                    "Stemats",
+                    1
+                ],
+                [
+                    "Shiny Tactical Nuclear Penguin",
+                    1
+                ],
+                [
+                    "Shiny Rotstalker",
+                    1
+                ],
+                [
+                    "Tugger",
+                    1
+                ],
+                [
+                    "Ttocs",
+                    1
+                ],
+                [
+                    "Shiny When Fruit Attacks",
+                    1
+                ],
+                [
+                    "Shmolder III",
+                    1
+                ],
+                [
+                    "Shiny Thighza",
+                    1
+                ],
+                [
+                    "Flutterspine II",
+                    1
+                ],
+                [
+                    "Fitzgibbon",
                     1
                 ]
             ]
         },
         {
             "user_id": 136928539487371266,
-            "cash": 1264,
+            "cash": 4072,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 186924306276679680,
-            "cash": 1264,
+            "cash": 4072,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 204750746745438208,
-            "cash": 767,
-            "engagement": 3,
+            "cash": 3032,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
+            "engagement": 6,
             "items": [
                 [
                     "Joker the Jovial",
@@ -2038,13 +6309,74 @@
                 [
                     "Patters",
                     1
+                ],
+                [
+                    "Shiny Chorizo",
+                    1
+                ],
+                [
+                    "Sterkenburg",
+                    1
+                ],
+                [
+                    "Salsa Verde",
+                    1
+                ],
+                [
+                    "Greed Hastings",
+                    1
+                ],
+                [
+                    "Stack Dorsey",
+                    1
+                ],
+                [
+                    "Shiny Ninja",
+                    1
+                ],
+                [
+                    "Ninja",
+                    1
+                ],
+                [
+                    "Ryskull",
+                    1
+                ],
+                [
+                    "Westerosi Legends",
+                    1
+                ],
+                [
+                    "Larry",
+                    1
+                ],
+                [
+                    "Shiny Coco Montrese",
+                    1
+                ],
+                [
+                    "Dean Ambskull",
+                    1
+                ],
+                [
+                    "Frosty the Forsaken",
+                    1
+                ],
+                [
+                    "Richard",
+                    1
+                ],
+                [
+                    "Pigeon",
+                    1
                 ]
             ]
         },
         {
             "user_id": 241944494033862657,
-            "cash": 173,
-            "engagement": 4,
+            "cash": 2760,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
+            "engagement": 6,
             "items": [
                 [
                     "Shiny Quad Damage",
@@ -2116,17 +6448,50 @@
                 ],
                 [
                     "David Warner",
-                    1
+                    2
                 ],
                 [
                     "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Shiny The Kid",
+                    1
+                ],
+                [
+                    "Larry",
+                    2
+                ],
+                [
+                    "Hop House 13",
+                    1
+                ],
+                [
+                    "Lent",
+                    1
+                ],
+                [
+                    "Shiny Bo Dalskull",
+                    1
+                ],
+                [
+                    "Gringas",
+                    1
+                ],
+                [
+                    "Pesski",
+                    1
+                ],
+                [
+                    "Rorona",
                     1
                 ]
             ]
         },
         {
             "user_id": 247856257631911936,
-            "cash": 1090,
+            "cash": 3898,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": [
                 [
@@ -2149,19 +6514,29 @@
         },
         {
             "user_id": 193861041946492928,
-            "cash": 674,
+            "cash": 3482,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 145625064153415680,
-            "cash": 624,
+            "cash": 3432,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": "none"
         },
         {
             "user_id": 288345258209574915,
-            "cash": 438,
+            "cash": 3246,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
+            "engagement": 0,
+            "items": "none"
+        },
+        {
+            "user_id": 107652886239911956,
+            "cash": 150,
+            "last_balance_update": "2023-11-09 09:47:29.533534",
             "engagement": 0,
             "items": "none"
         }
@@ -5659,7 +10034,7 @@
         {
             "role_id": "1104508498412322937",
             "role_income": 2,
-            "last_updated": "2023-09-10 13:55:14.947496"
+            "last_updated": "2023-11-09 09:47:29.533534"
         }
     ]
 }
