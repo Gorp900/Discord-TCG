@@ -402,9 +402,9 @@ async def on_message(message):
 	# --------------
 
 	elif command in ["awards", all_reg_commands_aliases["awards"]]:
-		modes = ["-completionist", "-hoarder", "-beef", "-zubat", "-magpie", "-salad", "-undertaker", "-champion"]
+		modes = ["completionist", "hoarder", "beef", "zubat", "magpie", "salad", "undertaker", "champion"]
 		page_number = 1
-		mode_type = modes[1] ## default is hoarder, so most cards
+		mode_type = "none"
 		server_name = server.name
 		full_name = server_name  # + mode_type
 
@@ -414,10 +414,10 @@ async def on_message(message):
 			color = discord_error_rgb_code
 			embed = discord.Embed(
 			description=f"{emoji_error} Need a leaderboard Type, enter one of the following in format of \"leaderboard -type\": \n\n \
-				-completionist : 11 unique players from one team\n \
-				-hoarder : Most Cards\n-beef : Most unique big guys\n-zubat : Most duplicates of one player\n \
-				-magpie : Most Shinies\n-salad : 1 player from each team\n-undertaker : Most unique dead players\n \
-				-champion : Most unique playerrs from the season winning and bowl winning teams", color=color)
+				completionist : 11 unique players from one team\n \
+				hoarder : Most Cards\nbeef : Most unique big guys\nzubat : Most duplicates of one player\n \
+				magpie : Most Shinies\nsalad : 1 player from each team\nundertaker : Most unique dead players\n \
+				champion : Most unique playerrs from the season winning and bowl winning teams", color=color)
 			embed.set_author(name=username, icon_url=user_pfp)
 			await channel.send(embed=embed)
 			return
@@ -426,33 +426,32 @@ async def on_message(message):
 			if param[1] in modes:
 				mode_type = param[1]
 				page_number = 1
-				if mode_type == "-completionist": full_name = "Completionists"
-				elif mode_type == "-hoarder": full_name = "Card Hoarders"
-				elif mode_type == "-beef": full_name = "Beefiest Bunch"
-				elif mode_type == "-zubat": full_name = "ZubatZubatZubat"
-				elif mode_type == "-magpie": full_name = "Shiney Magpies"
-				elif mode_type == "-salad": full_name = "Delicious Fruit Salads"
-				elif mode_type == "-undertaker": full_name = "Leaderboard of the Dead"
-				elif mode_type == "-champion": full_name = "Champ Collectors"
+				if mode_type == "completionist": full_name = "Every set of 11 Unique Players in a team"
+				elif mode_type == "hoarder": full_name = "Most Cards"
+				elif mode_type == "beef": full_name = "Most Unique Big Guys"
+				elif mode_type == "zubat": full_name = "Most Duplicates of one player"
+				elif mode_type == "magpie": full_name = "Most Shinies"
+				elif mode_type == "salad": full_name = "Every set of 1 unique player from each team"
+				elif mode_type == "undertaker": full_name = "Most Unique Dead Players"
+				elif mode_type == "champion": full_name = "Most Unique players from champion teams"
 
 		print(f"Looking for {full_name}, at page {page_number}, in mode {mode_type}")
 
 		# handler
 		try:
-			print("at start of try statement, mode type == ", mode_type)
-			if mode_type == "-completionist": status, lb_return = await db_handler.leaderboard_com(user, channel, username, client)
-			elif mode_type == "-hoarder": status, lb_return = await db_handler.leaderboard_hoa(user, channel, username, client)
-			elif mode_type == "-beef": status, lb_return = await db_handler.leaderboard_bee(user, channel, username, client)
-			elif mode_type == "-zubat": status, lb_return = await db_handler.leaderboard_zub(user, channel, username, client)
-			elif mode_type == "-magpie": status, lb_return = await db_handler.leaderboard_mag(user, channel, username, client)
-			elif mode_type == "-salad": status, lb_return = await db_handler.leaderboard_sal(user, channel, username, client)
-			elif mode_type == "-undertaker" : status, lb_return = await db_handler.leaderboard_und(user, channel, username, client)
-			elif mode_type == "-champion": status, lb_return = await db_handler.leaderboard_cha(user, channel, username, client)
+			if mode_type == "completionist": status, lb_return = await db_handler.leaderboard_com(user, channel, username, client)
+			elif mode_type == "hoarder": status, lb_return = await db_handler.leaderboard_hoa(user, channel, username, client)
+			elif mode_type == "beef": status, lb_return = await db_handler.leaderboard_bee(user, channel, username, client)
+			elif mode_type == "zubat": status, lb_return = await db_handler.leaderboard_zub(user, channel, username, client)
+			elif mode_type == "magpie": status, lb_return = await db_handler.leaderboard_mag(user, channel, username, client)
+			elif mode_type == "salad": status, lb_return = await db_handler.leaderboard_sal(user, channel, username, client)
+			elif mode_type == "undertaker" : status, lb_return = await db_handler.leaderboard_und(user, channel, username, client)
+			elif mode_type == "champion": status, lb_return = await db_handler.leaderboard_cha(user, channel, username, client)
 			else : status = "error"
 
 			if status == "error":
 				color = discord_error_rgb_code
-				embed = discord.Embed(description=f"{lb_return}", color=color)
+				embed = discord.Embed(description=f"{status}, perhaps you typed an option wrong?", color=color)
 				embed.set_author(name=username, icon_url=user_pfp)
 				await channel.send(embed=embed)
 				return
@@ -461,9 +460,16 @@ async def on_message(message):
 				color = discord.Color.from_rgb(3, 169, 244)
 				embed = discord.Embed(title=f"\n{full_name}", color=color)
 				embed.set_author(name=username, icon_url=user_pfp)
-				embed.add_field(name="1st", value=f"{lb_return[0][0]} : {lb_return[0][1]}")
-				embed.add_field(name="2nd", value=f"{lb_return[1][0]} : {lb_return[1][1]}")
-				embed.add_field(name="3rd", value=f"{lb_return[2][0]} : {lb_return[2][1]}")
+				suffix = "st"
+				for x in range(len(lb_return)):
+					pos = x+1
+					## Can't use a match/case statement, wrong version of python >_> 
+					if pos == 1: suffix = "st"
+					elif pos == 2: suffix = "nd"
+					elif pos == 3: suffix = "rd"
+					else: suffix = "th"
+					if str(lb_return[x][1]).startswith("0") == False: ## only display if there IS a value...
+						embed.add_field(name=f"{pos}{suffix} : {lb_return[x][0]}", value=f"      with {lb_return[x][1]}", inline=False)
 				await channel.send(embed=embed)
 				return
 		except Exception as e:
@@ -1484,10 +1490,9 @@ async def on_message(message):
 		await channel.send(embed=embed)
 
 		return
-	if(message.content.startswith("/")):
-		await message.delete()
-
-		return
+	#if(message.content.startswith("/")):
+	#	await message.delete()
+	#	return
 
 
 """

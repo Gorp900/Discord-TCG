@@ -290,10 +290,58 @@ class pythonboat_database_handler:
 	#
 	# LEADERBOARD
 	#
-	## TODO each of these....
+
 	async def leaderboard_com(self, user, channel, username, client):
 		## Completionist Leaderboard, Count how many times a coach has 11 unique players from each team
-		return "success", "success"
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
+		
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict = []
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			all_cards_per_team = {}
+			# First we need to build/organize all count of players cards per team...
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if current_card["team_name"] not in all_cards_per_team:
+						all_cards_per_team[current_card["team_name"]] = []
+					temp_array = all_cards_per_team[current_card["team_name"]]
+					temp_array.append(current_user["items"][x][1])
+					all_cards_per_team[current_card["team_name"]] = temp_array
+					## all_cards_per team should now look a bit like ...
+					## {"team_a" : [1,2,5,3], "team_b" : [7,2,2] ....}
+
+			## Now to coutn sets of 11 for each organized team of cards....
+			all_teams_results = []
+			team_list_keys = list(all_cards_per_team.keys())
+			for y in range(len(all_cards_per_team)): ## For each team ...
+				zero_count = 0
+				while len(all_cards_per_team[team_list_keys[y]]) > 10: ## actually have 11 unique cards or more
+					for z in range(11): ## go through the first 11 spots in the array one by one
+						all_cards_per_team[team_list_keys[y]][z] -= 1	## We count down set
+					for q in all_cards_per_team[team_list_keys[y]]:
+						if q == 0:
+							all_cards_per_team[team_list_keys[y]].remove(q) ## and remove any zeroes we get to
+					zero_count += 1 ## adding up the amount of times we do this
+				all_teams_results.append(zero_count) ## gives us how many "full sets" of players we're able to make with this team
+			
+			running_total = 0
+			for i in all_teams_results:
+				running_total = running_total + i
+
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		return "success", return_dict
 
 	async def leaderboard_hoa(self, user, channel, username, client):
 		## Hoarder Leaderboard, Count each coaches total number of cards
@@ -317,37 +365,234 @@ class pythonboat_database_handler:
 			## add both the user id and running total to return dict
 			return_dict.append([current_user["user_id"], running_total])
 
-		## Now to sort dict
-		## the sorted function takes what to sort and how, setting the key with lambda x:x[1] uses it's own item list, with it's second varr as the key to sort.
-		return_dict = sorted(return_dict, key=lambda x:x[1], reverse=True) ## reverse=true makes it highest first
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		
 		return "success", return_dict
 
 	async def leaderboard_bee(self, user, channel, username, client):
 		## Beef Leaderboard, count each coaches most uniqye big guys
-		return "success", "success"
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
+
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			running_total = 0
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if current_card["position"] == "bigguy":
+						running_total += 1
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		return "success", return_dict
 
 	async def leaderboard_zub(self, user, channel, username, client):
 		## Zubat Award: Count each coaches most duplicates of one player
-		return "success", "success"
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		if new_data != "none":
+			json_content["userdata"] = new_data
+		
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		return_names =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			most_duplicates_num = 0
+			most_duplicates_name = ""
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					if current_user["items"][x][1] > most_duplicates_num:
+						most_duplicates_num = current_user["items"][x][1]
+						most_duplicates_name = current_user["items"][x][0]
+			## add both the user id and running total to return dict
+			result = most_duplicates_num
+			result_name = " " + str(most_duplicates_name)
+			return_dict.append([current_user["user_id"], result])
+			return_names.append([current_user["user_id"], result_name])
+			## We copy the id to name function from sorter into here just for our seperate return
+			for i in range(len(return_names)):
+				try:
+					name_object = await client.fetch_user(int(return_names[i][0]))
+					actual_name = str(name_object)
+				except:
+					actual_name = str(return_names[i][0])
+				return_names[i][0] = actual_name
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		## Now a double loop to check coach names on both arrays and match their count to the card name
+		for x in range(len(return_dict)):
+			for y in range(len(return_names)):
+				if return_dict[x][0] == return_names[y][0]:
+					return_dict[x][1] = str(return_dict[x][1]) + str(return_names[y][1])
+		return "success", return_dict
 
 	async def leaderboard_mag(self, user, channel, username, client):
 		## Magpie Award: Count each coaches number of shinies
-		return "success", "success"
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
+
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			running_total = 0
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if current_card["shiny"] == True:
+						running_total += current_user["items"][x][1]
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		return "success", return_dict
 	
 	async def leaderboard_sal(self, user, channel, username, client):
 		## Fruit Salad Award: Count how many times each coach as a collection of 1 player from each team
-		return "success", "success"
+		# load json
+		print("inside salad")
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
+		
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict = []
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			all_cards_per_team = {}
+			# First we need to build/organize all count of players cards per team...
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if current_card["team_name"] not in all_cards_per_team:
+						all_cards_per_team[current_card["team_name"]] = 0
+					all_cards_per_team[current_card["team_name"]] += current_user["items"][x][1]
+					## all_cards_per team should now look a bit like ...
+					## {"team_a" : 120, "team_b" : 65] ....}
+
+			## Now to count each set of 1 player from each team
+			running_total = 0
+			if len(all_cards_per_team) == 14: ## There are 14 teams, so this must be 14
+				print("This coach as cards from 14 teams...")
+				running_total = all_cards_per_team[min(all_cards_per_team, key=all_cards_per_team.get)]
+				## The actual number is just equal to how many times they can make a set of 1 player from each team
+				##  Therefore, as long as they have 14 different teams worth of cards, it's just the lowest amount of that...
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		print("All coaches done, time to sort ")
+		print(return_dict)
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		print("and return...")
+		return "success", return_dict
 	
 	async def leaderboard_und(self, user, channel, username, client):
 		## Undertaker Award : Count most unique players that are dead
-		return "success", "success"
+		# load json
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
+
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			running_total = 0
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if current_card["deceased"] == True:
+						running_total += 1
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		return "success", return_dict
 	
 	async def leaderboard_cha(self, user, channel, username, client):
 		## Champion award : Count which coach has the most uniqye players from the winning league and bowl teams
 		winning_league_team = "Mental Disintegration"
 		winning_bowl_team = ""
-		return "success", "success"
+		json_file = open(self.pathToJson, "r")
+		json_content = json.load(json_file)
+		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		item_database = json_content["items"]
+		if new_data != "none":
+			json_content["userdata"] = new_data
 
+		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
+		return_dict =[]
+		for i in range(len(json_content["userdata"])):
+			## Fill all_users with all user_ids
+			current_user = json_content["userdata"][i]
+			running_total = 0
+			## Now an easy count of all total cards to be done here
+			if current_user["items"] != "none":
+				for x in range(len(current_user["items"])): ## For each card item...
+					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					if (current_card["team_name"] == winning_league_team) \
+					or (current_card["team_name"] == winning_bowl_team):
+						running_total += 1
+			## add both the user id and running total to return dict
+			return_dict.append([current_user["user_id"], running_total])
+
+		return_dict = await self.sort_leaderboard(return_dict, client)
+		return "success", return_dict
+
+	## Sort leaderboard by ascending value AND replace userIDs with names is possible
+	async def sort_leaderboard(self, leaderboard_object, client):
+		print("in sorter")
+		sorted_board = sorted(leaderboard_object, key=lambda x:x[1], reverse=True) ## reverse=true makes it highest first
+		for i in range(len(sorted_board)):
+			try:
+				name_object = await client.fetch_user(int(sorted_board[i][0]))
+				actual_name = str(name_object)
+			except:
+				actual_name = str(sorted_board[i][0])
+			sorted_board[i][0] = actual_name
+		print("leaving sorter")
+		return sorted_board
+
+	## Rudimentery card detail checker, will be broken if multiple cards have the same name >_>
+	##	TODO: need to implement card_id's for comparison instead...
+	async def get_card_details(self, card_name, item_database):
+		for x in range(len(item_database)):
+			if item_database[x]["name"] == card_name:
+				card_deets = item_database[x]
+				return card_deets
+		return "failure"
 
 ## Old LEaderboard, TODO: Remove me, no longer used
 	async def leaderboard(self, user, channel, username, full_name, page_number, mode_type, client):
@@ -1529,3 +1774,4 @@ class pythonboat_database_handler:
 		self.overwrite_json(json_content)
 
 		return "success", "success"
+

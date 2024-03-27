@@ -8,8 +8,8 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 10175,
-            "last_balance_update": "2024-03-25 13:42:34.602124",
+            "cash": 10255,
+            "last_balance_update": "2024-03-26 12:26:15.466584",
             "engagement": 36,
             "items": [
                 [
@@ -1212,9 +1212,9 @@
         },
         {
             "user_id": 185808377052528640,
-            "cash": 5743,
-            "last_balance_update": "2024-01-31 22:17:31.408697",
-            "engagement": 11,
+            "cash": 234,
+            "last_balance_update": "2024-03-25 17:09:35.256938",
+            "engagement": 38,
             "items": [
                 [
                     "Shiny Holidays Are Coming",
@@ -1242,19 +1242,19 @@
                 ],
                 [
                     "Alberto Del Riskull",
-                    1
+                    2
                 ],
                 [
                     "Cabrito",
-                    2
+                    7
                 ],
                 [
                     "Len",
-                    1
+                    2
                 ],
                 [
                     "Cyril",
-                    2
+                    3
                 ],
                 [
                     "Shiny Arianna",
@@ -1270,7 +1270,7 @@
                 ],
                 [
                     "Big E Lanskull",
-                    1
+                    3
                 ],
                 [
                     "Fursty Ferret",
@@ -1298,15 +1298,15 @@
                 ],
                 [
                     "Thighza",
-                    2
+                    3
                 ],
                 [
                     "Westerosi Legends",
-                    2
+                    4
                 ],
                 [
                     "Joker the Jovial",
-                    2
+                    4
                 ],
                 [
                     "Shiny Whitney Wolfe Herdware",
@@ -1342,7 +1342,7 @@
                 ],
                 [
                     "Returner Deryck",
-                    1
+                    2
                 ],
                 [
                     "Shiny Ninja",
@@ -1350,7 +1350,7 @@
                 ],
                 [
                     "Bo Dalskull",
-                    1
+                    3
                 ],
                 [
                     "Brock Leskull",
@@ -1358,7 +1358,7 @@
                 ],
                 [
                     "Bos",
-                    1
+                    4
                 ],
                 [
                     "Tactical Nuclear Penguin",
@@ -1370,19 +1370,19 @@
                 ],
                 [
                     "Applecrack",
-                    2
+                    3
                 ],
                 [
                     "Dasypeltis",
-                    1
+                    5
                 ],
                 [
                     "Frosty the Forsaken",
-                    1
+                    2
                 ],
                 [
                     "Third Madonna Regina",
-                    1
+                    2
                 ],
                 [
                     "Mark Zuckerborg",
@@ -1394,23 +1394,359 @@
                 ],
                 [
                     "Shiny Noodles the Nasty",
-                    1
+                    2
                 ],
                 [
                     "Noel",
-                    1
+                    2
                 ],
                 [
                     "Crasty",
+                    1
+                ],
+                [
+                    "Shiny Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Violence Bruce",
+                    2
+                ],
+                [
+                    "Abbot Ale",
+                    3
+                ],
+                [
+                    "Kraken",
+                    1
+                ],
+                [
+                    "Shiny Rimski",
+                    1
+                ],
+                [
+                    "Patters",
+                    2
+                ],
+                [
+                    "Pesski",
+                    1
+                ],
+                [
+                    "Jack",
+                    1
+                ],
+                [
+                    "Shiny Chorizo",
+                    1
+                ],
+                [
+                    "Maimai",
+                    2
+                ],
+                [
+                    "Princess Lunate II",
+                    1
+                ],
+                [
+                    "Whitstable Bay",
+                    2
+                ],
+                [
+                    "Shiny Cyril",
+                    1
+                ],
+                [
+                    "Doombar",
+                    2
+                ],
+                [
+                    "Rimski",
+                    1
+                ],
+                [
+                    "Shiny Fitzgibbon",
+                    1
+                ],
+                [
+                    "Sophie",
+                    1
+                ],
+                [
+                    "Drofrehtur",
+                    1
+                ],
+                [
+                    "Shiny Mark Waugh",
+                    1
+                ],
+                [
+                    "Deathwing",
+                    2
+                ],
+                [
+                    "Tugger",
+                    1
+                ],
+                [
+                    "Eureka O'Hara",
+                    1
+                ],
+                [
+                    "Shiny Violence Bruce",
+                    1
+                ],
+                [
+                    "Bianca del Rio",
+                    1
+                ],
+                [
+                    "Skeletaloo",
+                    3
+                ],
+                [
+                    "Shiny Drofrehtur",
+                    1
+                ],
+                [
+                    "Salsa Verde",
+                    1
+                ],
+                [
+                    "Merv Hughes",
+                    1
+                ],
+                [
+                    "Binga",
+                    1
+                ],
+                [
+                    "Shiny Quesadilla",
+                    1
+                ],
+                [
+                    "Le Cont",
+                    2
+                ],
+                [
+                    "Zumbo the Zany Mad Man",
+                    1
+                ],
+                [
+                    "Gerard",
+                    2
+                ],
+                [
+                    "Shiny Belinda",
+                    1
+                ],
+                [
+                    "Chorizo",
+                    1
+                ],
+                [
+                    "Apple Tomb",
+                    1
+                ],
+                [
+                    "Shiny Big McSkellingtosh",
+                    1
+                ],
+                [
+                    "Yabba the Yeasty",
+                    3
+                ],
+                [
+                    "Shiny Dead Pony Club",
+                    1
+                ],
+                [
+                    "Opera Omnia",
+                    2
+                ],
+                [
+                    "Huski",
+                    1
+                ],
+                [
+                    "Chili con Carne",
+                    1
+                ],
+                [
+                    "Shiny Chili con Carne",
+                    1
+                ],
+                [
+                    "Rajas con Crema",
+                    3
+                ],
+                [
+                    "Chad Michaels",
+                    1
+                ],
+                [
+                    "Corunda",
+                    2
+                ],
+                [
+                    "Shiny Sterkenburg",
+                    1
+                ],
+                [
+                    "Dean Ambskull",
+                    1
+                ],
+                [
+                    "Steak Bake",
+                    1
+                ],
+                [
+                    "Shiny Ongina",
+                    1
+                ],
+                [
+                    "TEA",
+                    1
+                ],
+                [
+                    "Shiny Salsa",
+                    1
+                ],
+                [
+                    "Samoa Joskull",
+                    1
+                ],
+                [
+                    "Quad Damage",
+                    1
+                ],
+                [
+                    "Shiny Abbot Ale",
+                    1
+                ],
+                [
+                    "Kilian",
+                    1
+                ],
+                [
+                    "Chuckles the Cheesy",
+                    1
+                ],
+                [
+                    "Starlight Grimmer II",
+                    2
+                ],
+                [
+                    "Rehsurc",
+                    1
+                ],
+                [
+                    "Crackpot the Butcher",
+                    1
+                ],
+                [
+                    "Shiny Mor",
+                    1
+                ],
+                [
+                    "Koccyx",
+                    1
+                ],
+                [
+                    "Gringas",
+                    2
+                ],
+                [
+                    "Shiny Kraken",
+                    1
+                ],
+                [
+                    "Salsa",
+                    2
+                ],
+                [
+                    "Shiny Raritibia",
+                    1
+                ],
+                [
+                    "Baron Corskull",
+                    1
+                ],
+                [
+                    "Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Benny-Cake",
+                    1
+                ],
+                [
+                    "Shiny Bos",
+                    1
+                ],
+                [
+                    "Shiny Len",
+                    1
+                ],
+                [
+                    "Hanna-Barbarians",
+                    1
+                ],
+                [
+                    "Lent",
+                    1
+                ],
+                [
+                    "Rainbone Dash",
+                    1
+                ],
+                [
+                    "Yoyo the Yuckie",
+                    1
+                ],
+                [
+                    "Shiny Hop House 13",
+                    1
+                ],
+                [
+                    "Jones",
+                    1
+                ],
+                [
+                    "Spitfire",
+                    1
+                ],
+                [
+                    "Shiny Pesski",
+                    1
+                ],
+                [
+                    "Jake",
+                    1
+                ],
+                [
+                    "Shiny Patters",
+                    1
+                ],
+                [
+                    "Matrix Huateng",
+                    1
+                ],
+                [
+                    "Shiny Pockets the Pox-Ridden",
+                    1
+                ],
+                [
+                    "Shiny Rorona",
                     1
                 ]
             ]
         },
         {
             "user_id": 109392522874208256,
-            "cash": 19,
-            "last_balance_update": "2024-03-25 12:23:02.719961",
-            "engagement": 177,
+            "cash": 157,
+            "last_balance_update": "2024-03-27 07:22:43.334880",
+            "engagement": 178,
             "items": [
                 [
                     "Frosty the Forsaken",
@@ -1610,7 +1946,7 @@
                 ],
                 [
                     "Violence Bruce",
-                    4
+                    5
                 ],
                 [
                     "Flutterspine II",
@@ -1930,7 +2266,7 @@
                 ],
                 [
                     "John-Boy",
-                    3
+                    4
                 ],
                 [
                     "Returner Deryck",
@@ -2206,7 +2542,7 @@
                 ],
                 [
                     "Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Bad Steve",
@@ -2286,6 +2622,14 @@
                 ],
                 [
                     "Shiny Rimski",
+                    1
+                ],
+                [
+                    "Shiny Cesarskull",
+                    1
+                ],
+                [
+                    "Shiny Princess Lunate II",
                     1
                 ]
             ]
@@ -2768,9 +3112,9 @@
         },
         {
             "user_id": 330073959758430210,
-            "cash": 7,
-            "last_balance_update": "2024-03-25 14:33:54.457095",
-            "engagement": 353,
+            "cash": 100,
+            "last_balance_update": "2024-03-26 11:20:49.202669",
+            "engagement": 354,
             "items": [
                 [
                     "Eureka O'Hara",
@@ -3026,7 +3370,7 @@
                 ],
                 [
                     "Greed Hastings",
-                    8
+                    9
                 ],
                 [
                     "Thighza",
@@ -3038,7 +3382,7 @@
                 ],
                 [
                     "Dasypeltis",
-                    9
+                    10
                 ],
                 [
                     "Patters",
@@ -3050,7 +3394,7 @@
                 ],
                 [
                     "Crasty",
-                    7
+                    8
                 ],
                 [
                     "Starlight Grimmer II",
@@ -3746,6 +4090,10 @@
                 ],
                 [
                     "Adore Delano",
+                    2
+                ],
+                [
+                    "Shiny Raritibia",
                     1
                 ]
             ]
@@ -4432,9 +4780,9 @@
         },
         {
             "user_id": 533708157382426625,
-            "cash": 298,
-            "last_balance_update": "2024-03-10 15:57:20.053080",
-            "engagement": 535,
+            "cash": 103,
+            "last_balance_update": "2024-03-26 17:37:15.552730",
+            "engagement": 540,
             "items": [
                 [
                     "Herr Kut",
@@ -4454,15 +4802,15 @@
                 ],
                 [
                     "Westerosi Legends",
-                    14
+                    15
                 ],
                 [
                     "Rehsurc",
-                    12
+                    13
                 ],
                 [
                     "Fursty Ferret",
-                    5
+                    6
                 ],
                 [
                     "Whitney Wolfe Herdware",
@@ -4510,7 +4858,7 @@
                 ],
                 [
                     "Sterkenburg",
-                    16
+                    17
                 ],
                 [
                     "Ballin Bozos",
@@ -4582,7 +4930,7 @@
                 ],
                 [
                     "Chanel",
-                    21
+                    22
                 ],
                 [
                     "Zumbo the Zany Mad Man",
@@ -4618,7 +4966,7 @@
                 ],
                 [
                     "Jones",
-                    2
+                    3
                 ],
                 [
                     "Rajas con Crema",
@@ -4654,7 +5002,7 @@
                 ],
                 [
                     "NFTeve Jobs",
-                    1
+                    3
                 ],
                 [
                     "Whitstable Bay",
@@ -4690,7 +5038,7 @@
                 ],
                 [
                     "Cabrito",
-                    15
+                    16
                 ],
                 [
                     "Greed Hastings",
@@ -4698,7 +5046,7 @@
                 ],
                 [
                     "Arianna",
-                    4
+                    5
                 ],
                 [
                     "Rimski",
@@ -4730,11 +5078,11 @@
                 ],
                 [
                     "Salsa",
-                    7
+                    8
                 ],
                 [
                     "Tugger",
-                    8
+                    9
                 ],
                 [
                     "Tao",
@@ -4782,7 +5130,7 @@
                 ],
                 [
                     "Ted",
-                    5
+                    6
                 ],
                 [
                     "Second Madonna Mabel",
@@ -4790,7 +5138,7 @@
                 ],
                 [
                     "Larry",
-                    9
+                    10
                 ],
                 [
                     "Merv Hughes",
@@ -4822,11 +5170,11 @@
                 ],
                 [
                     "Abbot Ale",
-                    15
+                    16
                 ],
                 [
                     "Ayesha",
-                    8
+                    9
                 ],
                 [
                     "Big E Lanskull",
@@ -4918,7 +5266,7 @@
                 ],
                 [
                     "The Kid",
-                    6
+                    8
                 ],
                 [
                     "Dean Ambskull",
@@ -4950,7 +5298,7 @@
                 ],
                 [
                     "Xavier Woodskull",
-                    8
+                    9
                 ],
                 [
                     "Dhar'gor",
@@ -5010,7 +5358,7 @@
                 ],
                 [
                     "Chili con Carne",
-                    5
+                    6
                 ],
                 [
                     "Starlight Grimmer II",
@@ -5250,7 +5598,7 @@
                 ],
                 [
                     "Shiny Jim",
-                    2
+                    3
                 ],
                 [
                     "Shiny Rehsurc",
@@ -5274,7 +5622,7 @@
                 ],
                 [
                     "Shiny Corunda",
-                    1
+                    2
                 ],
                 [
                     "Shiny Greed Hastings",
@@ -5402,7 +5750,7 @@
                 ],
                 [
                     "Shiny Cabrito",
-                    1
+                    2
                 ],
                 [
                     "Shiny Dougal",
@@ -5430,6 +5778,14 @@
                 ],
                 [
                     "Shiny Spitfire",
+                    1
+                ],
+                [
+                    "Shiny Ayesha",
+                    1
+                ],
+                [
+                    "Shiny Jack",
                     1
                 ]
             ]
@@ -5736,9 +6092,9 @@
         },
         {
             "user_id": 134405791103844352,
-            "cash": 252,
-            "last_balance_update": "2024-03-17 16:15:47.790095",
-            "engagement": 56,
+            "cash": 198,
+            "last_balance_update": "2024-03-26 17:16:39.814181",
+            "engagement": 58,
             "items": [
                 [
                     "Dead Pony Club",
@@ -5758,7 +6114,7 @@
                 ],
                 [
                     "Cabrito",
-                    2
+                    4
                 ],
                 [
                     "Shiny Chanel",
@@ -5846,7 +6202,7 @@
                 ],
                 [
                     "Pesski",
-                    1
+                    2
                 ],
                 [
                     "Shiny Big E Lanskull",
@@ -5910,7 +6266,7 @@
                 ],
                 [
                     "Thighza",
-                    1
+                    2
                 ],
                 [
                     "Shiny Satellite Nadella",
@@ -6070,7 +6426,7 @@
                 ],
                 [
                     "Big McSkellingtosh",
-                    1
+                    2
                 ],
                 [
                     "Rekcut",
@@ -6154,11 +6510,11 @@
                 ],
                 [
                     "Shiny Westerosi Legends",
-                    1
+                    2
                 ],
                 [
                     "Tahbashimen Iumut",
-                    1
+                    2
                 ],
                 [
                     "Shiny Applecrack",
@@ -6242,7 +6598,7 @@
                 ],
                 [
                     "Arianna",
-                    1
+                    2
                 ],
                 [
                     "Shiny Spitfire",
@@ -6318,6 +6674,14 @@
                 ],
                 [
                     "Fitzgibbon",
+                    1
+                ],
+                [
+                    "Shiny Whitney Wolfe Herdware",
+                    1
+                ],
+                [
+                    "Gerard",
                     1
                 ]
             ]
@@ -6658,7 +7022,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Kraken.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -6688,7 +7052,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Patters.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -6728,7 +7092,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Mental Disintegration/Merv Hughes.gif",
             "shiny": true,
             "position": "bigguy",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -6798,7 +7162,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Taquito.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -6828,7 +7192,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Quesadilla.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -6838,7 +7202,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Amazon Primes/Corunda.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -6888,7 +7252,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Yalcrab.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -6948,7 +7312,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Reverse Engineers/Rekcut.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7058,7 +7422,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Things That Are Bloodbowl/Hanna-Barbarians.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7198,7 +7562,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Sterkenburg.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7208,7 +7572,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Grand Atelier/Marie.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7228,7 +7592,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Frosty the Forsaken.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7238,7 +7602,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Joker the Jovial.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7268,7 +7632,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Magsy the Malicious.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -7278,7 +7642,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Franco the Fierce.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7328,7 +7692,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Ballin Bozos/Chuckles the Cheesy.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -7358,7 +7722,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Jeff Bez.OS.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -7388,7 +7752,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/NFTeve Jobs.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7398,7 +7762,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Gestult Of Personality/Mark Zuckerborg.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7478,7 +7842,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Rotstalker.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7508,7 +7872,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Eureka O'Hara.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7518,7 +7882,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Chanel.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7538,7 +7902,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Steak Bake.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7568,7 +7932,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Dragging Your Heels/Adore Delano.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -7648,7 +8012,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Jake.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7708,7 +8072,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Diabolos Daredevils/Arianna.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7728,7 +8092,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Byrne.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7748,7 +8112,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Larry.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7768,7 +8132,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Shoddy Workmanship/Dougal.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -7918,7 +8282,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Huski.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7938,7 +8302,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Rimski.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -7948,7 +8312,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Jones.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7958,7 +8322,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herr Raid.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -7968,7 +8332,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Le Cont.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -7988,7 +8352,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Team Lard/Herr Dry.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -8098,7 +8462,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Raritibia.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8108,7 +8472,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/My Little Boney/Starlight Grimmer II.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8188,7 +8552,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Alberto Del Riskull.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8238,7 +8602,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/Da Redskullzz/Kofi Kingskull.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8288,7 +8652,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Doombar.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -8308,7 +8672,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Shiny/The Beers With Beards/Pumpkin King.gif",
             "shiny": true,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8408,7 +8772,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Merv Hughes.png",
             "shiny": false,
             "position": "bigguy",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8418,7 +8782,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Kraken.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -8428,7 +8792,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Mental Disintegration/Patters.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8518,7 +8882,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Corunda.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -8548,7 +8912,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Taquito.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8568,7 +8932,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Amazon Primes/Quesadilla.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8628,7 +8992,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Yalcrab.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -8648,7 +9012,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Reverse Engineers/Rekcut.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8738,7 +9102,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Things That Are Bloodbowl/Hanna-Barbarians.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -8918,7 +9282,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Sterkenburg.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -8938,7 +9302,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Grand Atelier/Marie.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -8958,7 +9322,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Joker the Jovial.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9018,7 +9382,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Chuckles the Cheesy.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9028,7 +9392,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Franco the Fierce.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -9048,7 +9412,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Magsy the Malicious.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9078,7 +9442,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Ballin Bozos/Frosty the Forsaken.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9088,7 +9452,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Mark Zuckerborg.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -9138,7 +9502,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/NFTeve Jobs.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -9178,7 +9542,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Gestult Of Personality/Jeff Bez.OS.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9208,7 +9572,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Eureka O'Hara.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9238,7 +9602,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Rotstalker.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9258,7 +9622,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Chanel.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9288,7 +9652,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Steak Bake.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9318,7 +9682,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Dragging Your Heels/Adore Delano.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9378,7 +9742,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Arianna.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9448,7 +9812,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Diabolos Daredevils/Jake.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9488,7 +9852,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Byrne.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9528,7 +9892,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Larry.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9568,7 +9932,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Shoddy Workmanship/Dougal.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9618,7 +9982,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Jones.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9648,7 +10012,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Rimski.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9698,7 +10062,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herr Dry.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -9708,7 +10072,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Herr Raid.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         },
         {
@@ -9718,7 +10082,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Huski.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "common"
         },
         {
@@ -9728,7 +10092,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Team Lard/Le Cont.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9738,7 +10102,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Raritibia.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9858,7 +10222,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/My Little Boney/Starlight Grimmer II.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9928,7 +10292,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Kofi Kingskull.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -9958,7 +10322,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/Da Redskullzz/Alberto Del Riskull.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "uncommon"
         },
         {
@@ -10038,7 +10402,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Doombar.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "legendary"
         },
         {
@@ -10098,7 +10462,7 @@
             "image_location": "/root/BBTCG/assets/Season 16/Basic/The Beers With Beards/Pumpkin King.png",
             "shiny": false,
             "position": "generic",
-            "deceased": false,
+            "deceased": true,
             "rarity": "rare"
         }
     ],
