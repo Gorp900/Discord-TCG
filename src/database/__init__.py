@@ -310,7 +310,7 @@ class pythonboat_database_handler:
 			# First we need to build/organize all count of players cards per team...
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if current_card["team_name"] not in all_cards_per_team:
 						all_cards_per_team[current_card["team_name"]] = []
 					temp_array = all_cards_per_team[current_card["team_name"]]
@@ -388,7 +388,7 @@ class pythonboat_database_handler:
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if current_card["position"] == "bigguy":
 						running_total += 1
 			## add both the user id and running total to return dict
@@ -461,7 +461,7 @@ class pythonboat_database_handler:
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if current_card["shiny"] == True:
 						running_total += current_user["items"][x][1]
 			## add both the user id and running total to return dict
@@ -490,7 +490,7 @@ class pythonboat_database_handler:
 			# First we need to build/organize all count of players cards per team...
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if current_card["team_name"] not in all_cards_per_team:
 						all_cards_per_team[current_card["team_name"]] = 0
 					all_cards_per_team[current_card["team_name"]] += current_user["items"][x][1]
@@ -532,7 +532,7 @@ class pythonboat_database_handler:
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if current_card["deceased"] == True:
 						running_total += 1
 			## add both the user id and running total to return dict
@@ -544,7 +544,7 @@ class pythonboat_database_handler:
 	async def leaderboard_cha(self, user, channel, username, client):
 		## Champion award : Count which coach has the most uniqye players from the winning league and bowl teams
 		winning_league_team = "Mental Disintegration"
-		winning_bowl_team = ""
+		winning_bowl_team = "Mental Disintegration"
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
@@ -561,7 +561,7 @@ class pythonboat_database_handler:
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
-					current_card = await self.get_card_details(current_user["items"][x][0], item_database)
+					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
 					if (current_card["team_name"] == winning_league_team) \
 					or (current_card["team_name"] == winning_bowl_team):
 						running_total += 1
@@ -587,129 +587,129 @@ class pythonboat_database_handler:
 
 	## Rudimentery card detail checker, will be broken if multiple cards have the same name >_>
 	##	TODO: need to implement card_id's for comparison instead...
-	async def get_card_details(self, card_name, item_database):
+	async def get_card_details(self, card_id, item_database):
 		for x in range(len(item_database)):
-			if item_database[x]["name"] == card_name:
+			if item_database[x]["card_id"] == card_id:
 				card_deets = item_database[x]
 				return card_deets
 		return "failure"
 
 ## Old LEaderboard, TODO: Remove me, no longer used
-	async def leaderboard(self, user, channel, username, full_name, page_number, mode_type, client):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+	# async def leaderboard(self, user, channel, username, full_name, page_number, mode_type, client):
+	# 	# load json
+	# 	json_file = open(self.pathToJson, "r")
+	# 	json_content = json.load(json_file)
+	# 	user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 
-		if new_data != "none":
-			json_content["userdata"] = new_data
+	# 	if new_data != "none":
+	# 		json_content["userdata"] = new_data
 
-		json_user_content = json_content["userdata"][user_index]
+	# 	json_user_content = json_content["userdata"][user_index]
 
-		"""
-		sorting algorithm
-		"""
-		# yes, i could use a dict
-		all_users = []
-		all_bal = []
-		i = 0
-		for i in range(len(json_content["userdata"])):
-			all_users.append(json_content["userdata"][i]["user_id"])
-			if mode_type == "-cash":
-				all_bal.append(int(json_content["userdata"][i]["cash"]))
-			#elif mode_type == "-cards":
-			#	all_bal.append(int(json_content["userdata"][i]["items"]))
-			else:  # elif mode_type == "-total":
-			#	print(json_content["userdata"][i]["cash"] + json_content["userdata"][i]["items"])
-				all_bal.append(int(json_content["userdata"][i]["cash"])) #+ json_content["userdata"][i]["items"]))
-		print(all_bal)
-		# so, data is set, now sort
-		i = -1
-		while i <= len(all_bal):
-			i += 1
-			try:
-				if all_bal[i] < all_bal[i + 1]:
-					# save the higher stats one into buffer
-					saved = all_bal[i]
-					# this one has lower stats, so move him right
-					all_bal[i] = all_bal[i + 1]
-					# the higher one (saved) takes that position
-					all_bal[i + 1] = saved
-					# repeat process, but for the player-names
-					saved = all_users[i]
-					all_users[i] = all_users[i + 1]
-					all_users[i + 1] = saved
-					i = -1
-			except:
-				pass
+	# 	"""
+	# 	sorting algorithm
+	# 	"""
+	# 	# yes, i could use a dict
+	# 	all_users = []
+	# 	all_bal = []
+	# 	i = 0
+	# 	for i in range(len(json_content["userdata"])):
+	# 		all_users.append(json_content["userdata"][i]["user_id"])
+	# 		if mode_type == "-cash":
+	# 			all_bal.append(int(json_content["userdata"][i]["cash"]))
+	# 		#elif mode_type == "-cards":
+	# 		#	all_bal.append(int(json_content["userdata"][i]["items"]))
+	# 		else:  # elif mode_type == "-total":
+	# 		#	print(json_content["userdata"][i]["cash"] + json_content["userdata"][i]["items"])
+	# 			all_bal.append(int(json_content["userdata"][i]["cash"])) #+ json_content["userdata"][i]["items"]))
+	# 	print(all_bal)
+	# 	# so, data is set, now sort
+	# 	i = -1
+	# 	while i <= len(all_bal):
+	# 		i += 1
+	# 		try:
+	# 			if all_bal[i] < all_bal[i + 1]:
+	# 				# save the higher stats one into buffer
+	# 				saved = all_bal[i]
+	# 				# this one has lower stats, so move him right
+	# 				all_bal[i] = all_bal[i + 1]
+	# 				# the higher one (saved) takes that position
+	# 				all_bal[i + 1] = saved
+	# 				# repeat process, but for the player-names
+	# 				saved = all_users[i]
+	# 				all_users[i] = all_users[i + 1]
+	# 				all_users[i + 1] = saved
+	# 				i = -1
+	# 		except:
+	# 			pass
 
-		i = 0
-		# use names instead of just ID, except if we cannot find names
-		# so for example if someone left the server
-		for i in range(len(all_users)):
-			try:
-				name_object = await client.fetch_user(int(all_users[i]))
-				print(i, all_users[i], name_object)
-				actual_name = str(name_object)
-				if all_users[i] == user:
-					user_lb_position = i + 1
-			except:
-				actual_name = str(all_users[i])
-			# update
-			all_users[i] = actual_name
+	# 	i = 0
+	# 	# use names instead of just ID, except if we cannot find names
+	# 	# so for example if someone left the server
+	# 	for i in range(len(all_users)):
+	# 		try:
+	# 			name_object = await client.fetch_user(int(all_users[i]))
+	# 			print(i, all_users[i], name_object)
+	# 			actual_name = str(name_object)
+	# 			if all_users[i] == user:
+	# 				user_lb_position = i + 1
+	# 		except:
+	# 			actual_name = str(all_users[i])
+	# 		# update
+	# 		all_users[i] = actual_name
 
-		i = 0
-		# making nice number formats
-		for i in range(len(all_bal)):
-			all_bal[i] = '{:,}'.format(all_bal[i])
+	# 	i = 0
+	# 	# making nice number formats
+	# 	for i in range(len(all_bal)):
+	# 		all_bal[i] = '{:,}'.format(all_bal[i])
 
-		# making the formatted output description
-		# number of pages which will be needed :
-		# we have 10 ranks per page
-		ranks_per_page = 10
-		page_count = len(all_bal) / ranks_per_page
-		if ".0" in str(page_count): page_count = int(page_count)
-		if not isinstance(page_count, int):
-			page_count += 1
-		# page_count = (len(all_bal) + ranks_per_page - 1)
-		# round number up
-		total_pages = round(page_count)
+	# 	# making the formatted output description
+	# 	# number of pages which will be needed :
+	# 	# we have 10 ranks per page
+	# 	ranks_per_page = 10
+	# 	page_count = len(all_bal) / ranks_per_page
+	# 	if ".0" in str(page_count): page_count = int(page_count)
+	# 	if not isinstance(page_count, int):
+	# 		page_count += 1
+	# 	# page_count = (len(all_bal) + ranks_per_page - 1)
+	# 	# round number up
+	# 	total_pages = round(page_count)
 
-		# our selection !
-		index_start = (page_number - 1) * ranks_per_page
-		index_end = index_start + ranks_per_page
-		user_selection = all_users[index_start: index_end]
-		bal_selection = all_bal[index_start: index_end]
+	# 	# our selection !
+	# 	index_start = (page_number - 1) * ranks_per_page
+	# 	index_end = index_start + ranks_per_page
+	# 	user_selection = all_users[index_start: index_end]
+	# 	bal_selection = all_bal[index_start: index_end]
 
-		# making the formatted !
-		i = 0
-		leaderboard_formatted = f""
-		for i in range(len(user_selection)):
-			leaderboard_formatted += f"\n**{str(i + 1)}.** {user_selection[i]} • {str(self.currency_symbol)} {bal_selection[i]}"
+	# 	# making the formatted !
+	# 	i = 0
+	# 	leaderboard_formatted = f""
+	# 	for i in range(len(user_selection)):
+	# 		leaderboard_formatted += f"\n**{str(i + 1)}.** {user_selection[i]} • {str(self.currency_symbol)} {bal_selection[i]}"
 
-		# making a nice output
-		if total_pages == 1:
-			page_number = 1
-		elif page_number > total_pages:
-			page_number = 1
+	# 	# making a nice output
+	# 	if total_pages == 1:
+	# 		page_number = 1
+	# 	elif page_number > total_pages:
+	# 		page_number = 1
 
-		# inform user
-		color = self.discord_blue_rgb_code
-		embed = discord.Embed(description=f"\n\n{leaderboard_formatted}", color=color)
-		# same pfp as unbelievaboat uses
-		embed.set_author(name=full_name,
-						 icon_url="https://media.discordapp.net/attachments/506838906872922145/506899959816126493/h5D6Ei0.png")
-		if user_lb_position == 1:
-			pos_name = "st"
-		elif user_lb_position == 2:
-			pos_name = "nd"
-		elif user_lb_position == 3:
-			pos_name = "rd" 
-		embed.set_footer(
-			text=f"Page {page_number}/{total_pages}  •  Your leaderboard rank: {user_lb_position}{pos_name}")
-		await channel.send(embed=embed)
+	# 	# inform user
+	# 	color = self.discord_blue_rgb_code
+	# 	embed = discord.Embed(description=f"\n\n{leaderboard_formatted}", color=color)
+	# 	# same pfp as unbelievaboat uses
+	# 	embed.set_author(name=full_name,
+	# 					 icon_url="https://media.discordapp.net/attachments/506838906872922145/506899959816126493/h5D6Ei0.png")
+	# 	if user_lb_position == 1:
+	# 		pos_name = "st"
+	# 	elif user_lb_position == 2:
+	# 		pos_name = "nd"
+	# 	elif user_lb_position == 3:
+	# 		pos_name = "rd" 
+	# 	embed.set_footer(
+	# 		text=f"Page {page_number}/{total_pages}  •  Your leaderboard rank: {user_lb_position}{pos_name}")
+	# 	await channel.send(embed=embed)
 
-		return "success", "success"
+	# 	return "success", "success"
 
 	#
 	# MODULE INFO
@@ -879,16 +879,19 @@ class pythonboat_database_handler:
 	#
 	# CREATE NEW ITEM
 	#
-
+	## TODO: Dunno if this is a great way to add a single new card to the db anymore.  If i had a html component as well , this could be useful
 	async def create_new_item(self, item_name, team_name, position, rarity):
 		# load json
 		json_file = open(self.pathToJson, "r")
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
 
-		img_dir = "/root/BBTCG/assets/Season 16/"
+		## TODO: Need to actually grab these values rather than hard set...
+		img_dir = "/root/BBTCG/assets/Season 17/"
 		basic_img_dir = img_dir + "Basic/"
 		shiny_img_dir = img_dir + "Shiny/"
+		card_id = "17_"
+		card_id += str(len(json_items))
 
 		## Check for dupes
 		for i in range(len(json_items)):
@@ -899,22 +902,24 @@ class pythonboat_database_handler:
 		json_items.append({
 			"name": item_name,
 			"team_name": team_name,
-			"season_name": "Season 16",
+			"season_name": "Season 17",
 			"image_location": basic_img_dir + team_name + "/" + item_name + ".png",
 			"shiny": False,
 			"position": position,
 			"deceased": False,
-			"rarity": rarity
+			"rarity": rarity,
+			"card_id": card_id
 		})
 		json_items.append({
 			"name": "Shiny " + item_name,
 			"team_name": team_name,
-			"season_name": "Season 16",
+			"season_name": "Season 17",
 			"image_location": shiny_img_dir + team_name + "/" + item_name + ".gif",
 			"shiny": True,
 			"position": position,
 			"deceased": False,
-			"rarity": rarity
+			"rarity": rarity,
+			"card_id": card_id
 		})
 
 		# overwrite, save current data
@@ -932,6 +937,7 @@ class pythonboat_database_handler:
 
 		img_dir = "/root/BBTCG/assets/"
 		files = glob.glob(img_dir + "**", recursive = True) ## Glob finds all filenames
+		card_count = 1 ## Then we count each card, in a season, and append it's count after the id_prefix to make ID
 		for item in files:
 			split_string = item.split("/") ## Splits each line by slash, to 8 parts...
 			found_player = False
@@ -946,6 +952,9 @@ class pythonboat_database_handler:
 					shiny = True
 					player_name = "Shiny " + player_name
 				season_name = split_string[4]
+				card_id = season_name.split(" ")[1] ## Get just season number
+				card_id += "_" + str(card_count)
+				card_count += 1
 				image_location = item
 
 			## If we have indeed found a player, add it to the DB
@@ -965,7 +974,8 @@ class pythonboat_database_handler:
 						"shiny": shiny,
 						"position": "generic",
 						"deceased": False,
-						"rarity": "common"
+						"rarity": "common",
+						"card_id": card_id
 					})
 		# overwrite, save current data
 		json_content["items"] = json_items
@@ -1017,142 +1027,142 @@ class pythonboat_database_handler:
 
 		return "success", "success"
 
-	#
-	# BUY ITEM
-	#
+	# #
+	# # BUY ITEM
+	# #
 
-	## TODO: would remove, but we should take a look at this for actually giving cards to players
-	async def buy_item(self, user, channel, username, user_pfp, item_name, amount, user_roles, server_object,
-					   user_object):
-		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
+	# ## TODO: would remove, but we should take a look at this for actually giving cards to players
+	# async def buy_item(self, user, channel, username, user_pfp, item_name, amount, user_roles, server_object,
+	# 				   user_object):
+	# 	# load json
+	# 	json_file = open(self.pathToJson, "r")
+	# 	json_content = json.load(json_file)
 
-		json_items = json_content["items"]
-		item_found = item_index = 0
-		for i in range(len(json_items)):
-			if json_items[i]["name"] == item_name:
-				item_found = 1
-				item_index = i
-		if not item_found:
-			return "error", "Item not found."
-		item = json_items[item_index]
-		# get variables
-		item_name = item_name
-		item_price = item["price"]
-		req_roles = item["required_roles"]
-		give_roles = item["given_roles"]
-		rem_roles = item["removed_roles"]
-		max_bal = item["maximum_balance"]
-		remaining_stock = item["amount_in_stock"]
-		expiration_date = item["expiration_date"]
-		reply_message = item["reply_message"]
+	# 	json_items = json_content["items"]
+	# 	item_found = item_index = 0
+	# 	for i in range(len(json_items)):
+	# 		if json_items[i]["name"] == item_name:
+	# 			item_found = 1
+	# 			item_index = i
+	# 	if not item_found:
+	# 		return "error", "Item not found."
+	# 	item = json_items[item_index]
+	# 	# get variables
+	# 	item_name = item_name
+	# 	item_price = item["price"]
+	# 	req_roles = item["required_roles"]
+	# 	give_roles = item["given_roles"]
+	# 	rem_roles = item["removed_roles"]
+	# 	max_bal = item["maximum_balance"]
+	# 	remaining_stock = item["amount_in_stock"]
+	# 	expiration_date = item["expiration_date"]
+	# 	reply_message = item["reply_message"]
 
-		# calculate expiration
-		today = datetime.today()
-		expire = datetime.strptime(expiration_date, "%Y-%m-%d %H:%M:%S.%f")
-		if today > expire:
-			return "error", f"Item has already expired. Expiring date was {expiration_date}"
-		# else we're good
+	# 	# calculate expiration
+	# 	today = datetime.today()
+	# 	expire = datetime.strptime(expiration_date, "%Y-%m-%d %H:%M:%S.%f")
+	# 	if today > expire:
+	# 		return "error", f"Item has already expired. Expiring date was {expiration_date}"
+	# 	# else we're good
 
-		# 1. check req roles
-		try:
-			if req_roles == "none":
-				pass
-			else:
-				for i in range(len(req_roles)):
-					if int(req_roles[i]) not in user_roles:
-						return "error", f"User does not seem to have all required roles."
-		except Exception as e:
-			print("1", e)
-			return "error", f"Unexpected error."
+	# 	# 1. check req roles
+	# 	try:
+	# 		if req_roles == "none":
+	# 			pass
+	# 		else:
+	# 			for i in range(len(req_roles)):
+	# 				if int(req_roles[i]) not in user_roles:
+	# 					return "error", f"User does not seem to have all required roles."
+	# 	except Exception as e:
+	# 		print("1", e)
+	# 		return "error", f"Unexpected error."
 
-		### BEFORE update, "check rem roles" and "check give roles" was located here. it seems that
-		### the intended usage i had back then was to do that stuff once the item is bought.
-		### thus this is now located below, after checking balance etc.
+	# 	### BEFORE update, "check rem roles" and "check give roles" was located here. it seems that
+	# 	### the intended usage i had back then was to do that stuff once the item is bought.
+	# 	### thus this is now located below, after checking balance etc.
 
-		# 4. check if enough money
+	# 	# 4. check if enough money
 
-		sum_price = item_price * amount
-		sum_price = round(sum_price, 0)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		user_content = json_content["userdata"][user_index]
-		user_cash = user_content["cash"]
-		if user_cash < sum_price:
-			return "error", f"Error! Not enough money in cash to purchase.\nto pay: {sum_price} ; in cash: {user_cash}"
+	# 	sum_price = item_price * amount
+	# 	sum_price = round(sum_price, 0)
+	# 	user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+	# 	user_content = json_content["userdata"][user_index]
+	# 	user_cash = user_content["cash"]
+	# 	if user_cash < sum_price:
+	# 		return "error", f"Error! Not enough money in cash to purchase.\nto pay: {sum_price} ; in cash: {user_cash}"
 
-		# 5. check if not too much money
-		user_bank = user_content["bank"]
-		if max_bal != "none":
-			if (user_bank + user_cash) > max_bal:
-				return "error", f"Error! You have too much money to purchase.\nnet worth: {'{:,}'.format(int(user_bank + user_cash))} ; max bal: {max_bal}"
+	# 	# 5. check if not too much money
+	# 	user_bank = user_content["bank"]
+	# 	if max_bal != "none":
+	# 		if (user_bank + user_cash) > max_bal:
+	# 			return "error", f"Error! You have too much money to purchase.\nnet worth: {'{:,}'.format(int(user_bank + user_cash))} ; max bal: {max_bal}"
 
-		# 6. check if enough in stock or not
-		if max_bal != "none":
-			if remaining_stock <= 0:
-				return "error", f"Error! Item not in stock."
-			elif amount > remaining_stock:
-				return "error", f"Error! Not enough remaining in stock ({remaining_stock} remaining)."
+	# 	# 6. check if enough in stock or not
+	# 	if max_bal != "none":
+	# 		if remaining_stock <= 0:
+	# 			return "error", f"Error! Item not in stock."
+	# 		elif amount > remaining_stock:
+	# 			return "error", f"Error! Not enough remaining in stock ({remaining_stock} remaining)."
 
-		# 8. rem money, substract stock, print message, add to inventory
-		user_content["cash"] -= sum_price
-		try:
-			item["amount_in_stock"] -= amount
-		except:
-			# in this case theres no limit so we dont substract anything
-			pass
+	# 	# 8. rem money, substract stock, print message, add to inventory
+	# 	user_content["cash"] -= sum_price
+	# 	try:
+	# 		item["amount_in_stock"] -= amount
+	# 	except:
+	# 		# in this case theres no limit so we dont substract anything
+	# 		pass
 
-		if user_content["items"] == "none":
-			user_content["items"] = [[item_name, amount]]
-		else:
-			needAppend = True
-			for i_i in range(len(user_content["items"])):
-				if user_content["items"][i_i][0] == item_name:
-					user_content["items"][i_i][1] += amount
-					needAppend = False
-					break
-			if needAppend:
-				user_content["items"].append([item_name, amount])
+	# 	if user_content["items"] == "none":
+	# 		user_content["items"] = [[item_name, amount]]
+	# 	else:
+	# 		needAppend = True
+	# 		for i_i in range(len(user_content["items"])):
+	# 			if user_content["items"][i_i][0] == item_name:
+	# 				user_content["items"][i_i][1] += amount
+	# 				needAppend = False
+	# 				break
+	# 		if needAppend:
+	# 			user_content["items"].append([item_name, amount])
 
-		# 2. check give roles
-		try:
-			if rem_roles == "none":
-				pass
-			else:
-				for i in range(len(rem_roles)):
-					role = discord.utils.get(server_object.roles, id=int(rem_roles[i]))
-					print(role)
-					await user_object.remove_roles(role)
-		except Exception as e:
-			print("2", e)
-			return "error", f"Unexpected error."
+	# 	# 2. check give roles
+	# 	try:
+	# 		if rem_roles == "none":
+	# 			pass
+	# 		else:
+	# 			for i in range(len(rem_roles)):
+	# 				role = discord.utils.get(server_object.roles, id=int(rem_roles[i]))
+	# 				print(role)
+	# 				await user_object.remove_roles(role)
+	# 	except Exception as e:
+	# 		print("2", e)
+	# 		return "error", f"Unexpected error."
 
-		# 3. check rem roles
-		try:
-			if req_roles == "none":
-				pass
-			else:
-				for i in range(len(give_roles)):
-					role = discord.utils.get(server_object.roles, id=int(give_roles[i]))
-					print(role)
-					await user_object.add_roles(role)
-		except Exception as e:
-			print("3", e)
-			return "error", f"Unexpected error."
-		color = self.discord_blue_rgb_code
-		embed = discord.Embed(
-			description=f"You have bought {amount} {item_name} and paid {str(self.currency_symbol)} **{'{:,}'.format(int(sum_price))}**",
-			color=color)
-		embed.set_author(name=username, icon_url=user_pfp)
-		embed.set_footer(text=reply_message)
-		await channel.send(embed=embed)
+	# 	# 3. check rem roles
+	# 	try:
+	# 		if req_roles == "none":
+	# 			pass
+	# 		else:
+	# 			for i in range(len(give_roles)):
+	# 				role = discord.utils.get(server_object.roles, id=int(give_roles[i]))
+	# 				print(role)
+	# 				await user_object.add_roles(role)
+	# 	except Exception as e:
+	# 		print("3", e)
+	# 		return "error", f"Unexpected error."
+	# 	color = self.discord_blue_rgb_code
+	# 	embed = discord.Embed(
+	# 		description=f"You have bought {amount} {item_name} and paid {str(self.currency_symbol)} **{'{:,}'.format(int(sum_price))}**",
+	# 		color=color)
+	# 	embed.set_author(name=username, icon_url=user_pfp)
+	# 	embed.set_footer(text=reply_message)
+	# 	await channel.send(embed=embed)
 
-		# overwrite, end
-		json_content["userdata"][user_index] = user_content
-		json_content["items"] = json_items
-		self.overwrite_json(json_content)
+	# 	# overwrite, end
+	# 	json_content["userdata"][user_index] = user_content
+	# 	json_content["items"] = json_items
+	# 	self.overwrite_json(json_content)
 
-		return "success", "success"
+	# 	return "success", "success"
 	
 	#
 	# BRONZE SILVER GOLD CARD PACKS
@@ -1260,6 +1270,7 @@ class pythonboat_database_handler:
 			##print(f"Buy-Pack :: designated pullnumber from randrange [0-" + str(len(draw_pool)) + f"] and we got {pull_number}")
 			confirmed_card = draw_pool[pull_number]
 			item_name = confirmed_card["name"]
+			card_id = confirmed_card["card_id"]
 			card_image = confirmed_card["image_location"]
 
 			## Altering the pre/suffix to just be plain, so the name is at least in a seperate box
@@ -1281,16 +1292,16 @@ class pythonboat_database_handler:
 
 			## Add item to inventory
 			if user_content["items"] == "none":
-				user_content["items"] = [[item_name, 1]]
+				user_content["items"] = [[item_name, 1, card_id]]
 			else:
 				needAppend = True
 				for i_i in range(len(user_content["items"])):
-					if user_content["items"][i_i][0] == item_name:
+					if user_content["items"][i_i][2] == card_id:
 						user_content["items"][i_i][1] += 1
 						needAppend = False
 						break
 				if needAppend:
-					user_content["items"].append([item_name, 1])
+					user_content["items"].append([item_name, 1, card_id])
 
 			# overwrite data
 			json_content["userdata"][user_index] = user_content
@@ -1325,8 +1336,25 @@ class pythonboat_database_handler:
 				return "error", f"❌ You do not have any items to give"
 			else:
 				worked = False
+				card_id_to_trade = None
+				## TODO: need a better match for checking if an item is a name or an ID
+				if item_name.startsWith("17_") == False: ## If we have a player name...
+					## Before we actually commit to the item beign given, we need to check if there are multiple items with the same name
+					## and if there are, we need the user to input the card_id instead of item name
+					duplicate_count = 0
+					possible_ids = []
+					for i in range(len(json_user_content["items"])):
+						if json_user_content["items"][i][0].casefold() == item_name.casefold():
+							duplicate_count +=1 ## count cards
+							possible_ids.append(json_user_content["items"][i][2]) ## get their ID's while we're here
+					if duplicate_count > 1: ## We do have more than 1 with the same name
+						return "error", f"Multiple cards with the same name detected.  Please use their cardID instead.\nPossible ID's are: {possible_ids}"
+					else:
+						card_id_to_trade = possible_ids[0] ## The only thing we found IS the card to trade
+
+				## Now we have an exact ID to trade, lets go thrrough the users items
 				for ii_i in range(len(json_user_content["items"])):
-					if json_user_content["items"][ii_i][0].casefold() == item_name.casefold():
+					if json_user_content["items"][ii_i][2] == card_id_to_trade:
 						if (json_user_content["items"][ii_i][1] - amount) < 0:
 							return "error", f"❌ You do not have enough items of that item to give."
 						json_user_content["items"][ii_i][1] -= amount
@@ -1349,19 +1377,19 @@ class pythonboat_database_handler:
 
 			# so we should be good, now handling the reception side
 			for x in range(len(json_item_database)):
-				if json_item_database[x]["name"].casefold() == item_name.casefold():
+				if json_item_database[x]["card_id"] == card_id_to_trade:
 					item_name = json_item_database[x]["name"]
 			if json_recept_content["items"] == "none":
-				json_recept_content["items"] = [[item_name, amount]]
+				json_recept_content["items"] = [[item_name, amount, card_id_to_trade]]
 			else:
 				needAppend = True
 				for i_i in range(len(json_recept_content["items"])):
-					if json_recept_content["items"][i_i][0] == item_name:
+					if json_recept_content["items"][i_i][2] == card_id_to_trade:
 						json_recept_content["items"][i_i][1] += amount
 						needAppend = False
 						break
 				if needAppend:
-					json_recept_content["items"].append([item_name, amount])
+					json_recept_content["items"].append([item_name, amount, card_id_to_trade])
 
 		except:
 			return "error", f"❌"
@@ -1425,6 +1453,7 @@ class pythonboat_database_handler:
 			for ii in range(len(item_content)): ## Made the first line, so now we check database for players in this team
 				if (item_content[ii]["team_name"] == current_team) and item_content[ii]["shiny"] == False: ## If the player belongs to the team...
 					current_player = item_content[ii]["name"]
+					current_id = item_content[ii]["card_id"]
 					current_image = item_content[ii]["image_location"]
 					current_rarity = item_content[ii]["rarity"]
 					quantity = 0
@@ -1445,7 +1474,7 @@ class pythonboat_database_handler:
 						if current_rarity == "rare": color_string = " class=\"rare-item\" "
 						if current_rarity == "legendary": color_string = " class=\"legendary-item\" "
 					current_image = current_image.lstrip("/root/BBTCG/")
-					text_to_insert += "  <div class=\"column\"><p>" + current_player + "<br>Basic: " + str(quantity) + "<br>Shinies: " + str(shiny_quantity) + "</p><img" + color_string + "src=\"" + current_image +"\"></div>\n"
+					text_to_insert += "  <div class=\"column\"><p>" + current_player + "  (" + str(current_id) + ")<br>Basic: " + str(quantity) + "<br>Shinies: " + str(shiny_quantity) + "</p><img" + color_string + "src=\"" + current_image +"\"></div>\n"
 			text_to_insert += "</div></div>\n"
 		contents.insert(current_line_num_to_edit, text_to_insert)
 		text_to_insert = ""
