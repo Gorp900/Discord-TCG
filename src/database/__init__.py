@@ -1,4 +1,4 @@
-import json, os, time, random, math, sys, discord, math, glob, shutil
+import json, os, time, random, math, sys, discord, math, glob, shutil, re
 from datetime import datetime
 from datetime import timedelta
 
@@ -945,6 +945,10 @@ class pythonboat_database_handler:
 				## Specifially, we're looking for the structure to be like :: /root/BBTCG/assets/<season_name>/<basic_or_shiny>/<team_name>/<player_name>.png or .gif
 				found_player = True
 				player_name = split_string[7].split(".")[0]
+				## remove digits from player_name at end of filename
+				if re.search("_[0-9]+$", player_name):
+					player_name = player_name.split("_")[0]
+
 				team_name = split_string[6]
 				if split_string[5] == "Basic": 
 					shiny = False
