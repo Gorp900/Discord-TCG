@@ -492,9 +492,9 @@ async def on_message(message):
 		embed.add_field(name="give", value=f"Usage: `/give <user> <amount>`\nSends <amount> of cyans to <user> pinged", inline=False)
 		embed.add_field(name="give-item", value=f"Usage: `/give-item <user> <item> <amount>`\nSends <item> to <user> pinged.  If <amount> is left blank, it sends a single item", inline=False) 
 		embed.add_field(name="find-item", value=f"Usage: `/find-item <item-name>`\nReturns a list of coaches who own a copy of the item you're looking for", inline=False)
-		embed.add_field(name="bronze-pack", value=f"Usage: `/bronze-pack` OR `/bp` \nPurchases a Bronze Pack of cards for 100 Coins", inline=False)
-		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Silver Pack of cards for 175 Coins", inline=False)
-		embed.add_field(name="gold-pack", value=f"Usage: `/gold-pack` OR `/gp` \nPurchases a Gold Pack of cards for 300 Coins", inline=False)
+		embed.add_field(name="bronze-pack", value=f"Usage: `/bronze-pack` OR `/bp` \nPurchases a Bronze Pack of cards for 1000 Coins", inline=False)
+		embed.add_field(name="silver-pack", value=f"Usage: `/silver-pack` OR `/sp` \nPurchases a Silver Pack of cards for 1600 Coins", inline=False)
+		embed.add_field(name="gold-pack", value=f"Usage: `/gold-pack` OR `/gp` \nPurchases a Gold Pack of cards for 3000 Coins", inline=False)
 		# edit stuff
 		embed.set_footer(text="For more info, contact an admin")
 		await channel.send(embed=embed)
@@ -1077,7 +1077,7 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["bronze-pack", "bp"]:
-		embed = discord.Embed(description=f"A Bronze pack costs 100 coins, and contains 3 cards.\nType `yes` to confirm or anything else to cancel.")
+		embed = discord.Embed(description=f"A Bronze pack costs 1000 coins, and contains 3 cards.\nType `yes` to confirm or anything else to cancel.")
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
 		user_input = ""
@@ -1111,7 +1111,7 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["silver-pack", "sp"]:
-		embed = discord.Embed(description=f"A Silver pack costs 175 coins, and contains 4 cards.\nType `yes` to confirm or anything else to cancel.")
+		embed = discord.Embed(description=f"A Silver pack costs 1600 coins, and contains 4 cards.\nType `yes` to confirm or anything else to cancel.")
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
 		user_input = ""
@@ -1145,7 +1145,7 @@ async def on_message(message):
 	# ---------------------------
 
 	elif command in ["gold-pack", "gp"]:
-		embed = discord.Embed(description=f"A Gold pack costs 300 coins, and contains 5 cards with a single guarenteed shiny.\nType `yes` to confirm or anything else to cancel.")
+		embed = discord.Embed(description=f"A Gold pack costs 3000 coins, and contains 5 cards with a single guarenteed shiny.\nType `yes` to confirm or anything else to cancel.")
 		embed.set_author(name=username, icon_url=user_pfp)
 		await channel.send(embed=embed)
 		user_input = ""

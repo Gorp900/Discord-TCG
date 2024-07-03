@@ -129,7 +129,7 @@ class pythonboat_database_handler:
 		json_content = json.load(json_file)
 		data_to_search.append({
 			"user_id": user_to_find,
-			"cash": 150,
+			"cash": 3000,
 			"engagement": 0,
 			# "balance" : cash + bank
 			# "roles": "None" ; will be checked when calculating weekly auto-role-income
@@ -212,7 +212,7 @@ class pythonboat_database_handler:
 		try:
 			if passed_time_hours >= 1:
 			# Calculate payment and bonuses ( THIS IS LIKE THE OTHER BALANCE UPDATE METHOD MAKE SURE ANY CHANGES APPLY TO BOTH )
-				payment = 2 * int(passed_time_hours)
+				payment = 8 * int(passed_time_hours)
 				bonus_engagement = json_user_content["engagement"]
 				json_user_content["engagement"] / 10
 				json_user_content["cash"] += (payment + bonus_engagement)
@@ -1177,17 +1177,17 @@ class pythonboat_database_handler:
 			cards_to_draw = 3
 			shinys_possible = 1
 			shiny_chance = 1
-			cost = 100
+			cost = 1000
 		elif pack_type == "silver":
 			cards_to_draw = 4
 			shinys_possible = 1
-			shiny_chance = 3
-			cost = 175
+			shiny_chance = 5
+			cost = 1600
 		elif pack_type == "gold":
 			cards_to_draw = 5
 			shinys_possible = 2
 			shiny_chance = 1
-			cost = 300
+			cost = 3000
 
 		## Quickly check if we can afford this...
 		json_file = open(self.pathToJson, "r")
@@ -1750,6 +1750,7 @@ class pythonboat_database_handler:
 	# ROLE INCOMES - UPDATE INCOMES
 	#
 	# okay were gonna change it to an hourly income (10.06.2023)
+	## TODO: Check if we wanna remove this since we edited the check_balance method to handle updates to income now too.
 
 	async def update_incomes(self, user, channel, username, user_pfp, server_object):
 		# load json
@@ -1792,7 +1793,8 @@ class pythonboat_database_handler:
 						user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
 						json_user_content = json_content["userdata"][user_index]
 						json_user_content["last_balance_update"] = str(now)
-						payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
+						#payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
+						payment = 8 * int(passed_time_hours) ## Quick and dirty alignment until we check if we still want this whole method or not (See method desc above)
 						bonus_engagement = json_user_content["engagement"]
 						json_user_content["engagement"] / 10
 						json_user_content["cash"] += (payment + bonus_engagement)
