@@ -20,6 +20,8 @@ class pythonboat_database_handler:
 	def __init__(self, client):
 		# we do the path from the main.py file, so we go into the db folder, then select
 		self.pathToJson = "/root/BBTCG/PROD/Discord-TCG/src/database/database.json"
+		self.pathToItemDB = "/root/BBTCG/PROD/Discord-TCG/src/database/item_database.json"
+		self.pathToUserDB = "/root/BBTCG/PROD/Discord-TCG/src/database/user_database.json"
 		self.client = client
 
 		# for colors
@@ -56,7 +58,7 @@ class pythonboat_database_handler:
 	def get_currency_symbol(self, test=False, value="unset"):
 		if not test:
 			# get currency symbol to use
-			temp_json_opening = open(self.pathToJson, "r")
+			temp_json_opening = open(self.pathToItemDB, "r")
 			temp_json_content = json.load(temp_json_opening)
 			# the currency symbol is always at position 0 in the "symbols" part
 			currency_symbol = temp_json_content["symbols"][0]["symbol_emoji"]
@@ -72,26 +74,26 @@ class pythonboat_database_handler:
 
 	# if we handle a already created file, we need certain variables
 	async def check_json(self):
-		temp_json_opening = open(self.pathToJson, "r")
-		temp_json_content = json.load(temp_json_opening)
-		"""
-		possibly to add :
-			improve the error system, raising specific errors with a "error_info"
-			for example : "userdata missing", or "slut missing", or even "slut min_revenue missing"
-		"""
+		temp_json_items = open(self.pathToItemDB, "r")
+		temp_json_users = open(self.pathToUserDB, "r")
+		temp_json_content_items = json.load(temp_json_items)
+		temp_json_content_users = json.load(temp_json_users)
+
 		try:
-			check_content = temp_json_content
+			check_items = temp_json_content_items
+			check_users = temp_json_content_users
 			# userdata space
-			userdata = check_content["userdata"]
+			userdata = check_users["userdata"]
 			# variables
-			variables = check_content["variables"]
+			variables = check_items["variables"]
 			# symbol
-			currency_symbol = check_content["symbols"][0]
-			items = check_content["items"]
-			roles = check_content["income_roles"]
+			currency_symbol = check_items["symbols"][0]
+			items = check_items["items"]
+			roles = check_items["income_roles"]
 
 			# didnt fail, so we're good
-			temp_json_opening.close()
+			temp_json_items.close()
+			temp_json_users.close()
 		except Exception as e:
 			# something is missing, inform client
 			return "error"
@@ -101,8 +103,9 @@ class pythonboat_database_handler:
 	"""
 
 	# need to overwrite the whole json when updating, luckily the database won't be enormous
+	## TODO: This should really know which DB we're specifically overwriting. but for now the only one this should apply to is the userDB
 	def overwrite_json(self, content):
-		self.json_db = open(self.pathToJson, "w")
+		self.json_db = open(self.pathToUserDB, "w")
 		self.clean_json = json.dumps(content, indent=4, separators=(",", ": "))
 		self.json_db.write(self.clean_json)
 		self.json_db.close()
@@ -125,7 +128,7 @@ class pythonboat_database_handler:
 		print("\ncreating user\n")
 		# we did NOT find him, which means he doesn't exist yet
 		# so we automatically create him
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		data_to_search.append({
 			"user_id": user_to_find,
@@ -158,7 +161,7 @@ class pythonboat_database_handler:
 	## TODO: This doesnt fully work yet, it's the actual time passing i need to figure out, then save.
 	async def non_command_engagement_boost(self, user):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 		user_content = json_content["userdata"][user_index]
@@ -186,7 +189,7 @@ class pythonboat_database_handler:
 
 	async def balance(self, user, channel, userbal_to_check, username_to_check, userpfp_to_check):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 		# check if user exists
@@ -213,8 +216,9 @@ class pythonboat_database_handler:
 			if passed_time_hours >= 1:
 			# Calculate payment and bonuses ( THIS IS LIKE THE OTHER BALANCE UPDATE METHOD MAKE SURE ANY CHANGES APPLY TO BOTH )
 				payment = 8 * int(passed_time_hours)
-				bonus_engagement = json_user_content["engagement"]
-				json_user_content["engagement"] / 10
+				#bonus_engagement = json_user_content["engagement"]
+				#json_user_content["engagement"] / 10
+				bonus_engagement = 0 ## TODO: Removing egagement for season 17
 				json_user_content["cash"] += (payment + bonus_engagement)
 				# overwrite
 				json_content["userdata"][user_index] = json_user_content
@@ -245,7 +249,7 @@ class pythonboat_database_handler:
 
 	async def give(self, user, channel, username, user_pfp, reception_user, amount, recept_uname):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
 		reception_user_index, new_data = self.find_index_in_db(json_content["userdata"], reception_user)
@@ -280,7 +284,7 @@ class pythonboat_database_handler:
 		await channel.send(embed=embed)
 
 		# overwrite, end
-		json_user_content["engagement"] += 4
+		#json_user_content["engagement"] += 4 #TODO: Removing engagement for season 17
 		json_content["userdata"][user_index] = json_user_content
 		json_content["userdata"][reception_user_index] = json_recept_content
 		self.overwrite_json(json_content)
@@ -294,18 +298,20 @@ class pythonboat_database_handler:
 	async def leaderboard_com(self, user, channel, username, client):
 		## Completionist Leaderboard, Count how many times a coach has 11 unique players from each team
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 		
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict = []
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			all_cards_per_team = {}
 			# First we need to build/organize all count of players cards per team...
 			if current_user["items"] != "none":
@@ -346,17 +352,17 @@ class pythonboat_database_handler:
 	async def leaderboard_hoa(self, user, channel, username, client):
 		## Hoarder Leaderboard, Count each coaches total number of cards
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			running_total = 0
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
@@ -372,24 +378,26 @@ class pythonboat_database_handler:
 	async def leaderboard_bee(self, user, channel, username, client):
 		## Beef Leaderboard, count each coaches most uniqye big guys
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			running_total = 0
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
 				for x in range(len(current_user["items"])): ## For each card item...
 					current_card = await self.get_card_details(current_user["items"][x][2], item_database)
-					if current_card["position"] == "bigguy":
+					if current_card["position"] == "Big Guy":
 						running_total += 1
 			## add both the user id and running total to return dict
 			return_dict.append([current_user["user_id"], running_total])
@@ -399,19 +407,20 @@ class pythonboat_database_handler:
 
 	async def leaderboard_zub(self, user, channel, username, client):
 		## Zubat Award: Count each coaches most duplicates of one player
+		## TODO: Might want to add card_id to this, it will currently work as intended, but the output embed might not make clear exactly which card we're talking about
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 		
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
 		return_names =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			most_duplicates_num = 0
 			most_duplicates_name = ""
 			## Now an easy count of all total cards to be done here
@@ -445,18 +454,20 @@ class pythonboat_database_handler:
 	async def leaderboard_mag(self, user, channel, username, client):
 		## Magpie Award: Count each coaches number of shinies
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			running_total = 0
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
@@ -473,19 +484,20 @@ class pythonboat_database_handler:
 	async def leaderboard_sal(self, user, channel, username, client):
 		## Fruit Salad Award: Count how many times each coach as a collection of 1 player from each team
 		# load json
-		print("inside salad")
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 		
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict = []
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			all_cards_per_team = {}
 			# First we need to build/organize all count of players cards per team...
 			if current_user["items"] != "none":
@@ -500,34 +512,32 @@ class pythonboat_database_handler:
 			## Now to count each set of 1 player from each team
 			running_total = 0
 			if len(all_cards_per_team) == 14: ## There are 14 teams, so this must be 14
-				print("This coach as cards from 14 teams...")
 				running_total = all_cards_per_team[min(all_cards_per_team, key=all_cards_per_team.get)]
 				## The actual number is just equal to how many times they can make a set of 1 player from each team
 				##  Therefore, as long as they have 14 different teams worth of cards, it's just the lowest amount of that...
 			## add both the user id and running total to return dict
 			return_dict.append([current_user["user_id"], running_total])
 
-		print("All coaches done, time to sort ")
-		print(return_dict)
 		return_dict = await self.sort_leaderboard(return_dict, client)
-		print("and return...")
 		return "success", return_dict
 	
 	async def leaderboard_und(self, user, channel, username, client):
 		## Undertaker Award : Count most unique players that are dead
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			running_total = 0
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
@@ -545,18 +555,20 @@ class pythonboat_database_handler:
 		## Champion award : Count which coach has the most uniqye players from the winning league and bowl teams
 		winning_league_team = "Mental Disintegration"
 		winning_bowl_team = "Mental Disintegration"
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		item_database = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
 		## return as a dictionary like "[[Gorp900, 50], [Rob, 60], [Jezz, 70]]" ...
 		return_dict =[]
-		for i in range(len(json_content["userdata"])):
+		for i in range(len(user_content["userdata"])):
 			## Fill all_users with all user_ids
-			current_user = json_content["userdata"][i]
+			current_user = user_content["userdata"][i]
 			running_total = 0
 			## Now an easy count of all total cards to be done here
 			if current_user["items"] != "none":
@@ -746,7 +758,7 @@ class pythonboat_database_handler:
 
 	async def add_money(self, user, channel, username, user_pfp, reception_user, amount, recept_uname):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		reception_user_index, new_data = self.find_index_in_db(json_content["userdata"], reception_user)
 
@@ -777,7 +789,7 @@ class pythonboat_database_handler:
 
 	async def remove_money(self, user, channel, username, user_pfp, reception_user, amount, recept_uname):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToUserDB, "r")
 		json_content = json.load(json_file)
 		reception_user_index, new_data = self.find_index_in_db(json_content["userdata"], reception_user)
 
@@ -845,7 +857,7 @@ class pythonboat_database_handler:
 
 	async def change_currency_symbol(self, user, channel, username, user_pfp, new_emoji_name):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 
 		json_emoji = json_content["symbols"][0]
@@ -882,7 +894,7 @@ class pythonboat_database_handler:
 	## TODO: Dunno if this is a great way to add a single new card to the db anymore.  If i had a html component as well , this could be useful
 	async def create_new_item(self, item_name, team_name, position, rarity):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
 
@@ -931,7 +943,7 @@ class pythonboat_database_handler:
 	## Populate_database will recursivly search the asset folder for NEW images to make as items in it's DB
 	async def populate_database(self):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 		json_items = json_content["items"]
 
@@ -992,7 +1004,7 @@ class pythonboat_database_handler:
 
 	async def remove_item(self, item_name):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 
 		json_items = json_content["items"]
@@ -1190,46 +1202,46 @@ class pythonboat_database_handler:
 			cost = 3000
 
 		## Quickly check if we can afford this...
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		user_content = json_content["userdata"][user_index]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		item_database = item_content["items"]
+
+		current_user = user_content["userdata"][user_index]
 		user_cash = user_content["cash"]
 		if user_cash < cost:
 			return "error", f"Error! Not enough money in cash to purchase.\nto pay: {cost} ; in cash: {user_cash}"
-		user_content["cash"] -= cost
-		user_content["engagement"] += 1
-		json_content["userdata"][user_index] = user_content
-		self.overwrite_json(json_content)
+		current_user["cash"] -= cost
+		#user_content["engagement"] += 1 #TODO: Removing enagagement for season 17
+		user_content["userdata"][user_index] = current_user
+		self.overwrite_json(user_content)
 
 		## Construct Groupings
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		json_items = json_content["items"]
 		shiny_l = []; shiny_r = []; shiny_uc = []; shiny_c = []
 		basic_l = []; basic_r = []; basic_uc = []; basic_c = []
 
-		db_size = len(json_items)
+		db_size = len(item_database)
 		##print(f"Buy-Pack :: Pre-loop, db_size is {db_size}")
 		for x in range(db_size):
-			if (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "common"): shiny_c.append(json_items[x])
-			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "uncommon"): shiny_uc.append(json_items[x])
-			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "rare"): shiny_r.append(json_items[x])
-			elif (json_items[x]["shiny"] == True) and (json_items[x]["rarity"] == "legendary"): shiny_l.append(json_items[x])
-			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "common"): basic_c.append(json_items[x])
-			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "uncommon"): basic_uc.append(json_items[x])
-			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "rare"): basic_r.append(json_items[x])
-			elif (json_items[x]["shiny"] == False) and (json_items[x]["rarity"] == "legendary"): basic_l.append(json_items[x])
+			if (item_database[x]["shiny"] == True) and (item_database[x]["rarity"] == "common"): shiny_c.append(item_database[x])
+			elif (item_database[x]["shiny"] == True) and (item_database[x]["rarity"] == "uncommon"): shiny_uc.append(item_database[x])
+			elif (item_database[x]["shiny"] == True) and (item_database[x]["rarity"] == "rare"): shiny_r.append(item_database[x])
+			elif (item_database[x]["shiny"] == True) and (item_database[x]["rarity"] == "legendary"): shiny_l.append(item_database[x])
+			elif (item_database[x]["shiny"] == False) and (item_database[x]["rarity"] == "common"): basic_c.append(item_database[x])
+			elif (item_database[x]["shiny"] == False) and (item_database[x]["rarity"] == "uncommon"): basic_uc.append(item_database[x])
+			elif (item_database[x]["shiny"] == False) and (item_database[x]["rarity"] == "rare"): basic_r.append(item_database[x])
+			elif (item_database[x]["shiny"] == False) and (item_database[x]["rarity"] == "legendary"): basic_l.append(item_database[x])
 
 		##print(f"Buy-Pack :: Organized db into seperate arrays...")
 		while cards_to_draw != 0:
 			##print(f"Buy-Pack :: Inside Loop, cards left to draw is == {cards_to_draw}")
 			# load json
-			json_file = open(self.pathToJson, "r")
-			json_content = json.load(json_file)
-			json_items = json_content["items"]
-			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-			user_content = json_content["userdata"][user_index]
+			user_file = open(self.pathToUserDB, "r")
+			user_content = json.load(user_file)
+			user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+			current_user = user_content["userdata"][user_index]
 
 			# see the odds of shiny
 			shiny_get = False
@@ -1295,22 +1307,21 @@ class pythonboat_database_handler:
 			await channel.send(file=image_to_embed, embed=embed)
 
 			## Add item to inventory
-			if user_content["items"] == "none":
-				user_content["items"] = [[item_name, 1, card_id]]
+			if current_user["items"] == "none":
+				current_user["items"] = [[item_name, 1, card_id]]
 			else:
 				needAppend = True
-				for i_i in range(len(user_content["items"])):
-					if user_content["items"][i_i][2] == card_id:
-						user_content["items"][i_i][1] += 1
+				for i_i in range(len(current_user["items"])):
+					if current_user["items"][i_i][2] == card_id:
+						current_user["items"][i_i][1] += 1
 						needAppend = False
 						break
 				if needAppend:
-					user_content["items"].append([item_name, 1, card_id])
+					current_user["items"].append([item_name, 1, card_id])
 
 			# overwrite data
-			json_content["userdata"][user_index] = user_content
-			json_content["items"] = json_items
-			self.overwrite_json(json_content)
+			user_content["userdata"][user_index] = current_user
+			self.overwrite_json(user_content)
 			cards_to_draw -= 1
 			## end loop here
 		## end, return
@@ -1323,17 +1334,19 @@ class pythonboat_database_handler:
 	async def give_item(self, user, channel, username, user_pfp, item_name, amount, reception_user, server_object,
 						user_object, recept_username):
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		reception_user_index, new_data = self.find_index_in_db(json_content["userdata"], reception_user)
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		reception_user_index, new_data = self.find_index_in_db(user_content["userdata"], reception_user)
 		recept_uname = recept_username
 		if new_data != "none":
-			json_content["userdata"] = new_data
+			user_content["userdata"] = new_data
 
-		json_user_content = json_content["userdata"][user_index]
-		json_recept_content = json_content["userdata"][reception_user_index]
-		json_item_database = json_content["items"]
+		json_user_content = user_content["userdata"][user_index]
+		json_recept_content = user_content["userdata"][reception_user_index]
+		json_item_database = item_content["items"]
 
 		try:
 			if json_user_content["items"] == "none":
@@ -1407,10 +1420,10 @@ class pythonboat_database_handler:
 		await channel.send(embed=embed)
 
 		# overwrite, end
-		json_user_content["engagement"] += 4
-		json_content["userdata"][user_index] = json_user_content
-		json_content["userdata"][reception_user_index] = json_recept_content
-		self.overwrite_json(json_content)
+		#json_user_content["engagement"] += 4
+		user_content["userdata"][user_index] = json_user_content
+		user_content["userdata"][reception_user_index] = json_recept_content
+		self.overwrite_json(user_content)
 
 		return "success", "success"
 
@@ -1420,12 +1433,13 @@ class pythonboat_database_handler:
 
 	async def create_html_inventory(self, user, channel, username, user_pfp):
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		user_content = json_content["userdata"][user_index]["items"]
-		item_content = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		user_inventory = user_content["userdata"][user_index]["items"]
+		item_database = item_content["items"]
 
 		##Copy our new file
 		origional_file = "/root/mysite/bloodbowl/bot-inventories/base-inventory.html"
@@ -1443,8 +1457,8 @@ class pythonboat_database_handler:
 		
 		## Need to create list of team names to be the basis of our loop
 		team_list = []
-		for i in range(len(item_content)):
-			team_list.append(item_content[i]["team_name"])
+		for i in range(len(item_database)):
+			team_list.append(item_database[i]["team_name"])
 		team_list = list(dict.fromkeys(team_list))
 		team_list.sort()
 
@@ -1454,24 +1468,24 @@ class pythonboat_database_handler:
 		for i in range(len(team_list)): ## Loop based on team name so we loop through 'em
 			current_team = team_list[i]
 			text_to_insert += "<button class=\"collapsible\">" + current_team + "</button>\n <div class=\"content\"><div class=\"row\">\n"
-			for ii in range(len(item_content)): ## Made the first line, so now we check database for players in this team
-				if (item_content[ii]["team_name"] == current_team) and item_content[ii]["shiny"] == False: ## If the player belongs to the team...
-					current_player = item_content[ii]["name"]
-					current_id = item_content[ii]["card_id"]
-					current_image = item_content[ii]["image_location"]
-					current_rarity = item_content[ii]["rarity"]
+			for ii in range(len(item_database)): ## Made the first line, so now we check database for players in this team
+				if (item_database[ii]["team_name"] == current_team) and item_database[ii]["shiny"] == False: ## If the player belongs to the team...
+					current_player = item_database[ii]["name"]
+					current_id = item_database[ii]["card_id"]
+					current_image = item_database[ii]["image_location"]
+					current_rarity = item_database[ii]["rarity"]
 					quantity = 0
 					shiny_quantity = 0
 					color_string = " class=\"gray-image\" "
-					for iii in range(len(user_content)): ## After getting their details, we check if the user has any of these players in their inventory
-						if user_content[iii][0] == current_player: 
-							quantity = user_content[iii][1]
-						if user_content[iii][0] == str("Shiny " + current_player): 
-							shiny_quantity = user_content[iii][1]
+					for iii in range(len(user_inventory)): ## After getting their details, we check if the user has any of these players in their inventory
+						if user_inventory[iii][0] == current_player: 
+							quantity = user_inventory[iii][1]
+						if user_inventory[iii][0] == str("Shiny " + current_player): 
+							shiny_quantity = user_inventory[iii][1]
 					if shiny_quantity > 0:
-						for s in range(len(item_content)):
-							if item_content[s]["name"] == str("Shiny " + current_player):
-								current_image = item_content[s]["image_location"]
+						for s in range(len(item_database)):
+							if item_database[s]["name"] == str("Shiny " + current_player):
+								current_image = item_database[s]["image_location"]
 					if (quantity > 0 ) or (shiny_quantity > 0):
 						if current_rarity == "common": color_string = " class=\"common-item\" "
 						if current_rarity == "uncommon": color_string = " class=\"uncommon-item\" "
@@ -1504,14 +1518,16 @@ class pythonboat_database_handler:
 	## TODO: Also need to add other options to this, for going to html page...
 	async def check_inventory(self, user, channel, username, user_pfp, display_mode):
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
 
-		user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-		user_content = json_content["userdata"][user_index]
-		item_content = json_content["items"]
+		user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+		current_user = user_content["userdata"][user_index]
+		item_database = item_content["items"]
 
-		items = user_content["items"]
+		items = current_user["items"]
 
 		## First we wanna remove nil items:
 		nil_list = []
@@ -1523,8 +1539,8 @@ class pythonboat_database_handler:
 
 		## Construct a team list, and seperate count, as well as a rarity list and count
 		team_list = []
-		for i in range(len(item_content)):
-			team_list.append(item_content[i]["team_name"])
+		for i in range(len(item_database)):
+			team_list.append(item_database[i]["team_name"])
 		team_list = list(dict.fromkeys(team_list))
 		team_count = []
 		for i in range(len(team_list)): team_count.append(0)
@@ -1540,10 +1556,10 @@ class pythonboat_database_handler:
 					rarity = "?"
 					team_name = "?"
 					## This lil loop gets matchign stats of items...
-					for ii in range(len(item_content)):
-						if items[i][0] == item_content[ii]["name"]: 
-							rarity = item_content[ii]["rarity"]
-							team_name = item_content[ii]["team_name"]
+					for ii in range(len(item_database)):
+						if items[i][0] == item_database[ii]["name"]: 
+							rarity = item_database[ii]["rarity"]
+							team_name = item_database[ii]["team_name"]
 					## Count teams and rarity here
 					if team_name in team_list: team_count[team_list.index(team_name)] += 1
 					if rarity in rarity_list: rarity_count[rarity_list.index(rarity)] += 1
@@ -1560,9 +1576,9 @@ class pythonboat_database_handler:
 				for i in range(len(items)): ## teams show players belonging to teams
 					team_name = "?"
 					## This lil loop gets matchign stats of items...
-					for ii in range(len(item_content)):
-						if items[i][0] == item_content[ii]["name"]: 
-							team_name = item_content[ii]["team_name"]
+					for ii in range(len(item_database)):
+						if items[i][0] == item_database[ii]["name"]: 
+							team_name = item_database[ii]["team_name"]
 					## Count teams and rarity here
 					if team_name in team_list: team_count[team_list.index(team_name)] += 1
 				for i in range(len(team_list)):
@@ -1571,9 +1587,9 @@ class pythonboat_database_handler:
 				for i in range(len(items)): ## rarity shows number per rarity
 					rarity = "?"
 					## This lil loop gets matchign stats of items...
-					for ii in range(len(item_content)):
-						if items[i][0] == item_content[ii]["name"]: 
-							rarity = item_content[ii]["rarity"]
+					for ii in range(len(item_database)):
+						if items[i][0] == item_database[ii]["name"]: 
+							rarity = item_database[ii]["rarity"]
 					## Count teams and rarity here
 					if rarity in rarity_list: rarity_count[rarity_list.index(rarity)] += 1
 				for i in range(len(rarity_list)):
@@ -1592,15 +1608,17 @@ class pythonboat_database_handler:
 	
 	async def display_card(self, user, channel, username, user_pfp, item_name):
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
-		json_items = json_content["items"]
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
+		json_items = item_content["items"]
 		found_card = False
 
 		if item_name == "random": ## Pull a random card from the user's inventory
-			user_index, new_data = self.find_index_in_db(json_content["userdata"], user)
-			user_content = json_content["userdata"][user_index]
-			user_items = user_content["items"]
+			user_index, new_data = self.find_index_in_db(user_content["userdata"], user)
+			current_user = user_content["userdata"][user_index]
+			user_items = current_user["items"]
 			item_position = random.randrange(0,len(user_items))
 			item_name = user_items[item_position][0]
 
@@ -1636,14 +1654,15 @@ class pythonboat_database_handler:
 	# FIND CARD
 	#
 	#Should find whether any player owns specified card and output users name
+	## TODO: This might need card_id's for additional identification
 	async def find_item(self, userList, cardToFind):
 		##Loop through all users, getting their list of items and check if card exists in their inventory
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
 
 		#Gets us all users data
-		userdata = json_content["userdata"]
+		userdata = user_content["userdata"]
 
 		#Loop through getting list of items for each user
 		for i in range(len(userdata)):
@@ -1657,10 +1676,10 @@ class pythonboat_database_handler:
 	#
 	# ROLE INCOMES - NEW ONE
 	#
-
+	## TODO: Don't think i'm really using this, might remove.
 	async def new_income_role(self, user, channel, username, user_pfp, income_role_id, income):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 
 		json_income_roles = json_content["income_roles"]
@@ -1685,7 +1704,7 @@ class pythonboat_database_handler:
 
 		# overwrite, end
 		json_content["income_roles"] = json_income_roles
-		self.overwrite_json(json_content)
+		self.overwrite_json(json_content) ## TODO:Aw shiet, need to redo the overwrite_json method to know which DB we're dealing with...
 
 		return "success", "success"
 
@@ -1695,7 +1714,7 @@ class pythonboat_database_handler:
 
 	async def remove_income_role(self, user, channel, username, user_pfp, income_role_id):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 
 		json_income_roles = json_content["income_roles"]
@@ -1712,7 +1731,7 @@ class pythonboat_database_handler:
 
 		# overwrite, end
 		json_content["income_roles"] = json_income_roles
-		self.overwrite_json(json_content)
+		self.overwrite_json(json_content) ## TODO:Aw shiet, need to redo the overwrite_json method to know which DB we're dealing with...
 
 		return "success", "success"
 
@@ -1722,7 +1741,7 @@ class pythonboat_database_handler:
 
 	async def list_income_roles(self, user, channel, username, user_pfp, server_object):
 		# load json
-		json_file = open(self.pathToJson, "r")
+		json_file = open(self.pathToItemDB, "r")
 		json_content = json.load(json_file)
 
 		json_income_roles = json_content["income_roles"]
@@ -1754,11 +1773,13 @@ class pythonboat_database_handler:
 
 	async def update_incomes(self, user, channel, username, user_pfp, server_object):
 		# load json
-		json_file = open(self.pathToJson, "r")
-		json_content = json.load(json_file)
+		item_file = open(self.pathToItemDB, "r")
+		item_content = json.load(item_file)
+		user_file = open(self.pathToUserDB, "r")
+		user_content = json.load(user_file)
 
-		json_income_roles = json_content["income_roles"]
-		user_content = json_content["userdata"]
+		json_income_roles = item_content["income_roles"]
+		user_db = user_content["userdata"]
 
 		# pretty straight forward i think.
 		# first, we go into each role object
@@ -1790,23 +1811,24 @@ class pythonboat_database_handler:
 					passed_time_hours = passed_time.total_seconds() // 3600.0
 					if passed_time_hours >= 1:
 						# also to create user in case he isnt registered yet
-						user_index, new_data = self.find_index_in_db(json_content["userdata"], member.id)
-						json_user_content = json_content["userdata"][user_index]
+						user_index, new_data = self.find_index_in_db(user_content["userdata"], member.id)
+						json_user_content = user_content["userdata"][user_index]
 						json_user_content["last_balance_update"] = str(now)
 						#payment = json_income_roles[role_index]["role_income"] * int(passed_time_hours)
 						payment = 8 * int(passed_time_hours) ## Quick and dirty alignment until we check if we still want this whole method or not (See method desc above)
-						bonus_engagement = json_user_content["engagement"]
-						json_user_content["engagement"] / 10
+						#bonus_engagement = json_user_content["engagement"]
+						#json_user_content["engagement"] / 10
+						bonus_engagement = 0
 						json_user_content["cash"] += (payment + bonus_engagement)
 						# overwrite
-						json_content["userdata"][user_index] = json_user_content
+						user_content["userdata"][user_index] = json_user_content
 				except:
 					pass
 
 		# overwrite, end
-		json_income_roles[role_index]["last_updated"] = str(now)
-		json_content["income_roles"] = json_income_roles
-		self.overwrite_json(json_content)
+		#json_income_roles[role_index]["last_updated"] = str(now)
+		#json_content["income_roles"] = json_income_roles
+		#self.overwrite_json(user_content)
 
 		return "success", "success"
 
