@@ -1683,7 +1683,6 @@ class pythonboat_database_handler:
 	# FIND CARD
 	#
 	#Should find whether any player owns specified card and output users name
-	## TODO: This might need card_id's for additional identification
 	async def find_item(self, userList, cardToFind):
 		##Loop through all users, getting their list of items and check if card exists in their inventory
 		# load json
@@ -1697,7 +1696,7 @@ class pythonboat_database_handler:
 		for i in range(len(userdata)):
 			items = userdata[i]["items"]
 			for j in range(len(items)):
-				if items[j][0].casefold() == cardToFind.casefold():
+				if items[j][0].casefold() == cardToFind.casefold() or items[j][2].casefold() == cardToFind.casefold():
 					print(userdata[i]["user_id"])
 					userList.append(userdata[i]["user_id"])		
 		return "success"
