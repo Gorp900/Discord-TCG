@@ -275,6 +275,10 @@ class pythonboat_database_handler:
 		json_user_content["cash"] -= amount
 		json_recept_content["cash"] += amount
 
+		#Count pack purchase
+		json_content["purchase_count"][0]["cash_traded"] +=1
+		json_content["purchase_count"][0]["cash_value"] += amount
+
 		# inform user
 		color = self.discord_success_rgb_code
 		embed = discord.Embed(
@@ -1422,6 +1426,9 @@ class pythonboat_database_handler:
 
 		except:
 			return "error", f"❌"
+
+		#Count pack purchase
+		user_content["purchase_count"][0]["cards_traded"] +=1
 
 		# inform user
 		color = self.discord_success_rgb_code

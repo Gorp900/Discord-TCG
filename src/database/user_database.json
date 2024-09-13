@@ -1,9 +1,12 @@
 {
     "purchase_count": [
         {
-            "bronze": 0,
-            "silver": 0,
-            "gold": 0
+            "bronze": 24,
+            "silver": 15,
+            "gold": 13,
+            "cards_traded": 0,
+            "cash_traded": 1,
+            "cash_value": 16
         }
     ],
     "userdata": [
@@ -11,6 +14,1000 @@
             "user_id": 100000000000000000,
             "cash": 100.0,
             "items": "none"
+        },
+        {
+            "user_id": 163388306460114945,
+            "cash": 1224,
+            "engagement": 0,
+            "last_balance_update": "2024-09-01 07:58:47.298891",
+            "items": [
+                [
+                    "Tidus",
+                    1,
+                    "17_7"
+                ],
+                [
+                    "JJ Abrams",
+                    1,
+                    "17_326"
+                ],
+                [
+                    "Bahamut",
+                    1,
+                    "17_204"
+                ],
+                [
+                    "Thoracotomy",
+                    1,
+                    "17_250"
+                ],
+                [
+                    "Botta",
+                    1,
+                    "17_167"
+                ],
+                [
+                    "Peter O'Tooled'Up",
+                    1,
+                    "17_133"
+                ],
+                [
+                    "Robber De Niro",
+                    1,
+                    "17_305"
+                ],
+                [
+                    "Shruikan",
+                    1,
+                    "17_202"
+                ],
+                [
+                    "Shiny Hitmonchan",
+                    1,
+                    "17_311"
+                ],
+                [
+                    "Mike",
+                    1,
+                    "17_190"
+                ],
+                [
+                    "Memory Leak Leo",
+                    1,
+                    "17_104"
+                ],
+                [
+                    "Bragi-ng Rights",
+                    1,
+                    "17_263"
+                ],
+                [
+                    "Keepa",
+                    1,
+                    "17_166"
+                ],
+                [
+                    "Charolais Oakley",
+                    1,
+                    "17_196"
+                ],
+                [
+                    "Panniculectomy",
+                    1,
+                    "17_252"
+                ]
+            ]
+        },
+        {
+            "user_id": 185112370996183042,
+            "cash": 654,
+            "engagement": 0,
+            "last_balance_update": "2024-09-10 00:18:32.552055",
+            "items": [
+                [
+                    "TOG Dirty II Me",
+                    1,
+                    "17_320"
+                ],
+                [
+                    "Lotho du Casse",
+                    1,
+                    "17_224"
+                ],
+                [
+                    "Bad Gateway Bob",
+                    2,
+                    "17_274"
+                ],
+                [
+                    "Will",
+                    1,
+                    "17_183"
+                ],
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_199"
+                ],
+                [
+                    "Tairn",
+                    1,
+                    "17_203"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "Laparoscopy",
+                    1,
+                    "17_249"
+                ],
+                [
+                    "Gabriaaaghl",
+                    1,
+                    "17_281"
+                ],
+                [
+                    "Gastrointestinal",
+                    1,
+                    "17_247"
+                ],
+                [
+                    "Jan EA Sports",
+                    1,
+                    "17_236"
+                ],
+                [
+                    "Thorn",
+                    1,
+                    "17_205"
+                ],
+                [
+                    "Hel-d My Hand",
+                    1,
+                    "17_261"
+                ],
+                [
+                    "Odo Jing",
+                    1,
+                    "17_219"
+                ],
+                [
+                    "Wedge",
+                    1,
+                    "17_175"
+                ],
+                [
+                    "Toothless",
+                    1,
+                    "17_207"
+                ],
+                [
+                    "Thomas Hardly Alive",
+                    1,
+                    "17_291"
+                ],
+                [
+                    "Biggs",
+                    1,
+                    "17_174"
+                ],
+                [
+                    "Fafnir",
+                    1,
+                    "17_212"
+                ],
+                [
+                    "Deoni Kukoc",
+                    1,
+                    "17_194"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_319"
+                ],
+                [
+                    "Petaaagh",
+                    1,
+                    "17_277"
+                ],
+                [
+                    "Petaaagh",
+                    1,
+                    "17_112"
+                ],
+                [
+                    "Shiny Hitmonlee",
+                    1,
+                    "17_310"
+                ],
+                [
+                    "Judaaaghs",
+                    1,
+                    "17_285"
+                ],
+                [
+                    "Dudo Barton",
+                    1,
+                    "17_50"
+                ],
+                [
+                    "Square Peater Myers",
+                    1,
+                    "17_200"
+                ]
+            ]
+        },
+        {
+            "user_id": 185808377052528640,
+            "cash": 12506,
+            "engagement": 0,
+            "last_balance_update": "2024-09-13 09:52:44.295090",
+            "items": "none"
+        },
+        {
+            "user_id": 109392522874208256,
+            "cash": 1608,
+            "engagement": 0,
+            "last_balance_update": "2024-09-12 10:38:10.494154",
+            "items": [
+                [
+                    "Jackie Beat Saber",
+                    1,
+                    "17_70"
+                ],
+                [
+                    "Hemicolectomy",
+                    1,
+                    "17_240"
+                ],
+                [
+                    "Steve Kerry Cattle",
+                    1,
+                    "17_197"
+                ],
+                [
+                    "Jaaaghn",
+                    1,
+                    "17_278"
+                ],
+                [
+                    "Bariatric",
+                    1,
+                    "17_244"
+                ],
+                [
+                    "Building a Grag Queen",
+                    1,
+                    "17_228"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_319"
+                ],
+                [
+                    "Maaaghthew",
+                    1,
+                    "17_280"
+                ],
+                [
+                    "Judaaaghs",
+                    1,
+                    "17_285"
+                ],
+                [
+                    "Shiny Kingler",
+                    1,
+                    "17_144"
+                ],
+                [
+                    "Hel-d My Hand",
+                    1,
+                    "17_261"
+                ],
+                [
+                    "Bronchoscopy",
+                    1,
+                    "17_245"
+                ],
+                [
+                    "Ancient Game of RuPaul",
+                    2,
+                    "17_226"
+                ],
+                [
+                    "William Bleak",
+                    1,
+                    "17_293"
+                ],
+                [
+                    "Dave Nurglebreath",
+                    1,
+                    "17_15"
+                ],
+                [
+                    "Maaaghry",
+                    1,
+                    "17_276"
+                ],
+                [
+                    "Edgar Allan Woe",
+                    1,
+                    "17_289"
+                ],
+                [
+                    "Laparoscopy",
+                    1,
+                    "17_249"
+                ]
+            ]
+        },
+        {
+            "user_id": 330073959758430210,
+            "cash": 112,
+            "engagement": 0,
+            "last_balance_update": "2024-08-31 20:11:33.096267",
+            "items": [
+                [
+                    "Will",
+                    1,
+                    "17_183"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "Greybeard",
+                    1,
+                    "17_214"
+                ],
+                [
+                    "CharB-Zard",
+                    1,
+                    "17_323"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_318"
+                ],
+                [
+                    "Dave Nurglebreath",
+                    1,
+                    "17_180"
+                ],
+                [
+                    "Pancreatectomy",
+                    1,
+                    "17_251"
+                ],
+                [
+                    "Odin-ner Date",
+                    1,
+                    "17_253"
+                ],
+                [
+                    "Panniculectomy",
+                    2,
+                    "17_252"
+                ],
+                [
+                    "Dustin 'Offman",
+                    1,
+                    "17_301"
+                ],
+                [
+                    "Wakka",
+                    1,
+                    "17_8"
+                ],
+                [
+                    "Steve Kerry Cattle",
+                    1,
+                    "17_197"
+                ],
+                [
+                    "Connection Reset Charlie",
+                    2,
+                    "17_272"
+                ],
+                [
+                    "James Skullcracker",
+                    1,
+                    "17_181"
+                ],
+                [
+                    "Smaug",
+                    1,
+                    "17_209"
+                ],
+                [
+                    "Eric Devil Hands Idle",
+                    1,
+                    "17_306"
+                ],
+                [
+                    "Adelard Drake",
+                    1,
+                    "17_218"
+                ],
+                [
+                    "Dudo Barton",
+                    1,
+                    "17_215"
+                ],
+                [
+                    "Shiny Mr Mime",
+                    2,
+                    "17_312"
+                ],
+                [
+                    "Building a Grag Queen",
+                    1,
+                    "17_228"
+                ],
+                [
+                    "Ben",
+                    1,
+                    "17_188"
+                ],
+                [
+                    "Oscar Wildething",
+                    1,
+                    "17_290"
+                ],
+                [
+                    "Biggs",
+                    1,
+                    "17_174"
+                ],
+                [
+                    "Peter O'Tooled'Up",
+                    1,
+                    "17_298"
+                ],
+                [
+                    "Thoracotomy",
+                    1,
+                    "17_250"
+                ],
+                [
+                    "William Bleak",
+                    1,
+                    "17_293"
+                ],
+                [
+                    "In My Thorts",
+                    1,
+                    "17_259"
+                ]
+            ]
+        },
+        {
+            "user_id": 184693628650651650,
+            "cash": 512,
+            "engagement": 0,
+            "last_balance_update": "2024-09-13 08:54:37.384622",
+            "items": [
+                [
+                    "Sherman Clump",
+                    1,
+                    "17_329"
+                ],
+                [
+                    "100% Orange Juice Boxx",
+                    1,
+                    "17_234"
+                ],
+                [
+                    "Wedge",
+                    1,
+                    "17_175"
+                ],
+                [
+                    "General Patton",
+                    1,
+                    "17_328"
+                ],
+                [
+                    "Not Frigg-id",
+                    1,
+                    "17_255"
+                ],
+                [
+                    "Lotho du Casse",
+                    1,
+                    "17_224"
+                ],
+                [
+                    "Amputation",
+                    1,
+                    "17_246"
+                ],
+                [
+                    "Maaaghthew",
+                    1,
+                    "17_280"
+                ],
+                [
+                    "Ash",
+                    1,
+                    "17_185"
+                ],
+                [
+                    "Odo Jing",
+                    1,
+                    "17_219"
+                ],
+                [
+                    "Peter O'Tooled'Up",
+                    1,
+                    "17_298"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_316"
+                ],
+                [
+                    "Will",
+                    1,
+                    "17_183"
+                ],
+                [
+                    "AMX Gonna Give It To Ya",
+                    1,
+                    "17_321"
+                ],
+                [
+                    "Biggs",
+                    1,
+                    "17_174"
+                ],
+                [
+                    "William Shakesinboots",
+                    2,
+                    "17_292"
+                ],
+                [
+                    "CharB-Zard",
+                    2,
+                    "17_323"
+                ],
+                [
+                    "Danny Matilda DeVito",
+                    1,
+                    "17_325"
+                ],
+                [
+                    "Sir Anthony Hacklimbs",
+                    1,
+                    "17_299"
+                ],
+                [
+                    "Insaniaquaria",
+                    1,
+                    "17_227"
+                ],
+                [
+                    "Fafnir",
+                    1,
+                    "17_212"
+                ],
+                [
+                    "Sir Patrick Screwheart",
+                    1,
+                    "17_135"
+                ],
+                [
+                    "Amputation",
+                    1,
+                    "17_81"
+                ],
+                [
+                    "Stack Overflow Steve",
+                    1,
+                    "17_266"
+                ],
+                [
+                    "Dudo Barton",
+                    1,
+                    "17_215"
+                ],
+                [
+                    "Balgerda",
+                    1,
+                    "17_177"
+                ]
+            ]
+        },
+        {
+            "user_id": 225690039206543361,
+            "cash": 320,
+            "engagement": 0,
+            "last_balance_update": "2024-08-18 10:47:46.643964",
+            "items": [
+                [
+                    "Letty",
+                    1,
+                    "17_6"
+                ],
+                [
+                    "Jesaaaghs",
+                    1,
+                    "17_275"
+                ],
+                [
+                    "Judaaaghs",
+                    1,
+                    "17_285"
+                ],
+                [
+                    "Datto",
+                    1,
+                    "17_170"
+                ],
+                [
+                    "Bronchoscopy",
+                    2,
+                    "17_245"
+                ],
+                [
+                    "Thomas Hardly Alive",
+                    1,
+                    "17_291"
+                ],
+                [
+                    "Thomaaaghs",
+                    1,
+                    "17_279"
+                ],
+                [
+                    "Oophorectomy",
+                    1,
+                    "17_238"
+                ],
+                [
+                    "B J Longhorn",
+                    1,
+                    "17_198"
+                ],
+                [
+                    "Thorn",
+                    1,
+                    "17_40"
+                ],
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_199"
+                ],
+                [
+                    "In My Thorts",
+                    1,
+                    "17_259"
+                ],
+                [
+                    "Cystoscopy",
+                    1,
+                    "17_239"
+                ],
+                [
+                    "Page Fault Phil",
+                    1,
+                    "17_265"
+                ],
+                [
+                    "Dan",
+                    1,
+                    "17_184"
+                ]
+            ]
+        },
+        {
+            "user_id": 134405791103844352,
+            "cash": 168,
+            "engagement": 0,
+            "last_balance_update": "2024-09-12 00:19:00.655533",
+            "items": [
+                [
+                    "Building a Grag Queen",
+                    1,
+                    "17_63"
+                ],
+                [
+                    "Shruikan",
+                    1,
+                    "17_202"
+                ],
+                [
+                    "Graveyard Kipling",
+                    1,
+                    "17_287"
+                ],
+                [
+                    "Wellby Bannister",
+                    1,
+                    "17_222"
+                ],
+                [
+                    "Wedge",
+                    1,
+                    "17_175"
+                ],
+                [
+                    "Dan",
+                    1,
+                    "17_19"
+                ],
+                [
+                    "Hemicolectomy",
+                    1,
+                    "17_240"
+                ],
+                [
+                    "Mickey Maus",
+                    1,
+                    "17_322"
+                ],
+                [
+                    "Ash",
+                    1,
+                    "17_185"
+                ],
+                [
+                    "Vrtra",
+                    1,
+                    "17_208"
+                ],
+                [
+                    "Insaniaquaria",
+                    1,
+                    "17_62"
+                ],
+                [
+                    "Square Peater Myers",
+                    1,
+                    "17_200"
+                ],
+                [
+                    "B J Longhorn",
+                    1,
+                    "17_33"
+                ],
+                [
+                    "Laparoscopy",
+                    1,
+                    "17_249"
+                ],
+                [
+                    "AMX Gonna Give It To Ya",
+                    1,
+                    "17_321"
+                ],
+                [
+                    "100% Orange Juice Boxx",
+                    1,
+                    "17_69"
+                ],
+                [
+                    "Peter O'Tooled'Up",
+                    1,
+                    "17_298"
+                ],
+                [
+                    "Greybeard",
+                    1,
+                    "17_214"
+                ],
+                [
+                    "Shiny Ekans",
+                    1,
+                    "17_313"
+                ],
+                [
+                    "Thorn",
+                    1,
+                    "17_205"
+                ]
+            ]
+        },
+        {
+            "user_id": 533708157382426625,
+            "cash": 8,
+            "engagement": 0,
+            "last_balance_update": "2024-09-11 19:40:23.495589",
+            "items": [
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_199"
+                ],
+                [
+                    "Tairn",
+                    1,
+                    "17_203"
+                ],
+                [
+                    "Dan",
+                    2,
+                    "17_184"
+                ],
+                [
+                    "Michaaaghl",
+                    1,
+                    "17_282"
+                ],
+                [
+                    "Oophorectomy",
+                    2,
+                    "17_238"
+                ],
+                [
+                    "Connection Reset Charlie",
+                    1,
+                    "17_272"
+                ],
+                [
+                    "Robert Frostbitten",
+                    2,
+                    "17_294"
+                ],
+                [
+                    "Falco de Bois",
+                    1,
+                    "17_216"
+                ],
+                [
+                    "Pancreatectomy",
+                    1,
+                    "17_86"
+                ],
+                [
+                    "JJ Abrams",
+                    1,
+                    "17_326"
+                ],
+                [
+                    "Polo Callis",
+                    3,
+                    "17_217"
+                ],
+                [
+                    "Cass",
+                    1,
+                    "17_186"
+                ],
+                [
+                    "B J Longhorn",
+                    1,
+                    "17_198"
+                ],
+                [
+                    "Deoni Kukoc",
+                    1,
+                    "17_194"
+                ],
+                [
+                    "Benedict Sombrebatch",
+                    1,
+                    "17_303"
+                ],
+                [
+                    "Pancreatectomy",
+                    1,
+                    "17_251"
+                ],
+                [
+                    "Hel-d My Hand",
+                    1,
+                    "17_261"
+                ],
+                [
+                    "Cystoscopy",
+                    1,
+                    "17_239"
+                ],
+                [
+                    "Gadriaaaghl",
+                    1,
+                    "17_284"
+                ],
+                [
+                    "Bad Gateway Bob",
+                    1,
+                    "17_274"
+                ],
+                [
+                    "Graveyard Kipling",
+                    2,
+                    "17_287"
+                ],
+                [
+                    "Thorn",
+                    1,
+                    "17_205"
+                ],
+                [
+                    "A-Freya-ed To Let You Go",
+                    1,
+                    "17_256"
+                ],
+                [
+                    "TOG Dirty II Me",
+                    1,
+                    "17_320"
+                ],
+                [
+                    "Dustin 'Offman",
+                    1,
+                    "17_301"
+                ],
+                [
+                    "Page Fault Phil",
+                    1,
+                    "17_265"
+                ],
+                [
+                    "Brother",
+                    1,
+                    "17_169"
+                ],
+                [
+                    "Stack Overflow Steve",
+                    1,
+                    "17_266"
+                ],
+                [
+                    "Petaaagh",
+                    1,
+                    "17_277"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_318"
+                ]
+            ]
+        },
+        {
+            "user_id": 133960484201168896,
+            "cash": 1512,
+            "engagement": 0,
+            "last_balance_update": "2024-09-12 17:49:19.908281",
+            "items": [
+                [
+                    "Edgar Allan Woe",
+                    1,
+                    "17_124"
+                ],
+                [
+                    "Shiny Mr Mime",
+                    1,
+                    "17_312"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "A-Freya-ed To Let You Go",
+                    1,
+                    "17_256"
+                ],
+                [
+                    "Judaaaghs",
+                    1,
+                    "17_285"
+                ]
+            ]
         }
     ]
 }
