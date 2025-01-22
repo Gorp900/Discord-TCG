@@ -1,9 +1,9 @@
 {
     "purchase_count": [
         {
-            "bronze": 24,
-            "silver": 15,
-            "gold": 13,
+            "bronze": 41,
+            "silver": 27,
+            "gold": 41,
             "cards_traded": 0,
             "cash_traded": 1,
             "cash_value": 16
@@ -100,9 +100,9 @@
         },
         {
             "user_id": 185112370996183042,
-            "cash": 654,
+            "cash": 1350,
             "engagement": 0,
-            "last_balance_update": "2024-09-10 00:18:32.552055",
+            "last_balance_update": "2024-10-25 11:17:50.809778",
             "items": [
                 [
                     "TOG Dirty II Me",
@@ -111,7 +111,7 @@
                 ],
                 [
                     "Lotho du Casse",
-                    1,
+                    2,
                     "17_224"
                 ],
                 [
@@ -186,7 +186,7 @@
                 ],
                 [
                     "Thomas Hardly Alive",
-                    1,
+                    2,
                     "17_291"
                 ],
                 [
@@ -226,7 +226,7 @@
                 ],
                 [
                     "Judaaaghs",
-                    1,
+                    2,
                     "17_285"
                 ],
                 [
@@ -236,23 +236,98 @@
                 ],
                 [
                     "Square Peater Myers",
-                    1,
+                    2,
                     "17_200"
+                ],
+                [
+                    "Danny Matilda DeVito",
+                    2,
+                    "17_325"
+                ],
+                [
+                    "A-Frey-ed to Love",
+                    1,
+                    "17_257"
+                ],
+                [
+                    "Maaaghthew",
+                    1,
+                    "17_280"
+                ],
+                [
+                    "Was Whitman",
+                    1,
+                    "17_296"
+                ],
+                [
+                    "Bragi-ng Rights",
+                    1,
+                    "17_263"
+                ],
+                [
+                    "Raphaeaaaghl",
+                    1,
+                    "17_283"
+                ],
+                [
+                    "Thoracotomy",
+                    1,
+                    "17_250"
+                ],
+                [
+                    "Eric Devil Hands Idle",
+                    1,
+                    "17_306"
+                ],
+                [
+                    "Scottie Philipipine",
+                    1,
+                    "17_192"
+                ],
+                [
+                    "Page Fault Phil",
+                    1,
+                    "17_265"
+                ],
+                [
+                    "Risk of ICE is Rain",
+                    1,
+                    "17_230"
+                ],
+                [
+                    "Benedict Sombrebatch",
+                    1,
+                    "17_303"
+                ],
+                [
+                    "Steve Kerry Cattle",
+                    1,
+                    "17_197"
+                ],
+                [
+                    "Shiny Ekans",
+                    1,
+                    "17_313"
+                ],
+                [
+                    "Balgerda",
+                    1,
+                    "17_177"
                 ]
             ]
         },
         {
             "user_id": 185808377052528640,
-            "cash": 12506,
+            "cash": 37666,
             "engagement": 0,
-            "last_balance_update": "2024-09-13 09:52:44.295090",
+            "last_balance_update": "2025-01-22 13:43:42.771965",
             "items": "none"
         },
         {
             "user_id": 109392522874208256,
-            "cash": 1608,
+            "cash": 392,
             "engagement": 0,
-            "last_balance_update": "2024-09-12 10:38:10.494154",
+            "last_balance_update": "2025-01-09 14:49:57.502608",
             "items": [
                 [
                     "Jackie Beat Saber",
@@ -296,7 +371,7 @@
                 ],
                 [
                     "Judaaaghs",
-                    1,
+                    3,
                     "17_285"
                 ],
                 [
@@ -343,14 +418,199 @@
                     "Laparoscopy",
                     1,
                     "17_249"
+                ],
+                [
+                    "Darienne Sam Lake u Hack",
+                    1,
+                    "17_68"
+                ],
+                [
+                    "Deoni Kukoc",
+                    1,
+                    "17_194"
+                ],
+                [
+                    "James Skullcracker",
+                    1,
+                    "17_181"
+                ],
+                [
+                    "Vrtra",
+                    1,
+                    "17_208"
+                ],
+                [
+                    "Ben",
+                    1,
+                    "17_188"
+                ],
+                [
+                    "Struan",
+                    1,
+                    "17_24"
+                ],
+                [
+                    "Odo Jing",
+                    1,
+                    "17_219"
+                ],
+                [
+                    "Pancreatectomy",
+                    1,
+                    "17_251"
+                ],
+                [
+                    "Greg",
+                    1,
+                    "17_187"
+                ],
+                [
+                    "Brother",
+                    1,
+                    "17_169"
+                ],
+                [
+                    "Danna Gall*Gun",
+                    1,
+                    "17_66"
+                ],
+                [
+                    "Biggs",
+                    1,
+                    "17_174"
+                ],
+                [
+                    "Sylvie",
+                    1,
+                    "17_206"
+                ],
+                [
+                    "Scottie Philipipine",
+                    1,
+                    "17_192"
+                ],
+                [
+                    "Jarnunvosk",
+                    1,
+                    "17_45"
+                ],
+                [
+                    "Danny Matilda DeVito",
+                    1,
+                    "17_325"
+                ],
+                [
+                    "Fafnir",
+                    1,
+                    "17_212"
+                ],
+                [
+                    "Dudo Barton",
+                    1,
+                    "17_215"
+                ],
+                [
+                    "Matt Daemon",
+                    1,
+                    "17_142"
+                ],
+                [
+                    "Thorn",
+                    1,
+                    "17_205"
+                ],
+                [
+                    "Abus",
+                    1,
+                    "17_176"
+                ],
+                [
+                    "Toothless",
+                    1,
+                    "17_207"
+                ],
+                [
+                    "Benedict Sombrebatch",
+                    1,
+                    "17_303"
+                ],
+                [
+                    "Dudo Barton",
+                    1,
+                    "17_50"
+                ],
+                [
+                    "Loki-ng Good",
+                    1,
+                    "17_254"
+                ],
+                [
+                    "Timeout Terry",
+                    1,
+                    "17_273"
+                ],
+                [
+                    "Wedge",
+                    1,
+                    "17_175"
+                ],
+                [
+                    "Shiny Ekans",
+                    2,
+                    "17_313"
+                ],
+                [
+                    "Petaaagh",
+                    1,
+                    "17_112"
+                ],
+                [
+                    "Shiny Machamp",
+                    1,
+                    "17_308"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "Petaaagh",
+                    1,
+                    "17_277"
+                ],
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_34"
+                ],
+                [
+                    "Jackie Beat Saber",
+                    1,
+                    "17_235"
+                ],
+                [
+                    "Will Perdulong",
+                    1,
+                    "17_201"
+                ],
+                [
+                    "Sir Patrick Screwheart",
+                    1,
+                    "17_300"
+                ],
+                [
+                    "William Shakesinboots",
+                    1,
+                    "17_292"
                 ]
             ]
         },
         {
             "user_id": 330073959758430210,
-            "cash": 112,
+            "cash": 2080,
             "engagement": 0,
-            "last_balance_update": "2024-08-31 20:11:33.096267",
+            "last_balance_update": "2025-01-19 08:45:00.282559",
             "items": [
                 [
                     "Will",
@@ -394,7 +654,7 @@
                 ],
                 [
                     "Panniculectomy",
-                    2,
+                    3,
                     "17_252"
                 ],
                 [
@@ -419,7 +679,7 @@
                 ],
                 [
                     "James Skullcracker",
-                    1,
+                    3,
                     "17_181"
                 ],
                 [
@@ -444,7 +704,7 @@
                 ],
                 [
                     "Shiny Mr Mime",
-                    2,
+                    3,
                     "17_312"
                 ],
                 [
@@ -486,23 +746,148 @@
                     "In My Thorts",
                     1,
                     "17_259"
+                ],
+                [
+                    "Graveyard Kipling",
+                    1,
+                    "17_122"
+                ],
+                [
+                    "Disk Full Dave",
+                    1,
+                    "17_271"
+                ],
+                [
+                    "Stack Overflow Steve",
+                    1,
+                    "17_266"
+                ],
+                [
+                    "Jackie Beat Saber",
+                    1,
+                    "17_235"
+                ],
+                [
+                    "Michael Vestland Fjordan",
+                    1,
+                    "17_26"
+                ],
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_34"
+                ],
+                [
+                    "Shiny Ekans",
+                    2,
+                    "17_313"
+                ],
+                [
+                    "Maaaghry",
+                    1,
+                    "17_276"
+                ],
+                [
+                    "Tidus",
+                    1,
+                    "17_7"
+                ],
+                [
+                    "Timeout Terry",
+                    2,
+                    "17_273"
+                ],
+                [
+                    "Neurosurgery",
+                    2,
+                    "17_241"
+                ],
+                [
+                    "Shiny Muk",
+                    1,
+                    "17_315"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_154"
+                ],
+                [
+                    "Keepa",
+                    1,
+                    "17_166"
+                ],
+                [
+                    "Love Across Baldr-es",
+                    1,
+                    "17_258"
+                ],
+                [
+                    "Corneal Transplant",
+                    1,
+                    "17_242"
+                ],
+                [
+                    "Edgar Allan Woe",
+                    1,
+                    "17_289"
+                ],
+                [
+                    "In My Thorts",
+                    1,
+                    "17_94"
+                ],
+                [
+                    "Hel-d My Hand",
+                    2,
+                    "17_261"
+                ],
+                [
+                    "Danna Gall*Gun",
+                    1,
+                    "17_231"
+                ],
+                [
+                    "Maaaghthew",
+                    1,
+                    "17_280"
+                ],
+                [
+                    "Hugh VaGrant",
+                    1,
+                    "17_302"
+                ],
+                [
+                    "100% Orange Juice Boxx",
+                    1,
+                    "17_69"
+                ],
+                [
+                    "Deoni Kukoc",
+                    1,
+                    "17_194"
+                ],
+                [
+                    "Dante Alighouli",
+                    1,
+                    "17_295"
                 ]
             ]
         },
         {
             "user_id": 184693628650651650,
-            "cash": 512,
+            "cash": 72,
             "engagement": 0,
-            "last_balance_update": "2024-09-13 08:54:37.384622",
+            "last_balance_update": "2025-01-20 21:01:58.365735",
             "items": [
                 [
                     "Sherman Clump",
-                    1,
+                    2,
                     "17_329"
                 ],
                 [
                     "100% Orange Juice Boxx",
-                    1,
+                    2,
                     "17_234"
                 ],
                 [
@@ -522,7 +907,7 @@
                 ],
                 [
                     "Lotho du Casse",
-                    1,
+                    2,
                     "17_224"
                 ],
                 [
@@ -532,7 +917,7 @@
                 ],
                 [
                     "Maaaghthew",
-                    1,
+                    2,
                     "17_280"
                 ],
                 [
@@ -572,7 +957,7 @@
                 ],
                 [
                     "William Shakesinboots",
-                    2,
+                    4,
                     "17_292"
                 ],
                 [
@@ -587,7 +972,7 @@
                 ],
                 [
                     "Sir Anthony Hacklimbs",
-                    1,
+                    2,
                     "17_299"
                 ],
                 [
@@ -597,7 +982,7 @@
                 ],
                 [
                     "Fafnir",
-                    1,
+                    2,
                     "17_212"
                 ],
                 [
@@ -612,7 +997,7 @@
                 ],
                 [
                     "Stack Overflow Steve",
-                    1,
+                    2,
                     "17_266"
                 ],
                 [
@@ -624,6 +1009,186 @@
                     "Balgerda",
                     1,
                     "17_177"
+                ],
+                [
+                    "JJ Abrams",
+                    1,
+                    "17_161"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_318"
+                ],
+                [
+                    "Judaaaghs",
+                    2,
+                    "17_285"
+                ],
+                [
+                    "Error 503 Eddy",
+                    1,
+                    "17_264"
+                ],
+                [
+                    "Gastrointestinal",
+                    2,
+                    "17_247"
+                ],
+                [
+                    "Rob",
+                    2,
+                    "17_182"
+                ],
+                [
+                    "Devjohn Paxson",
+                    1,
+                    "17_199"
+                ],
+                [
+                    "Vermithor",
+                    1,
+                    "17_211"
+                ],
+                [
+                    "Wakka",
+                    1,
+                    "17_8"
+                ],
+                [
+                    "Gabriaaaghl",
+                    1,
+                    "17_281"
+                ],
+                [
+                    "Corneal Transplant",
+                    1,
+                    "17_242"
+                ],
+                [
+                    "Maaaghry",
+                    1,
+                    "17_276"
+                ],
+                [
+                    "William Bleak",
+                    1,
+                    "17_293"
+                ],
+                [
+                    "Panniculectomy",
+                    1,
+                    "17_252"
+                ],
+                [
+                    "Ezra Pound of Flesh",
+                    1,
+                    "17_286"
+                ],
+                [
+                    "Hemicolectomy",
+                    1,
+                    "17_240"
+                ],
+                [
+                    "Grag Dreadender",
+                    1,
+                    "17_179"
+                ],
+                [
+                    "Ancient Game of RuPaul",
+                    1,
+                    "17_226"
+                ],
+                [
+                    "Tairn",
+                    2,
+                    "17_203"
+                ],
+                [
+                    "Benedict Sombrebatch",
+                    1,
+                    "17_303"
+                ],
+                [
+                    "Dustin 'Offman",
+                    1,
+                    "17_301"
+                ],
+                [
+                    "Love Across Baldr-es",
+                    1,
+                    "17_258"
+                ],
+                [
+                    "Bad Gateway Bob",
+                    1,
+                    "17_274"
+                ],
+                [
+                    "Can't Ig-Njord You",
+                    1,
+                    "17_260"
+                ],
+                [
+                    "Will.I.Was Wordsworth",
+                    1,
+                    "17_288"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "Jassu",
+                    1,
+                    "17_3"
+                ],
+                [
+                    "Danna Gall*Gun",
+                    1,
+                    "17_231"
+                ],
+                [
+                    "Jaaaghn",
+                    1,
+                    "17_278"
+                ],
+                [
+                    "Bragi-ng Rights",
+                    1,
+                    "17_263"
+                ],
+                [
+                    "Adelard Drake",
+                    1,
+                    "17_218"
+                ],
+                [
+                    "James Skullcracker",
+                    1,
+                    "17_181"
+                ],
+                [
+                    "Sir Anthony Hacklimbs",
+                    1,
+                    "17_134"
+                ],
+                [
+                    "Robber De Niro",
+                    1,
+                    "17_305"
+                ],
+                [
+                    "404 Not Found Nate",
+                    1,
+                    "17_268"
+                ],
+                [
+                    "BatChat Crazy",
+                    1,
+                    "17_324"
                 ]
             ]
         },
@@ -712,9 +1277,9 @@
         },
         {
             "user_id": 134405791103844352,
-            "cash": 168,
+            "cash": 840,
             "engagement": 0,
-            "last_balance_update": "2024-09-12 00:19:00.655533",
+            "last_balance_update": "2025-01-19 09:49:04.906441",
             "items": [
                 [
                     "Building a Grag Queen",
@@ -728,7 +1293,7 @@
                 ],
                 [
                     "Graveyard Kipling",
-                    1,
+                    2,
                     "17_287"
                 ],
                 [
@@ -768,7 +1333,7 @@
                 ],
                 [
                     "Insaniaquaria",
-                    1,
+                    2,
                     "17_62"
                 ],
                 [
@@ -798,12 +1363,12 @@
                 ],
                 [
                     "Peter O'Tooled'Up",
-                    1,
+                    2,
                     "17_298"
                 ],
                 [
                     "Greybeard",
-                    1,
+                    2,
                     "17_214"
                 ],
                 [
@@ -815,14 +1380,159 @@
                     "Thorn",
                     1,
                     "17_205"
+                ],
+                [
+                    "Keepa",
+                    1,
+                    "17_166"
+                ],
+                [
+                    "Maaaghthew",
+                    2,
+                    "17_280"
+                ],
+                [
+                    "Horamo Grante",
+                    1,
+                    "17_28"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_55"
+                ],
+                [
+                    "Gastrointestinal",
+                    1,
+                    "17_247"
+                ],
+                [
+                    "Will",
+                    1,
+                    "17_183"
+                ],
+                [
+                    "TOG Dirty II Me",
+                    1,
+                    "17_320"
+                ],
+                [
+                    "Biggs",
+                    2,
+                    "17_174"
+                ],
+                [
+                    "Sir Anthony Hacklimbs",
+                    1,
+                    "17_134"
+                ],
+                [
+                    "Alaska Warthunderfuck",
+                    1,
+                    "17_229"
+                ],
+                [
+                    "Oscar Wildething",
+                    1,
+                    "17_290"
+                ],
+                [
+                    "Hugh VaGrant",
+                    1,
+                    "17_137"
+                ],
+                [
+                    "Sir Patrick Screwheart",
+                    1,
+                    "17_300"
+                ],
+                [
+                    "Tony the Tiger",
+                    1,
+                    "17_327"
+                ],
+                [
+                    "Mike",
+                    1,
+                    "17_190"
+                ],
+                [
+                    "Odin-ner Date",
+                    1,
+                    "17_253"
+                ],
+                [
+                    "Charolais Oakley",
+                    1,
+                    "17_31"
+                ],
+                [
+                    "Not Frigg-id",
+                    1,
+                    "17_255"
+                ],
+                [
+                    "A-Frey-ed to Love",
+                    1,
+                    "17_257"
+                ],
+                [
+                    "Letty",
+                    1,
+                    "17_6"
+                ],
+                [
+                    "Neurosurgery",
+                    1,
+                    "17_241"
+                ],
+                [
+                    "Hugh VaGrant",
+                    1,
+                    "17_302"
+                ],
+                [
+                    "Hel-d My Hand",
+                    1,
+                    "17_261"
+                ],
+                [
+                    "Scottie Philipipine",
+                    1,
+                    "17_192"
+                ],
+                [
+                    "Deoni Kukoc",
+                    1,
+                    "17_29"
+                ],
+                [
+                    "Panniculectomy",
+                    1,
+                    "17_252"
+                ],
+                [
+                    "Jaaaghn",
+                    1,
+                    "17_278"
+                ],
+                [
+                    "Dante Alighouli",
+                    1,
+                    "17_295"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_317"
                 ]
             ]
         },
         {
             "user_id": 533708157382426625,
-            "cash": 8,
+            "cash": 872,
             "engagement": 0,
-            "last_balance_update": "2024-09-11 19:40:23.495589",
+            "last_balance_update": "2024-11-28 18:18:05.989893",
             "items": [
                 [
                     "Devjohn Paxson",
@@ -851,7 +1561,7 @@
                 ],
                 [
                     "Connection Reset Charlie",
-                    1,
+                    2,
                     "17_272"
                 ],
                 [
@@ -871,7 +1581,7 @@
                 ],
                 [
                     "JJ Abrams",
-                    1,
+                    2,
                     "17_326"
                 ],
                 [
@@ -891,12 +1601,12 @@
                 ],
                 [
                     "Deoni Kukoc",
-                    1,
+                    2,
                     "17_194"
                 ],
                 [
                     "Benedict Sombrebatch",
-                    1,
+                    2,
                     "17_303"
                 ],
                 [
@@ -911,7 +1621,7 @@
                 ],
                 [
                     "Cystoscopy",
-                    1,
+                    3,
                     "17_239"
                 ],
                 [
@@ -956,7 +1666,7 @@
                 ],
                 [
                     "Brother",
-                    1,
+                    2,
                     "17_169"
                 ],
                 [
@@ -973,6 +1683,166 @@
                     "Shiny Zubat",
                     1,
                     "17_318"
+                ],
+                [
+                    "Charolais Oakley",
+                    1,
+                    "17_196"
+                ],
+                [
+                    "Peter O'Tooled'Up",
+                    1,
+                    "17_298"
+                ],
+                [
+                    "Jarnunvosk",
+                    1,
+                    "17_210"
+                ],
+                [
+                    "Fafnir",
+                    1,
+                    "17_212"
+                ],
+                [
+                    "Lotho du Casse",
+                    1,
+                    "17_224"
+                ],
+                [
+                    "Horamo Grante",
+                    2,
+                    "17_193"
+                ],
+                [
+                    "Jassu",
+                    1,
+                    "17_168"
+                ],
+                [
+                    "Square Peater Myers",
+                    2,
+                    "17_200"
+                ],
+                [
+                    "Hugh Folly",
+                    1,
+                    "17_304"
+                ],
+                [
+                    "Risk of ICE is Rain",
+                    1,
+                    "17_230"
+                ],
+                [
+                    "Tidus",
+                    1,
+                    "17_172"
+                ],
+                [
+                    "Shiny Hitmonchan",
+                    2,
+                    "17_311"
+                ],
+                [
+                    "Not Frigg-id",
+                    1,
+                    "17_255"
+                ],
+                [
+                    "AMX Gonna Give It To Ya",
+                    1,
+                    "17_321"
+                ],
+                [
+                    "BatChat Crazy",
+                    1,
+                    "17_324"
+                ],
+                [
+                    "Wakka",
+                    1,
+                    "17_173"
+                ],
+                [
+                    "Shiny Zubat",
+                    1,
+                    "17_319"
+                ],
+                [
+                    "Kandy Muse Dash",
+                    1,
+                    "17_232"
+                ],
+                [
+                    "Ash",
+                    1,
+                    "17_185"
+                ],
+                [
+                    "CharB-Zard",
+                    1,
+                    "17_323"
+                ],
+                [
+                    "Was Whitman",
+                    1,
+                    "17_296"
+                ],
+                [
+                    "Bob Cook",
+                    1,
+                    "17_225"
+                ],
+                [
+                    "Loki-ng Good",
+                    1,
+                    "17_254"
+                ],
+                [
+                    "Timeout Terry",
+                    1,
+                    "17_273"
+                ],
+                [
+                    "Abus",
+                    1,
+                    "17_176"
+                ],
+                [
+                    "Judaaaghs",
+                    1,
+                    "17_285"
+                ],
+                [
+                    "William Bleak",
+                    1,
+                    "17_293"
+                ],
+                [
+                    "Sir Anthony Hacklimbs",
+                    1,
+                    "17_299"
+                ],
+                [
+                    "Tyrs of Joy",
+                    1,
+                    "17_262"
+                ],
+                [
+                    "Datto",
+                    1,
+                    "17_170"
+                ],
+                [
+                    "Largo Lancaster",
+                    1,
+                    "17_220"
+                ],
+                [
+                    "Shruikan",
+                    1,
+                    "17_202"
                 ]
             ]
         },
